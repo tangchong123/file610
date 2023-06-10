@@ -1,0 +1,107 @@
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.loading-box {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    overflow: hidden;
+}
+.loading-box>img {
+    width: 180px;
+    height: 180px;
+    background-color: gray;
+    border-radius: 50%;
+}
+
+/* 头部框  */
+.content{
+
+}
+.content .header {
+    width: 100vw;
+    min-width: 600px;
+    background-color: black;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 40px;
+}
+.content .header img{
+    /* background-color: black; */
+    width: 120px;
+    height: 20px;
+}
+.content .header div{
+    color: #b8b6b4;
+    padding-left: 12px;
+    font-size: 14px;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.content .header div span{
+    height: 100%;
+    text-align: center;
+    line-height: 35px;
+    padding:0 10px
+}
+.content .header div span:hover{
+    color: white;
+}
+/* 左盒子 */
+.left-box{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    background: radial-gradient(ellipse farthest-corner at 50% 30%, #2b2d33 0%, #1e2025 50%, #14151a 100%);
+    padding:16px;
+    color: white;
+}
+.user-info-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-info-box > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #6dcff6;
+}
+.user-info-box div img{
+    padding-right: 12px;
+}
+.userNickname{
+    display: flex;
+    flex-direction: column;
+}
+.userNickname > span{
+    font-size: 14px;
+}
+.user-info-box > span{
+    font-size: 26px;
+}
+.friends-box-null{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+    border:1px dashed rgba(0,217,255,.3);
+    font-size: 14px;
+    border-radius: 6px;
+}
+/* 朋友列表框 */
