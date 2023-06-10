@@ -1,0 +1,32 @@
+$(function(){
+  $('.store').on('mouseenter',()=>{
+    $('.store>div').show()
+  })
+  $('.store').on('mouseleave',()=>{
+    $('.store>div').hide()
+  })
+  $('.community').on('mouseenter',()=>{
+    $('.community>div').show()
+  })
+  $('.community').on('mouseleave',()=>{
+    $('.community>div').hide()
+  })
+  $('.yourStore').on('mouseenter',()=>{
+    $('.yourStore>div').show()
+  })
+  $('.yourStore').on('mouseleave',()=>{
+    $('.yourStore>div').hide()
+  })
+  $('.recommend').on('mouseenter',()=>{
+    $('.recommend>div').show()
+  })
+  $('.recommend').on('mouseleave',()=>{
+    $('.recommend>div').hide()
+  })
+  $('.gameType').on('mouseenter',()=>{
+    $('.gameType>div').css('display','flex')
+  })
+  $('.gameType').on('mouseleave',()=>{
+    $('.gameType>div').hide()
+  })
+})

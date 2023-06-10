@@ -1,0 +1,356 @@
+.wrapper {
+  width: 1100px;
+  margin: 0 auto;
+}
+body,
+html {
+  width: 100%;
+  height: auto;
+  background: url(../images/colored_body_top.png);
+}
+a {
+  color: #ccc;
+}
+nav {
+  background-color: #171a21;
+  color: #ccc;
+  height: 100px;
+}
+nav .wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+nav .wrapper .logo a {
+  width: 100%;
+  height: 100%;
+}
+nav .wrapper .navList {
+  flex: 1;
+  display: flex;
+  margin-left: 40px;
+}
+nav .wrapper .navList > li {
+  cursor: pointer;
+  margin-right: 30px;
+}
+nav .wrapper .navList > li:hover {
+  color: #eee;
+}
+nav .wrapper .store,
+nav .wrapper .community {
+  position: relative;
+}
+nav .wrapper .store div,
+nav .wrapper .community div {
+  display: none;
+  position: absolute;
+  top: 24px;
+  left: -24px;
+  width: 200%;
+  height: auto;
+  z-index: 100;
+}
+nav .wrapper .store div > ul,
+nav .wrapper .community div > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 120%;
+  height: auto;
+  background-color: #171a21;
+}
+nav .wrapper .store div > ul > li:hover a,
+nav .wrapper .community div > ul > li:hover a {
+  color: #eee;
+}
+nav .wrapper .store div > ul > li a,
+nav .wrapper .community div > ul > li a {
+  font-size: 12px;
+}
+nav .tool {
+  display: flex;
+  justify-content: space-evenly;
+  width: 28%;
+  height: 100%;
+  padding-top: 10px;
+}
+nav .tool .install {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 26px;
+  font-size: 13px;
+  background-color: #5c7e10;
+}
+nav .tool .install a {
+  margin-left: 5px;
+  color: #fff;
+}
+nav .tool .changeLang select {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ccc;
+}
+nav .tool .changeLang select option {
+  background-color: #171a21;
+  border: none;
+  outline: none;
+}
+aside {
+  position: absolute;
+  top: 180px;
+  left: 30px;
+}
+aside .title {
+  font-size: 18px;
+  color: #536f86;
+}
+aside .giftCard {
+  cursor: pointer;
+  width: 160px;
+  height: 120px;
+}
+aside .giftCard a {
+  width: 100%;
+  height: 100%;
+}
+aside .giftCard img {
+  width: 100%;
+  height: 60px;
+}
+aside .giftCard:hover div {
+  color: #eee;
+}
+aside .giftCard:hover div span {
+  color: #eee;
+}
+aside .giftCard div {
+  width: 60%;
+  color: #88bde9;
+}
+aside .giftCard div span {
+  color: #ccc;
+  font-size: 14px;
+}
+aside .commendList {
+  margin-bottom: 10px;
+}
+aside .commendList ul li a {
+  font-size: 13px;
+  color: #7a8b9d;
+}
+aside .commendList ul li:hover a {
+  color: #66c0f4;
+}
+section .wrapper .title {
+  color: #fff;
+}
+section .wrapper .pickList {
+  display: flex;
+  margin-top: 40px;
+  width: 100%;
+  height: 35px;
+  background: linear-gradient(90deg, rgba(62, 103, 150, 0.919) 11.38%, rgba(58, 120, 177, 0.8) 25.23%, #0f216e 100%);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+}
+section .wrapper .pickList > ul {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  margin-left: 20px;
+}
+section .wrapper .pickList > ul > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+  font-weight: 700;
+  color: #eee;
+  margin-right: 20px;
+  font-size: 14px;
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+}
+section .wrapper .pickList > ul .yourStore,
+section .wrapper .pickList > ul .recommend,
+section .wrapper .pickList > ul .gameType {
+  width: 60px;
+  position: relative;
+}
+section .wrapper .pickList > ul .yourStore > div,
+section .wrapper .pickList > ul .recommend > div,
+section .wrapper .pickList > ul .gameType > div {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: -20px;
+  width: 200%;
+  height: auto;
+  z-index: 100;
+}
+section .wrapper .pickList > ul .yourStore > div > ul,
+section .wrapper .pickList > ul .recommend > div > ul,
+section .wrapper .pickList > ul .gameType > div > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 120%;
+  height: auto;
+  background: linear-gradient(90deg, rgba(33, 162, 255, 0.1) 1.89%, rgba(50, 50, 51, 0) 50%), linear-gradient(180deg, #575860 11.6%, #3A4852 54.73%, #2C2D34 100%);
+  padding: 8px 5px 8px 5px;
+}
+section .wrapper .pickList > ul .yourStore > div > ul > li,
+section .wrapper .pickList > ul .recommend > div > ul > li,
+section .wrapper .pickList > ul .gameType > div > ul > li {
+  width: 80%;
+  height: 25px;
+  margin: 5px 0;
+  margin-bottom: 0;
+}
+section .wrapper .pickList > ul .yourStore > div > ul > li:hover,
+section .wrapper .pickList > ul .recommend > div > ul > li:hover,
+section .wrapper .pickList > ul .gameType > div > ul > li:hover {
+  border-bottom: 1px solid #fff;
+}
+section .wrapper .pickList > ul .yourStore > div > ul > li:hover a,
+section .wrapper .pickList > ul .recommend > div > ul > li:hover a,
+section .wrapper .pickList > ul .gameType > div > ul > li:hover a {
+  color: #eee;
+}
+section .wrapper .pickList > ul .yourStore > div > ul > li a,
+section .wrapper .pickList > ul .recommend > div > ul > li a,
+section .wrapper .pickList > ul .gameType > div > ul > li a {
+  font-size: 12px;
+}
+section .wrapper .pickList > ul .gameType > div {
+  display: flex;
+  display: none;
+  justify-content: space-between;
+  left: -10px;
+  width: 700px;
+  height: 420px;
+  background: linear-gradient(90deg, rgba(33, 162, 255, 0.1) 1.89%, rgba(50, 50, 51, 0) 50%), linear-gradient(180deg, #575860 11.6%, #3A4852 54.73%, #2C2D34 100%);
+  padding: 15px 20px;
+  font-weight: normal;
+}
+section .wrapper .pickList > ul .gameType > div .title {
+  margin-bottom: 10px;
+  color: #2ebfff;
+}
+section .wrapper .pickList > ul .gameType > div .line {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(216, 216, 216, 0.3), transparent);
+  margin: 7px 0;
+  width: 50%;
+}
+section .wrapper .pickList > ul .gameType > div .left {
+  height: auto;
+}
+section .wrapper .pickList > ul .gameType > div .left li {
+  width: 100%;
+  height: 20px;
+}
+section .wrapper .pickList > ul .gameType > div .left li:hover {
+  border-bottom: 1px solid #fff;
+}
+section .wrapper .pickList > ul .gameType > div .middle {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 0 50px;
+  height: auto;
+}
+section .wrapper .pickList > ul .gameType > div .middle .topList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 47%;
+  margin-bottom: 0px;
+}
+section .wrapper .pickList > ul .gameType > div .middle .topList li {
+  margin-bottom: 5px;
+  margin-right: 5px;
+  height: 20px;
+}
+section .wrapper .pickList > ul .gameType > div .middle .topList li:hover {
+  border-bottom: 1px solid #fff;
+}
+section .wrapper .pickList > ul .gameType > div .middle .bottomList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 50%;
+}
+section .wrapper .pickList > ul .gameType > div .middle .bottomList li {
+  margin-bottom: 5px;
+  margin-right: 5px;
+  height: 20px;
+}
+section .wrapper .pickList > ul .gameType > div .middle .bottomList li:hover {
+  border-bottom: 1px solid #fff;
+}
+section .wrapper .pickList > ul .gameType > div .right {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+section .wrapper .pickList > ul .gameType > div .right .topList li,
+section .wrapper .pickList > ul .gameType > div .right .bottomList li {
+  width: 100%;
+  height: 20px;
+}
+section .wrapper .pickList > ul .gameType > div .right .topList li:hover,
+section .wrapper .pickList > ul .gameType > div .right .bottomList li:hover {
+  border-bottom: 1px solid #fff;
+}
+section .wrapper .pickList .search {
+  display: flex;
+  align-items: center;
+}
+section .wrapper .pickList .search input {
+  width: 80%;
+  height: 80%;
+  background: #316282;
+  border: 1px solid #22445b;
+  font-style: italic;
+  padding-left: 10px;
+  border-radius: 4px;
+}
+section .wrapper .pickList .search input:focus {
+  outline: 1px solid #4c9acc;
+}
+section .wrapper .pickList .search .icon {
+  cursor: pointer;
+  width: 15%;
+  height: 80%;
+}
+section .wrapper .pickList .search .icon img {
+  width: 100%;
+  height: 100%;
+}
+section .wrapper .banner {
+  margin-top: 40px;
+}
+section .wrapper .banner .bannerPic {
+  display: flex;
+  width: 100%;
+  height: 360px;
+}
+section .wrapper .banner .bannerPic .img {
+  width: 60%;
+  height: 100%;
+}
+section .wrapper .banner .bannerPic .desc {
+  width: 40%;
+  height: 100%;
+}

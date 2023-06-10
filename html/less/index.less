@@ -1,0 +1,373 @@
+.wrapper {
+  width: 1100px;
+  margin: 0 auto;
+}
+body,
+html {
+  width: 100%;
+  height: auto;
+  background: url(../images/colored_body_top.png);
+}
+a {
+  color: #ccc;
+}
+
+// 顶部栏
+nav {
+  background-color: rgb(23, 26, 33);
+  color: #ccc;
+  height: 100px;
+  .wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    .logo {
+      a {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .navList {
+      flex: 1;
+      display: flex;
+      margin-left: 40px;
+      > li {
+        cursor: pointer;
+        margin-right: 30px;
+        &:hover {
+          color: #eee;
+        }
+      }
+    }
+    .store,
+    .community {
+      position: relative;
+      div {
+        display: none;
+        position: absolute;
+        top: 24px;
+        left: -24px;
+        width: 200%;
+        height: auto;
+        z-index: 100;
+        > ul {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
+          width: 120%;
+          height: auto;
+          background-color: rgb(23, 26, 33);
+          > li {
+            &:hover {
+              a {
+                color: #eee;
+              }
+            }
+            a {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .tool {
+    display: flex;
+    justify-content: space-evenly;
+    width: 28%;
+    height: 100%;
+    padding-top: 10px;
+    .install {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 110px;
+      height: 26px;
+      font-size: 13px;
+      background-color: rgb(92, 126, 16);
+      a {
+        margin-left: 5px;
+        color: #fff;
+      }
+    }
+    .changeLang {
+      select {
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #ccc;
+        option {
+          background-color: rgb(23, 26, 33);
+          border: none;
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+// 侧边栏
+aside{
+  position: absolute;
+  top: 180px;
+  left: 30px;
+  .title{
+    font-size: 18px;
+    color:#536f86
+  }
+  .giftCard{
+    cursor: pointer;
+    width: 160px;
+    height: 120px;
+    a{
+      width: 100%;
+      height: 100%;
+    }
+    img{
+      width:100%;
+      height: 60px;
+    }
+    &:hover{
+      div{
+        color: #eee;
+        span{
+          color: #eee;
+        }
+      }
+    }
+    div{
+      width: 60%;
+      color: #88bde9;
+      span{
+        color: #ccc;
+        font-size: 14px;
+      }
+    }
+  }
+  .commendList{
+    margin-bottom: 10px;
+    ul{
+      li{
+        a{
+          font-size: 13px;
+          color: #7a8b9d;
+        }
+        &:hover{
+          a{
+            color: #66c0f4;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 内容区域
+section {
+  .wrapper {
+    // 选择列表
+    .title{
+      color: #fff;
+    }
+    .pickList {
+      display: flex;
+      margin-top: 40px;
+      width: 100%;
+      height: 35px;
+      background: linear-gradient(
+        90deg,
+        rgba(62, 103, 150, 0.919) 11.38%,
+        rgba(58, 120, 177, 0.8) 25.23%,
+        rgb(15, 33, 110) 100%
+      );
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+      >ul {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 80%;
+        height: 100%;
+        margin-left: 20px;
+        > li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          cursor: pointer;
+          font-weight: 700;
+          color: #eee;
+          margin-right: 20px;
+          font-size: 14px;
+          text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+        }
+        .yourStore,.recommend,.gameType{
+          width: 60px;
+          position: relative;
+          >div {
+            display: none;
+            position: absolute;
+            top: 35px;
+            left: -20px;
+            width: 200%;
+            height: auto;
+            z-index: 100;
+            > ul {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              width: 120%;
+              height: auto;
+              background: linear-gradient(90deg, rgba(33, 162, 255, 0.1) 1.89%, rgba(50, 50, 51, 0) 50%), linear-gradient(180deg, #575860 11.6%, #3A4852 54.73%, #2C2D34 100%);
+              padding: 8px 5px 8px 5px;
+              > li {
+                width: 80%;
+                height: 25px;
+                margin: 5px 0;
+                margin-bottom: 0;
+                &:hover {
+                  border-bottom: 1px solid #fff;
+                  a {
+                    color: #eee;
+                  }
+                }
+                a {
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+        .gameType{
+          >div{
+            display: flex;
+            display: none;
+            justify-content: space-between;
+            left: -10px;
+            width: 700px;
+            height: 420px;
+            background: linear-gradient(90deg, rgba(33, 162, 255, 0.1) 1.89%, rgba(50, 50, 51, 0) 50%), linear-gradient(180deg, #575860 11.6%, #3A4852 54.73%, #2C2D34 100%);
+            padding: 15px 20px;
+            font-weight: normal;
+            .title{
+              margin-bottom: 10px;
+              color: #2ebfff;
+            }
+            .line{
+              height: 1px;
+              background: linear-gradient(90deg, rgba(216, 216, 216, 0.3), transparent);
+              margin: 7px 0;
+              width: 50%;
+            }
+            .left{
+              height: auto;
+              li{
+                width: 100%;
+                height: 20px;
+                  &:hover{
+                    border-bottom: 1px solid #fff;
+                  }
+              }
+            }
+            .middle{
+              display: flex;
+              flex-direction: column;
+              flex: 1;
+              margin: 0 50px;
+              height: auto;
+              .topList{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                height: 47%;
+                margin-bottom: 0px;
+                li{
+                  margin-bottom: 5px;
+                  margin-right: 5px;
+                  height: 20px;
+                  &:hover{
+                    border-bottom: 1px solid #fff;
+                  }
+                }
+              }
+              .bottomList{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                height: 50%;
+                li{
+                  margin-bottom: 5px;
+                  margin-right: 5px;
+                  height: 20px;
+                  &:hover{
+                    border-bottom: 1px solid #fff;
+                  }
+                }
+              }
+            }
+            .right{
+              display: flex;
+              flex-direction: column;
+              height: auto;
+              .topList,.bottomList{
+                li{
+                  width: 100%;
+                  height: 20px;
+                  &:hover{
+                    border-bottom: 1px solid #fff;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .search {
+        display: flex;
+        align-items: center;
+        input {
+          width: 80%;
+          height: 80%;
+          background: rgb(49, 98, 130);
+          border: 1px solid rgb(34, 68, 91);
+          font-style: italic;
+          padding-left: 10px;
+          border-radius: 4px;
+          &:focus {
+            outline: 1px solid rgb(76, 154, 204);
+          }
+        }
+        .icon {
+          cursor: pointer;
+          width: 15%;
+          height: 80%;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+    // 轮播图
+    .banner{
+      margin-top: 40px;
+      .bannerPic{
+        display: flex;
+        width: 100%;
+        height: 360px;
+        .img{
+          width: 60%;
+          height: 100%;
+        }
+        .desc{
+          width: 40%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
