@@ -1,14 +1,16 @@
 {
-  "scripts": {
-    "serve": "nodemon app.js"
-  },
-  "dependencies": {
-    "@koa/cors": "^4.0.0",
-    "@koa/router": "^12.0.0",
-    "koa": "^2.14.2",
-    "koa-bodyparser": "^4.4.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.22"
-  }
+	"scripts": {
+		"serve": "nodemon app.js"
+	},
+	"dependencies": {
+		"@koa/cors": "^4.0.0",
+		"@koa/multer": "^3.0.2",
+		"@koa/router": "^12.0.0",
+		"koa": "^2.14.2",
+		"koa-bodyparser": "^4.4.0",
+		"koa-static": "^5.0.0"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.22"
+	}
 }

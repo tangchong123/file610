@@ -29,4 +29,19 @@ $(function(){
   $('.gameType').on('mouseleave',()=>{
     $('.gameType>div').hide()
   })
+  
+  getData().then(res=>{
+    let data = res.data.data
+    let index = 0
+    $('.bannerPic>.img img').attr('src',`http://localhost:4400/upload/apps/${data[index].dir}/${data[index].file[0]}`)
+    $('.bannerPic>.img a').attr('href',`https://store.steampowered.com/app/${data[index].dir}`)
+  })
 })
+
+function getData(){
+  let limit = 6
+  return axios({
+    method:'GET',
+    url:`http://localhost:4400/api/getBanner/${limit}`
+  })
+}

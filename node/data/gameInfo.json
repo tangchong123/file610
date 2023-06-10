@@ -1,0 +1,55 @@
+[
+  {
+    "id":730,
+    "name":"Counter-Strike: Global Offensive",
+    "nowPrice":"¥0",
+    "primePrice":null
+  },
+  {
+    "id":1364780,
+    "name":"Street Fighter 6",
+    "nowPrice":"¥348",
+    "primePrice":"¥348"
+  },
+  {
+    "id":230410,
+    "name":"WarFrame",
+    "nowPrice":"¥0",
+    "primePrice":null
+  },{
+    "id":271590,
+    "name":"Grand Theft Auto V",
+    "nowPrice":"¥65",
+    "primePrice":"¥179"
+  },{
+    "id":1938090,
+    "name":"Call of duty",
+    "nowPrice":"¥159",
+    "primePrice":"¥299"
+  },{
+    "id":359550,
+    "name":"Rainbow Six Siege",
+    "nowPrice":"¥0",
+    "primePrice":"¥99"
+  },{
+    "id":578080,
+    "name":"PUBG BattleGrounds",
+    "nowPrice":"free",
+    "primePrice":null
+  },{
+    "id":812140,
+    "name":"Assassins Creed Odssey",
+    "nowPrice":"¥89",
+    "primePrice":"¥149"
+  },{
+    "id":1293830,
+    "name":"Forza Horizon 4",
+    "nowPrice":"¥199",
+    "primePrice":"¥299"
+  },{
+    "id":1919590,
+    "name":"NBA 2K23",
+    "nowPrice":"¥169",
+    "primePrice":"¥299"
+  }
+]

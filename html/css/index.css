@@ -345,9 +345,14 @@ section .wrapper .banner .bannerPic {
   display: flex;
   width: 100%;
   height: 360px;
+  margin-top: 10px;
 }
 section .wrapper .banner .bannerPic .img {
   width: 60%;
+  height: 100%;
+}
+section .wrapper .banner .bannerPic .img img {
+  width: 100%;
   height: 100%;
 }
 section .wrapper .banner .bannerPic .desc {
