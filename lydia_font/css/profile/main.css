@@ -1,0 +1,310 @@
+iframe {
+  display: block;
+  height: 104px;
+}
+
+.main_box {
+  width: 100%;
+  background: url(../../img/profile/bg_dots.png) no-repeat;
+  color: #E9E5E8;
+  position: relative;
+}
+.main_box a {
+  color: #E9E5E8;
+}
+.main_box .popup_window {
+  display: none;
+}
+.main_box .popup_window .mask {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.main_box .popup_window .container {
+  width: 1100px;
+  background-color: #161A21;
+  padding: 40px;
+  color: #8B9399;
+  position: absolute;
+  top: 36px;
+  left: 50%;
+  z-index: 999;
+  margin-left: -550px;
+}
+.main_box .popup_window .container img {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+}
+.main_box .popup_window .container .title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.main_box .popup_window .container .isSure {
+  margin-bottom: 40px;
+}
+.main_box .popup_window .container .choose {
+  width: 200px;
+  height: 40px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.main_box .popup_window .container .choose button {
+  width: 60px;
+  height: 32px;
+  border-radius: 4px;
+  border: none;
+  color: #E9E5E8;
+}
+.main_box .popup_window .container .choose .y {
+  background-color: #5DAE30;
+}
+.main_box .popup_window .container .choose .n {
+  background-color: #31363F;
+}
+.main_box .container {
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: rgba(116, 74, 116, 0.3);
+}
+.main_box .container .top {
+  width: 100%;
+  min-height: 224px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.main_box .container .top .user_info {
+  width: 65%;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.main_box .container .top .user_info .avatar {
+  width: 164px;
+  height: 164px;
+}
+.main_box .container .top .user_info .avatar img {
+  width: 164px;
+  height: 164px;
+}
+.main_box .container .top .user_info .intro {
+  width: calc(100% - 184px);
+  position: relative;
+}
+.main_box .container .top .user_info .intro .nickname img {
+  cursor: pointer;
+}
+.main_box .container .top .user_info .intro .old_info {
+  display: none;
+  width: 180px;
+  padding: 6px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+  background-color: #161A21;
+  font-size: 14px;
+  position: absolute;
+  top: 20px;
+  left: 45px;
+}
+.main_box .container .top .user_info .intro .old_info ul {
+  padding: 10px;
+  padding-right: 0px;
+  margin-bottom: 20px;
+}
+.main_box .container .top .user_info .intro .old_info ul li {
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #fff;
+}
+.main_box .container .top .user_info .intro .old_info .clear_old {
+  font-size: 12px;
+  color: #757576;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.main_box .container .top .user_info .intro .old_info .clear_old:hover {
+  color: #fff;
+}
+.main_box .container .top .user_info .intro .realname {
+  font-size: 12px;
+}
+.main_box .container .top .user_info .intro .info_intro {
+  font-size: 14px;
+  margin-top: 30px;
+}
+.main_box .container .top .self_profile {
+  display: flex;
+  width: 33%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 10px;
+  margin-right: 15px;
+}
+.main_box .container .top .self_profile .level {
+  margin-bottom: 10px;
+}
+.main_box .container .top .self_profile .level a {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+}
+.main_box .container .top .self_profile .level a .level_num {
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  border-radius: 50%;
+  border: 2px solid #8B9399;
+  line-height: 36px;
+  text-align: center;
+  margin-right: 10px;
+}
+.main_box .container .top .self_profile .choose_badge {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  font-size: 14px;
+  color: #ccc;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
+}
+.main_box .container .top .self_profile .choose_badge a {
+  color: #fff;
+}
+.main_box .container .top .self_profile .choose_badge a:hover {
+  color: rgb(84, 149, 187);
+}
+.main_box .container .top .self_profile .edit_profile {
+  width: 120px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  color: #ccc;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.main_box .container .bottom {
+  width: 100%;
+  min-height: 224px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.main_box .container .bottom .left {
+  width: 64%;
+  color: #969696;
+  margin-top: 60px;
+}
+.main_box .container .bottom .left .message .message_title {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 5px 10px;
+  border-radius: 4px;
+  position: relative;
+}
+.main_box .container .bottom .left .message .message_title .t {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.main_box .container .bottom .left .message .message_title .sub {
+  font-size: 14px;
+  margin-left: 3px;
+}
+.main_box .container .bottom .left .message .message_title .pos {
+  font-size: 12px;
+  position: absolute;
+  top: 0px;
+  left: 158px;
+  cursor: default;
+}
+.main_box .container .bottom .left .message .message_title .pos i {
+  color: #009ED7;
+}
+.main_box .container .bottom .left .message .message_title .pos .hint {
+  display: none;
+  width: 260px;
+  height: 45px;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 12px;
+  color: #333131;
+  background-color: rgb(194, 194, 194);
+  position: absolute;
+  top: -50px;
+  left: -6px;
+}
+.main_box .container .bottom .left .message .message_title .pos:hover .hint {
+  display: block;
+}
+.main_box .container .bottom .left .message .message_ipt {
+  width: 98%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.main_box .container .bottom .left .message .message_ipt .avatar {
+  width: 34px;
+  height: 34px;
+}
+.main_box .container .bottom .left .message .message_ipt .avatar img {
+  width: 34px;
+  height: 34px;
+}
+.main_box .container .bottom .left .message .message_ipt input {
+  width: calc(100% - 40px);
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.1);
+  color: #dbd5d5;
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+.main_box .container .bottom .left .message .message_ipt .tools {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  bottom: -35px;
+  right: 0px;
+}
+.main_box .container .bottom .left .message .message_ipt .tools button {
+  width: 80px;
+  height: 26px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #67c1f5 !important;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+}
+.main_box .container .bottom .left .message .message_ipt .tools .help:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+.main_box .container .bottom .left .message .message_ipt .tools .emj {
+  margin: 0 10px;
+  cursor: pointer;
+}
+.main_box .container .bottom .left .message .message_ipt .tools .emj img {
+  width: 22px;
+  height: 22px;
+}
+.main_box .container .bottom .left .message .message_ipt .tools .submit {
+  color: #D2E885 !important;
+  background: linear-gradient(to bottom, #a4d007 5%, #536904 95%);
+}
+.main_box .container .bottom .left .message .message_ipt .tools .submit:hover {
+  background: #a4d007;
+}/*# sourceMappingURL=main.css.map */
