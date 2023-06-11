@@ -7,13 +7,12 @@ const userList = JSON.parse(userData)
 
 const messagePath = path.join(__dirname, '../../data/message.json')
 const messageData = fs.readFileSync(messagePath, 'utf8')
-const messageList = JSON.parse(messageData)
+const messageList = messageData.length?JSON.parse(messageData):[]
 
 const delMessagePath = path.join(__dirname, '../../data/delete_message.json')
 const delMessageContent = fs.readFileSync(delMessagePath, 'utf8')
-const delMessageList = JSON.parse(delMessageContent)
+const delMessageList = delMessageContent.length?JSON.parse(delMessageContent):[]
 
-// let lastID = messageList[memoList.length - 1].id
 
 module.exports = {
     // 添加留言 body
