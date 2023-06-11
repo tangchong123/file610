@@ -11,7 +11,7 @@
 </head>
 <body>
     <!-- 顶部header -->
-    <iframe src="../header/header.html" width="100%" frameborder="0" scrolling="no"></iframe>
+    <iframe class="header" src="../header/header.html" frameborder="0" scrolling="no"></iframe>
 
     <div class="main_box">
         <!-- 弹窗 -->
@@ -156,7 +156,6 @@
                 </div>
             </div>
 
-
             <!-- 下面 其他信息 -->
             <div class="bottom">
 
@@ -172,7 +171,22 @@
                                 (<i>?</i>)
                                 <div class="hint">您可以订阅一个讨论串，以便在他人发布新留言时接收留言通知</div>
                             </span>
-                            
+
+                            <!-- 当有分页时查看所有留言 -->
+                            <div class="showDetail">
+                                <div class="see">
+                                    <a href="#">查看所有 <i>7</i> 条留言</a>
+                                </div>
+                                <!-- 分页 -->
+                                <div class="pagination">
+                                    <button class="prev"><</button>
+                                    <ul>
+                                        <li>1</li>
+                                        <li>2</li>
+                                    </ul>
+                                    <button class="next">></button>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- 留言输入框 -->
@@ -292,6 +306,7 @@
                     
                     <!-- 留言列表 -->
                     <div class="message_list">
+                        <!-- 要动态渲染的留言数据 结构模板 -->
                         <div class="list">
                             <div class="message_avatar">
                                 <img src="../../img/profile/avatar/small.jpg" alt="">
@@ -309,6 +324,16 @@
                                 <img src="../../img/profile/trash.png" alt="">
                                 <div class="del_hint">删除</div>
                             </div>
+                        </div>
+
+                        <!-- 分页 -->
+                        <div class="pagination">
+                            <button class="prev"><</button>
+                            <ul>
+                                <li>1</li>
+                                <li>2</li>
+                            </ul>
+                            <button class="next">></button>
                         </div>
                     </div>
                 </div>
@@ -358,5 +383,6 @@
     </div>
 
     <!-- 底部footer -->
+    <iframe class="footer" src="../footer/footer.html" frameborder="0"></iframe>
 </body>
 </html>

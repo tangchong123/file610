@@ -8,8 +8,8 @@
   height: inherit;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .header_container .main .logo {
   width: 176px;
@@ -18,4 +18,90 @@
 .header_container .main .logo img {
   width: 176px;
   height: 44px;
+}
+.header_container .main .category {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+.header_container .main .category li {
+  margin-right: 20px;
+  position: relative;
+}
+.header_container .main .category li a {
+  width: 30px;
+  height: 24px;
+  font-size: 14px;
+  color: #b8b6b4;
+  text-transform: uppercase;
+}
+.header_container .main .category li a:hover {
+  color: #fff;
+}
+.header_container .main .category .cate_list {
+  display: none;
+  width: 132px;
+  height: 210px;
+  font-size: 14px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 45555;
+}
+.header_container .main .right {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  display: flex;
+  color: #b8b6b4;
+  font-size: 12px;
+}
+.header_container .main .right .install {
+  height: 24px;
+  line-height: 24px;
+  margin-right: 15px;
+  padding: 0 5px;
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+.header_container .main .right .install img {
+  margin: 0 5px;
+}
+.header_container .main .right .install span {
+  margin: 0 5px;
+}
+.header_container .main .right .install:hover span {
+  color: #fff;
+}
+.header_container .main .right .inform {
+  width: 27px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  margin-right: 15px;
+}
+.header_container .main .right .inform img {
+  width: 12px;
+  height: 9px;
+}
+.header_container .main .right .inform:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.header_container .main .right .self_info {
+  margin-top: 2px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.header_container .main .right .self_info:hover span {
+  color: #fff;
+}
+.header_container .main .right .avatar {
+  width: 32px;
+  height: 32px;
+}
+.header_container .main .right .avatar img {
+  width: 32px;
+  height: 32px;
 }/*# sourceMappingURL=header.css.map */

@@ -1,12 +1,19 @@
-iframe {
+.header {
     display: block;
+    width: 100%;
     height: 104px;
+}
+.footer {
+    display: block;
+    width: 100%;
+    height: 78px;
 }
 .main_box {
     width: 100%;
     background: url(../../img/profile/bg_dots.png) no-repeat;
     color: #E9E5E8;
     position: relative;
+    padding-bottom: 16px;
     a {
         color: #E9E5E8;
     }
@@ -367,6 +374,7 @@ iframe {
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
+            margin-bottom: 50px;
 
             // 下面的左边
             .left {
@@ -412,6 +420,53 @@ iframe {
                             }
                             &:hover .hint{
                                 display: block;
+                            }
+                        }
+                        .showDetail {
+                            position: absolute;
+                            right: 10px;
+                            bottom: 5px;
+                            display: flex;
+                            align-items: center;
+                            .see {
+                                margin-right: 15px;
+                                font-size: 12px;
+                                a {
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                            // 分页
+                            .pagination {
+                                height: 30px;
+                                display: flex;
+                                align-items: center;
+                                
+                                button {
+                                    width: 45px;
+                                    height: 22px;
+                                    background-color: #333131;
+                                    border: none;
+                                    background-color: rgba(0, 158, 215,.3);
+                                    color: #009ED7;
+                                    border-radius: 4px;
+                                    &:hover {
+                                        background-color: #009ED7;
+                                        color: #fff;
+                                    }
+                                }
+                                ul {
+                                    display: flex;
+                                    align-items: center;
+                                    margin: 0px 10px;
+                                    li {
+                                        width: 20px;
+                                        height: 20px;
+                                        line-height: 20px;
+                                        text-align: center;
+                                    }
+                                }
                             }
                         }
                         
@@ -560,6 +615,7 @@ iframe {
                 .message_list {
                     border-bottom: 1px solid #aaa;
                     margin-top: 80px;
+                    position: relative;
                     .list {
                         width: 100%;
                         display: flex;
@@ -626,6 +682,39 @@ iframe {
                             background-color: rgba(255, 255, 255,.2);
                             .del {
                                 display: block;
+                            }
+                        }
+                    }
+                    // 分页
+                    .pagination {
+                        height: 30px;
+                        display: flex;
+                        align-items: center;
+                        position: absolute;
+                        right: 0px;
+                        bottom: -50px;
+                        button {
+                            width: 45px;
+                            height: 22px;
+                            background-color: #333131;
+                            border: none;
+                            background-color: rgba(0, 158, 215,.3);
+                            color: #009ED7;
+                            border-radius: 4px;
+                            &:hover {
+                                background-color: #009ED7;
+                                color: #fff;
+                            }
+                        }
+                        ul {
+                            display: flex;
+                            align-items: center;
+                            margin: 0px 10px;
+                            li {
+                                width: 20px;
+                                height: 20px;
+                                line-height: 20px;
+                                text-align: center;
                             }
                         }
                     }
