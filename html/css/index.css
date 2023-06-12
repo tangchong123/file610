@@ -1,5 +1,5 @@
 .wrapper {
-  width: 1100px;
+  width: 1000px;
   margin: 0 auto;
 }
 body,
@@ -487,4 +487,146 @@ section .wrapper .topicPic a {
 }
 section .wrapper .saleGame {
   margin-top: 40px;
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+section .wrapper .saleGame .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10%;
+}
+section .wrapper .saleGame .top .more {
+  padding: 4px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+}
+section .wrapper .saleGame .top .more a {
+  font-size: 12px;
+  color: #fff;
+}
+section .wrapper .saleGame .content {
+  width: 100%;
+  height: 80%;
+}
+section .wrapper .saleGame .content .gameList {
+  width: 100%;
+  height: 100%;
+}
+section .wrapper .saleGame .content .gameList .text {
+  width: 100%;
+  height: 30%;
+  background: url(../images/salebackground_spotlight.jpg);
+  background-size: 100% 100%;
+  padding: 10px 14px;
+}
+section .wrapper .saleGame .content .gameList .text .time {
+  color: #acdbf5;
+  font-size: 14px;
+  margin: 10px 0;
+}
+section .wrapper .saleGame .content .gameList .text .priceBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #344654;
+  width: 50%;
+  height: 35px;
+  box-shadow: 0 0 2px black;
+}
+section .wrapper .saleGame .content .gameList .text .priceBox .primePrice {
+  font-size: 14px;
+  text-decoration: line-through;
+}
+section .wrapper .saleGame .content .gameList .text .priceBox .nowPrice {
+  color: #beee11;
+}
+section .wrapper .saleGame .content .gameList .big {
+  float: left;
+  width: 32%;
+  height: 100%;
+}
+section .wrapper .saleGame .content .gameList .big a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+section .wrapper .saleGame .content .gameList .big .img {
+  width: 100%;
+  height: 70%;
+}
+section .wrapper .saleGame .content .gameList .big .img img {
+  width: 100%;
+  height: 100%;
+}
+section .wrapper .saleGame .content .gameList .small {
+  float: left;
+  width: 36%;
+  height: 48%;
+}
+section .wrapper .saleGame .content .gameList .small a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+section .wrapper .saleGame .content .gameList .small .img {
+  width: 100%;
+  height: 70%;
+}
+section .wrapper .saleGame .content .gameList .small .img img {
+  width: 100%;
+  height: 100%;
+}
+section .wrapper .saleGame .content .gameList .small:last-child {
+  margin-top: 16px;
+}
+section .wrapper .saleGame .content .gameList .small .text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section .wrapper .saleGame .content .dots {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .wrapper .saleGame .content .dots .dot {
+  display: inline-block;
+  margin: 12px 2px;
+  width: 15px;
+  height: 9px;
+  border-radius: 2px;
+  transition: background-color 0.2s;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  cursor: pointer;
+}
+section .wrapper .saleGame .content .dots .dot:hover {
+  background-color: hsla(0, 0%, 100%, 0.3);
+}
+section .wrapper .saleGame .content .dots .active {
+  background-color: hsla(0, 0%, 100%, 0.4);
+}
+section .wrapper .saleGame .leftBtn,
+section .wrapper .saleGame .rightBtn {
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 80px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+section .wrapper .saleGame .leftBtn {
+  left: -65px;
+  background: url(../images/向左.png);
+  background-size: 100% 100%;
+}
+section .wrapper .saleGame .rightBtn {
+  right: -65px;
+  background: url(../images/向右.png);
+  background-size: 100% 100%;
 }

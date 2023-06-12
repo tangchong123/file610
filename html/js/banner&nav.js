@@ -1,4 +1,5 @@
 $(function(){
+  // 绑定事件
   $('.store').on('mouseenter',()=>{
     $('.store>div').show()
   })
@@ -29,7 +30,7 @@ $(function(){
   $('.gameType').on('mouseleave',()=>{
     $('.gameType>div').hide()
   })
-
+  // 界面大小改变 控制aside
   window.onresize = function(){
     if(document.documentElement.clientWidth<=1350){
       $('aside').hide()
@@ -37,7 +38,7 @@ $(function(){
       $('aside').show()
     }
   }
-  
+  // 获取banner数据
   getData().then(res=>{
     let data = res.data.data
     let index = 0
@@ -45,7 +46,7 @@ $(function(){
       location.href = `https://store.steampowered.com/app/${data[index].dir}`
     })
     setBanner(data,index)
-    $('.leftBtn').on('click',()=>{
+    $('.banner .leftBtn').on('click',()=>{
       index--
       if(index<0){
         index = data.length-1
@@ -53,7 +54,7 @@ $(function(){
       console.log(index);
       setBanner(data,index)
     })
-    $('.rightBtn').on('click',()=>{
+    $('.banner .rightBtn').on('click',()=>{
       index++
       if(index>data.length-1){
         index=0
@@ -84,6 +85,30 @@ $(function(){
       },2000)
     })
   })
+  // 获取折扣商品
+  getSaleData().then(res=>{
+    let data = res.data.data
+    let index = 0
+    console.log(data);
+    setSale(data,index)
+    $('.saleGame .dot')[index].classList.add('active')
+    $('.saleGame .leftBtn').on('click',function(){
+      index-=2
+      if(index<0){
+        index = 2
+      }
+      setSale(data,index)
+      $('.saleGame .dot')[index/2].classList.add('active')
+    })
+    $('.saleGame .rightBtn').on('click',function(){
+      index+=2
+      if(index>3){
+        index=0
+      }
+      setSale(data,index)
+      $('.saleGame .dot')[index/2].classList.add('active')
+    })
+  })
 })
 
 function getData(){
@@ -93,7 +118,6 @@ function getData(){
     url:`http://localhost:4400/api/getBanner/${limit}`
   })
 }
-
 function setBanner(data,index){
   $('.bannerPic').html(`
     <div class="img">
@@ -149,4 +173,107 @@ function setBanner(data,index){
         setBanner(data,e.target.index)
       }
     })
+}
+
+function getSaleData(){
+  return axios({
+    method:'GET',
+    url:`http://localhost:4400/api/getSale`
+  })
+}
+function setSale(data,index){
+  let dotIndex = index
+  $('.content').html('')
+  let template = document.createElement('div')
+    template.className = 'gameList'
+    template.innerHTML = `
+    <div class="big">
+      <a href="https://store.steampowered.com/app/${data[index].id}">
+        <div class="img">
+          <img src='http://localhost:4400/upload/onSale/${data[index].dir}/${data[index].file}'></img>
+        </div>
+        <div class='text'>
+          <div>周末特惠</div>
+          <div class='time'>优惠截至时间：10月13日 上午1:00</div>
+          <div class='priceBox'>
+            ${data[index].info?data[index].info:''}
+            <div class='primePrice'>
+              ${data[index].info?'':data[index].primePrice}
+            </div>
+            <div class='nowPrice'>
+              ${data[index].info?'':data[index].nowPrice}
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="big">
+      <a href="https://store.steampowered.com/app/${data[++index].id}">
+        <div class="img">
+        <img src='http://localhost:4400/upload/onSale/${data[index].dir}/${data[index].file}'></img>
+        </div>
+        <div class='text'>
+          <div>周末特惠</div>
+          <div class='time'>优惠截至时间：10月13日 上午1:00</div>
+          <div class='priceBox'>
+            ${data[index].info?data[index].info:''}
+            <div class='primePrice'>
+              ${data[index].info?'':data[index].primePrice}
+            </div>
+            <div class='nowPrice'>
+              ${data[index].info?'':data[index].nowPrice}
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="small">
+      <a href="https://store.steampowered.com/bundle/${data[5].id}">
+        <div class="img">
+        <img src='http://localhost:4400/upload/onSale/${data[5].dir}/${data[5].file}'></img>
+        </div>
+        <div class='text'>
+          <span>今日特惠</span>
+          <div class='priceBox'>
+            <div class='primePrice'>${data[5].primePrice}</div>
+            <div class='nowPrice'>${data[5].nowPrice}</div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="small">
+      <a href="https://store.steampowered.com/bundle/${data[6].id}">
+        <div class="img">
+        <img src='http://localhost:4400/upload/onSale/${data[6].dir}/${data[6].file}'></img>
+        </div>
+        <div class='text'>
+          <span>今日特惠</span>
+          <div class='priceBox'>
+            <div class='primePrice'>${data[6].primePrice}</div>
+            <div class='nowPrice'>${data[6].nowPrice}</div>
+          </div>
+        </div>
+      </a>
+    </div>
+    `
+    $('.saleGame .content').append(template)
+    let dots = document.createElement('div')
+    dots.className = 'dots'
+    data.forEach((item,index)=>{
+    if((index*2)<(data.length-3)){
+      let div = document.createElement('div')
+      div.className = 'dot'
+      div.index = index
+      dots.append(div)
+    }
+  })
+  $('.saleGame .content').append(dots)
+  $('.saleGame .dots').on('click',function(e){
+    if(e.target.classList.contains('dot')){
+      document.querySelector('.dots   .active').classList.remove('active')
+      e.target.classList.add('active')
+      setSale(data,e.target.index+1)
+      $('.saleGame .dot')[e.target.index].classList.add('active')
+    }
+  })
 }

@@ -1,5 +1,5 @@
 .wrapper {
-  width: 1100px;
+  width: 1000px;
   margin: 0 auto;
 }
 body,
@@ -506,6 +506,147 @@ section {
     // 特别优惠
     .saleGame{
       margin-top: 40px;
+      width:100%;
+      height: 500px;
+      position: relative;
+      .top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 10%;
+        .more{
+          padding: 4px 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid #fff;
+          a{
+            font-size: 12px;
+            color: #fff;
+          }
+        }
+      }
+      .content{
+          width: 100%;
+          height: 80%;
+        .gameList{
+          width: 100%;
+          height: 100%;
+          .text{
+            width:100%;
+            height: 30%;
+            background: url(../images/salebackground_spotlight.jpg);
+            background-size: 100% 100%;
+            padding: 10px 14px;
+            .time{
+              color: #acdbf5;
+              font-size: 14px;
+              margin: 10px 0;
+            }
+            .priceBox{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: #344654;
+              width: 50%;
+              height: 35px;
+              box-shadow: 0 0 2px black;
+              .primePrice{
+                font-size: 14px;
+                text-decoration: line-through;
+              }
+              .nowPrice{
+                color: #beee11;
+              }
+            }
+          }
+          .big{
+            float: left;
+            width: 32%;
+            height: 100%;
+            a{
+              display: inline-block;
+              width: 100%;
+              height: 100%;
+            }
+            .img{
+              width: 100%;
+              height: 70%;
+              img{
+                width:100%;
+                height: 100%;
+              }
+            }
+          }
+          .small{
+            float: left;
+            width: 36%;
+            height: 48%;
+            a{
+              display: inline-block;
+              width: 100%;
+              height: 100%;
+            }
+            .img{
+              width: 100%;
+              height: 70%;
+              img{
+                width: 100%;
+                height: 100%;
+              }
+            }
+            &:last-child{
+              margin-top: 16px;
+            }
+            .text{
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            }
+          }
+        }
+        .dots{
+          width: 100%;
+          height: 10%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .dot{
+            display: inline-block;
+            margin: 12px 2px;
+            width: 15px;
+            height: 9px;
+            border-radius: 2px;
+            transition: background-color 0.2s;
+            background-color: hsla(202,60%,100%,0.2);
+            cursor: pointer;
+            &:hover{
+              background-color: hsla(202,60%,100%,0.3);
+            }
+          }
+          .active{
+            background-color: hsla(202,60%,100%,0.4);
+          }
+        }
+      }
+      .leftBtn,.rightBtn{
+        position: absolute;
+        top: 50%;
+        width: 60px;
+        height: 80px;
+        cursor: pointer;
+        transform: translateY(-50%);
+      }
+      .leftBtn{
+        left: -65px;
+        background: url(../images/向左.png);
+        background-size: 100% 100%;
+      }
+      .rightBtn{
+        right: -65px;
+        background: url(../images/向右.png);
+        background-size: 100% 100%;
+      }
     }
   }
 }

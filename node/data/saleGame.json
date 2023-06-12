@@ -1,0 +1,60 @@
+[
+  {
+    "id": 379430,
+    "name": "Kingdom Come",
+    "nowPrice": "¥22.5",
+    "primePrice": "¥90",
+    "dir": "379430",
+    "file": "spotlight_image_english.jpg"
+  },
+  {
+    "id": 1593500,
+    "name": "God of War",
+    "nowPrice": "¥207",
+    "primePrice": "¥345",
+    "dir": "1593500",
+    "file": "spotlight_image_english.jpg"
+  },
+  {
+    "id": 2290180,
+    "name": "Riders Republic",
+    "nowPrice": "¥74.5",
+    "primePrice": "¥298",
+    "dir": "2290180",
+    "file": "spotlight_image_english.jpg"
+  },
+  {
+    "id": "sale-AssassinsCreedFranchiseSale",
+    "name": "刺客信条系列作品特卖",
+    "nowPrice": "null",
+    "primePrice": "null",
+    "dir": "sale-AssassinsCreedFranchiseSale",
+    "file": "spotlight_image_schinese.jpg",
+    "info": "最高可省-85%"
+  },
+  {
+    "id": "sale-dontnod15thbirthdaysale",
+    "name": "15周年特卖",
+    "nowPrice": null,
+    "primePrice": null,
+    "dir": "sale-dontnod15thbirthdaysale",
+    "file": "spotlight_image_schinese.jpg",
+    "info": "最高可省-80%"
+  },
+  {
+    "id": "21749",
+    "name": "Road 96 Hitchhiker Bundle",
+    "nowPrice": "¥39.48",
+    "primePrice": "157.88",
+    "dir": "21749",
+    "file": "header_292x136.jpg"
+  },
+  {
+    "id": "1569200",
+    "name": "Brewmaster 酿酒大师",
+    "nowPrice": "¥40.92",
+    "primePrice": "¥62",
+    "dir": "1569200",
+    "file": "header_schinese.jpg"
+  }
+]

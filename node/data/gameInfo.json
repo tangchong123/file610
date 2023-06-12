@@ -51,5 +51,45 @@
     "name":"NBA 2K23",
     "nowPrice":"¥169",
     "primePrice":"¥299"
+  },
+  {
+    "id":379430,
+    "name":"Kingdom Come",
+    "nowPrice":"¥22.5",
+    "primePrice":"¥90"
+  },{
+    "id":1593500,
+    "name":"God of War",
+    "nowPrice":"¥207",
+    "primePrice":"¥345"
+  }
+  ,{
+    "id":2290180,
+    "name":"Riders Republic",
+    "nowPrice":"¥74.5",
+    "primePrice":"¥298"
+  },{
+    "id":"sale-AssassinsCreedFranchiseSale",
+    "name":"刺客信条系列作品特卖",
+    "nowPrice":"null",
+    "primePrice":"null",
+    "info":"最高可省-85%"
+  },{
+    "id":"sale-dontnod15thbirthdaysale",
+    "name":"15周年特卖",
+    "nowPrice":null,
+    "primePrice":null,
+    "info":"最高可省-80%"
+  },{
+    "id":"21749",
+    "name":"Road 96 Hitchhiker Bundle",
+    "nowPrice":"¥39.48",
+    "primePrice":"157.88"
+  },
+  {
+    "id":"1569200",
+    "name":"Brewmaster 酿酒大师",
+    "nowPrice":"¥40.92",
+    "primePrice":"¥62"
   }
 ]

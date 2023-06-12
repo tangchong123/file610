@@ -24,5 +24,13 @@ module.exports = {
       msg:'获取成功',
       data:res
     }
+  },
+  async getSale(ctx){
+    let saleList = JSON.parse(fs.readFileSync(path.join(__dirname,'../../data/saleGame.json')))
+    return ctx.body = {
+      code:200,
+      msg:'获取成功',
+      data:saleList
+    }
   }
 }
