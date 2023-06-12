@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/add_friends.css">
+</head>
+
+<body>
+    <div id="app2">
+        <div class="header"></div>
+        <div class="main">
+            <div class="main-header">
+
+            </div>
+            <div class="main-box">
+                <div class="main-left">
+                    <div>好友</div>
+                    <div>
+                        <div v-for="(item,index) of friendsMenu">
+                            <img v-bind:src="item.icon" alt="">
+                            <span>{{item.menu}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-right">
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+    <script src="../js/index.js" type="model"></script>
+    <script src="../js/add_friends.js" type="javaScripts/text"></script>
+    <script>
+        window.onload = function() {
+            // 获取本地存储的用户信息
+         }
+    </script>
+</body>
+
+</html>

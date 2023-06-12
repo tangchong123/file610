@@ -1,0 +1,55 @@
+let app2 = new Template({ 
+    // el:"#app2",
+    data: {
+        friendsMenu:[
+            {
+                "icon":"../imgs/我的.png",
+                "menu":"您的好友"
+            },
+            {
+                "icon":"../imgs/addfriend.png",
+                "menu":"添加好友"
+            },
+            {
+                "icon":"../imgs/邮件.png",
+                "menu":"待处理邀请"
+            },
+            {
+                "icon":"../imgs/屏蔽.png",
+                "menu":"已屏蔽"
+            },
+            {
+                "icon":"../imgs/倒计时.png",
+                "menu":"近期共同游戏玩家"
+            },
+        ],
+        focusing: [
+            {
+                "icon":"../imgs/我的关注.png",
+                "menu":"关注的玩家"
+            },
+            {
+                "icon":"../imgs/通知.png",
+                "menu":"关注的游戏"
+            },
+        ],
+     },
+     myGroups:[
+        {
+            "icon":"../imgs/group-add.png",
+            "menu":"您的组"
+        },
+        {
+            "icon":"../imgs/邮件.png",
+            "menu":"待处理邀请"
+        },
+        {
+            "icon":"../imgs/search.png",
+            "menu":"查找组..."
+        },
+        {
+            "icon":"../imgs/group-add.png",
+            "menu":"创建组..."
+        },
+     ]
+    })
