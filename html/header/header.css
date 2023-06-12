@@ -1,0 +1,99 @@
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
+nav {
+  background-color: #171a21;
+  color: #ccc;
+  height: 100px;
+}
+nav a{
+  color: #ccc;
+}
+nav .wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+nav .wrapper .logo a {
+  width: 100%;
+  height: 100%;
+}
+nav .wrapper .navList {
+  flex: 1;
+  display: flex;
+  margin-left: 40px;
+}
+nav .wrapper .navList > li {
+  cursor: pointer;
+  margin-right: 30px;
+}
+nav .wrapper .navList > li:hover {
+  color: #eee;
+}
+nav .wrapper .store,
+nav .wrapper .community {
+  position: relative;
+}
+nav .wrapper .store div,
+nav .wrapper .community div {
+  display: none;
+  position: absolute;
+  top: 24px;
+  left: -24px;
+  width: 200%;
+  height: auto;
+  z-index: 100;
+}
+nav .wrapper .store div > ul,
+nav .wrapper .community div > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 120%;
+  height: auto;
+  background-color: #171a21;
+}
+nav .wrapper .store div > ul > li:hover a,
+nav .wrapper .community div > ul > li:hover a {
+  color: #eee;
+}
+nav .wrapper .store div > ul > li a,
+nav .wrapper .community div > ul > li a {
+  font-size: 12px;
+}
+nav .tool {
+  display: flex;
+  justify-content: space-evenly;
+  width: 28%;
+  height: 100%;
+  padding-top: 10px;
+}
+nav .tool .install {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 26px;
+  font-size: 13px;
+  background-color: #5c7e10;
+}
+nav .tool .install a {
+  margin-left: 5px;
+  color: #fff;
+}
+nav .tool .changeLang select {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ccc;
+}
+nav .tool .changeLang select option {
+  background-color: #171a21;
+  border: none;
+  outline: none;
+}

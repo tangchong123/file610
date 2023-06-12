@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="./header.css">
+  </head>
+  <body>
+    <!-- 顶部栏 -->
+    <nav>
+      <div class="wrapper">
+        <div class="logo">
+          <a href="#">
+            <img src="../images/header_logo.png" width="186" height="44" />
+          </a>
+        </div>
+        <div class="navList">
+          <li class="store">
+            <a href="#">商店</a>
+            <div>
+              <ul>
+                <li><a href="#">主页</a></li>
+                <li><a href="">探索队列</a></li>
+                <li><a href="">愿望单</a></li>
+                <li><a href="">点数商店</a></li>
+                <li><a href="">新闻</a></li>
+                <li><a href="">统计数据</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="community">
+            <a href="">社区</a>
+            <div>
+              <ul>
+                <li><a href="">主页</a></li>
+                <li><a href="">讨论</a></li>
+                <li><a href="">创意工坊</a></li>
+                <li><a href="">市场</a></li>
+                <li><a href="">实况直播</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="">关于</a>
+          </li>
+          <li>
+            <a href="">客服</a>
+          </li>
+        </div>
+        <div class="tool">
+          <div class="install">
+            <img src="./images/btn_header_installsteam_download.png" alt="" />
+            <a href="">安装Steam</a>
+          </div>
+          <a href="">登录</a>
+          <div class="changeLang">
+            <select id="">
+              <option value="cn">简体中文</option>
+              <option value="jp">日本语</option>
+              <option value="co">韩语</option>
+              <option value="en">英语</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <script src="../js/jquery-3.0.0.min.js"></script>
+    <script>
+      $(function(){
+        // 给nav绑定事件
+        $('.store').on('mouseenter',()=>{
+          $('.store>div').show()
+        })
+        $('.store').on('mouseleave',()=>{
+          $('.store>div').hide()
+        })
+        $('.community').on('mouseenter',()=>{
+          $('.community>div').show()
+        })
+        $('.community').on('mouseleave',()=>{
+          $('.community>div').hide()
+        })
+      })
+    </script>
+  </body>
+</html>
