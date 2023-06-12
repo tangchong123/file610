@@ -51,7 +51,6 @@ $(function(){
       if(index<0){
         index = data.length-1
       }
-      console.log(index);
       setBanner(data,index)
     })
     $('.banner .rightBtn').on('click',()=>{
@@ -89,7 +88,6 @@ $(function(){
   getSaleData().then(res=>{
     let data = res.data.data
     let index = 0
-    console.log(data);
     setSale(data,index)
     $('.saleGame .dot')[index].classList.add('active')
     $('.saleGame .leftBtn').on('click',function(){
@@ -108,6 +106,48 @@ $(function(){
       setSale(data,index)
       $('.saleGame .dot')[index/2].classList.add('active')
     })
+  })
+
+  // 类别切换
+  let ulList = document.querySelectorAll('.type .list ul')
+  let typeListIndex = 0
+  let div = document.createElement('div')
+  div.className='dots'
+  ulList.forEach((item,index)=>{
+    let dot = document.createElement('div')
+    dot.className='dot'
+    dot.index = index
+    div.append(dot)
+  })
+  $('.type').append(div)
+  $('.type .dots .dot')[0].classList.add('active')
+  $('.type .dots').on('click',function(e){
+    if(e.target.classList.contains('dot')){
+      document.querySelector('.type .dots .active').classList.remove('active')
+      e.target.classList.add('active')
+      document.querySelector('.type .list .active').classList.remove('active')
+      ulList[e.target.index].classList.add('active')
+    }
+  })
+  $('.type .rightBtn').on('click',function(){
+    typeListIndex++
+    document.querySelector('.type .list .active').classList.remove('active')
+    if(typeListIndex>ulList.length-1){
+      typeListIndex=0
+    }
+    ulList[typeListIndex].classList.add('active')
+    document.querySelector('.type .dots .active').classList.remove('active')
+    $('.type .dots .dot')[typeListIndex].classList.add('active')
+  })
+  $('.type .leftBtn').on('click',function(){
+    typeListIndex--
+    document.querySelector('.type .list .active').classList.remove('active')
+    if(typeListIndex<0){
+      typeListIndex=ulList.length-1
+    }
+    ulList[typeListIndex].classList.add('active')
+    document.querySelector('.type .dots .active').classList.remove('active')
+    $('.type .dots .dot')[typeListIndex].classList.add('active')
   })
 })
 
@@ -182,7 +222,6 @@ function getSaleData(){
   })
 }
 function setSale(data,index){
-  let dotIndex = index
   $('.content').html('')
   let template = document.createElement('div')
     template.className = 'gameList'
@@ -208,7 +247,7 @@ function setSale(data,index){
       </a>
     </div>
     <div class="big">
-      <a href="https://store.steampowered.com/app/${data[++index].id}">
+      <a href="${data[++index].url?'https://store.steampowered.com/'+data[index].url:'https://store.steampowered.com/app/'+data[index].id}">
         <div class="img">
         <img src='http://localhost:4400/upload/onSale/${data[index].dir}/${data[index].file}'></img>
         </div>

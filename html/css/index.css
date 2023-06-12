@@ -630,3 +630,107 @@ section .wrapper .saleGame .rightBtn {
   background: url(../images/向右.png);
   background-size: 100% 100%;
 }
+section .wrapper .type {
+  width: 100%;
+  height: 320px;
+  position: relative;
+}
+section .wrapper .type .title {
+  width: 100%;
+  height: 10%;
+}
+section .wrapper .type .list {
+  width: 100%;
+  height: 75%;
+}
+section .wrapper .type .list ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+section .wrapper .type .list ul li {
+  width: 23%;
+  height: 100%;
+  position: relative;
+  background: #1b2838;
+}
+section .wrapper .type .list ul li .cover {
+  cursor: pointer;
+  width: 100%;
+  height: 40%;
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(20px) brightness(80%);
+}
+section .wrapper .type .list ul li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+section .wrapper .type .list ul li a img {
+  width: 100%;
+  height: 100%;
+}
+section .wrapper .type .list ul li span {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  width: 150px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  z-index: 2;
+  cursor: pointer;
+}
+section .wrapper .type .list .active {
+  display: flex;
+}
+section .wrapper .type .leftBtn,
+section .wrapper .type .rightBtn {
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 80px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+section .wrapper .type .leftBtn {
+  left: -65px;
+  background: url(../images/向左.png);
+  background-size: 100% 100%;
+}
+section .wrapper .type .rightBtn {
+  right: -65px;
+  background: url(../images/向右.png);
+  background-size: 100% 100%;
+}
+section .wrapper .type .dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 15%;
+}
+section .wrapper .type .dots .dot {
+  display: inline-block;
+  margin: 12px 2px;
+  width: 15px;
+  height: 9px;
+  border-radius: 2px;
+  transition: background-color 0.2s;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  cursor: pointer;
+}
+section .wrapper .type .dots .dot:hover {
+  background-color: hsla(0, 0%, 100%, 0.3);
+}
+section .wrapper .type .dots .active {
+  background-color: hsla(0, 0%, 100%, 0.4);
+}

@@ -30,7 +30,8 @@
     "primePrice": "null",
     "dir": "sale-AssassinsCreedFranchiseSale",
     "file": "spotlight_image_schinese.jpg",
-    "info": "最高可省-85%"
+    "info": "最高可省-85%",
+    "url": "sale/AssassinsCreedFranchiseSale"
   },
   {
     "id": "sale-dontnod15thbirthdaysale",
@@ -39,7 +40,8 @@
     "primePrice": null,
     "dir": "sale-dontnod15thbirthdaysale",
     "file": "spotlight_image_schinese.jpg",
-    "info": "最高可省-80%"
+    "info": "最高可省-80%",
+    "url": "sale/dontnod15thbirthdaysale"
   },
   {
     "id": "21749",

@@ -45,6 +45,19 @@ saleInfo.forEach(game=>{
   let temp = res1.map(item=>{
     if(item){
       if(item.dir==game.id.toString()){
+        if(game.info){
+          let list = game.id.split('-')
+          return{
+            id:game.id,
+            name:game.name,
+            nowPrice:game.nowPrice,
+            primePrice:game.primePrice,
+            dir:item.dir,
+            file:item.file,
+            info:game.info,
+            url:list[0]+'/'+list[1]
+          }
+        }
         return {
           id:game.id,
           name:game.name,
