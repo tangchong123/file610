@@ -7,6 +7,7 @@ html {
   width: 100%;
   height: auto;
   background: url(../images/colored_body_top.png);
+  background-size: 100% 400%;
 }
 a {
   color: #ccc;
@@ -316,9 +317,10 @@ section .wrapper .pickList > ul .gameType > div .right .bottomList li:hover {
 section .wrapper .pickList .search {
   display: flex;
   align-items: center;
+  position: relative;
 }
 section .wrapper .pickList .search input {
-  width: 80%;
+  width: 100%;
   height: 80%;
   background: #316282;
   border: 1px solid #22445b;
@@ -333,6 +335,12 @@ section .wrapper .pickList .search .icon {
   cursor: pointer;
   width: 15%;
   height: 80%;
+  border-radius: 2px;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 section .wrapper .pickList .search .icon img {
   width: 100%;
@@ -341,14 +349,16 @@ section .wrapper .pickList .search .icon img {
 section .wrapper .banner {
   margin-top: 40px;
   position: relative;
+  height: 432px;
 }
 section .wrapper .banner .bannerPic {
   cursor: pointer;
   display: flex;
   width: 100%;
-  height: 353px;
+  height: 352px;
   margin-top: 10px;
   color: #fff;
+  transition: all 0.7s;
 }
 section .wrapper .banner .bannerPic .img {
   width: 80%;
@@ -421,6 +431,29 @@ section .wrapper .banner .bannerPic .desc .price .icon {
   background: url(../images/bannerIcon.png);
   background-size: 100% 100%;
 }
+section .wrapper .banner .dotList {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.7s;
+}
+section .wrapper .banner .dotList .dot {
+  display: inline-block;
+  margin: 12px 2px;
+  width: 15px;
+  height: 9px;
+  border-radius: 2px;
+  transition: background-color 0.2s;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  cursor: pointer;
+}
+section .wrapper .banner .dotList .dot:hover {
+  background-color: hsla(0, 0%, 100%, 0.3);
+}
+section .wrapper .banner .dotList .active {
+  background-color: hsla(0, 0%, 100%, 0.4);
+}
 section .wrapper .banner .leftBtn,
 section .wrapper .banner .rightBtn {
   position: absolute;
@@ -428,6 +461,7 @@ section .wrapper .banner .rightBtn {
   width: 60px;
   height: 80px;
   cursor: pointer;
+  transform: translateY(-50%);
 }
 section .wrapper .banner .leftBtn {
   left: -65px;
@@ -438,4 +472,19 @@ section .wrapper .banner .rightBtn {
   right: -65px;
   background: url(../images/向右.png);
   background-size: 100% 100%;
+}
+section .wrapper .topicPic {
+  margin-top: 30px;
+  width: 100%;
+  height: 150px;
+}
+section .wrapper .topicPic a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: url(../images/topic_takeunder.jpg);
+  background-size: 100% 100%;
+}
+section .wrapper .saleGame {
+  margin-top: 40px;
 }

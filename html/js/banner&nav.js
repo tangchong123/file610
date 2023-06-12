@@ -29,11 +29,18 @@ $(function(){
   $('.gameType').on('mouseleave',()=>{
     $('.gameType>div').hide()
   })
+
+  window.onresize = function(){
+    if(document.documentElement.clientWidth<=1350){
+      $('aside').hide()
+    }else{
+      $('aside').show()
+    }
+  }
   
   getData().then(res=>{
     let data = res.data.data
     let index = 0
-    console.log(data)
     $('.bannerPic').on('click',function(){
       location.href = `https://store.steampowered.com/app/${data[index].dir}`
     })
@@ -51,8 +58,30 @@ $(function(){
       if(index>data.length-1){
         index=0
       }
-      console.log(index);
       setBanner(data,index)
+    })
+    let timer = null
+    if(timer){
+      clearInterval(timer)
+    }
+    timer = setInterval(()=>{
+      index++
+      if(index>data.length-1){
+        index=0
+      }
+      setBanner(data,index)
+    },2000)
+    $('.banner').on('mouseenter',function(){
+      clearInterval(timer)
+    })
+    $('.banner').on('mouseleave',function(){
+      timer = setInterval(()=>{
+        index++
+        if(index>data.length-1){
+          index=0
+        }
+        setBanner(data,index)
+      },2000)
     })
   })
 })
@@ -101,5 +130,23 @@ function setBanner(data,index){
     })
     $('.bannerPic .picList').on('mouseleave',function(){
         $('.bannerPic>.img img').attr('src',`http://localhost:4400/upload/apps/${data[index].dir}/${data[index].file[0]}`)
+    })
+    let list = document.createElement('div')
+    list.className = 'dotList'
+    data.forEach((item,index)=>{
+      let div = document.createElement('div')
+      div.className = 'dot'
+      div.index = index
+      list.append(div)
+    })
+    $('.dotList').remove()
+    $('.banner').append(list)
+    $('.banner>.dotList>.dot')[index].classList.add('active')
+    $('.dotList').on('click',function(e){
+      if(e.target.classList.contains('dot')){
+        document.querySelector('.dotList .active').classList.remove('active')
+        e.target.classList.add('active')
+        setBanner(data,e.target.index)
+      }
     })
 }
