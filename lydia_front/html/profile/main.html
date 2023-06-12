@@ -37,7 +37,7 @@
         <div class="popup_window_text_format">
             <div class="mask"></div>
             <div class="container">
-                <img src="../../img/profile/del.png" alt="">
+                <img class="text_format_no" src="../../img/profile/del.png" alt="">
                 <div class="title">文本格式</div>
                 <span>这些标记标签允许您为您的留言及发帖文字添加格式，类似于HTML。</span>
                 <ul>
@@ -54,12 +54,11 @@
                         <b class="r">粗体文本</b>
                     </li>
                     <li>
-                        <span class="l">[下划线文本]</span>
+                        <span class="l">[u]下划线文本[/u]</span>
                         <u class="r">下划线文本</u>
                     </li>
-
                     <li>
-                        <span class="l">[i][/i]</span>
+                        <span class="l">[i]斜体文本[/i]</span>
                         <span class="r">斜体文本</span>
                     </li>
                     <li>
@@ -67,7 +66,6 @@
                         <del class="r">删除文本</del>
                     </li>
                     <li>
-                        <!-- js实现 鼠标经过时去除hide类 -->
                         <span class="l">[spoiler]隐藏文本[/spoiler]</span>
                         <span class="r hide">隐藏文本</span>
                     </li>
@@ -75,6 +73,7 @@
                         <span class="l">[noparse]不解析[b]标签[/b][/noparse]</span>
                         <span class="r">不解析[b]标签[/b]</span>
                     </li>
+                    <!-- // 上面的li在Chrome中渲染不出来？？？why -->
                     <li>
                         <span class="l">[hr][/hr]</span>
                         <span class="r">渲染水平分隔线</span>
@@ -85,7 +84,7 @@
                         <a class="r" href="#">网站链接</a>
                     </li>
                 </ul>
-                <button>确定</button>
+                <button class="text_format_y">确定</button>
             </div>
         </div>
         
@@ -209,7 +208,7 @@
                                     <img src="../../img/profile/emoji2.png" alt="" class="img1">
 
                                     <!-- 表情包列表 -->
-                                    <ul>
+                                    <ul class="emj_list">
                                         <li>
                                             <img src="../../img/profile/e1.png" alt="">
                                             <div class="popup">
@@ -325,7 +324,7 @@
                                 </div>
                                 <!-- 删除留言 -->
                                 <div class="del">
-                                    <img src="../../img/profile/trash.png" alt="">
+                                    <img class="delImg" src="../../img/profile/trash.png" alt="">
                                     <div class="del_hint">删除</div>
                                 </div>
                             </div>
@@ -352,32 +351,32 @@
                     <!-- 列表 -->
                     <ul>
                         <li class="badge_list">
-                            <a href="#" class="title">徽章</a>
+                            <a href="./badges.html" class="title">徽章</a>
                             <div class="badge"></div>
                         </li>
                         <li>
-                            <a href="#" class="title">游戏</a>
+                            <a href="playedGames.html" class="title">游戏</a>
                         </li>
                         <li>
-                            <a href="#" class="title">库存</a>
+                            <a href="inventory.html" class="title">库存</a>
                         </li>
                         <li>
-                            <a href="#" class="title">截图</a>
+                            <a href="screenShots.html" class="title">截图</a>
                         </li>
                         <li>
-                            <a href="#" class="title">视频</a>
+                            <a href="screenShots.html" class="title">视频</a>
                         </li>
                         <li>
-                            <a href="#" class="title">创意工坊物品</a>
+                            <a href="screenShots.html" class="title">创意工坊物品</a>
                         </li>
                         <li>
-                            <a href="#" class="title">评测</a>
+                            <a href="recommend.html" class="title">评测</a>
                         </li>
                         <li>
-                            <a href="#" class="title">指南</a>
+                            <a href="screenShots.html" class="title">指南</a>
                         </li>
                         <li>
-                            <a href="#" class="title">艺术作品</a>
+                            <a href="screenShots.html" class="title">艺术作品</a>
                         </li>
                     </ul>
 

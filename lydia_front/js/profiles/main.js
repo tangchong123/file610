@@ -24,7 +24,7 @@ window.onload = function(){
         let hh = (dt.getHours()+"").padStart(2,0)
         let mm = (dt.getMinutes()+"").padStart(2,0)
         let ss = (dt.getSeconds()+"").padStart(2,0)
-        return `${y} 年 ${m} 月 ${d} 日  ${hh}:${mm}:${ss}`
+        return `${y}-${m}-${d} ${hh}:${mm}:${ss}`
     }
 
     // 初始化信息。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。
@@ -63,7 +63,7 @@ window.onload = function(){
     async function initMessage(data) {
         // 先清除留言列表
         message_listCt.innerHTML = ""
-        data.result.forEach(message=> {
+        data.result.forEach((message,index)=> {
             let str = `
             <div class="list">
                 <div class="message_avatar">
@@ -77,7 +77,7 @@ window.onload = function(){
                     <div class="content">${message.content}</div>
                 </div>
                 <div class="del">
-                    <img src="../../img/profile/trash.png" alt="">
+                    <img class="delImg" data-index=${index} src="../../img/profile/trash.png" alt="">
                     <div class="del_hint">删除</div>
                 </div>
             </div>
@@ -106,14 +106,16 @@ window.onload = function(){
         }
     }
 
-    // 清除用户旧名
+    // 清除用户旧名 和 点击表情包
     function clearUserOldName() {
         let userInfo = mainBox.querySelector(".container .top .user_info")
         let oldInfo = userInfo.querySelector(".old_info")
         let oldNameContainer = oldInfo.querySelector(".old_name_container")
+        let emj_list = emjBtn.querySelector(".emj_list")
         
 
         mainBox.onclick = function(e) {
+            // 清除用户旧名
             if(e.target.matches(".showClearOldName")) {
                 // 先清空
                 oldNameContainer.innerHTML = ""
@@ -155,6 +157,18 @@ window.onload = function(){
                 oldInfo.style.display = "none"
             }
 
+            // 点击表情包
+            if(e.target.matches(".img1")||e.target.matches(".emj")) {
+                e.target.onclick = function() {
+                    emj_list.style.visibility = "visible"
+                }
+            }else {
+                emj_list.style.visibility = "hidden"
+            }
+            // 点击里面的某个表情包, 将其放入textarea中?????????????????????
+            // addMessageIpt.value+=e.target.innerHTML
+            // console.log(e.target);
+            // 用字体图标实现  在textarea中写入字体图标url ，在渲染到留言列表
         }
     }
     clearUserOldName()
@@ -199,19 +213,50 @@ window.onload = function(){
     paginnationClick(0)
     paginnationClick(1)
 
+    // 判断留言框是否有内容
+    addMessageIpt.oninput = function() {
+        let content = addMessageIpt.value
+        if(content.trim()=="") {
+            tools.style.visibility = "hidden"
+        }else {
+            tools.style.visibility = "visible"
+        }
+    }
     // 添加留言
     addMessageBtn.onclick = async function() {
         let content = addMessageIpt.value
-        let {data} = await addMessage(content,user.nickname)
+        await addMessage(content,user.nickname)
         addMessageIpt.value = ""
+        tools.style.visibility = "hidden"
         init()
     }
+
+    // 删除留言
+    message_listCt.onclick = async function(e) {
+        if(e.target.className=="delImg") {
+            let {data} = await getMessage(page)
+            let index = e.target.getAttribute("data-index")
+            let id = data.result[index].createTime
+            await removeMessage(id)
+            init()
+        }
+    }
+
 
     // 点击格式帮助 弹窗弹出
     helpBtn.onclick = function() {
         text_format_popup_window.style.display = "block"
+        let text_format_no = text_format_popup_window.querySelector(".text_format_no")
+        let text_format_y = text_format_popup_window.querySelector(".text_format_y")
+        text_format_no.onclick = function() {
+            text_format_popup_window.style.display = "none"
+        }
+        text_format_y.onclick = function() {
+            text_format_popup_window.style.display = "none"
+        }
     }
 
+    
 
 
     
@@ -243,6 +288,18 @@ window.onload = function(){
                 content,
                 nickname
             }
+        })
+        return data
+    }
+
+    // 删除留言
+    async function removeMessage(id) {
+        let {data} = await axios({
+            method: "DELETE",
+            headers:{
+                Authorization: `Bearer ${localStorage.token}`
+            },
+            url: `http://localhost:8080/profiles/message/${id}`,
         })
         return data
     }

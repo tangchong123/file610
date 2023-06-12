@@ -24,6 +24,7 @@
         .mask {
             position: fixed;
             inset: 0;
+            z-index: 999;
             background-color: rgba(0, 0, 0,.8);
         }
         .container {
@@ -82,6 +83,7 @@
         .mask {
             position: fixed;
             inset: 0;
+            z-index: 999;
             background-color: rgba(0, 0, 0,.8);
         }
         .container {
@@ -508,6 +510,7 @@
                         }
                         // 留言工具
                         .tools {
+                            visibility: hidden;
                             display: flex;
                             justify-content: flex-end;
                             align-items: center;
