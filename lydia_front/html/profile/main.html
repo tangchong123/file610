@@ -7,20 +7,23 @@
     <title>Document</title>
     <link rel="stylesheet" href="../../css/base.css">
     <link rel="stylesheet" href="../../css/profile/main.css">
-    
+    <script src="../../js/request.js"></script>
+    <!-- <script src="../../js/vue.js"></script> -->
+    <script src="../../js/axios.min.js"></script>
+    <script src="../../js/profiles/main.js"></script>
 </head>
 <body>
     <!-- 顶部header -->
     <iframe class="header" src="../header/header.html" frameborder="0" scrolling="no"></iframe>
 
-    <div class="main_box">
+    <div id="main_box">
         <!-- 弹窗 -->
         
         <!-- 清除旧名 弹窗 -->
         <div class="popup_window_clearold">
             <div class="mask"></div>
             <div class="container">
-                <img src="../../img/profile/del.png" alt="">
+                <img class="no" src="../../img/profile/del.png" alt="">
                 <div class="title">清除曾用名记录</div>
                 <div class="isSure">您确定要清除您的个人资料名称历史记录吗?这会让最近曾和您一起玩游戏的用户更难找到您，而且会让您好友列表中的用户难以对您进行识别。</div>
                 <div class="choose">
@@ -99,14 +102,16 @@
                         <!-- 用户信息小卡片 -->
                         <div class="card">
                             <div class="card_top">
-                                <div class="card_avatar">
+                                <div class="avatar">
                                     <img src="../../img/profile/avatar/middle.jpg" alt="">
                                 </div>
-                                <div class="card_nickname">nickname</div>
+                                <div class="nickname">
+                                    <span>nickname</span>
+                                </div>
                                 <div class="state">离线</div>
                             </div>
                             <div class="card_level">
-                                <a href="#">
+                                <a href="./badges.html">
                                     <div class="level_num">
                                         0
                                     </div>
@@ -118,14 +123,13 @@
                     <!-- 信息介绍 -->
                     <div class="intro">
                         <div class="nickname">
-                            <span>lydia</span>
-                            <img src="../../img/profile/arrowDn9x5.gif" alt="">
+                            <span>nickname</span>
+                            <img class="showClearOldName" src="../../img/profile/arrowDn9x5.gif" alt="">
                         </div>
                         <div class="old_info">
                             <div>此用户也使用过以下名称：</div>
-                            <ul>
-                                <li>oldname</li>
-                                <li>oldname2</li>
+                            <ul class="old_name_container">
+                                <!-- <li>oldname</li> -->
                             </ul>
                             <div class="clear_old">清除曾用名记录</div>
                         </div>

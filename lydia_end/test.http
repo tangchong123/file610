@@ -1,4 +1,5 @@
 @host=http://localhost:8080/profiles
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTY4NjQ4Nzk4NDM0MiwidXNlcm5hbWUiOiJMeWRpYSIsImlhdCI6MTY4NjUzMjc5OCwiZXhwIjoxNjg2NTM2Mzk4fQ.4gtlHc1m8OtJlnY5io_KG_oat6m7R6wqCFIEUIXAswo
 
 GET {{host}} HTTP/1.1
 
@@ -6,8 +7,9 @@ GET {{host}} HTTP/1.1
 POST {{host}}/login HTTP/1.1
 Content-Type: application/json
 
+
 {
-    "username": "Kitty",
+    "username": "Lydia",
     "password": "123456"
 }
 
@@ -17,19 +19,22 @@ POST {{host}}/register HTTP/1.1
 Content-Type: application/json
 
 {
-    "username": "Jennie",
+    "username": "Mimi",
     "password": "123456"
 }
 
 ###删除用户
-DELETE {{host}}/users/11 HTTP/1.1
+DELETE {{host}}/users/1686533054805 HTTP/1.1
+Authorization: Bearer {{token}}
 
 ### 获取用户列表
 GET {{host}}/users/1686487640238 HTTP/1.1
+Authorization: Bearer {{token}}
 
 ### 更新用户信息
-PATCH {{host}}/users/11 HTTP/1.1
+PATCH {{host}}/users/1686488009205 HTTP/1.1
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
     "username": "Jennifer",
@@ -49,24 +54,28 @@ Content-Type: application/json
 ### 添加message留言
 POST {{host}}/message/1686487984342 HTTP/1.1
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
     "nickname": "Lydia",
-    "content": "我是Lydia，这是我的第一条留言！"
+    "content": "我是Lydia，这是我的第二条留言！"
 }
 
 
 ### 删除message留言
-DELETE  {{host}}/message/1686491863169 HTTP/1.1
+DELETE  {{host}}/message/1686533250418 HTTP/1.1
+Authorization: Bearer {{token}}
 
 
 ### 更新message留言
 PATCH {{host}}/message/1685931462838 HTTP/1.1
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
-    "content": "我第三次修改了留言"
+    "content": "我第四次修改了留言"
 }
 
 ### 查找message留言
 GET {{host}}/message/1686487984342?query=w&page=1 HTTP/1.1
+Authorization: Bearer {{token}}

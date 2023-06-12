@@ -2,7 +2,7 @@ const Koa = require('koa')
 const bodyParser = require('koa-bodyparser')
 const cors = require('@koa/cors')
 const static = require('koa-static')
-const {PORT,PUBLIC_PATH} = require('./config')
+const {PORT,PUBLIC_PATH,SECRET_KEY} = require('./config')
 // const tojwt = require("jsonwebtoken")
 // const fromjwt = require("koa-jwt")
 const router = require('./src/router')
@@ -18,7 +18,7 @@ app.use(static(PUBLIC_PATH))
 
 // JWT
 // app.use(fromjwt({secret: SECRET_KEY}).unless({
-//     path: ["/api/login","/api/register"]
+//     path: ["/profiles/login","/profiles/register"]
 // }))
 
 // 请求体数据解析

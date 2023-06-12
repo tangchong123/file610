@@ -8,7 +8,7 @@
     width: 100%;
     height: 78px;
 }
-.main_box {
+#main_box {
     width: 100%;
     background: url(../../img/profile/bg_dots.png) no-repeat;
     color: #E9E5E8;
@@ -202,7 +202,7 @@
                             flex-direction: column;
                             justify-content: center;
                             align-items: center;
-                            .card_avatar {
+                            .avatar {
                                 width: 96px;
                                 height: 96px;
                                 img {
@@ -213,7 +213,7 @@
                                 top: 22px;
                                 left: 15px;
                             }
-                            .card_nickname {
+                            .nickname {
                                 font-size: 20px;
                                 color: rgb(166, 160, 160);
                                 margin-left: 45px;
@@ -272,6 +272,7 @@
                         position: absolute;
                         top: 20px;
                         left: 45px;
+                        z-index: 6;
                         ul {
                             padding: 10px;
                             padding-right: 0px;

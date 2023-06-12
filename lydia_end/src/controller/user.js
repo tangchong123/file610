@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path')
+const tojwt = require("jsonwebtoken")
+const {SECRET_KEY} = require("../../config")
 const userPath =  path.join(__dirname, '../../data/user.json')
 const userContent = fs.readFileSync(userPath,'utf8')
 const userList = userContent.length?JSON.parse(userContent):[]
@@ -67,10 +69,26 @@ module.exports = {
             }
         }
 
+        // token
+        // let token = tojwt.sign(
+        //     {
+        //         id: user.id,
+        //         username: user.username,
+        //         role: user.role
+        //     },
+        //     SECRET_KEY,
+        //     {
+        //         expiresIn: "1h",
+        //     }
+        // )
+
         ctx.body = {
             code: 200,
             msg: '登录成功',
-            data: user
+            data: {
+                token: "",
+                user
+            }
         }
     },
 

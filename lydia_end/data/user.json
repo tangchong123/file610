@@ -22,7 +22,7 @@
     "username": "Lydia",
     "nickname": "Lydia",
     "password": "123456",
-    "avatar": "../src/public/avatar/large.jpg",
+    "avatar": "https://up.enterdesk.com/edpic_source/35/df/aa/35dfaa2e6e8b982011c8336fd589af4b.jpg",
     "email": "",
     "intro": "未提供信息"
   },
@@ -37,8 +37,17 @@
   },
   {
     "id": 1686488009205,
-    "username": "Jennie",
-    "nickname": "Jennie",
+    "username": "Jennifer",
+    "nickname": "珍妮弗er",
+    "password": "123456",
+    "avatar": "../src/public/avatar/large.jpg",
+    "email": "",
+    "intro": "大家好，我是珍妮弗！"
+  },
+  {
+    "id": 1686532835701,
+    "username": "Mama",
+    "nickname": "Mama",
     "password": "123456",
     "avatar": "../src/public/avatar/large.jpg",
     "email": "",

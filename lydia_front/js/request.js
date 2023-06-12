@@ -8,7 +8,7 @@ async function ajax({
 } = {}) {
 	try {
 		let res = await axios({
-			baseURL: 'http://localhost:4400/api',
+			baseURL: 'http://localhost:8080/profiles',
 			method: method,
 			url: url,
 			params: params,
@@ -35,23 +35,11 @@ async function ajax({
 	}
 }
 
-// const baseURL = 'http://localhost:4400/api'
-
-let urls = {
-	login: '/login',
-	register: '/register',
-}
-
-// urls = new Proxy(urls, {
-// 	get(target, key) {
-// 		return baseURL + target[key]
-// 	},
-// })
-
+// 用户登录
 function login(username, password) {
 	return ajax({
 		method: 'POST',
-		url: urls.login,
+		url: "/login",
 		data: {
 			username,
 			password,
@@ -59,11 +47,30 @@ function login(username, password) {
 	})
 }
 
+// 用户注册
 function register(data) {
 	return ajax({
 		method: 'POST',
-		url: urls.register,
+		url: "/register",
 		data: data,
+	})
+}
+
+// 更新用户信息
+function updateUser(id,data) {
+	return ajax({
+		method: "PATCH",
+		url: `/users/${id}`,
+		data: data
+	})
+}
+
+// 获取用户信息
+function getUser(id,data) {
+	return ajax({
+		method: "GET",
+		url: `/users/${id}`,
+		data: data
 	})
 }
 
