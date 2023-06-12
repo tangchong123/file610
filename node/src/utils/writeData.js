@@ -79,3 +79,14 @@ saleInfo.forEach(game=>{
   result1.push(...temp)
 })
 // fs.writeFileSync(path.join(__dirname,'../../data/saleGame.json'),JSON.stringify(result1,null,2))
+
+let gameList = []
+gameList.push(...JSON.parse(fs.readFileSync(path.join(__dirname,'../../data/banner.json'))))
+let saleList = JSON.parse(fs.readFileSync(path.join(__dirname,'../../data/saleGame.json')))
+saleList = saleList.filter(item=>!item.info)
+saleList = saleList.map(item=>{
+  item.preDir = 'onSale'
+  return item
+})
+gameList.push(...saleList)
+// fs.writeFileSync(path.join(__dirname,'../../data/gameList.json'),JSON.stringify(gameList,null,2))

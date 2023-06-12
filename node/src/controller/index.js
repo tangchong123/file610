@@ -32,5 +32,20 @@ module.exports = {
       msg:'获取成功',
       data:saleList
     }
+  },
+  async getGameList(ctx){
+    let {limit} = ctx.request.params
+    let gameList = JSON.parse(fs.readFileSync(path.join(__dirname,'../../data/gameList.json')))
+    let res = []
+    for(let i =1;i<=limit;i++){
+      let random = getRandom(0,gameList.length-1)
+      res.push(gameList[random])
+      gameList.splice(random,1)
+    }
+    return ctx.body ={
+      code:200,
+      msg:'获取成功',
+      data:res
+    }
   }
 }

@@ -316,3 +316,127 @@ function setSale(data,index){
     }
   })
 }
+
+
+$(function(){
+  let limit = 12
+  let gameList = []
+  axios({
+    method:'GET',
+    url:`http://localhost:4400/api/getGameList/${limit}`
+  })
+  .then(res=>{
+    let data = res.data.data
+    let index = 0
+    while(index<data.length){
+      if(data.length==0){
+        break
+      }
+      index++
+      if(index==4){
+        gameList.push(data.splice(0,index))
+        index = 0
+      }
+    }
+    let ulList = document.createDocumentFragment()
+    for(let i =0;i<3;i++){
+      let ul =document.createElement('ul')
+      if(i==0){
+        ul.className='active'
+      }
+      ul.innerHTML = `
+        <li>
+          <a><img src='http://localhost:4400/upload/${gameList[i][0].preDir?gameList[i][0].preDir+'/':'apps/'}${gameList[i][0].dir}/${Array.isArray(gameList[i][0].file)?gameList[i][0].file[0]:gameList[i][0].file}'></img>
+          <div class='text'>
+            <div class='primePrice'>
+              ${gameList[i][0].primePrice?gameList[i][0].primePrice:''}
+            </div>
+            <div class='nowPrice'>
+              ${gameList[i][0].primePrice?gameList[i][0].nowPrice:'免费游玩'}
+            </div>
+          </div>
+          </a>
+        </li>
+        <li>
+          <a><img src='http://localhost:4400/upload/${gameList[i][1].preDir?gameList[i][1].preDir+'/':'apps/'}${gameList[i][1].dir}/${Array.isArray(gameList[i][1].file)?gameList[i][1].file[0]:gameList[i][1].file}'></img>
+          <div class='text'>
+            <div class='primePrice'>
+              ${gameList[i][1].primePrice?gameList[i][1].primePrice:''}
+            </div>
+            <div class='nowPrice'>
+              ${gameList[i][1].primePrice?gameList[i][1].nowPrice:'免费游玩'}
+            </div>
+          </div>
+          </a>
+        </li>
+        <li>
+          <a><img src='http://localhost:4400/upload/${gameList[i][2].preDir?gameList[i][2].preDir+'/':'apps/'}${gameList[i][2].dir}/${Array.isArray(gameList[i][2].file)?gameList[i][2].file[0]:gameList[i][2].file}'></img>
+          <div class='text'>
+            <div class='primePrice'>
+              ${gameList[i][2].primePrice?gameList[i][2].primePrice:''}
+            </div>
+            <div class='nowPrice'>
+              ${gameList[i][2].primePrice?gameList[i][2].nowPrice:'免费游玩'}
+            </div>
+          </div>
+          </a>
+        </li>
+        <li>
+          <a><img src='http://localhost:4400/upload/${gameList[i][3].preDir?gameList[i][3].preDir+'/':'apps/'}${gameList[i][3].dir}/${Array.isArray(gameList[i][3].file)?gameList[i][3].file[0]:gameList[i][3].file}'></img>
+          <div class='text'>
+            <div class='primePrice'>
+              ${gameList[i][3].primePrice?gameList[i][3].primePrice:''}
+            </div>
+            <div class='nowPrice'>
+              ${gameList[i][3].primePrice?gameList[i][3].nowPrice:'免费游玩'}
+            </div>
+          </div>
+          </a>
+        </li>
+      `
+      ulList.append(ul)
+    }
+    $('.popGame .gameList').append(ulList)
+    let popList = document.querySelectorAll('.popGame .gameList ul')
+    let popDots = document.createDocumentFragment()
+    popList.forEach((item,index)=>{
+      let div = document.createElement('div')
+      div.className = 'dot'
+      if(index==0){
+        div.classList.add('active')
+      }
+      div.index = index
+      popDots.append(div)
+    })
+    $('.popGame .dots').append(popDots)
+    let popIndex = 0
+    $('.popGame .leftBtn').on('click',function(){
+      popIndex--
+      if(popIndex<0){
+        popIndex=popList.length-1
+      }
+      document.querySelector('.popGame .gameList .active').classList.remove('active')
+      popList[popIndex].classList.add('active')
+      document.querySelector('.popGame .dots .active').classList.remove('active')
+      $('.popGame .dots .dot')[popIndex].classList.add('active')
+    })
+    $('.popGame .rightBtn').on('click',function(){
+      popIndex++
+      if(popIndex>popList.length-1){
+        popIndex=0
+      }
+      document.querySelector('.popGame .gameList .active').classList.remove('active')
+      popList[popIndex].classList.add('active')
+      document.querySelector('.popGame .dots .active').classList.remove('active')
+      $('.popGame .dots .dot')[popIndex].classList.add('active')
+    })
+    $('.popGame .dots').on('click',function(e){
+      if(e.target.classList.contains('dot')){
+        document.querySelector('.popGame .gameList .active').classList.remove('active')
+      popList[e.target.index].classList.add('active')
+      document.querySelector('.popGame .dots .active').classList.remove('active')
+      $('.popGame .dots .dot')[e.target.index].classList.add('active')
+      }
+    })
+  })
+})
