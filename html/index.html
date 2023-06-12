@@ -429,9 +429,54 @@
 
       </div>
     </section>
+
+    <!-- 内容部分 -->
+    <article>
+      <div class="wrapper">
+        <div class="notLogin" v-if="!isLogin">
+          <div class="text">
+            <div>登录以查看个性化推荐</div>
+            <a href="">登录</a>
+            <div>或者<a href="">注册</a>并免费加入Steam</div>
+          </div>
+        </div>
+        <div class="alreadyLogin" v-else>
+          <div class="title">您的探索队列</div>
+          <div class="background">
+            <div class="img img1">
+              <img src="./images/showImg3.jpg" alt="">
+            </div>
+            <div class="img img2">
+              <img src="./images/showImg1.jpg" alt="">
+            </div>
+            <div class="img img3">
+              <img src="./images/showImg2.jpg" alt="">
+            </div>
+            <div class="img img4">
+              <img src="./images/showImg.jpg" alt="">
+            </div>
+          </div>
+          <a href="">
+            点击这里开始探索您的队列
+            <div class="arrow"></div>
+          </a>
+        </div>
+        <div class="seeSteam">
+          <div class="title">浏览STEAM</div>
+          <ul>
+            <li><a href="">新品</a></li>
+            <li><a href="">优惠</a></li>
+            <li><a href="">免费游戏</a></li>
+            <li><a href="">按用户标签</a></li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
   <script src="./js/jquery-3.0.0.min.js"></script>
   <script src="./js/vue.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="./js/banner&nav.js"></script>
+  <script src="./js/indexContent.js"></script>
 </body>
 </html>

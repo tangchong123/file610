@@ -1,5 +1,5 @@
 $(function(){
-  // 绑定事件
+  // 给nav绑定事件
   $('.store').on('mouseenter',()=>{
     $('.store>div').show()
   })
