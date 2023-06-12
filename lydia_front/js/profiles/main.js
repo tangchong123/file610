@@ -1,12 +1,18 @@
 window.onload = function(){
     let user = JSON.parse(localStorage.getItem("user")||"{}")
     let historyName = JSON.parse(localStorage.getItem("historyName") || `["还没有旧名哦"]`)
+
     let mainBox = document.querySelector("#main_box")
+    let clearold_popup_window = mainBox.querySelector(".popup_window_clearold")
+    let text_format_popup_window = mainBox.querySelector(".popup_window_text_format")
     let message_listCt = mainBox.querySelector(".message_list>.message_list_Ct")
     let pagination = mainBox.querySelectorAll(".pagination")
     let seeAllMessageBtn = mainBox.querySelector(".see")
     let addMessageIpt = mainBox.querySelector(".addMessageIpt")
     let addMessageBtn = mainBox.querySelector(".tools>.submit")
+    let tools = mainBox.querySelector(".tools")
+    let helpBtn = tools.querySelector(".help")
+    let emjBtn = tools.querySelector(".emj")
     let page = 1
 
     // 格式化时间 
@@ -105,7 +111,7 @@ window.onload = function(){
         let userInfo = mainBox.querySelector(".container .top .user_info")
         let oldInfo = userInfo.querySelector(".old_info")
         let oldNameContainer = oldInfo.querySelector(".old_name_container")
-        let clearold_popup_window = mainBox.querySelector(".popup_window_clearold")
+        
 
         mainBox.onclick = function(e) {
             if(e.target.matches(".showClearOldName")) {
@@ -202,6 +208,10 @@ window.onload = function(){
     }
 
     // 点击格式帮助 弹窗弹出
+    helpBtn.onclick = function() {
+        text_format_popup_window.style.display = "block"
+    }
+
 
 
     
