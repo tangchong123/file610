@@ -433,6 +433,7 @@
     <!-- 内容部分 -->
     <article>
       <div class="wrapper">
+        <!-- 登录与非登录的不同显示 -->
         <div class="notLogin" v-if="!isLogin">
           <div class="text">
             <div>登录以查看个性化推荐</div>
@@ -461,6 +462,7 @@
             <div class="arrow"></div>
           </a>
         </div>
+        <!-- 浏览Steam -->
         <div class="seeSteam">
           <div class="title">浏览STEAM</div>
           <ul>
@@ -470,6 +472,7 @@
             <li><a href="">按用户标签</a></li>
           </ul>
         </div>
+        <!-- 热门游戏推荐 -->
         <div class="popGame">
           <div class="top">
             <div class="title">热门游戏</div>
@@ -483,6 +486,20 @@
           <div class="leftBtn"></div>
           <div class="rightBtn"></div>
           <div class="dots"></div>
+        </div>
+        <!-- 游戏列表展示 -->
+        <div class="showGameList">
+          <div class="navTab">
+            <ul>
+              <li class="active">新品与热门商品</li>
+              <li>热销商品</li>
+              <li>热门即将推出</li>
+              <li>优惠</li>
+            </ul>
+          </div>
+          <div class="showList">
+            
+          </div>
         </div>
       </div>
     </article>
@@ -513,7 +530,7 @@
   <script src="./js/jquery-3.0.0.min.js"></script>
   <script src="./js/vue.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="./js/banner&nav.js"></script>
+  <script src="./js/index_main.js"></script>
   <script src="./js/indexContent.js"></script>
 </body>
 </html>

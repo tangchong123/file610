@@ -7,7 +7,7 @@ html {
   width: 100%;
   height: auto;
   background: url(../images/colored_body_top.png) ;
-  background-size: 100% 400%;
+  background-size: 100% 2458px;
   position: relative;
 }
 a {
@@ -935,9 +935,12 @@ article{
           align-items: center;
           width: 23%;
           height: 100%;
-          background: linear-gradient(90deg, #06BFFF 30%, #2D73FF 100%);
+          background: linear-gradient(90deg, #06BFFF 0%, #2D73FF 100%);
           border-radius: 3px;
           box-shadow: 0 0 4px #000;
+          &:hover{
+            background: linear-gradient(90deg, #06BFFF 30%, #2D73FF 100%);
+          }
           a{
             color: #FFF;
           }
@@ -978,6 +981,7 @@ article{
           height: 100%;
           display: none;
           li{
+            cursor: pointer;
             width: 23%;
             height: 100%;
             a{
@@ -992,8 +996,11 @@ article{
                 display: flex;
                 align-items: center;
                 height: 20%;
-                background: linear-gradient( to right, rgba(56,107,135,1) 5%,rgba(68,130,163,1) 95%);
+                background: linear-gradient( -45deg, rgba(64,121,153,1) 5%,rgba(42,62,89,1) 95%);
                 padding: 0 10px;
+                &:hover{
+                  background: linear-gradient( to right, rgba(56,107,135,1) 5%,rgba(68,130,163,1) 95%);
+                }
                 .primePrice{
                   text-decoration: line-through;
                 }
@@ -1013,6 +1020,40 @@ article{
         justify-content: center;
         align-items: center;
         height: 15%;  
+      }
+    }
+
+    // 游戏列表展示
+    .showGameList{
+      margin-top: 70px;
+      width: 100%;
+      height: 840px;
+      .navTab{
+        width: 100%;
+        height: 4%;
+        ul{
+          display: flex;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          li{
+            cursor: pointer;
+            color: #4f94bc;
+            width: 118px;
+            text-align: center;
+            font-size: 14px;
+            &:hover{
+              color: #fff;
+            }
+          }
+          .active{
+            padding: 5px 10px;
+            color: #fff;
+            background-color: rgb(23, 64, 82);
+            border-radius: 4px;
+          }
+        }
+
       }
     }
   }

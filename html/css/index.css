@@ -7,7 +7,7 @@ html {
   width: 100%;
   height: auto;
   background: url(../images/colored_body_top.png);
-  background-size: 100% 400%;
+  background-size: 100% 2458px;
   position: relative;
 }
 a {
@@ -908,9 +908,12 @@ article .wrapper .seeSteam ul li {
   align-items: center;
   width: 23%;
   height: 100%;
-  background: linear-gradient(90deg, #06BFFF 30%, #2D73FF 100%);
+  background: linear-gradient(90deg, #06BFFF 0%, #2D73FF 100%);
   border-radius: 3px;
   box-shadow: 0 0 4px #000;
+}
+article .wrapper .seeSteam ul li:hover {
+  background: linear-gradient(90deg, #06BFFF 30%, #2D73FF 100%);
 }
 article .wrapper .seeSteam ul li a {
   color: #FFF;
@@ -950,6 +953,7 @@ article .wrapper .popGame .gameList ul {
   display: none;
 }
 article .wrapper .popGame .gameList ul li {
+  cursor: pointer;
   width: 23%;
   height: 100%;
 }
@@ -966,8 +970,11 @@ article .wrapper .popGame .gameList ul li a .text {
   display: flex;
   align-items: center;
   height: 20%;
-  background: linear-gradient(to right, #386b87 5%, #4482a3 95%);
+  background: linear-gradient(-45deg, #407999 5%, #2a3e59 95%);
   padding: 0 10px;
+}
+article .wrapper .popGame .gameList ul li a .text:hover {
+  background: linear-gradient(to right, #386b87 5%, #4482a3 95%);
 }
 article .wrapper .popGame .gameList ul li a .text .primePrice {
   text-decoration: line-through;
@@ -983,6 +990,37 @@ article .wrapper .popGame .dots {
   justify-content: center;
   align-items: center;
   height: 15%;
+}
+article .wrapper .showGameList {
+  margin-top: 70px;
+  width: 100%;
+  height: 840px;
+}
+article .wrapper .showGameList .navTab {
+  width: 100%;
+  height: 4%;
+}
+article .wrapper .showGameList .navTab ul {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+article .wrapper .showGameList .navTab ul li {
+  cursor: pointer;
+  color: #4f94bc;
+  width: 118px;
+  text-align: center;
+  font-size: 14px;
+}
+article .wrapper .showGameList .navTab ul li:hover {
+  color: #fff;
+}
+article .wrapper .showGameList .navTab ul .active {
+  padding: 5px 10px;
+  color: #fff;
+  background-color: #174052;
+  border-radius: 4px;
 }
 footer {
   position: absolute;

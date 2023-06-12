@@ -3,8 +3,6 @@ const app = new Vue({
   data(){
     return {
       isLogin:true,
-      limit:12,
-      gameList:[]
     }
   },
   method:{
@@ -13,4 +11,17 @@ const app = new Vue({
   created() {
 
   },
+})
+
+$(function(){
+  $('.showGameList .navTab ul').on('click',function(e){
+    if(e.target.nodeName == 'LI'){
+      document.querySelector('.showGameList .navTab ul .active').classList.remove('active')
+      e.target.classList.add('active')
+    }
+  })
+  let lis = document.querySelectorAll('.showGameList .navTab ul li')
+  lis.forEach((item,index)=>{
+    item.index = index
+  })
 })
