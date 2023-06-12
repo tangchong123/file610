@@ -115,7 +115,7 @@ module.exports = {
     // 查找留言 query
 	async search(ctx) {
 		let { uid } = ctx.request.params
-		let { query = '', size = 8, page = 1 } = ctx.request.query
+		let { query = '', size = 5, page = 1 } = ctx.request.query
 
 		let offset = (page - 1) * size
 

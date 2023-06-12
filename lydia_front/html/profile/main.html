@@ -111,7 +111,7 @@
                                 <div class="state">离线</div>
                             </div>
                             <div class="card_level">
-                                <a href="./badges.html">
+                                <a>
                                     <div class="level_num">
                                         0
                                     </div>
@@ -143,7 +143,7 @@
                 <div class="self_profile">
                     <!-- 等级及徽章 -->
                     <div class="level">
-                        <a href="#">
+                        <a  href="./badges.html">
                             <div class="level_num">
                                 0
                             </div>
@@ -152,7 +152,7 @@
                     </div>
                     <!-- 编辑个人资料及展示徽章选择 -->
                     <div class="choose_badge">
-                        您可以在这里展示您徽章中的其中之一，请从<a href="#">编辑个人资料</a>页面中选择
+                        您可以在这里展示您徽章中的其中之一，请从<a href="./editPage.html">编辑个人资料</a>页面中选择
                     </div>
 
                     <!-- 编辑个人资料 -->
@@ -179,14 +179,13 @@
                             <!-- 当有分页时查看所有留言 -->
                             <div class="showDetail">
                                 <div class="see">
-                                    <a href="#">查看所有 <i>7</i> 条留言</a>
+                                    <a href="./allMessagePage.html">查看所有 <i>7</i> 条留言</a>
                                 </div>
                                 <!-- 分页 -->
                                 <div class="pagination">
                                     <button class="prev"><</button>
                                     <ul>
-                                        <li>1</li>
-                                        <li>2</li>
+                                        <!-- <li>1</li> -->
                                     </ul>
                                     <button class="next">></button>
                                 </div>
@@ -198,7 +197,7 @@
                             <div class="avatar">
                                 <img src="../../img/profile/avatar/small.jpg" alt="">
                             </div>
-                            <textarea placeholder="添加一条留言"></textarea>
+                            <textarea placeholder="添加一条留言" class="addMessageIpt"></textarea>
                             <!-- 留言工具 -->
                             <div class="tools">
                                 <button class="help">格式帮助</button>
@@ -311,22 +310,24 @@
                     <!-- 留言列表 -->
                     <div class="message_list">
                         <!-- 要动态渲染的留言数据 结构模板 -->
-                        <div class="list">
-                            <div class="message_avatar">
-                                <img src="../../img/profile/avatar/small.jpg" alt="">
-                            </div>
-                            <div class="content_box">
-                                <div class="content_top">
-                                    <!-- 点击名称 跳转至留言者个人资料页 -->
-                                    <a href="#" class="message_nickname">nickname</a>
-                                    <span class="past_time"><i>1</i> 小时以前</span>
+                        <div class="message_list_Ct">
+                            <div class="list">
+                                <div class="message_avatar">
+                                    <img src="../../img/profile/avatar/small.jpg" alt="">
                                 </div>
-                                <div class="content">留言内容在这儿</div>
-                            </div>
-                            <!-- 删除留言 -->
-                            <div class="del">
-                                <img src="../../img/profile/trash.png" alt="">
-                                <div class="del_hint">删除</div>
+                                <div class="content_box">
+                                    <div class="content_top">
+                                        <!-- 点击名称 跳转至留言者个人资料页 -->
+                                        <a href="#" class="message_nickname">nickname</a>
+                                        <span class="past_time">1小时以前</span>
+                                    </div>
+                                    <div class="content">留言内容在这儿</div>
+                                </div>
+                                <!-- 删除留言 -->
+                                <div class="del">
+                                    <img src="../../img/profile/trash.png" alt="">
+                                    <div class="del_hint">删除</div>
+                                </div>
                             </div>
                         </div>
 
@@ -334,8 +335,7 @@
                         <div class="pagination">
                             <button class="prev"><</button>
                             <ul>
-                                <li>1</li>
-                                <li>2</li>
+                                <!-- <li>1</li> -->
                             </ul>
                             <button class="next">></button>
                         </div>

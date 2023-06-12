@@ -617,72 +617,80 @@
                     border-bottom: 1px solid #aaa;
                     margin-top: 80px;
                     position: relative;
-                    .list {
-                        width: 100%;
-                        display: flex;
-                        align-items: center;
-                        position: relative;
-                        margin-bottom: 10px;
-                        padding: 5px;
-                        border-radius: 4px;
-                        transition: all .3s linear;
-                        .message_avatar {
-                            margin-right: 10px;
-                        }
-                        .content_box {
+                    .message_list_Ct {
+                        .list {
+                            width: 100%;
                             display: flex;
-                            flex-direction: column;
-                            justify-content: space-around;
-                            font-size: 14px;
-                            .content_top {
-                                color: #fff;
-                                .message_nickname {
-                                    &:hover {
-                                        text-decoration: underline;
+                            align-items: center;
+                            position: relative;
+                            margin-bottom: 10px;
+                            padding: 5px;
+                            border-radius: 4px;
+                            transition: all .3s linear;
+                            .message_avatar {
+                                margin-right: 10px;
+                                width: 32px;
+                                height: 32px;
+                                img {
+                                    width: 32px;
+                                    height: 32px;
+                                }
+                            }
+                            .content_box {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-around;
+                                font-size: 14px;
+                                .content_top {
+                                    color: #fff;
+                                    .message_nickname {
+                                        &:hover {
+                                            text-decoration: underline;
+                                        }
+                                    }
+                                    .past_time {
+                                        font-size: 12px;
+                                        color: #56707f;
+                                        margin-left: 5px;
                                     }
                                 }
-                                .past_time {
-                                    font-size: 12px;
-                                    color: #56707f;
-                                    margin-left: 5px;
-                                }
+                                // .content {
+                                //     display: -webkit-box;
+                                //     -webkit-box-orient: vertical;
+                                //     -webkit-line-clamp: 3;
+                                //     overflow: hidden;
+                                //     text-overflow: ellipsis;
+                                // }
                             }
-                            // .content {
-                            //     display: -webkit-box;
-                            //     -webkit-box-orient: vertical;
-                            //     -webkit-line-clamp: 3;
-                            //     overflow: hidden;
-                            //     text-overflow: ellipsis;
-                            // }
-                        }
-                        .del {
-                            display: none;
-                            position: absolute;
-                            top: 5px;
-                            right: 10px;
-                            cursor: pointer;
-                            .del_hint {
+                            .del {
                                 display: none;
                                 position: absolute;
-                                top: -27px;
-                                left: -2px;
-                                width: 40px;
-                                height: 28px;
-                                line-height: 28px;
-                                text-align: center;
-                                border-radius: 3px;
-                                background-color: #ccc;
-                                color: #000;
-                                font-size: 14px;
+                                top: 5px;
+                                right: 10px;
+                                cursor: pointer;
+                                .del_hint {
+                                    display: none;
+                                    position: absolute;
+                                    top: -27px;
+                                    left: -2px;
+                                    width: 40px;
+                                    height: 28px;
+                                    line-height: 28px;
+                                    text-align: center;
+                                    border-radius: 3px;
+                                    background-color: #ccc;
+                                    color: #000;
+                                    font-size: 14px;
+                                }
+                                &:hover .del_hint{
+                                    display: block;
+                                }
                             }
-                            &:hover .del_hint{
-                                display: block;
-                            }
-                        }
-                        &:hover {
-                            background-color: rgba(255, 255, 255,.2);
-                            .del {
-                                display: block;
+                            &:hover {
+                                background-color: rgba(255, 255, 255,.2);
+                                .del {
+                                    display: block;
+                                }
                             }
                         }
                     }

@@ -4,7 +4,7 @@
     "username": "Marry",
     "nickname": "Marry",
     "password": "123456",
-    "avatar": "../src/public/avatar/large.jpg",
+    "avatar": "../../img/profile/avatar/small.jpg",
     "email": "",
     "intro": "未提供信息"
   },
@@ -13,7 +13,7 @@
     "username": "Linda",
     "nickname": "Linda",
     "password": "123456",
-    "avatar": "../src/public/avatar/large.jpg",
+    "avatar": "../../img/profile/avatar/small.jpg",
     "email": "",
     "intro": "未提供信息"
   },
@@ -31,7 +31,7 @@
     "username": "Tom",
     "nickname": "Tom",
     "password": "123456",
-    "avatar": "../src/public/avatar/large.jpg",
+    "avatar": "../../img/profile/avatar/small.jpg",
     "email": "",
     "intro": "未提供信息"
   },
@@ -40,7 +40,7 @@
     "username": "Jennifer",
     "nickname": "珍妮弗er",
     "password": "123456",
-    "avatar": "../src/public/avatar/large.jpg",
+    "avatar": "../../img/profile/avatar/small.jpg",
     "email": "",
     "intro": "大家好，我是珍妮弗！"
   },
@@ -49,7 +49,7 @@
     "username": "Mama",
     "nickname": "Mama",
     "password": "123456",
-    "avatar": "../src/public/avatar/large.jpg",
+    "avatar": "../../img/profile/avatar/small.jpg",
     "email": "",
     "intro": "未提供信息"
   }

@@ -58,7 +58,7 @@ Authorization: Bearer {{token}}
 
 {
     "nickname": "Lydia",
-    "content": "我是Lydia，这是我的第二条留言！"
+    "content": "我是Lydia，这是我的第十条留言！"
 }
 
 
