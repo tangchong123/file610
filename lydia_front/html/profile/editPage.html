@@ -5,8 +5,134 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/profile/editPage.css">
 </head>
 <body>
-    <h1>编辑个人资料</h1>
+    <!-- 顶部header -->
+    <iframe class="header" src="../header/header.html" frameborder="0" scrolling="no"></iframe>
+
+    <!-- 编辑资料 主体 -->
+    <div class="edit_box">
+        <!-- 导航栏 -->
+        <div class="nav">
+            <a class="avatar" href="main.html">
+                <img src="../../img/profile/avatar/middle.jpg" alt="">
+            </a>
+            <div class="nav_bar">
+                <a class="nickname" href="./main.html">nickname</a>
+                <span>»</span>
+                <a class="edit" href="./editPage.html">编辑个人资料</a>
+            </div>
+        </div>
+
+        <a href="main.html" class="goback">返回您的个人资料</a>
+
+        <!-- 个人资料 -->
+        <div class="container">
+            <!-- 左边 -->
+            <div class="left">
+                <ul class="to">
+                    <li>
+                        <span>一般</span>
+                        <div class="mask"></div>
+                    </li>
+                    <li>
+                        <span>头像</span>
+                        <div class="mask"></div>
+                    </li>
+                    <li>
+                        <span>个人资料背景</span>
+                        <div class="mask"></div>
+                    </li>
+                    <li>
+                        <span>迷你个人资料</span>
+                        <div class="mask"></div>
+                    </li>
+                    <li>
+                        <span>主题</span>
+                        <div class="mask"></div>
+                    </li>
+                    <li class="privacy_setting">
+                        <span>隐私设置</span>
+                        <div class="mask"></div>
+                    </li>
+                </ul>
+                <div class="toShop">
+                    <span>Steam点数商店</span>
+                    <div class="mask"></div>
+                </div>
+            </div>
+
+            <!-- 右边 -->
+            <div class="right">
+                <div class="r normall_box">
+                    <div class="title">
+                        <div class="t">一般</div>
+                        <span>设置您的个人资料名称和详情。提供您的真实姓名等额外信息可以帮助好友在Steam 社区上找到您。</span>
+                        <span>您的个人资料名称和头像会在整个Steam平台上代表您，必需适合向所有受众展示。请查看<a href="#">常见问题</a>，获取更多详情。
+                        </span>
+                    </div>
+                    <!-- 一般设置 -->
+                    <div class="normall_setting">
+                        <div class="title">一般</div>
+                        <div class="detail">
+                            <div class="nickname">
+                                <span>个人资料名称</span>
+                                <input type="text" placeholder="nickname">
+                            </div>
+                            <div class="realname">
+                                <span>真实姓名 (?)</span>
+                                <input type="text" placeholder="realname">
+                            </div>
+                            <div class="self_url">
+                                <span>自定义URL (?)</span>
+                                <input type="text">
+                                <span>您的个人资料将显示于：<i>https://steamcommunity.com.profiles/982739864</i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 位置设置 -->
+                    <div class="position_setting">
+                        <div class="title">位置</div>
+                        <div class="detail">
+                            <div class="position">
+                                <span>国家/地区 (?)</span>
+                                <select>
+                                    <option value="">(不显示)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 概要设置 -->
+                    <div class="intro_setting">
+
+                    </div>
+                    <!-- 偏好设置 -->
+                    <div class="bias_setting">
+
+                    </div>
+                </div>
+                <div class="r avatar_box">
+
+                </div>
+                <div class="r bg_box">
+
+                </div>
+                <div class="r mini_box">
+
+                </div>
+                <div class="r theme_box">
+
+                </div>
+                <div class="r privacy_setting_box">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部footer -->
+    <iframe class="footer" src="../footer/footer.html" frameborder="0"></iframe>
 </body>
 </html>
