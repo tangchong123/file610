@@ -78,18 +78,24 @@ body {
                 .to {
                     display: flex;
                     flex-direction: column;
+                    .active {
+                        background-color: #3d4450;
+                        border-radius: 5px;
+                        color: #fff;
+                    }
                     li {
+                        width: 100%;
                         height: 30px;
+                        line-height: 30px;
                         padding: 0px 10px;
                         margin-bottom: 5px;
                         position: relative;
-                        
                         .mask {
                             width: 0;
                             height: 30px;
                             border-radius: 5px;
                             position: absolute;
-                            top: -4px;
+                            top: 0px;
                             left: 0px;
                             z-index: -1;
                             background-color: #3d4450;
@@ -105,13 +111,9 @@ body {
                             }
                         }
                         &:nth-of-type(6) {
-                            margin-top: 10px;
+                            margin-top: 20px;
                             margin-bottom: 40px;
-                            padding: 20px 10px;
                             border-top: 1px solid #ccc;
-                            .mask {
-                                top: 16px;
-                            }
                         }
                     }
                 }
@@ -156,7 +158,7 @@ body {
 
                 // 一般
                 .normall_box {
-                    display: none;
+                    // display: none;
                     // 标题
                     .title {
                         margin-bottom: 20px;
@@ -901,7 +903,7 @@ body {
 
                 // 主题
                 .theme_box {
-                    // display: none;
+                    display: none;
                     // 标题
                     >.title {
                         margin-bottom: 20px;
@@ -955,6 +957,7 @@ body {
                                     border: 3px solid rgba(255, 255, 255,.1);
                                     border-radius: 50%;
                                     transition: all .3s linear;
+                                    cursor: pointer;
                                     &:hover {
                                         transform: scale(1.1);
                                     }
@@ -1014,6 +1017,11 @@ body {
                             }
                         }
                     }
+                }
+
+                // 隐私设置
+                .privacy_setting_box {
+                    display: none;
                 }
             }
         }

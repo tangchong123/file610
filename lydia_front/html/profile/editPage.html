@@ -7,6 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="../../css/base.css">
     <link rel="stylesheet" href="../../css/profile/editPage.css">
+    <script src="../../js/profiles/editPage.js"></script>
+    <script src="../../js/axios.min.js"></script>
 </head>
 <body>
     <!-- 顶部header -->
@@ -17,7 +19,7 @@
         <!-- 导航栏 -->
         <div class="nav">
             <a class="avatar" href="main.html">
-                <img src="../../img/profile/avatar/middle.jpg" alt="">
+                <img src="../../img/profile/avatar/middle.jpg" alt="" style="width: 64px;height: 64px;">
             </a>
             <div class="nav_bar">
                 <a class="nickname" href="./main.html">nickname</a>
@@ -33,7 +35,7 @@
             <!-- 左边 -->
             <div class="left">
                 <ul class="to">
-                    <li>
+                    <li class="active">
                         <span>一般</span>
                         <div class="mask"></div>
                     </li>

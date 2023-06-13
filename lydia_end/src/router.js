@@ -18,10 +18,6 @@ router
     .patch("/users/:id",userController.update)
 
 // message 模块
-// 获取数据列表（搜索接口）
-// 添加
-// 删除
-// 修改
 router
 	.post('/message/:uid', messageController.add)
 	.delete('/message/:id', messageController.remove)

@@ -155,7 +155,7 @@ module.exports = {
             }
         }
 
-        let {username=user.username,nickname=username,password=user.password,avatar=user.avatar,intro=user.avatar} = ctx.request.body
+        let {username=user.username,nickname=username,password=user.password,avatar=user.avatar,intro=user.intro} = ctx.request.body
 
         // 更新用户信息
         user.username=username
