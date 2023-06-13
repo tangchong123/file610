@@ -87,6 +87,7 @@ nav {
       flex: 1;
       display: flex;
       margin-left: 40px;
+      position: relative;
       > li {
         cursor: pointer;
         margin-right: 30px;
@@ -132,7 +133,7 @@ nav {
   .tool {
     display: flex;
     justify-content: space-evenly;
-    width: 28%;
+    width: 32%;
     height: 100%;
     padding-top: 10px;
     .install {
@@ -147,6 +148,66 @@ nav {
       a {
         margin-left: 5px;
         color: #fff;
+      }
+    }
+    .notLogin{
+      a{
+        font-size: 14px;
+      }
+    }
+    .login{
+      display: flex;
+      flex: 1;
+      justify-content: space-evenly;
+      .info{
+        position: relative;
+        text-align: right;
+        font-size: 12px;
+        user-select: none;
+        .name,.money{  
+          cursor: pointer;
+        }
+        .name{
+          &:hover{
+            color: #fff;
+          }
+        }
+        .money{
+          &:hover{
+            color: #fff;
+          }
+        }
+        .selectBox{
+          position: absolute;
+          top: 23px;
+          left: -68px;
+          width: 136px;
+          height: 148px;
+          background: #171a21;
+          font-size: 11px;
+          color: #b8b6b4;
+          box-shadow: 0 0 12px #000000;
+          z-index: 1001;
+          padding: 10px 14px;
+          display: none;
+          ul{
+            width: 100%;
+            height: 100%;
+            li{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              height: 25%;
+            }
+          }
+        }
+      }
+      .pic{
+        width: 40px;
+        height: 40px;
+        background-color: pink;
+        cursor: pointer;
       }
     }
     .changeLang {
@@ -230,6 +291,7 @@ section {
     }
     // 选择列表
     .pickList {
+      position: relative;
       display: flex;
       margin-top: 40px;
       width: 100%;
@@ -394,6 +456,9 @@ section {
           font-style: italic;
           padding-left: 10px;
           border-radius: 4px;
+          &:hover{
+            outline: 1px solid rgb(76, 154, 204);
+          }
           &:focus {
             outline: 1px solid rgb(76, 154, 204);
           }
@@ -414,6 +479,17 @@ section {
           }
         }
       }
+      .wishList{
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: -32px;
+        padding: 2px 20px;
+        font-size: 12px;
+        color: #fff;
+        background: url(../images/wishlist_background.jpg);
+        background-size: 100% 100%;
+      }
     }
     
     // 轮播图
@@ -428,13 +504,12 @@ section {
         height: 352px;
         margin-top: 10px;
         color: #fff;
-        transition: all .7s;
+        transition: all .1s;
         .img{
           width: 80%;
           height: 100%;
           box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
           img{
-            transition: all .7s;
             width: 100%;
             height: 100%;
           }
@@ -723,6 +798,7 @@ section {
           width: 100%;
           height: 100%;
           display: none;
+          opacity: 0;
           li{
             width: 23%;
             height: 100%;
@@ -767,6 +843,7 @@ section {
           }
         }
         .active{
+          opacity: 1;
           display: flex;
         }
       }

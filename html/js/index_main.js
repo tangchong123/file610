@@ -12,6 +12,14 @@ $(function(){
   $('.community').on('mouseleave',()=>{
     $('.community>div').hide()
   })
+  $('.login .info .name').on('click',()=>{
+    if($('.login .info .selectBox').css('display')=='none'){
+      $('.login .info .selectBox').css('display','block')
+    }else{
+      $('.login .info .selectBox').css('display','none')
+    }
+  })
+
   $('.yourStore').on('mouseenter',()=>{
     $('.yourStore>div').show()
   })
@@ -70,7 +78,7 @@ $(function(){
         index=0
       }
       setBanner(data,index)
-    },2000)
+    },2500)
     $('.banner').on('mouseenter',function(){
       clearInterval(timer)
     })
@@ -159,11 +167,17 @@ function getData(){
   })
 }
 function setBanner(data,index){
+  $('.bannerPic').css('transition','all 0.001ms')
+  $('.bannerPic').css('opacity','0')
   $('.bannerPic').html(`
     <div class="img">
       <img src="" alt="">
     </div>
   `)
+  $('.bannerPic').on('transitionend',function(){
+    $('.bannerPic').css('transition','all 1000ms')
+    $('.bannerPic').css('opacity','1')
+  })
   $('.bannerPic>.img img').attr('src',`http://localhost:4400/upload/apps/${data[index].dir}/${data[index].file[0]}`)
   let template = document.createElement('div')
     template.className = 'desc'
@@ -222,6 +236,8 @@ function getSaleData(){
   })
 }
 function setSale(data,index){
+  $('.saleGame .content').css('transition','all 0.001ms')
+  $('.saleGame .content').css('opacity','0')
   $('.content').html('')
   let template = document.createElement('div')
     template.className = 'gameList'
@@ -307,6 +323,10 @@ function setSale(data,index){
     }
   })
   $('.saleGame .content').append(dots)
+  $('.saleGame .content').on('transitionend',function(){
+    $('.saleGame .content').css('transition','all 1s')
+  $('.saleGame .content').css('opacity','1')
+  })
   $('.saleGame .dots').on('click',function(e){
     if(e.target.classList.contains('dot')){
       document.querySelector('.dots   .active').classList.remove('active')

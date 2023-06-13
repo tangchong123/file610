@@ -86,6 +86,7 @@ nav .wrapper .navList {
   flex: 1;
   display: flex;
   margin-left: 40px;
+  position: relative;
 }
 nav .wrapper .navList > li {
   cursor: pointer;
@@ -130,7 +131,7 @@ nav .wrapper .community div > ul > li a {
 nav .tool {
   display: flex;
   justify-content: space-evenly;
-  width: 28%;
+  width: 32%;
   height: 100%;
   padding-top: 10px;
 }
@@ -147,6 +148,61 @@ nav .tool .install {
 nav .tool .install a {
   margin-left: 5px;
   color: #fff;
+}
+nav .tool .notLogin a {
+  font-size: 14px;
+}
+nav .tool .login {
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+}
+nav .tool .login .info {
+  position: relative;
+  text-align: right;
+  font-size: 12px;
+  user-select: none;
+}
+nav .tool .login .info .name,
+nav .tool .login .info .money {
+  cursor: pointer;
+}
+nav .tool .login .info .name:hover {
+  color: #fff;
+}
+nav .tool .login .info .money:hover {
+  color: #fff;
+}
+nav .tool .login .info .selectBox {
+  position: absolute;
+  top: 23px;
+  left: -68px;
+  width: 136px;
+  height: 148px;
+  background: #171a21;
+  font-size: 11px;
+  color: #b8b6b4;
+  box-shadow: 0 0 12px #000000;
+  z-index: 1001;
+  padding: 10px 14px;
+  display: none;
+}
+nav .tool .login .info .selectBox ul {
+  width: 100%;
+  height: 100%;
+}
+nav .tool .login .info .selectBox ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 25%;
+}
+nav .tool .login .pic {
+  width: 40px;
+  height: 40px;
+  background-color: pink;
+  cursor: pointer;
 }
 nav .tool .changeLang select {
   cursor: pointer;
@@ -210,6 +266,7 @@ section .wrapper .title {
   color: #fff;
 }
 section .wrapper .pickList {
+  position: relative;
   display: flex;
   margin-top: 40px;
   width: 100%;
@@ -384,6 +441,9 @@ section .wrapper .pickList .search input {
   padding-left: 10px;
   border-radius: 4px;
 }
+section .wrapper .pickList .search input:hover {
+  outline: 1px solid #4c9acc;
+}
 section .wrapper .pickList .search input:focus {
   outline: 1px solid #4c9acc;
 }
@@ -402,6 +462,17 @@ section .wrapper .pickList .search .icon img {
   width: 100%;
   height: 100%;
 }
+section .wrapper .pickList .wishList {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: -32px;
+  padding: 2px 20px;
+  font-size: 12px;
+  color: #fff;
+  background: url(../images/wishlist_background.jpg);
+  background-size: 100% 100%;
+}
 section .wrapper .banner {
   margin-top: 40px;
   position: relative;
@@ -414,7 +485,7 @@ section .wrapper .banner .bannerPic {
   height: 352px;
   margin-top: 10px;
   color: #fff;
-  transition: all 0.7s;
+  transition: all 0.1s;
 }
 section .wrapper .banner .bannerPic .img {
   width: 80%;
@@ -422,7 +493,6 @@ section .wrapper .banner .bannerPic .img {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
 }
 section .wrapper .banner .bannerPic .img img {
-  transition: all 0.7s;
   width: 100%;
   height: 100%;
 }
@@ -706,6 +776,7 @@ section .wrapper .type .list ul {
   width: 100%;
   height: 100%;
   display: none;
+  opacity: 0;
 }
 section .wrapper .type .list ul li {
   width: 23%;
@@ -750,6 +821,7 @@ section .wrapper .type .list ul li span {
   cursor: pointer;
 }
 section .wrapper .type .list .active {
+  opacity: 1;
   display: flex;
 }
 section .wrapper .type .leftBtn,
