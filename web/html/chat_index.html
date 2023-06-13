@@ -13,6 +13,7 @@
 
 <body>
     <div id="app">
+        <!-- <div class="cover"></div> -->
         <div v-show="isShowCreateGroup" class="create-group">
             <div class="create-group-one">
                 <span @click = "createGroup"></span>
@@ -35,6 +36,46 @@
                     <div @click="cancelCreateGroup">
                         取消
                     </div>
+                </div>
+            </div>
+        </div>
+        <div v-show="isShowSetting" class="setting">
+            <div>
+                <div class="setting-left">
+                    <div class="setting-left-header">好友列表设置</div>
+                    <div>
+                        <div v-for="item of friendsSetting">
+                            {{item}}
+                        </div>
+                    </div>
+                </div>
+                <div class="setting-right">
+                    <div v-show="settingActivateIndex === 0 ">
+                        <div  class="setting-title">
+                            {{friendsSetting[0]}}
+                        </div>
+                        <div class="setting-body">
+                            <div>
+                                <div>给好友名称添加昵称</div>
+                                <div>
+                                    <img v-bind:src="userInfo.avatar" alt="">
+                                    <div>
+                                        <span>昵称*</span>
+                                        <span>{{states[userInfo.state]}}</span>
+                                    </div>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div>
+                                <div>关</div>
+                                <div>开</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
             </div>
         </div>
@@ -73,7 +114,7 @@
                             <span>{{states[userInfo.state]}}</span>
                         </div>
                     </div>
-                    <span>
+                    <span @click.self = "ShowSetting">
                         ♲
                     </span>
                 </div>
@@ -93,7 +134,7 @@
                         <input type="text">
                         <span>X</span>
                     </div>
-                    <img src="../imgs/addfriend.png" alt="">
+                    <img src="../imgs/addfriend.png" alt="" @click="toAddFriend">
                 </div>
                 <div class="friend-state-box">
 
@@ -129,7 +170,6 @@
                 </div>
             </div>
         </div>
-        <HEADER></HEADER>
     </div>
     <script src="../js/vue2.js" ></script>
     <script src="../js/chat-index.js"></script>

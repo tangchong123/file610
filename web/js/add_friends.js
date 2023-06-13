@@ -1,5 +1,5 @@
-let app2 = new Template({ 
-    // el:"#app2",
+let app = new Vue({ 
+    el:"#app",
     data: {
         friendsMenu:[
             {
@@ -7,7 +7,7 @@ let app2 = new Template({
                 "menu":"您的好友"
             },
             {
-                "icon":"../imgs/addfriend.png",
+                "icon":"../imgs/group-add.png",
                 "menu":"添加好友"
             },
             {
@@ -33,23 +33,23 @@ let app2 = new Template({
                 "menu":"关注的游戏"
             },
         ],
+        myGroups:[
+            {
+                "icon":"../imgs/group-add.png",
+                "menu":"您的组"
+            },
+            {
+                "icon":"../imgs/邮件.png",
+                "menu":"待处理邀请"
+            },
+            {
+                "icon":"../imgs/search.png",
+                "menu":"查找组..."
+            },
+            {
+                "icon":"../imgs/group-add.png",
+                "menu":"创建组..."
+            },
+         ]
      },
-     myGroups:[
-        {
-            "icon":"../imgs/group-add.png",
-            "menu":"您的组"
-        },
-        {
-            "icon":"../imgs/邮件.png",
-            "menu":"待处理邀请"
-        },
-        {
-            "icon":"../imgs/search.png",
-            "menu":"查找组..."
-        },
-        {
-            "icon":"../imgs/group-add.png",
-            "menu":"创建组..."
-        },
-     ]
     })

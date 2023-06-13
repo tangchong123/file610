@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div id="app2">
+    <div id="app">
         <div class="header"></div>
         <div class="main">
             <div class="main-header">
@@ -19,11 +19,31 @@
             </div>
             <div class="main-box">
                 <div class="main-left">
-                    <div>好友</div>
                     <div>
-                        <div v-for="(item,index) of friendsMenu">
-                            <img v-bind:src="item.icon" alt="">
-                            <span>{{item.menu}}</span>
+                        <div>好友</div>
+                        <div class="left-friend">
+                            <div v-for="(item,index) of friendsMenu">
+                                <img v-bind:src="item.icon" alt="">
+                                <span>{{item.menu}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>正在关注</div>
+                        <div class="left-friend">
+                            <div v-for="(item,index) of focusing">
+                                <img v-bind:src="item.icon" alt="">
+                                <span>{{item.menu}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>组</div>
+                        <div class="left-friend">
+                            <div v-for="(item,index) of myGroups">
+                                <img v-bind:src="item.icon" alt="">
+                                <span>{{item.menu}}</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -33,12 +53,12 @@
         </div>
         <div class="footer"></div>
     </div>
-    <script src="../js/index.js" type="model"></script>
-    <script src="../js/add_friends.js" type="javaScripts/text"></script>
+    <script src="../js/vue2.js"></script>
+    <script src="../js/add_friends.js"></script>
     <script>
-        window.onload = function() {
+        window.onload = function () {
             // 获取本地存储的用户信息
-         }
+        }
     </script>
 </body>
 

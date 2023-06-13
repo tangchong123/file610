@@ -17,6 +17,11 @@ let app = new Vue({
         states:["在线","离开","隐身","请勿打扰"],
         groupName:"",
         inviteFriend:[],
+        isShowSetting:true,
+        friendsSetting:[
+            "好友列表","聊天","大小与缩放","通知","语音"
+        ],
+        settingActivateIndex:0
 
     },
     methods: {
@@ -46,7 +51,14 @@ let app = new Vue({
             this.isShowCreateGroup = false
         },
         //换头像
-        changeAvatar(){}
+        changeAvatar(){},
+        toAddFriend(){
+            window.location.href = "../html/add_friends.html"
+        },
+        ShowSetting(){
+            this.isShowSetting = !this.isShowSetting
+        }
+
      },
     watch: {
 

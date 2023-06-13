@@ -8,6 +8,16 @@
   margin-top: 12px;
 }
 
+.cover {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 3;
+}
+
 .friends-search {
   margin-top: 12px;
   display: flex;
@@ -189,4 +199,90 @@
   text-align: center;
   line-height: 45px;
   background-color: #3d4450;
+}
+
+.setting {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  object-fit: cover;
+  background-color: rgba(4, 7, 4, 0.7);
+  opacity: 1;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.setting > div {
+  width: 60vw;
+  min-width: 800px;
+  height: 70vh;
+  height: 600px;
+  display: flex;
+  border-top: 2px solid #3366ff;
+}
+
+.setting > div > .setting-left {
+  width: 30%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.setting > div > .setting-left > div {
+  width: 100%;
+}
+
+.setting > div > .setting-left > div > div {
+  width: 100%;
+  height: 40px;
+  margin: 8px 0px;
+  padding-left: 12px;
+  line-height: 40px;
+}
+
+.setting > div > .setting-left > div > div:hover {
+  background-color: #2e343f;
+}
+
+.setting > div > .setting-left > .setting-left-header {
+  width: 100%;
+  height: 60px;
+  font-size: 24px;
+  font-weight: 800;
+  color: #1a9fff;
+  text-align: center;
+  line-height: 60px;
+}
+
+.setting > div > .setting-right {
+  width: 70%;
+  height: 100%;
+  position: relative;
+  background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%), #25282e;
+}
+
+.setting > div > .setting-right > div {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.setting > div > .setting-right > div > .setting-title {
+  width: 100%;
+  height: 50px;
+  font-size: 22px;
+  font-weight: 600;
+  padding-left: 12px;
+  line-height: 50px;
+  border-bottom: 2px solid white;
+}
+
+.setting > div > .setting-right > div > .setting-body {
+  width: inherit;
+  display: flex;
 }
