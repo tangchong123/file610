@@ -442,6 +442,7 @@
                             }
                             // 分页
                             .pagination {
+                                visibility: hidden;
                                 height: 30px;
                                 display: flex;
                                 align-items: center;

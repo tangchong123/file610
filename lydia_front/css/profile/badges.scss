@@ -1,0 +1,102 @@
+body {
+    background-color: #162838;
+    color: #969696;
+    .header {
+        display: block;
+        width: 100%;
+        height: 104px;
+    }
+    .footer {
+        display: block;
+        width: 100%;
+        height: 78px;
+    }
+
+    .badge_box {
+        width: 76%;
+        margin: 0 auto;
+        position: relative;
+
+        // 导航栏
+        .nav {
+            width: 100%;
+            height: 102px;
+            background: rgba(78, 82, 90, 0.4);
+            display: flex;
+            align-items: center;
+            padding: 10px 30px;
+            .avatar {
+                width: 64px;
+                height: 64px;
+                .img {
+                    width: 64px;
+                    height: 64px;
+                }
+            }
+            .nav_bar {
+                margin-left: 30px;
+                .nickname {
+                    color: #ebebeb;
+                    font-size: 26px;
+                    &:hover {
+                        color: #1A9FFF;
+                    }
+                }
+                .edit {
+                    color: #ebebeb;
+                    &:hover {
+                        color: #1A9FFF;
+                    }
+                }
+            }
+        }
+
+        // 等级
+        .level_box {
+            width: calc(100% - 40px);
+            height: 76px;
+            border-radius: 4px;
+            padding: 0 20px;
+            margin: 20px auto;
+            border: 1px solid #E7E551;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-color: #1D1E20;
+            .level {
+                margin-right: 15px;
+                a {
+                    display: flex;
+                    align-items: center;
+                    font-size: 24px;
+                    color: #cfc9c9;
+                    .level_num {
+                        width: 36px;
+                        height: 36px;
+                        font-size: 20px;
+                        border-radius: 50%;
+                        border: 2px solid #8B9399;
+                        line-height: 36px;
+                        text-align: center;
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .experience {
+                color: #cfc9c9;;
+            }
+            .hint {
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                transform: translateY(-50%);
+                a {
+                    color: #cfc9c9;
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -6,7 +6,7 @@ window.onload = function(){
     let clearold_popup_window = mainBox.querySelector(".popup_window_clearold")
     let text_format_popup_window = mainBox.querySelector(".popup_window_text_format")
     let message_listCt = mainBox.querySelector(".message_list>.message_list_Ct")
-    let pagination = mainBox.querySelectorAll(".pagination")
+    let pagination = mainBox.querySelector(".pagination")
     let seeAllMessageBtn = mainBox.querySelector(".see")
     let addMessageIpt = mainBox.querySelector(".addMessageIpt")
     let addMessageBtn = mainBox.querySelector(".tools>.submit")
@@ -87,24 +87,38 @@ window.onload = function(){
 
         // 分页器和查看所有流言的显隐
         if(data.total<5) {  // 隐藏
-            pagination.forEach(p=> {
-                p.style.display = "none"
-            })
+            // pagination.forEach(p=> {
+                pagination.style.visibility = "hidden"
+            // })
             seeAllMessageBtn.style.display = "none"
         }else {  // 渲染并显示
-            pagination.forEach(p=> {
-                p.children[1].innerHTML = ""
-                // 渲染分页器
-                for(let i=1;i<=Math.ceil(data.total/data.size);i++) {
-                    let li = document.querySelector("li")
-                    li.innerHTML = i
-                    p.children[1].appendChild(li)
-                }
-            })
+            // pagination.forEach(p=> {
+                pagination.style.visibility = "visible"
+            // })
+            initPagination(data)
+            seeAllMessageBtn.style.display = "block"
             let seeMessageNum = seeAllMessageBtn.querySelector("i")
             seeMessageNum.innerHTML = data.total
         }
     }
+
+    // 初始化分页器
+    function initPagination(data) {
+        let len = Math.ceil(data.total/data.size)
+        if(len<1) {
+            len = 0
+        }
+        // pagination.forEach(p=> {
+            pagination.children[1].innerHTML = ""
+            // 渲染分页器
+            for(let i=1;i<=len;i++) {
+                let li = document.querySelector("li")
+                li.innerHTML = i
+                pagination.children[1].appendChild(li)
+            }
+        // })
+    }
+    
 
     // 清除用户旧名 和 点击表情包
     function clearUserOldName() {
@@ -182,8 +196,8 @@ window.onload = function(){
     }
 
     // 点击分页器事件 ????????? 页数显示不正确
-    function paginnationClick(i) {
-        pagination[i].onclick = async function(e){
+    // pagination.forEach(p=> {
+        pagination.onclick = async function(e) {
             let {data} =await getMessage()
             let total = data.total
             let size = data.size
@@ -209,9 +223,7 @@ window.onload = function(){
                 init()
             }
         }
-    }
-    paginnationClick(0)
-    paginnationClick(1)
+    // })
 
     // 判断留言框是否有内容
     addMessageIpt.oninput = function() {
@@ -241,7 +253,6 @@ window.onload = function(){
             init()
         }
     }
-
 
     // 点击格式帮助 弹窗弹出
     helpBtn.onclick = function() {

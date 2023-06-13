@@ -419,6 +419,7 @@
   text-decoration: underline;
 }
 #main_box .container .bottom .left .message .message_title .showDetail .pagination {
+  visibility: hidden;
   height: 30px;
   display: flex;
   align-items: center;
