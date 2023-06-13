@@ -577,9 +577,24 @@
       </div>
     </article>
 
+    <div class="forLogin" v-if="isLogin">
+      <div class="logo"></div>
+      <div class="title">
+        继续向下滚动便能看到更多推荐
+      </div>
+      <div class="tips">
+        您可以在下方看到多款您可能感兴趣的产品，他们涵盖了Steam上各式各样的类型
+      </div>
+    </div>
+    <div class="forNotLogin" v-else>
+      <div class="text">
+        <div class="title">正在寻找推荐?</div>
+        <div>登录以查看个性化推荐</div>
+        <a href="">登录</a>
+        <div>或者<a href="">注册</a>并免费加入Steam</div>
+      </div>
+    </div>
 
-
-    <div style="height: 200px;"></div>
     <!-- 底部 -->
     <footer>
       <div class="footer_box">
@@ -600,6 +615,39 @@
       </div>
     </footer>
 
+    <div class="showMoreData">
+      <div class="wrapper">
+          <div class="moreGame" v-for="data in moreDataList" :key="data.index">
+            <div class="gameName">{{data.name}}</div>
+            <div class="picList">
+            </div>
+            <div class="priceBox">
+              <div class="primePrice">
+                {{data.primePrice?data.primePrice:''}}
+              </div>
+              <div class="nowPrice">
+                {{data.primePrice?data.nowPrice:'免费'}}
+              </div>
+            </div>
+            <div class="tool">
+              <div class="toSee commonBox">
+                <a href="https://store.steampowered.com">访问产品页面</a>
+              </div>
+              <div class="middle">
+                <div class="addWish commonBox">
+                  <a href="">添加购物单</a>
+                </div>
+                <div class="ignore commonBox">
+                  <a href="">忽略</a>
+                </div>
+              </div>
+              <div class="seeMore commonBox">
+                <a href="">寻找更多类似商品</a>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
   <script src="./js/jquery-3.0.0.min.js"></script>
   <script src="./js/vue.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

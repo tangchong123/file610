@@ -1,15 +1,55 @@
 const app = new Vue({
   el:'#app',
-  data(){
-    return {
-      isLogin:false,
+  data:{
+    isLogin:true,
+    canGetData:false,
+    moreDataList:[],
+    url:[]
+  },
+  watch:{
+    canGetData(val){
+      if(val){
+        this.getSingleData().then(res=>{
+          let data = res.data.data
+          this.dataHandler(data)
+        })
+      }
     }
   },
-  method:{
-
-  },
   created() {
-
+    window.onscroll=()=>{
+      if(window.scrollY>2800){
+        if(this.isLogin){
+          this.canGetData = true
+        }
+      }
+    }
+  },
+  methods:{
+    getSingleData(){
+      return axios({
+        method:'GET',
+        url:`http://localhost:4400/api/getBanner/1`
+      })
+    },
+    dataHandler(data){
+      this.moreDataList.push(...data)
+      let nowScrollY = window.scrollY
+      renderPic()
+      window.onscroll=()=>{
+        if(window.scrollY-nowScrollY>260){
+          nowScrollY = window.scrollY
+          axios({
+            method:'GET',
+            url:`http://localhost:4400/api/getBanner/1`
+          }).then(res=>{
+            let data = res.data.data
+            this.moreDataList.push(...data)
+            renderPic()
+          })
+        }
+      }
+    },
   },
 })
 
@@ -115,4 +155,18 @@ function getData(){
     method:'GET',
     url:`http://localhost:4400/api/getBanner/${limit}`
   })
+}
+function renderPic(){
+  if(document.querySelectorAll('.showMoreData .picList').length!=0){
+    app.moreDataList.forEach((item,index)=>{
+      if(document.querySelectorAll('.showMoreData .picList')[index]){
+        document.querySelectorAll('.showMoreData .picList')[index].innerHTML = `
+        <div class="img"><img src='http://localhost:4400/upload/apps/${item.dir}/${item.file[1]}'></img></div>
+        <div class="sImg"><img src='http://localhost:4400/upload/apps/${item.dir}/${item.file[2]}'></img></div>
+        <div class="sImg"><img src='http://localhost:4400/upload/apps/${item.dir}/${item.file[3]}'></img></div>
+        <div class="sImg"><img src='http://localhost:4400/upload/apps/${item.dir}/${item.file[4]}'></img></div>
+      `
+      }
+    })
+  }
 }
