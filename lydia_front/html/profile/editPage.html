@@ -66,6 +66,8 @@
 
             <!-- 右边 -->
             <div class="right">
+
+                <!-- 一般 -->
                 <div class="r normall_box">
                     <div class="title">
                         <div class="t">一般</div>
@@ -106,27 +108,271 @@
                     </div>
                     <!-- 概要设置 -->
                     <div class="intro_setting">
-
+                        <div class="title">概要</div>
+                        <div class="detail">
+                            <div class="intro">
+                                <textarea placeholder="还没有任何信息"></textarea>
+                            </div>
+                            <div class="emj">
+                                <img src="../../img/profile/emoji2.png" alt="">
+                            </div>
+                            <!-- 所有表情显示框 暂时不打算实现表情包数据接口-->
+                            <div class="all_emj">
+                                <div class="t">所有表情</div>
+                                <div class="hint">您未拥有任何表情您可以在<a href="#">点数商店</a>或<a href="#">社区市场</a>中获取</div>
+                                <input type="text" placeholder="Search...">
+                            </div>
+                        </div>
                     </div>
                     <!-- 偏好设置 -->
                     <div class="bias_setting">
+                        <div class="title">个人资料偏好</div>
+                        <div class="detail">
+                            <input type="checkbox">在个人资料中隐藏社区奖励
+                        </div>
+                    </div>
 
+                    <!-- 按钮 -->
+                    <div class="btn">
+                        <button class="cancel">取消</button>
+                        <button class="save">保存</button>
                     </div>
                 </div>
+
+                <!-- 头像 -->
                 <div class="r avatar_box">
+                    <!-- 标题 -->
+                    <div class="title">
+                        <div class="t">头像</div>
+                        <span>选择您的头像图片和边框。</span>
+                    </div>
+
+                    <!-- 头像上传和展示 -->
+                    <div class="choose">
+                        <!-- 头像展示 -->
+                        <ul class="show">
+                            <li class="large">
+                                <div class="l_img">
+                                    <img src="../../img/profile/avatar/large.jpg" alt="">
+                                </div>
+                                <span>184px</span>
+                            </li>
+                            <li class="middle">
+                                <div class="m_img">
+                                    <img src="../../img/profile/avatar/large.jpg" alt="">
+                                </div>
+                                <span>64px</span>
+                            </li>
+                            <li class="small">
+                                <div class="s_img">
+                                    <img src="../../img/profile/avatar/large.jpg" alt="">
+                                </div>
+                                <span>32px</span>
+                            </li>
+                        </ul>
+                        <!-- 上传头像 -->
+                        <div class="upload">
+                            <button class="upload_btn">上传您的头像</button>
+                            <span>从您的设备上上传一个文件。图片应为方形, 至少为184
+                                px * 184px。
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- 您的头像 -->
+                    <div class="your_avatar">
+                        <div class="title">您的头像</div>
+                        <!-- 头像简单列表 -->
+                        <ul class="avatar_list">
+                            <li>
+                                <img src="../../img/profile/avatar/large.jpg" alt="">
+                                <div class="mask"></div>
+                            </li>
+                            <li>
+                                <img src="../../img/profile/avatar/large.jpg" alt="">
+                                <div class="mask"></div>
+                            </li>
+                            <li>
+                                <img src="../../img/profile/avatar/large.jpg" alt="">
+                                <div class="mask"></div>
+                            </li>
+                            <li>
+                                <img src="../../img/profile/avatar/large.jpg" alt="">
+                                <div class="mask"></div>
+                            </li>
+                        </ul>
+                        <!-- 查看所有头像 -->
+                        <button class="see_all_avatar">查看所有</button>
+                    </div>
+
+                    <!-- 您的边框 -->
+                    <div class="your_border">
+                        <div class="title">你的头像边框</div>
+                        <ul class="border_list">
+                            <li></li>
+                        </ul>
+                    </div>
+
+                    <!-- 按钮 -->
+                    <div class="btn">
+                        <button class="cancel">取消</button>
+                        <button class="save">保存</button>
+                    </div>
 
                 </div>
+
+                <!-- 个人资料背景 -->
                 <div class="r bg_box">
+                    <div class="title">
+                        <div class="t">个人资料背景</div>
+                        <span>选择一个背景在您的个人资料页面上显示。</span>
+                    </div>
 
+                    <!-- 背景显示 -->
+                    <div class="bg_show">
+                        <div class="center"></div>
+                    </div>
+
+                    <!-- 背景筛选 -->
+                    <div class="bg_filter">
+                        <span>FILTER</span>
+                        <input type="text">
+                    </div>
+
+                    <!-- 背景选择 -->
+                    <div class="bg_choose">
+                        <ul class="bg_list">
+                            <li>
+                                <div class="bg_img">
+                                    <img src="../../img/profile/bg_dots.png" alt="">
+                                </div>
+                                <span>默认</span>
+                            </li>
+                        </ul>
+                        
+                    </div>
+
+                    <!-- 按钮 -->
+                    <div class="btn">
+                        <button class="cancel">取消</button>
+                        <button class="save">保存</button>
+                    </div>
                 </div>
+
+                <!-- 迷你个人资料 -->
                 <div class="r mini_box">
+                    <div class="title">
+                        <div class="t">迷你个人资料</div>
+                        <span>选择一个背景，在鼠标悬停时出现的迷你个人资料上显示。</span>
+                    </div>
 
+                    <!-- 迷你个人资料显示 -->
+                    <div class="mini_show">
+                        <div class="card">
+                            <div class="card_top">
+                                <div class="avatar">
+                                    <img src="../../img/profile/avatar/middle.jpg" alt="">
+                                </div>
+                                <div class="nickname">
+                                    <span>nickname</span>
+                                </div>
+                                <div class="state">离线</div>
+                            </div>
+                            <div class="card_level">
+                                <a>
+                                    <div class="level_num">
+                                        0
+                                    </div>
+                                    <span>Steam 等级</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 迷你背景筛选 -->
+                    <div class="mini_filter">
+                        <span>FILTER</span>
+                        <input type="text">
+                    </div>
+
+                    <!-- 迷你背景选择 -->
+                    <div class="mini_choose">
+                        <ul class="mini_list">
+                            <li>
+                                <div class="mini_img">
+                                    <img src="../../img/profile/bg_dots.png" alt="">
+                                </div>
+                                <span>默认</span>
+                            </li>
+                        </ul>
+                        
+                    </div>
+
+                    <!-- 按钮 -->
+                    <div class="btn">
+                        <button class="cancel">取消</button>
+                        <button class="save">保存</button>
+                    </div>
                 </div>
+
+                <!-- 主题 -->
                 <div class="r theme_box">
+                    <div class="title">
+                        <div class="t">主题</div>
+                        <span>为您的个人资料页面选择一个颜色主题。</span>
+                    </div>
 
+                    <!-- 主题背景显示 -->
+                    <div class="theme_bg_show">
+                        <div class="center"></div>
+                    </div>
+
+                    <!-- 主题选择 -->
+                    <div class="theme_choose">
+                        <ul class="theme_list">
+                            <li>
+                                <div class="theme c0"></div>
+                                <span>默认主题</span>
+                            </li>
+                            <li>
+                                <div class="theme c1"></div>
+                                <span>夏日</span>
+                            </li>
+                            <li>
+                                <div class="theme c2"></div>
+                                <span>午夜</span>
+                            </li>
+                            <li>
+                                <div class="theme c3"></div>
+                                <span>钢铁</span>
+                            </li>
+                            <li>
+                                <div class="theme c4"></div>
+                                <span>宇宙</span>
+                            </li>
+                            <li>
+                                <div class="theme c5"></div>
+                                <span>深色模式</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 按钮 -->
+                    <div class="btn">
+                        <button class="cancel">取消</button>
+                        <button class="save">保存</button>
+                    </div>
                 </div>
-                <div class="r privacy_setting_box">
 
+                <!-- 隐私设置 -->
+                <div class="r privacy_setting_box">
+                    <div class="basic_info">
+                        <div class="title">我的基本信息：<i>公开</i></div>
+                        <span>为您的个人资料页面选择一个颜色主题。</span>
+                    </div>
+                    <div class="self_profile">
+
+                    </div>
                 </div>
             </div>
         </div>
