@@ -60,18 +60,43 @@ window.onload = function() {
     let avatarBox = right.querySelector(".avatar_box")
     let avatarCancelBtn = avatarBox.querySelector(".cancel")
     let avatarSaveBtn = avatarBox.querySelector(".save")
-    
+    let uploadBtn = avatarBox.querySelector("#upload")
+    let imgCts = avatarBox.querySelectorAll(".imgCt")
+    let uploadUrl = null
+
     // 取消按钮
     avatarCancelBtn.onclick = function() {
-        
+        console.log("cancel");
     }
 
-    // 保存按钮
+    // 上传头像
+    uploadBtn.onchange = function() {
+        let file = this.files[0]
+        let src = window.URL.createObjectURL(file)
+        imgCts.forEach(img=> {
+            img.src=src
+        })
+    }
+    
+    // 保存按钮 即 头像上传提交按钮
     avatarSaveBtn.onclick = async function() {
-        let {data} = await updateUsers()
+        let file = uploadBtn.files[0]
+        if(!file) {
+            return alert("您未选择任何文件！")
+        }
+        let formData = new FormData()
+        formData.append("file",file)
+        let data = await uploadFile(formData)
+        uploadUrl = data
+        
+        console.log(data);
+        // let data = await 
+        // let {data} = await updateUsers()
         // 写到localStorage
-        user.avatar = data.avatar
-        localStorage.setItem("user",JSON.stringify(user))
+        // user.avatar = data.avatar
+        // localStorage.setItem("user",JSON.stringify(user))
+        
+
         init()
     }
     
@@ -96,5 +121,17 @@ window.onload = function() {
         })
         return data
     }  
+
+    // 上传头像
+    async function uploadFile() {
+        let data = await axios({
+            method: "POST",
+            headers:{
+                Authorization: `Bearer ${localStorage.token}`
+            },
+            url: `http://localhost:8080/profiles/upload`,
+        })
+        return data
+    }
 
 }

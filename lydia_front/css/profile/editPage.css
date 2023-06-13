@@ -422,16 +422,26 @@ body .edit_box .container .right .avatar_box .choose .upload {
 body .edit_box .container .right .avatar_box .choose .upload .upload_btn {
   width: 216px;
   height: 32px;
+  line-height: 32px;
+  display: inline-block;
   border: 4px;
   color: #dfe3e6;
   font-size: 14px;
   text-align: center;
   background: #3d4450;
   transition: all 0.3s linear;
+  position: relative;
 }
 body .edit_box .container .right .avatar_box .choose .upload .upload_btn:hover {
   background: #545a66;
   box-shadow: 0 2px 10px 0 #000;
+}
+body .edit_box .container .right .avatar_box .choose .upload .upload_btn #upload {
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
 }
 body .edit_box .container .right .avatar_box .choose .upload span {
   font-size: 14px;
@@ -462,6 +472,7 @@ body .edit_box .container .right .avatar_box .your_avatar .avatar_list li {
   transition: all 0.3s linear;
   overflow: hidden;
   position: relative;
+  cursor: pointer;
 }
 body .edit_box .container .right .avatar_box .your_avatar .avatar_list li img {
   width: 150px;
@@ -525,6 +536,7 @@ body .edit_box .container .right .avatar_box .your_border .border_list li {
   height: 150px;
   border: 2px solid #1A9FFF;
   transition: all 0.3s linear;
+  cursor: pointer;
 }
 body .edit_box .container .right .avatar_box .your_border .border_list li:hover {
   transform: scale(1.1);

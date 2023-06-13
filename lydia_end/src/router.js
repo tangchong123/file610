@@ -5,6 +5,7 @@ const Router = require('@koa/router')
 const router = new Router()
 const userController = require('./controller/user')
 const messageController = require("./controller/message")
+const uploadController = require('./controller/avatar')
 
 router.prefix('/profiles')
 
@@ -24,4 +25,18 @@ router
 	.patch('/message/:id', messageController.update)
     .get('/message/:uid', messageController.search)
 
+// avatar头像 模块
+router
+	.post(
+		'/upload',
+		uploadController.upload.single('file'),
+		uploadController.uploadFile
+	)
+	.post(
+		'/upload/chunk',
+		uploadController.upload.single('file'),
+		uploadController.uploadChunk
+	)
+	.post('/upload/merge', uploadController.mergeChunk)
+	
 module.exports = router

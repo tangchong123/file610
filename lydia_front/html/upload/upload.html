@@ -35,6 +35,7 @@
         }
 
         let src = window.URL.createObjectURL(file)
+        console.log(src);
         img.src = src;
 
         // let reader = new FileReader()
@@ -62,39 +63,39 @@
             return
         }
 
-        // let formData = new FormData();
-        // formData.append('file', file)
+        let formData = new FormData();
+        formData.append('file', file)
 
-        // let data = await uploadFile(formData)
-        // uploadUrl = data;
-        // img.src = `http://localhost:4400${data}`
+        let data = await uploadFile(formData)
+        uploadUrl = data;
+        img.src = `http://localhost:4400${data}`
 
         // 大文件分片上传
-        console.log('大文件上传');
-        console.log(file.size);
+        // console.log('大文件上传');
+        // console.log(file.size);
 
-        let chunkList = [];
-        let cueSize = 0;
+        // let chunkList = [];
+        // let cueSize = 0;
 
-        while (cueSize <= file.size) {
+        // while (cueSize <= file.size) {
 
-            chunkList.push(file.slice(cueSize, cueSize + baseSize))
+        //     chunkList.push(file.slice(cueSize, cueSize + baseSize))
 
-            cueSize += baseSize;
-        }
+        //     cueSize += baseSize;
+        // }
 
-        let ms = Date.now();
+        // let ms = Date.now();
 
-        let chunkMap = chunkList.map((chunk, i) => {
-            let formData = new FormData();
-            formData.append('file', chunk)
+        // let chunkMap = chunkList.map((chunk, i) => {
+        //     let formData = new FormData();
+        //     formData.append('file', chunk)
 
-            return uploadChunk(formData, { name: `${ms}`, index: i })
-        })
+        //     return uploadChunk(formData, { name: `${ms}`, index: i })
+        // })
 
-        await Promise.all(chunkMap)
+        // await Promise.all(chunkMap)
 
-        let fileUrl = await mergeFile({ filename: file.name, name: ms, size: baseSize })
+        // let fileUrl = await mergeFile({ filename: file.name, name: ms, size: baseSize })
 
 
 
