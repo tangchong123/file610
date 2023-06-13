@@ -17,11 +17,23 @@ let app = new Vue({
         states:["在线","离开","隐身","请勿打扰"],
         groupName:"",
         inviteFriend:[],
-        isShowSetting:true,
+        isShowSetting:false,
         friendsSetting:[
             "好友列表","聊天","大小与缩放","通知","语音"
         ],
-        settingActivateIndex:0
+        settingActivateIndex:3,
+        notifyList: [
+            "好友加入游戏时","好友上线时","收到直接聊天信息时","收到聊天室通知时","组活动与公告"
+        ],
+        voiceInputDevice: [
+            "default"
+        ],
+        voiceInputDeviceIndex:0,
+        voiceOutDevice:[
+            "default"
+        ],
+        voiceOutDeviceIndex:0,
+        activateMicrophone:1
 
     },
     methods: {
@@ -57,6 +69,22 @@ let app = new Vue({
         },
         ShowSetting(){
             this.isShowSetting = !this.isShowSetting
+        },
+        changeNotify(i){
+            this.settingActivateIndex = i
+        },
+        changeVoiceInputDevice(i){
+            this.voiceInputDeviceIndex  = i
+        },
+        changeVoiceOutDevice(i){
+            this.voiceOutDeviceIndex  = i
+        },
+        changeMicrophone(i){
+            this.activateMicrophone = i
+        },
+        cancelSetting(){
+            this.isShowSetting = false
+            console.log("aaa")
         }
 
      },

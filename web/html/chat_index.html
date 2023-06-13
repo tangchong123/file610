@@ -44,22 +44,23 @@
                 <div class="setting-left">
                     <div class="setting-left-header">好友列表设置</div>
                     <div>
-                        <div v-for="item of friendsSetting">
+                        <div v-for="(item,index) of friendsSetting" @click = "changeNotify(index)">
                             {{item}}
                         </div>
                     </div>
                 </div>
                 <div class="setting-right">
+                    <div class="setting-fixed" @click.self = "cancelSetting()"></div>
                     <div v-show="settingActivateIndex === 0 ">
                         <div  class="setting-title">
                             {{friendsSetting[0]}}
                         </div>
                         <div class="setting-body">
-                            <div>
+                            <div class="first-body">
                                 <div>给好友名称添加昵称</div>
-                                <div>
+                                <div class="first-body-user">
                                     <img v-bind:src="userInfo.avatar" alt="">
-                                    <div>
+                                    <div class="first-body-usernick">
                                         <span>昵称*</span>
                                         <span>{{states[userInfo.state]}}</span>
                                     </div>
@@ -71,11 +72,202 @@
                                 <div>开</div>
                             </div>
                         </div>
+                        <div class="setting-body">
+                            <div>按游戏将好友分组</div>
+                            <div>
+                                <div>关</div>
+                                <div>开</div>
+                            </div>
+
+                        </div>
+                        <div class="setting-body">
+                            <div>在自定义类别中隐藏离线好友</div>
+                            <div>
+                                <div>关</div>
+                                <div>开</div>
+                            </div>
+
+                        </div>
+                        <div class="setting-body">
+                            <div>在线/离线好友列表中隐藏已分类好友</div>
+                            <div>
+                                <div>关</div>
+                                <div>开</div>
+                            </div>
+
+                        </div>
+                        <div class="setting-body">
+                            <div>将好友排序时忽略“离开:状态</div>
+                            <div>
+                                <div>关</div>
+                                <div>开</div>
+                            </div>
+
+                        </div>
                     </div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div v-show="settingActivateIndex === 1">
+                        <div  class="setting-title">
+                            {{friendsSetting[1]}}
+                        </div>
+                        <div class="setting-body">
+                            <div>不嵌入图片及其他内联媒体</div>
+                            <div>
+                                <div>关</div>
+                                <div>开</div>
+                            </div>
+                        </div>
+                        <div class="setting-body">
+                            <div>记住我打开的聊天</div>
+                            <div>
+                                <div>关</div>
+                                <div>开</div>
+                            </div>
+                        </div>
+                        <div class="setting-body">
+                            <div>时间戳始终以 24 小时制显示</div>
+                            <div>
+                                <div>关</div>
+                                <div>开</div>
+                            </div>
+                        </div>
+                        <div class="setting-body">
+                            <div>在聊天消息输入中禁用拼写检查</div>
+                            <div>
+                                <div>关</div>
+                                <div>开</div>
+                            </div>
+                        </div>
+                        <div class="setting-body">
+                            <div>禁用房间动画效果</div>
+                            <div>
+                                <div>关</div>
+                                <div>开</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div v-show="settingActivateIndex === 2">
+                        <div  class="setting-title">
+                            {{friendsSetting[2]}}
+                        </div>
+                        <div class="setting-body">
+                            <div>精简好友名单与聊天视图</div>
+                            <div>
+                                <div>关</div>
+                                <div>开</div>
+                            </div>
+                        </div>
+                        <div class="setting-body">
+                            <div>精简收藏区</div>
+                            <div>
+                                <div>关</div>
+                                <div>开</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div v-show="settingActivateIndex === 3">
+                        <div class="setting-title">
+                            {{friendsSetting[3]}}
+                        </div>
+                        <div class="notify-box">
+                            <div>
+                                <div>好友通知</div>
+                                <div>显示通知</div>
+                                <div>播放声音</div>
+                            </div>
+                            <div v-for="item of notifyList">
+                                <div>{{item}}</div>
+                                <div><input type="checkbox"></input></div>
+                                <div><input type="checkbox"></input></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div v-show="settingActivateIndex === 4">
+                        <div class="setting-title">
+                            {{friendsSetting[4]}}
+                        </div>
+                        <div class="voice">
+                            <div>
+                                <div>语音设置与测试</div>
+                                <div class="voice-test">
+                                    <div>
+                                        <img v-bind:src="userInfo.avatar" alt="">
+                                        <div>
+                                            <div>{{userInfo.nickName}}</div>
+                                            <div>{{states[userInfo.state]}}</div>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                开始测试麦克风
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div>语音输入设备</div>
+                                <div class="input-box">
+                                    <div>
+                                        <div>{{voiceInputDevice[voiceInputDeviceIndex]}}</div>
+                                        <span></span>
+                                    </div>
+                                    <div class="input-box-device">
+                                        <div v-for="(item,index) of voiceInputDevice" @click="changeVoiceInputDevice(index)">
+                                            {{item}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div>语音输出设备</div>
+                                <div class="input-box">
+                                    <div>
+                                        <div>{{voiceInputDevice[voiceInputDeviceIndex]}}</div>
+                                        <span></span>
+                                    </div>
+                                    <div class="input-box-device">
+                                        <div v-for="(item,index) of voiceOutDevice" @click="changeVoiceInputDevice(index)">
+                                            {{item}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    音量
+                                </div>
+                                <div class="my-voice">
+                                    <div>
+                                        <div>输入音量/增益</div>
+                                        <input type="range">
+                                        <div>(我的麦克风)</div>
+                                    </div>
+                                    <div>
+                                        <div>输出音量/增益</div>
+                                        <input type="range">
+                                        <div>(我的好友)</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    语音传输阈值
+                                </div>
+                                <div class="open-microphone">
+                                    麦克风开启时，不会传输入低于此阈值的噪音：
+                                </div>
+                                <div class="microphone-box">
+                                    <div :class="{'microphoneactivate':activateMicrophone==0}" @click = "changeMicrophone(0)">关闭</div>
+                                    <div :class="{'microphoneactivate':activateMicrophone==1}"  @click = "changeMicrophone(1)">
+                                        <span>中</span>
+                                        <span>(推荐)</span>
+                                    </div>
+                                    <div :class="{'microphoneactivate':activateMicrophone==2}"  @click = "changeMicrophone(2)">高</div>
+                                </div>
+                            </div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
