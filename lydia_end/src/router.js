@@ -5,7 +5,8 @@ const Router = require('@koa/router')
 const router = new Router()
 const userController = require('./controller/user')
 const messageController = require("./controller/message")
-const uploadController = require('./controller/avatar')
+const uploadController = require('./controller/upload')
+
 
 router.prefix('/profiles')
 
@@ -29,14 +30,8 @@ router
 router
 	.post(
 		'/upload',
-		uploadController.upload.single('file'),
+		uploadController.upload.single("file"),
 		uploadController.uploadFile
 	)
-	.post(
-		'/upload/chunk',
-		uploadController.upload.single('file'),
-		uploadController.uploadChunk
-	)
-	.post('/upload/merge', uploadController.mergeChunk)
 	
 module.exports = router
