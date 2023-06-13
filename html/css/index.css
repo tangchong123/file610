@@ -51,6 +51,23 @@ a {
 .dot.active {
   background-color: hsla(0, 0%, 100%, 0.4);
 }
+.primePrice {
+  text-decoration: line-through;
+}
+.nowPrice {
+  color: #beee11;
+}
+.more {
+  padding: 4px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+}
+.more a {
+  font-size: 12px;
+  color: #fff;
+}
 nav {
   background-color: #171a21;
   color: #ccc;
@@ -994,7 +1011,7 @@ article .wrapper .popGame .dots {
 article .wrapper .showGameList {
   margin-top: 70px;
   width: 100%;
-  height: 840px;
+  height: 760px;
 }
 article .wrapper .showGameList .navTab {
   width: 100%;
@@ -1022,12 +1039,156 @@ article .wrapper .showGameList .navTab ul .active {
   background-color: #174052;
   border-radius: 4px;
 }
-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+article .wrapper .showGameList .showList {
   width: 100%;
-  height: 80px;
+  height: 90%;
+}
+article .wrapper .showGameList .showList .seeMore {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 40px;
+}
+article .wrapper .showGameList .showList .seeMore a {
+  padding: 4px 10px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  font-size: 12px;
+}
+article .wrapper .showGameList .showList > ul {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: none;
+}
+article .wrapper .showGameList .showList > ul > li {
+  cursor: pointer;
+  width: 65%;
+  height: 85.5px;
+  color: #c7d5e0;
+  transition: all 0.3s;
+}
+article .wrapper .showGameList .showList > ul > li:hover {
+  background: linear-gradient(to right, #c6e6f8 5%, #95bcd3 95%);
+  color: #10161b;
+}
+article .wrapper .showGameList .showList > ul > li .basicInfo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+article .wrapper .showGameList .showList > ul > li .basicInfo .img {
+  width: 25%;
+  height: 100%;
+}
+article .wrapper .showGameList .showList > ul > li .basicInfo .img img {
+  width: 100%;
+  height: 100%;
+}
+article .wrapper .showGameList .showList > ul > li .basicInfo .desc {
+  width: 55%;
+  padding-left: 20px;
+}
+article .wrapper .showGameList .showList > ul > li .basicInfo .desc .name {
+  font-size: 20px;
+}
+article .wrapper .showGameList .showList > ul > li .basicInfo .desc .icon {
+  width: 20px;
+  height: 20px;
+  background: url('../images/bannerIcon.png');
+  background-size: 100% 100%;
+}
+article .wrapper .showGameList .showList > ul > li .basicInfo .desc .tag {
+  font-size: 14px;
+}
+article .wrapper .showGameList .showList > ul > li .basicInfo .priceBox {
+  text-align: right;
+  display: flex;
+  flex-direction: column ;
+  justify-content: center;
+  align-items: center;
+}
+article .wrapper .showGameList .showList > ul > li .basicInfo .priceBox .primePrice {
+  font-size: 14px;
+}
+article .wrapper .showGameList .showList > ul > li .detail {
+  cursor: default;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 35%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(to right, #95bbd4 5%, #859bac 95%);
+  padding: 16px 20px;
+}
+article .wrapper .showGameList .showList > ul > li .detail .desc {
+  width: 100%;
+  height: 20%;
+}
+article .wrapper .showGameList .showList > ul > li .detail .desc .name {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 24px;
+  color: #000;
+}
+article .wrapper .showGameList .showList > ul > li .detail .desc .assessment {
+  padding: 5px 7px;
+  margin-bottom: 10px;
+  background-color: rgba(38, 54, 69, 0.6);
+  color: #c6d4df;
+}
+article .wrapper .showGameList .showList > ul > li .detail .desc .assessment div {
+  font-size: 14px;
+  color: #66c0f4;
+}
+article .wrapper .showGameList .showList > ul > li .detail .desc .tag ul {
+  display: flex;
+}
+article .wrapper .showGameList .showList > ul > li .detail .desc .tag ul li {
+  background-color: rgba(38, 54, 69, 0.6);
+  padding: 2px 7px;
+  margin-right: 10px;
+  color: #fff;
+  font-size: 12px;
+}
+article .wrapper .showGameList .showList > ul > li .detail > .picList {
+  width: 100%;
+  height: 80%;
+}
+article .wrapper .showGameList .showList > ul > li .detail > .picList > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+article .wrapper .showGameList .showList > ul > li .detail > .picList > ul > li {
+  width: 100%;
+  height: 24%;
+}
+article .wrapper .showGameList .showList > ul > li .detail > .picList > ul > li img {
+  width: 100%;
+  height: 100%;
+}
+article .wrapper .showGameList .showList > ul .active {
+  background: linear-gradient(to right, #c6e6f8 5%, #95bcd3 95%);
+  color: #10161b;
+}
+article .wrapper .showGameList .showList > ul .active .detail {
+  z-index: 2;
+}
+article .wrapper .showGameList .showList .active {
+  display: block;
+}
+footer {
+  width: 100%;
+  height: 78px;
   color: #969696;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   padding-top: 16px;
@@ -1047,9 +1208,13 @@ footer .footer_box {
   justify-content: space-around;
   align-items: center;
 }
-footer .footer_box .logo img {
+footer .footer_box .logo {
   width: 88px;
   height: 25px;
+}
+footer .footer_box .logo img {
+  width: 100%;
+  height: 100%;
 }
 footer .footer_box .info .top {
   color: #8F98A0;

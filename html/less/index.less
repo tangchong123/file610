@@ -50,6 +50,23 @@ a {
 .dot.active{
   background-color: hsla(202,60%,100%,0.4);
 }
+.primePrice{
+  text-decoration: line-through;
+}
+.nowPrice{
+  color: #beee11;
+}
+.more{
+  padding: 4px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+  a{
+    font-size: 12px;
+    color: #fff;
+  }
+}
 
 // 顶部栏
 nav {
@@ -1027,7 +1044,7 @@ article{
     .showGameList{
       margin-top: 70px;
       width: 100%;
-      height: 840px;
+      height: 760px;
       .navTab{
         width: 100%;
         height: 4%;
@@ -1055,56 +1072,201 @@ article{
         }
 
       }
+      .showList{
+        width: 100%;
+        height: 90%;
+        .seeMore{
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          height: 40px;
+          a {
+            padding: 4px 10px;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            font-size: 12px;
+          }
+      }
+      >ul{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: none;
+        >li{
+          cursor: pointer;
+          width: 65%;
+          height: 85.5px;
+          color: #c7d5e0;
+          transition: all .3s;
+          &:hover{
+            background: linear-gradient( to right, #c6e6f8 5%,#95bcd3 95%);
+            color: #10161b;
+          }
+          .basicInfo{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            .img{
+              width: 25%;
+              height: 100%;
+              img{
+                width: 100%;
+                height: 100%;
+              }
+            }
+            .desc{
+              width: 55%;
+              padding-left: 20px;
+              .name{
+                font-size: 20px;
+              }
+              .icon{
+                width: 20px;
+                height: 20px;
+                background: url('../images/bannerIcon.png');
+                background-size: 100% 100%;
+              }
+              .tag{
+                font-size: 14px;
+              }
+            }
+            .priceBox{
+              text-align: right;
+              display: flex;
+              flex-direction:column ;
+              justify-content: center;
+              align-items: center;
+              .primePrice{
+                font-size: 14px;
+              }
+            }
+          }
+          .detail{
+            cursor: default;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 35%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient( to right, #95bbd4 5%,#859bac 95%);
+            padding: 16px 20px;
+            .desc{
+              width: 100%;
+              height: 20%;
+              .name{
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp:1;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: 24px;
+                color: #000;
+              }
+              .assessment{
+                padding: 5px 7px;
+                margin-bottom: 10px;
+                background-color: rgba( 38, 54, 69, 0.6);
+                color: #c6d4df;
+                div{
+                  font-size: 14px;
+                  color:#66c0f4;
+                }
+              }
+              .tag{
+                ul{
+                  display: flex;
+                  li{
+                    background-color: rgba( 38, 54, 69, 0.6);
+                    padding: 2px 7px;
+                    margin-right: 10px;
+                    color: #fff;
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+            >.picList{
+              width: 100%;
+              height: 80%;
+              >ul{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                height: 100%; 
+                >li{
+                  width: 100%;
+                  height: 24%;
+                  img{
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .active{
+          background: linear-gradient( to right, #c6e6f8 5%,#95bcd3 95%);
+            color: #10161b;
+          .detail{
+            z-index: 2;
+          }
+        }
+      }
+      .active{
+        display: block;
+      }
     }
   }
 }
-
-
+}
 
 footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
-  height: 80px;
+  height: 78px;
   color: #969696;
   font-family: "Motiva Sans",Arial,Helvetica,sans-serif;
   padding-top: 16px;
   background-color: #000;
   a {
-      color: #bec2c5;
-      &:hover {
-          color: #fff;
-      }
+    color: #bec2c5;
+    &:hover {
+        color: #fff;
+    }
   }
   .footer_box {
-      width: 70%;
-      margin: 0 auto;
-      font-size: 12px;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      .logo{
-        img{
-          width: 88px;
-          height: 25px;
+    width: 70%;
+    margin: 0 auto;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .logo{
+      width: 88px;
+      height: 25px;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .info {
+      .top {
+        color: #8F98A0;
+      }
+      ul {
+        display: flex;
+        li {
+          border-right: 1px solid #aaa;
+          padding: 0 10px;
+          &:nth-of-type(4) {
+              border-right: none;
+          }
         }
       }
-      .info {
-          .top {
-              color: #8F98A0;
-          }
-          ul {
-              display: flex;
-              li {
-                  border-right: 1px solid #aaa;
-                  padding: 0 10px;
-                  &:nth-of-type(4) {
-                      border-right: none;
-                  }
-                  
-              }
-          }
-      }
+    }
   }
 }

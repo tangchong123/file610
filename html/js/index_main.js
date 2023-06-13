@@ -40,7 +40,7 @@ $(function(){
   }
   // 获取banner数据
   getData().then(res=>{
-    let data = res.data.data
+    let {data} = res.data
     let index = 0
     $('.bannerPic').on('click',function(){
       location.href = `https://store.steampowered.com/app/${data[index].dir}`
