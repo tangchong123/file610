@@ -12,17 +12,19 @@
 
 <body>
     <div id="app">
-        <div class="header"></div>
+        <div class="header">
+            
+        </div>
         <div class="main">
             <div class="main-header">
-
+                <!-- <div class=""></div> -->
             </div>
             <div class="main-box">
                 <div class="main-left">
                     <div>
                         <div>好友</div>
                         <div class="left-friend">
-                            <div v-for="(item,index) of friendsMenu">
+                            <div v-for="(item,index) of friendsMenu" @click = "changeIndex(item.id)">
                                 <img v-bind:src="item.icon" alt="">
                                 <span>{{item.menu}}</span>
                             </div>
@@ -31,7 +33,7 @@
                     <div>
                         <div>正在关注</div>
                         <div class="left-friend">
-                            <div v-for="(item,index) of focusing">
+                            <div v-for="(item,index) of focusing" @click = "changeIndex(item.id)">
                                 <img v-bind:src="item.icon" alt="">
                                 <span>{{item.menu}}</span>
                             </div>
@@ -40,7 +42,7 @@
                     <div>
                         <div>组</div>
                         <div class="left-friend">
-                            <div v-for="(item,index) of myGroups">
+                            <div v-for="(item,index) of myGroups" @click = "changeIndex(item.id)">
                                 <img v-bind:src="item.icon" alt="">
                                 <span>{{item.menu}}</span>
                             </div>
@@ -48,6 +50,49 @@
                     </div>
                 </div>
                 <div class="main-right">
+                    
+                    <div v-show="controlIndex==0">
+                        <div>
+                            <div>
+                                您的好友 {{friendsList.length}}
+                                <span>/260</span>
+                            </div>
+                            <div>
+                                <div>管理好友列表</div>
+                                <div @click = "changeIndex(1)">
+                                    <span></span>
+                                    <div>添加好友</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <span></span>
+                            <input type="text" placeholder="通过名称或者游戏名搜索好友">
+                        </div>
+                        <div>
+                            <div v-if="friendsList.length == 0 " class="no-friends">
+                                抱歉,没有好友可显示.
+                            </div>
+                            <div v-else></div>
+                        </div>
+                    </div>
+                    <div v-show="controlIndex==1" class="add-friends">
+                        <div>添加好友</div>
+                        <div class="add-menu">
+                            <div class="my-friend-code"></div>
+                            <div class="fast-invite"></div>
+                            <div class="search-friend"></div>
+                        </div>
+                    </div>
+                    <div v-show="controlIndex==2">3</div>
+                    <div v-show="controlIndex==3">4</div>
+                    <div v-show="controlIndex==4">5</div>
+                    <div v-show="controlIndex==5">6</div>
+                    <div v-show="controlIndex==6">7</div>
+                    <div v-show="controlIndex==7">8</div>
+                    <div v-show="controlIndex==8">9</div>
+                    <div v-show="controlIndex==9">10</div>
+                    <div v-show="controlIndex==10">11</div>
                 </div>
             </div>
         </div>
