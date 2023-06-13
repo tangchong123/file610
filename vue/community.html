@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/community.css">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <img src="./img/logo_steam.svg" alt="">
+            <div>
+                <span @mouseenter='headerMouseenter(item)' @mouseleave='headerMouseleave(item)'
+                    v-for="item in headerList" :key="item.id"
+                    :style="{ color: item.active ? '#fff' : '#a9b6a6' }">{{item.title}}
+                </span>
+                <div v-show="isShow1" @mouseleave='headerMouseleaveAll'>
+                    <span @mouseenter='headerMouseenter1(item)' v-for="item in headerList1" :key="item.id"
+                        @mouseleave='headerMouseleave1(item)'
+                        :style="{ color: item.active ? '#fff' : '#a9b6a6' }">{{item.title}}</span>
+                </div>
+                <div v-show="isShow2" @mouseleave='headerMouseleaveAll'>
+                    <span @mouseenter='headerMouseenter2(item)' v-for="item in headerList2" :key="item.id"
+                        @mouseleave='headerMouseleave1(item)'
+                        :style="{ color: item.active ? '#fff' : '#a9b6a6' }">{{item.title}}</span>
+                </div>
+            </div>
+            <div class="headerRight">
+                <div>
+                    <img src="./img/下载.svg" alt="">
+                    安装 Steam
+                </div>
+                <span>登录</span>
+                <span>|</span>
+                <span>语言</span>
+            </div>
+        </header>
+        <main>
+            <div>
+                <span>社区活动</span>
+                <span>Steam 上所有游戏与软件的社区和官方内容。 </span>
+            </div>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <span>欢迎来到 Steam 社区</span>
+                            <span>登录 Steam 社区寻找更多的中心来浏览。</span>
+                            <div>
+                                <span title="登录">登录</span>
+                                或
+                                <span title="加入Steam">加入Steam</span>
+                            </div>
+                            <span>首次使用 Steam？
+                                <a href="">了解更多</a>。
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <p>热门的中心</p>
+                        <div v-for="item in gameLists" :key="item.id">
+                            <img :src="item.img" alt="">
+                            <div>
+                                <span>{{item.name}}</span>
+                                <span>{{item.info}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <p>查找中心</p>
+                        <div>
+                            <input type="text" placeholder="搜索产品">
+                            <div><img src="./img/searchbox_workshop_submit.gif" alt=""></div>
+                        </div>
+                    </div>
+                    <p></p>
+                    <div>
+                        <p>寻找玩家</p>
+                        <div>
+                            <input type="text" placeholder="搜索好友">
+                            <div><img src="./img/searchbox_workshop_submit.gif" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="topBar">
+            <span :class="{active:item.active}" :title="item.title" v-for="item in topBarLists">{{item.title}}</span>
+            <div>
+                <span>正在查看</span>
+                <p>最热门</p>
+                <p>最新</p>
+            </div>
+        </div>
+        <div class="commentBar">
+            <div v-for="item in commentLists" :key="item.id" @click="item.active = true">
+                <p>{{item.value1}}</p>
+                <p>
+                    {{item.value2}}
+                    <img src="./img/award_icon_blue.svg" alt="">
+                    <span>{{item.num}}</span>
+                </p>
+                <div>
+                    <div>
+                        <img src="./img/icon_rate.png" alt="">
+                    </div>
+                    <div>
+                        <p>推荐</p>
+                        <p>总时数 {{item.hours}} 小时</p>
+                    </div>
+                </div>
+                <p>发布于：{{item.publish}}</p>
+                <p>{{item.comment}}</p>
+                <div>
+                    <span>{{item.value3}}</span>
+                    <div>
+                        <img src="./img/comment_quoteicon.png" alt="">
+                        {{item.comments}}
+                    </div>
+                </div>
+                <div class="popUp" v-show="item.active">
+                    <div>
+                        <p>https://steamcommunity.com/profiles/76561199417197377/recommended/2290180/</p>
+                        <div>
+                            <div>
+                                <div>
+                                    <img :src="item.img1" alt="">
+                                    <div><img :src="item.img2" alt=""></div>
+                                </div>
+                                <span>{{item.name}}</span>»
+                                <span>评测</span>»
+                                <span>{{item.game}}</span>
+                            </div>
+                            <div>
+                                <div>
+                                    <div>
+                                        <p>
+                                            <span>{{item.value1}}</span>
+                                            <span>{{item.value2}}</span>
+                                        </p>
+                                        <div v-for="item1 in item.giftLists" @mouseenter="item1.active = true"
+                                            @mouseleave="item1.active = false">
+                                            <img :src="item1.gift" alt="">
+                                            <span>{{item1.num}}</span>
+                                            <div :class="{Active1:item1.active}">
+                                                <div>
+                                                    <img :src="item1.gifts" alt="">
+                                                </div>
+                                                <div>
+                                                    <p>{{item1.value1}}</p>
+                                                    <p>{{item1.value2}}</p>
+                                                    <p>奖励会给予创建者{{item1.num1}} Steam 点数。由{{item1.num ? item1.num : 1}}人送出
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <img src="./img/award_icon_blue.svg" alt="">
+                                            <span>1</span>
+                                            <p>查看另外1个社区大奖</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img src="./img/icon_thumbsUp.png" alt="">
+                                        <div>
+                                            <p>推荐</p>
+                                            <p>过去2周 {{item.hours}} 小时/总时数 {{item.hours1}} 小时 （评测时
+                                                {{item.hours2}} 小时）</p>
+                                        </div>
+                                        <div>
+                                            <img src="./img/icon_review_steam.png" alt="">
+                                            <p>产品是从Steam上直接购买的</p>
+                                        </div>
+                                    </div>
+                                    <p>发布于：{{item.publish}} 上午 {{item.date}}</p>
+                                    <p>{{item.comment}}</p>
+                                </div>
+                            </div>
+                            <div>
+                                <span>这篇评测是否有价值？</span>
+                                <div>
+                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                    是
+                                </div>
+                                <div>
+                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                    否
+                                </div>
+                                <div>
+                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                    欢乐
+                                </div>
+                                <div>
+                                    <div><img src="./img/award_icon (1).svg" alt=""></div>
+                                    奖励
+                                </div>
+                                <div>
+                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                    <p>举报该评测违反《Steam 服务协议条款》或《在线行为准则》。</p>
+                                </div>
+                            </div>
+                            <div>
+                                <img :src="item.img3" alt="">
+                                <div>
+                                    <div><img src="./img/icon_store.png" alt=""><span>访问商店页面</span></div>
+                                    <div><img src="./img/icon_community.png" alt=""><span>浏览社区中心</span></div>
+                                    <div><img src="./img/icon_search.png" alt=""><span>寻找更多类似产品</span></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                    <span>4 条留言</span>
+                                    <span>订阅讨论串</span>
+                                </div>
+                                <div v-for="item2 in item.userLists">
+                                    <img :src="item2.img" alt="" @mouseenter="item2.active = true"
+                                        @mouseleave="item2.active= false">
+                                    <div>
+                                        <p>
+                                            <span>{{item2.nickname}}</span>
+                                            <span>{{item2.hour}} 小时以前</span>
+                                        </p>
+                                        <p>{{item2.value}}</p>
+                                    </div>
+                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                    <div :class="{cardActive:item2.active}">
+                                        <div></div>
+                                        <div>
+                                            <div>2</div>
+                                            <span>Steam 等级</span>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <img :src="item2.img3" alt="">
+                                                <img :src="item2.img1" alt="">
+                                            </div>
+                                            <div>
+                                                <p>{{item2.nickname}}</p>
+                                                <p>{{item2.status}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gameBar">
+            <div v-for="item in gameRecommendedLists">
+                <div>
+                    <span>
+                        <img :src="item[0].img1" alt="">
+                    </span>
+                    <div>
+                        <div>
+                            <p>
+                                <img src="./img/5-star.png" alt="">
+                                {{item[0].num}} 个评价
+                            </p>
+                            <p>{{item[0].value1}}</p>
+                        </div>
+                        <div>
+                            <img src="./img/award_icon_blue.svg" alt="">
+                            <span>{{item[0].num1}}</span>
+                            <img src="./img/comment_quoteicon.png" alt="">
+                            {{item[0].num2}}
+                        </div>
+                    </div>
+                    <div>{{item[0].value2}}</div>
+                    <div>{{item[0].value3}}</div>
+                </div>
+                <div>
+                    <span>
+                        <img :src="item[1].img1" alt="">
+                    </span>
+                    <p>
+                        <img src="./img/icon_rate.png" alt="">
+                        <span>{{item[1].num}}</span>
+                        <img src="./img/award_icon_blue.svg" alt="">
+                        <span>{{item[1].num1}}</span>
+                        <img src="./img/comment_quoteicon.png" alt="">
+                        {{item[1].num2}}
+                    </p>
+                    <p>{{item[1].value1}}</p>
+                    <div>{{item[1].value2}}</div>
+                    <div>{{item[1].value3}}</div>
+                </div>
+                <div>
+                    <span>
+                        <img :src="item[2].img1" alt="">
+                    </span>
+                    <div>
+                        <div>
+                            <p>
+                                <img src="./img/4-star.png" alt="">
+                                {{item[2].num}} 个评价
+                            </p>
+                            <p>{{item[2].value1}}</p>
+                        </div>
+                        <div>
+                            <img src="./img/award_icon_blue.svg" alt="">
+                            <span>{{item[2].num1}}</span>
+                            <img src="./img/comment_quoteicon.png" alt="">
+                            {{item[2].num2}}
+                        </div>
+                    </div>
+                    <div>{{item[2].value2}}</div>
+                    <div>{{item[2].value3}}</div>
+                </div>
+                <div>
+                    <span>
+                        <img :src="item[3].img1" alt="">
+                    </span>
+                    <div>
+                        <div>
+                            <p>
+                                <span>
+                                    <img src="./img/icons_16.png" alt="">
+                                </span>
+                                <span>
+                                    <img src="./img/icons_16.png" alt="">
+                                </span>
+                                <span>
+                                    <img src="./img/award_icon (1).svg" alt="">
+                                    奖励
+                                </span>
+                            </p>
+                        </div>
+                        <p>
+                            <img src="./img/icon_rate.png" alt="">
+                            <span>{{item[3].num}}</span>
+                            <img src="./img/award_icon_blue.svg" alt="">
+                            <span>{{item[3].num1}}</span>
+                            <img src="./img/comment_quoteicon.png" alt="">
+                            {{item[3].num2}}
+                        </p>
+                    </div>
+                    <div>{{item[3].value2}}</div>
+                    <div>{{item[3].value3}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="module">
+        import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.esm.browser.js'
+        const app = new Vue({
+            el: '#app',
+            data: {
+                headerList: [
+                    { id: 1, title: '商店', active: false },
+                    { id: 2, title: '社区', active: false },
+                    { id: 3, title: '关于', active: false },
+                    { id: 4, title: '客服', active: false },
+                ],
+                headerList1: [
+                    { id: 1, title: '主页', active: false },
+                    { id: 2, title: '探索队列', active: false },
+                    { id: 3, title: '愿望单', active: false },
+                    { id: 4, title: '点数商店', active: false },
+                    { id: 5, title: '新闻', active: false },
+                    { id: 6, title: '统计数据', active: false },
+                ],
+                headerList2: [
+                    { id: 1, title: '主页', active: false },
+                    { id: 2, title: '讨论', active: false },
+                    { id: 3, title: '创意工坊', active: false },
+                    { id: 4, title: '市场', active: false },
+                    { id: 5, title: '实况直播', active: false },
+                ],
+                gameLists: [
+                    { id: 1, img: './img/e3f595a92552da3d664ad00277fad2107345f743.jpg', name: 'Team Fortress 2', info: '244 幅新艺术作品 本周' },
+                    { id: 2, img: './img/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg', name: 'Counter-Strike:Global Offensive', info: '415 幅新艺术作品 本周' },
+                    { id: 3, img: './img/7abe1a33129c20cf10d2c74128bbd657a2a2c806.jpg', name: 'DARK SOILS |||', info: '22 幅新艺术作品 本周' },
+                    { id: 4, img: './img/16d46c8630499bfc54d20745ac90786a302cd643.jpg', name: 'The Binding of lsaac:Rebirth', info: '21 幅新艺术作品 本周' }
+                ],
+                topBarLists: [
+                    { id: 1, title: '全部', active: true },
+                    { id: 2, title: '截图', active: false },
+                    { id: 3, title: '艺术作品', active: false },
+                    { id: 4, title: '实况直播', active: false },
+                    { id: 5, title: '视频', active: false },
+                    { id: 6, title: '创意工坊', active: false },
+                    { id: 7, title: '新闻', active: false },
+                    { id: 8, title: '指南', active: false },
+                    { id: 9, title: '评测', active: false },
+
+                ],
+                commentLists: [
+                    {
+                        id: 1,
+                        name: '下北沢の大天使',
+                        game: 'Riders Republic',
+                        value1: '有 577 人觉得这篇评测有价值',
+                        value2: '有 126 人觉得这篇评测很欢乐',
+                        num: 10,
+                        hours: 5.6,
+                        hours1: 5.6,
+                        hours2: 3.0,
+                        publish: '6 月 10 日',
+                        comment: '游戏名《喜欢你是我的秘密》',
+                        value3: 'Riders Republic',
+                        comments: 0,
+                        date: '8:34',
+                        img1: './img/27ef3d62a0e42bf4ac60d426f2f172e1790ec0fd.png',
+                        img2: "./img/b891759e07a7869466bf1b883af410bb12029955_medium.jpg",
+                        img3: './img/header.jpg',
+                        active: false,
+                        giftLists: [
+                            { gift: './img/13.png', num: '', num1: 800, gifts: './img/13 (1).png', value1: '聪明过人', value2: '思维体操金牌', active: false },
+                            { gift: './img/3.png', num: '7', num1: 100, gifts: './img/3 (1).png', value1: '令人捧腹', value2: '别的顶多是好笑，这可是极品好笑。', active: false },
+                            { gift: './img/14.png', num: '', num1: 200, gifts: './img/14 (1).png', value1: '温暖毛毯', value2: '在毯子里裹成温暖的一团。', active: false },
+                        ],
+                        userLists: [
+                            {
+                                id: 1,
+                                nickname: '自醉自演',
+                                hour: 7,
+                                value: "看游戏名应该是正版",
+                                img: './img/f04f559357f403f81e4166768f7d2a52cb18dad7.jpg',
+                                img1: './img/f04f559357f403f81e4166768f7d2a52cb18dad7_medium.jpg',
+                                img3: './img/babb8c618b2c8eafaad9bc3fac3304a1837ac4fb.png',
+                                status: '在线',
+                                active: false
+                            },
+                            {
+                                id: 2,
+                                nickname: '多喝热水身心舒畅',
+                                hour: 11,
+                                value: "666",
+                                img: './img/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb.jpg',
+                                img1: './img/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg',
+                                img3: './img/ff0e949ff66f2208a005ed51244ad145f0b68904.png',
+                                status: '离线',
+                                active: false
+                            },
+                            {
+                                id: 3,
+                                nickname: '1574297614 ',
+                                hour: 15,
+                                value: "a",
+                                img: './img/10de6d3c01bc83a2b886764a3aa1223298ffa2fe.jpg',
+                                img1: './img/10de6d3c01bc83a2b886764a3aa1223298ffa2fe_medium.jpg',
+                                img3: './img/babb8c618b2c8eafaad9bc3fac3304a1837ac4fb.png',
+                                status: '离线',
+                                active: false
+                            },
+                            {
+                                id: 4,
+                                nickname: 'KILLER WHALE ',
+                                hour: 16,
+                                value: "6",
+                                img: './img/480806c2db44534d53340b03237110575ab4b1ea.jpg',
+                                img1: './img/480806c2db44534d53340b03237110575ab4b1ea_medium.jpg',
+                                img3: './img/ecb166335801740e25b2b4a7188f19d4230a264d.png',
+                                status: '离线',
+                                active: false
+                            },
+                        ],
+                    },
+                    {
+                        id: 2,
+                        value1: '有 428 人觉得这篇评测有价值',
+                        value2: '有 42 人觉得这篇评测很欢乐',
+                        num: 9,
+                        hours: 16.7,
+                        hours1: 179.8,
+                        hours2: 172.7,
+                        publish: '6月7日',
+                        active: false,
+                        comment: '我来看评测是看你们对游戏的看法，而不是跟傻卵一样在那里摸鸡巴猫和给讨口子送点数',
+                        value3: "Tom Clancy's Rainbow Six Siege",
+                        comments: 4,
+                        date: '8:34',
+                        img1: './img/babb8c618b2c8eafaad9bc3fac3304a1837ac4fb.png',
+                        img2: "./img/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg",
+                        img3: './img/header (1).jpg',
+                        name: "ToGsothoth",
+                        game: "Tom Clancy's Rainbow Six Siege",
+                        active: false,
+                        giftLists: [
+                            { gift: './img/13.png', num: '', num1: 800, gifts: './img/13 (1).png', value1: '聪明过人', value2: '思维体操金牌', active: false },
+                            { gift: './img/3.png', num: '7', num1: 100, gifts: './img/3 (1).png', value1: '令人捧腹', value2: '别的顶多是好笑，这可是极品好笑。', active: false },
+                            { gift: './img/14.png', num: '', num1: 200, gifts: './img/14 (1).png', value1: '温暖毛毯', value2: '在毯子里裹成温暖的一团。', active: false },
+                        ],
+                        userLists: [
+                            {
+                                id: 1,
+                                nickname: '自醉自演',
+                                hour: 7,
+                                value: "看游戏名应该是正版",
+                                img: './img/f04f559357f403f81e4166768f7d2a52cb18dad7.jpg',
+                                img1: './img/f04f559357f403f81e4166768f7d2a52cb18dad7_medium.jpg',
+                                img3: './img/babb8c618b2c8eafaad9bc3fac3304a1837ac4fb.png',
+                                status: '在线',
+                                active: false
+                            },
+                            {
+                                id: 2,
+                                nickname: '多喝热水身心舒畅',
+                                hour: 11,
+                                value: "666",
+                                img: './img/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb.jpg',
+                                img1: './img/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg',
+                                img3: './img/ff0e949ff66f2208a005ed51244ad145f0b68904.png',
+                                status: '离线',
+                                active: false
+                            },
+                            {
+                                id: 3,
+                                nickname: '1574297614 ',
+                                hour: 15,
+                                value: "a",
+                                img: './img/10de6d3c01bc83a2b886764a3aa1223298ffa2fe.jpg',
+                                img1: './img/10de6d3c01bc83a2b886764a3aa1223298ffa2fe_medium.jpg',
+                                img3: './img/babb8c618b2c8eafaad9bc3fac3304a1837ac4fb.png',
+                                status: '离线',
+                                active: false
+                            },
+                            {
+                                id: 4,
+                                nickname: 'KILLER WHALE ',
+                                hour: 16,
+                                value: "6",
+                                img: './img/480806c2db44534d53340b03237110575ab4b1ea.jpg',
+                                img1: './img/480806c2db44534d53340b03237110575ab4b1ea_medium.jpg',
+                                img3: './img/ecb166335801740e25b2b4a7188f19d4230a264d.png',
+                                status: '离线',
+                                active: false
+                            },
+                        ],
+                    },
+                ],
+                gameRecommendedLists: [
+                    [
+                        { id: 1, num: 298, num1: 100, num2: 66, value1: 'Mercedes-Benz New Actros ', value2: 'Euro Truck Simulator 2', value3: 'Euro Truck Simulator 2: 创意工坊物品', img1: './img/game/steamuserimages-a.akamaihd (5).png' },
+                        { id: 2, num: 83, num1: 1, num2: 64, value1: 'Boyarsky tunnel Ludmurik-thousand devils! | Боярски', value2: '黎明杀机', value3: '黎明杀机：截图', img1: './img/game/steamuserimages-a.akamaihd (9).png' },
+                        { id: 3, num: 100, num1: 14, num2: 30, value1: 'Wolf Extraction Quest ', value2: 'Project Zomboid', value3: 'Project Zomboid: 创意工坊物品', img1: './img/game/steamuserimages-a.akamaihd (10).png' },
+                        { id: 4, num: 136, num1: 0, num2: 91, value2: '巫师 3：狂猎', value3: '巫师 3：狂猎: 截图', img1: './img/game/steamuserimages-a.akamaihd (8).png' },
+                    ],
+                ],
+                isShow1: false,
+                isShow2: false,
+                isHovering: false,
+                isActive: false,
+
+            },
+            methods: {
+                headerMouseenter(item) {
+                    item.active = true;
+                    if (item.id === 1) {
+                        this.isShow1 = true;
+                    }
+                    if (item.id === 2) {
+                        this.isShow2 = true;
+                    }
+                },
+                headerMouseenter1(item) {
+                    item.active = true;
+                    this.isShow1 = true;
+                    this.isShow2 = false;
+                },
+                headerMouseenter2(item) {
+                    item.active = true;
+                    this.isShow1 = false;
+                    this.isShow2 = true;
+                },
+                headerMouseleave(item) {
+                    item.active = false;
+                    this.isShow1 = false;
+                    this.isShow2 = false;
+                },
+                headerMouseleave1(item) {
+                    item.active = false;
+                },
+                headerMouseleaveAll() {
+                    this.isShow1 = false;
+                    this.isShow2 = false;
+                },
+
+            },
+        })
+
+    </script>
+</body>
+
+</html>
