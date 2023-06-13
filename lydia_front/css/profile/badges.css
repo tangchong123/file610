@@ -49,8 +49,11 @@ body .badge_box .nav .nav_bar .edit {
 body .badge_box .nav .nav_bar .edit:hover {
   color: #1A9FFF;
 }
-body .badge_box .level_box {
-  width: calc(100% - 40px);
+body .badge_box .container {
+  width: calc(100% - 100px);
+  margin: 0 auto;
+}
+body .badge_box .container .level_box {
   height: 76px;
   border-radius: 4px;
   padding: 0 20px;
@@ -61,16 +64,16 @@ body .badge_box .level_box {
   position: relative;
   background-color: #1D1E20;
 }
-body .badge_box .level_box .level {
+body .badge_box .container .level_box .level {
   margin-right: 15px;
 }
-body .badge_box .level_box .level a {
+body .badge_box .container .level_box .level a {
   display: flex;
   align-items: center;
   font-size: 24px;
   color: #cfc9c9;
 }
-body .badge_box .level_box .level a .level_num {
+body .badge_box .container .level_box .level a .level_num {
   width: 36px;
   height: 36px;
   font-size: 20px;
@@ -80,18 +83,84 @@ body .badge_box .level_box .level a .level_num {
   text-align: center;
   margin-right: 10px;
 }
-body .badge_box .level_box .experience {
+body .badge_box .container .level_box .experience {
   color: #cfc9c9;
 }
-body .badge_box .level_box .hint {
+body .badge_box .container .level_box .hint {
   position: absolute;
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
 }
-body .badge_box .level_box .hint a {
+body .badge_box .container .level_box .hint a {
   color: #cfc9c9;
 }
-body .badge_box .level_box .hint a:hover {
+body .badge_box .container .level_box .hint a:hover {
   color: #fff;
+}
+body .badge_box .container .bag_box {
+  width: 100%;
+  margin-bottom: 20px;
+}
+body .badge_box .container .bag_box a {
+  float: right;
+  margin-right: 5px;
+  font-size: 14px;
+  color: #1A9FFF;
+  text-align: center;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+body .badge_box .container .bag_box a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+body .badge_box .container .bag_box .bag1 {
+  width: 140px;
+}
+body .badge_box .container .bag_box .bag2 {
+  width: 100px;
+}
+body .badge_box .container .title_box {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .badge_box .container .title_box .t {
+  font-size: 24px;
+  color: #1A9FFF;
+}
+body .badge_box .container .title_box .sort {
+  color: #ebebeb;
+  display: flex;
+  align-items: center;
+}
+body .badge_box .container .title_box .sort li {
+  margin-left: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+body .badge_box .container .title_box .sort li:nth-of-type(1) {
+  color: #8B9399;
+  font-size: 12px;
+}
+body .badge_box .container .title_box .sort li:nth-of-type(2) {
+  text-decoration: underline;
+}
+body .badge_box .container .community_box {
+  width: 100%;
+  height: 400px;
+  background-color: #222424;
+  border-radius: 5px;
+  padding: 0px 10px;
+}
+body .badge_box .container .community_box > .titl {
+  width: 100%;
+  height: 60px;
+  padding: 15px 0px;
+  font-size: 24px;
+  color: #ebebeb;
+  border-bottom: 1px solid #000;
 }/*# sourceMappingURL=badges.css.map */

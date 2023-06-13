@@ -48,6 +48,9 @@ window.onload = function() {
     // 保存按钮
     normalSaveBtn.onclick = async function() {
         let {data} = await updateUsers(realnameIpt.value,nicknameIpt.value,introIpt.value)
+        // 将nickname写到historyName
+        historyName.push(data.nickname)
+        localStorage.setItem("historyName",JSON.stringify(historyName))
         // 写到localStorage
         user.username = data.username
         user.nickname = data.nickname
