@@ -93,7 +93,8 @@
             </div>
         </main>
         <div class="topBar">
-            <span :class="{active:item.active}" :title="item.title" v-for="item in topBarLists">{{item.title}}</span>
+            <span :class="{active:item.active}" :title="item.title" v-for="item in topBarLists"
+                @click="sss(item)">{{item.title}}</span>
             <div>
                 <span>正在查看</span>
                 <p>最热门</p>
@@ -126,9 +127,12 @@
                         {{item.comments}}
                     </div>
                 </div>
-                <div class="popUp" v-show="item.active">
-                    <div>
-                        <p>https://steamcommunity.com/profiles/76561199417197377/recommended/2290180/</p>
+                <div class="popUp" :class="{doActive:item.active}" @click.stop="item.active=false">
+                    <div @click.stop="">
+                        <p>https://steamcommunity.com/profiles/76561199417197377/recommended/2290180/
+                            <span @click.stop="item.active=false">X
+                            </span>
+                        </p>
                         <div>
                             <div>
                                 <div>
@@ -259,7 +263,7 @@
         </div>
         <div class="gameBar">
             <div v-for="item in gameRecommendedLists">
-                <div>
+                <div @click="item[0].active=true">
                     <span>
                         <img :src="item[0].img1" alt="">
                     </span>
@@ -280,8 +284,96 @@
                     </div>
                     <div>{{item[0].value2}}</div>
                     <div>{{item[0].value3}}</div>
+                    <div :class="{Active1:item[0].active}" @click.stop="item[0].active=false">
+                        <div @click.stop="">
+                            <p>https://steamcommunity.com/sharedfiles/filedetails/?id=2988708577
+                                <span @click.stop="item[0].active=false">X
+                                </span>
+                            </p>
+
+                            <div>
+                                <div>
+                                    <img :src="item[0].img1" alt="">
+                                </div>
+                                <div>
+                                    <div>
+                                        <div>
+                                            <div><img :src="item[0].user.img" alt=""  @mouseenter="item[0].user.active = true"
+                                                @mouseleave="item[0].user.active= false"></div>
+                                            <div>
+                                                <p>{{item[0].user.name}}</p>
+                                                <p>{{item[0].user.status}}</p>
+                                            </div>
+                                        </div>
+                                        <img :src="item[0].user.img1" alt="">
+                                        <div :class="{Active1:item[0].user.active}">
+                                            <div></div>
+                                            <div>
+                                                <div>2</div>
+                                                <span>Steam 等级</span>
+                                            </div>
+                                            <div>
+                                                <div>
+                                                    <img :src="item[0].user.img3" alt="">
+                                                    <img :src="item[0].user.img2" alt="">
+                                                </div>
+                                                <div>
+                                                    <p>{{item[0].user.name}}</p>
+                                                    <p>{{item[0].user.status}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p>{{item[0].user.value}}</p>
+                                        <div><img src="./img/icon_rate.png" alt="">{{item[0].user.num}}</div>
+                                        <div>
+                                            <div>
+                                                <div><img src="./img/icons_16.png" alt=""></div>
+                                            </div>
+                                            <div>
+                                                <div><img src="./img/icons_16.png" alt=""></div>
+                                            </div>
+                                            <div><img src="./img/award_icon (1).svg" alt="">奖励</div>
+                                        </div>
+                                        <div>
+                                            <div v-for="item2 in item[0].user.users">
+                                                <img :src="item2.img" alt="" @mouseenter="item2.active = true"
+                                                    @mouseleave="item2.active= false">
+                                                <div>
+                                                    <p>
+                                                        <span>{{item2.nickname}}</span>
+                                                        <span>{{item2.hour}} 小时以前</span>
+                                                    </p>
+                                                    <p>{{item2.value}}</p>
+                                                </div>
+                                                <div><img src="./img/icons_16.png" alt=""></div>
+                                                <div :class="{cardActive:item2.active}">
+                                                    <div></div>
+                                                    <div>
+                                                        <div>2</div>
+                                                        <span>Steam 等级</span>
+                                                    </div>
+                                                    <div>
+                                                        <div>
+                                                            <img :src="item2.img3" alt="">
+                                                            <img :src="item2.img1" alt="">
+                                                        </div>
+                                                        <div>
+                                                            <p>{{item2.nickname}}</p>
+                                                            <p>{{item2.status}}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
+                <div @click="item[1].active=true">
                     <span>
                         <img :src="item[1].img1" alt="">
                     </span>
@@ -296,8 +388,96 @@
                     <p>{{item[1].value1}}</p>
                     <div>{{item[1].value2}}</div>
                     <div>{{item[1].value3}}</div>
+                    <div :class="{Active1:item[1].active}" @click.stop="item[1].active=false">
+                        <div @click.stop="">
+                            <p>https://steamcommunity.com/sharedfiles/filedetails/?id=2988708577
+                                <span @click.stop="item[1].active=false">X
+                                </span>
+                            </p>
+
+                            <div>
+                                <div>
+                                    <img :src="item[1].img1" alt="">
+                                </div>
+                                <div>
+                                    <div>
+                                        <div>
+                                            <div><img :src="item[1].user.img" alt=""  @mouseenter="item[1].user.active = true"
+                                                @mouseleave="item[1].user.active= false"></div>
+                                            <div>
+                                                <p>{{item[1].user.name}}</p>
+                                                <p>{{item[1].user.status}}</p>
+                                            </div>
+                                        </div>
+                                        <img :src="item[1].user.img1" alt="">
+                                        <div :class="{Active1:item[1].user.active}">
+                                            <div></div>
+                                            <div>
+                                                <div>2</div>
+                                                <span>Steam 等级</span>
+                                            </div>
+                                            <div>
+                                                <div>
+                                                    <img :src="item[1].user.img3" alt="">
+                                                    <img :src="item[1].user.img2" alt="">
+                                                </div>
+                                                <div>
+                                                    <p>{{item[1].user.name}}</p>
+                                                    <p>{{item[1].user.status}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p>{{item[1].user.value}}</p>
+                                        <div><img src="./img/icon_rate.png" alt="">{{item[1].user.num}}</div>
+                                        <div>
+                                            <div>
+                                                <div><img src="./img/icons_16.png" alt=""></div>
+                                            </div>
+                                            <div>
+                                                <div><img src="./img/icons_16.png" alt=""></div>
+                                            </div>
+                                            <div><img src="./img/award_icon (1).svg" alt="">奖励</div>
+                                        </div>
+                                        <div>
+                                            <div v-for="item2 in item[1].user.users">
+                                                <img :src="item2.img" alt="" @mouseenter="item2.active = true"
+                                                    @mouseleave="item2.active= false">
+                                                <div>
+                                                    <p>
+                                                        <span>{{item2.nickname}}</span>
+                                                        <span>{{item2.hour}} 小时以前</span>
+                                                    </p>
+                                                    <p>{{item2.value}}</p>
+                                                </div>
+                                                <div><img src="./img/icons_16.png" alt=""></div>
+                                                <div :class="{cardActive:item2.active}">
+                                                    <div></div>
+                                                    <div>
+                                                        <div>2</div>
+                                                        <span>Steam 等级</span>
+                                                    </div>
+                                                    <div>
+                                                        <div>
+                                                            <img :src="item2.img3" alt="">
+                                                            <img :src="item2.img1" alt="">
+                                                        </div>
+                                                        <div>
+                                                            <p>{{item2.nickname}}</p>
+                                                            <p>{{item2.status}}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
+                <div @click="item[2].active=true">
                     <span>
                         <img :src="item[2].img1" alt="">
                     </span>
@@ -318,8 +498,96 @@
                     </div>
                     <div>{{item[2].value2}}</div>
                     <div>{{item[2].value3}}</div>
+                    <div :class="{Active1:item[2].active}" @click.stop="item[2].active=false">
+                        <div @click.stop="">
+                            <p>https://steamcommunity.com/sharedfiles/filedetails/?id=2988708577
+                                <span @click.stop="item[2].active=false">X
+                                </span>
+                            </p>
+
+                            <div>
+                                <div>
+                                    <img :src="item[2].img1" alt="">
+                                </div>
+                                <div>
+                                    <div>
+                                        <div>
+                                            <div><img :src="item[2].user.img" alt=""  @mouseenter="item[2].user.active = true"
+                                                @mouseleave="item[2].user.active= false"></div>
+                                            <div>
+                                                <p>{{item[2].user.name}}</p>
+                                                <p>{{item[2].user.status}}</p>
+                                            </div>
+                                        </div>
+                                        <img :src="item[2].user.img1" alt="">
+                                        <div :class="{Active1:item[2].user.active}">
+                                            <div></div>
+                                            <div>
+                                                <div>2</div>
+                                                <span>Steam 等级</span>
+                                            </div>
+                                            <div>
+                                                <div>
+                                                    <img :src="item[2].user.img3" alt="">
+                                                    <img :src="item[2].user.img2" alt="">
+                                                </div>
+                                                <div>
+                                                    <p>{{item[2].user.name}}</p>
+                                                    <p>{{item[2].user.status}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p>{{item[2].user.value}}</p>
+                                        <div><img src="./img/icon_rate.png" alt="">{{item[2].user.num}}</div>
+                                        <div>
+                                            <div>
+                                                <div><img src="./img/icons_16.png" alt=""></div>
+                                            </div>
+                                            <div>
+                                                <div><img src="./img/icons_16.png" alt=""></div>
+                                            </div>
+                                            <div><img src="./img/award_icon (1).svg" alt="">奖励</div>
+                                        </div>
+                                        <div>
+                                            <div v-for="item2 in item[2].user.users">
+                                                <img :src="item2.img" alt="" @mouseenter="item2.active = true"
+                                                    @mouseleave="item2.active= false">
+                                                <div>
+                                                    <p>
+                                                        <span>{{item2.nickname}}</span>
+                                                        <span>{{item2.hour}} 小时以前</span>
+                                                    </p>
+                                                    <p>{{item2.value}}</p>
+                                                </div>
+                                                <div><img src="./img/icons_16.png" alt=""></div>
+                                                <div :class="{cardActive:item2.active}">
+                                                    <div></div>
+                                                    <div>
+                                                        <div>2</div>
+                                                        <span>Steam 等级</span>
+                                                    </div>
+                                                    <div>
+                                                        <div>
+                                                            <img :src="item2.img3" alt="">
+                                                            <img :src="item2.img1" alt="">
+                                                        </div>
+                                                        <div>
+                                                            <p>{{item2.nickname}}</p>
+                                                            <p>{{item2.status}}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
+                <div @click="item[3].active=true">
                     <span>
                         <img :src="item[3].img1" alt="">
                     </span>
@@ -349,8 +617,97 @@
                     </div>
                     <div>{{item[3].value2}}</div>
                     <div>{{item[3].value3}}</div>
+                    <div :class="{Active1:item[3].active}" @click.stop="item[3].active=false">
+                        <div @click.stop="">
+                            <p>https://steamcommunity.com/sharedfiles/filedetails/?id=2988708577
+                                <span @click.stop="item[3].active=false">X
+                                </span>
+                            </p>
+
+                            <div>
+                                <div>
+                                    <img :src="item[3].img1" alt="">
+                                </div>
+                                <div>
+                                    <div>
+                                        <div>
+                                            <div><img :src="item[3].user.img" alt=""  @mouseenter="item[3].user.active = true"
+                                                @mouseleave="item[3].user.active= false"></div>
+                                            <div>
+                                                <p>{{item[3].user.name}}</p>
+                                                <p>{{item[3].user.status}}</p>
+                                            </div>
+                                        </div>
+                                        <img :src="item[3].user.img1" alt="">
+                                        <div :class="{Active1:item[3].user.active}">
+                                            <div></div>
+                                            <div>
+                                                <div>2</div>
+                                                <span>Steam 等级</span>
+                                            </div>
+                                            <div>
+                                                <div>
+                                                    <img :src="item[3].user.img3" alt="">
+                                                    <img :src="item[3].user.img2" alt="">
+                                                </div>
+                                                <div>
+                                                    <p>{{item[3].user.name}}</p>
+                                                    <p>{{item[3].user.status}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p>{{item[3].user.value}}</p>
+                                        <div><img src="./img/icon_rate.png" alt="">{{item[3].user.num}}</div>
+                                        <div>
+                                            <div>
+                                                <div><img src="./img/icons_16.png" alt=""></div>
+                                            </div>
+                                            <div>
+                                                <div><img src="./img/icons_16.png" alt=""></div>
+                                            </div>
+                                            <div><img src="./img/award_icon (1).svg" alt="">奖励</div>
+                                        </div>
+                                        <div>
+                                            <div v-for="item2 in item[3].user.users">
+                                                <img :src="item2.img" alt="" @mouseenter="item2.active = true"
+                                                    @mouseleave="item2.active= false">
+                                                <div>
+                                                    <p>
+                                                        <span>{{item2.nickname}}</span>
+                                                        <span>{{item2.hour}} 小时以前</span>
+                                                    </p>
+                                                    <p>{{item2.value}}</p>
+                                                </div>
+                                                <div><img src="./img/icons_16.png" alt=""></div>
+                                                <div :class="{cardActive:item2.active}">
+                                                    <div></div>
+                                                    <div>
+                                                        <div>2</div>
+                                                        <span>Steam 等级</span>
+                                                    </div>
+                                                    <div>
+                                                        <div>
+                                                            <img :src="item2.img3" alt="">
+                                                            <img :src="item2.img1" alt="">
+                                                        </div>
+                                                        <div>
+                                                            <p>{{item2.nickname}}</p>
+                                                            <p>{{item2.status}}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <img src="" alt="">
         </div>
     </div>
 
@@ -546,10 +903,301 @@
                 ],
                 gameRecommendedLists: [
                     [
-                        { id: 1, num: 298, num1: 100, num2: 66, value1: 'Mercedes-Benz New Actros ', value2: 'Euro Truck Simulator 2', value3: 'Euro Truck Simulator 2: 创意工坊物品', img1: './img/game/steamuserimages-a.akamaihd (5).png' },
-                        { id: 2, num: 83, num1: 1, num2: 64, value1: 'Boyarsky tunnel Ludmurik-thousand devils! | Боярски', value2: '黎明杀机', value3: '黎明杀机：截图', img1: './img/game/steamuserimages-a.akamaihd (9).png' },
-                        { id: 3, num: 100, num1: 14, num2: 30, value1: 'Wolf Extraction Quest ', value2: 'Project Zomboid', value3: 'Project Zomboid: 创意工坊物品', img1: './img/game/steamuserimages-a.akamaihd (10).png' },
-                        { id: 4, num: 136, num1: 0, num2: 91, value2: '巫师 3：狂猎', value3: '巫师 3：狂猎: 截图', img1: './img/game/steamuserimages-a.akamaihd (8).png' },
+                        {
+                            id: 1,
+                            num: 298,
+                            num1: 100,
+                            num2: 66,
+                            value1: 'Mercedes-Benz New Actros ',
+                            value2: 'Euro Truck Simulator 2',
+                            value3: 'Euro Truck Simulator 2: 创意工坊物品',
+                            img1: './img/game/steamuserimages-a.akamaihd (5).png',
+                            active: false,
+                            user: {
+                                name: '✠ LordHendra ✠',
+                                status: '离线',
+                                img: './img/b2a734431d40a6c110b7c09b1b3b65ad5819c79f_medium.jpg',
+                                img1: './img/capsule_184x69 (1).jpg',
+                                value: 'Region Liberated "John Seed"',
+                                num: 109,
+                                active:false,
+                                img2:'./img/e47273b62284f3ab2e2b9b15c89607c8c1d4dd16.gif',
+                                img3:'./img/85030942387d8c7803922f84c31e82bc42728279.png',
+                                users: [
+                                    {
+                                        nickname: 'Dr.DesperaDoS`* ',
+                                        img: './img/b22533b6718f26deabcb794f4e701da100f332a0.jpg',
+                                        hour: 2,
+                                        value: 'nice!',
+                                        active:false,
+                                        status: '离线',
+                                        img1:'./img/b22533b6718f26deabcb794f4e701da100f332a0_medium.jpg',
+                                        img3:'./img/85030942387d8c7803922f84c31e82bc42728279.png',
+                                    },
+                                    {
+                                        nickname: 'Gote ',
+                                        img: './img/a9025cd3119df1c847abdc73f45d6ac27ed7a03a.jpg',
+                                        hour: 3,
+                                        value: '6',
+                                        active:false,
+                                        status: '离线',
+                                        img1:'./img/a9025cd3119df1c847abdc73f45d6ac27ed7a03a.jpg',
+                                        img3:'./img/b555843a5aa0a71317992454504253a1a751423e.png',
+                                    },
+                                    {
+                                        nickname: 'Sieg',
+                                        img: './img/a521352ec938d97a89f4b9655f75924d3cea6344.jpg',
+                                        hour: 4,
+                                        value: '666',
+                                        active:false,
+                                        status: '离线',
+                                        img1:'./img/a521352ec938d97a89f4b9655f75924d3cea6344.jpg',
+                                        img3:'./img/b555843a5aa0a71317992454504253a1a751423e.png',
+                                    },
+                                    {
+                                        nickname: 'EndsWithaBullet',
+                                        img: './img/f68742c4645bc204987772256bbf574e1d8d456a.jpg',
+                                        hour: 3,
+                                        value: '牛',
+                                        active:false,
+                                        status: '在线',
+                                        img3:'./img/8999640c5cc2c5532549ea15819370d17ebd9405.png',
+                                        img1:'./img/e3b5b406642fe733a5db331bcfc442ccf54bca21.png',
+                                    },
+                                    {
+                                        nickname: 'Darcy Wang ',
+                                        img: './img/a1d07063db054990cb1f78f0ab84d42e11c4e76b.jpg',
+                                        hour: 5,
+                                        value: '6',
+                                        active:false,
+                                        status: '在线',
+                                        img1:'./img/a1d07063db054990cb1f78f0ab84d42e11c4e76b_medium.jpg',
+                                        img3:'./img/85030942387d8c7803922f84c31e82bc42728279.png',
+                                    },
+                                ]
+                            },
+                        },
+                        {
+                            id: 2,
+                            num: 83,
+                            num1: 1,
+                            num2: 64,
+                            value1: 'Boyarsky tunnel Ludmurik-thousand devils! | Боярски',
+                            value2: '黎明杀机',
+                            value3: '黎明杀机：截图',
+                            img1: './img/game/steamuserimages-a.akamaihd (9).png',
+                            active: false,
+                            user: {
+                                name: 'BLASTER',
+                                status: '离线',
+                                img: './img/480806c2db44534d53340b03237110575ab4b1ea_medium.jpg',
+                                img1: './img/capsule_184x69.jpg',
+                                value: 'Region Liberated "John Seed"',
+                                num: 109,
+                                active:false,
+                                img2:'./img/480806c2db44534d53340b03237110575ab4b1ea_medium.jpg',
+                                img3:'./img/ff0e949ff66f2208a005ed51244ad145f0b68904.png',
+                                users: [
+                                    {
+                                        nickname: 'Dr.DesperaDoS`* ',
+                                        img: './img/b22533b6718f26deabcb794f4e701da100f332a0.jpg',
+                                        hour: 2,
+                                        value: 'nice!',
+                                        active:false,
+                                        status: '离线',
+                                        img1:'./img/b22533b6718f26deabcb794f4e701da100f332a0_medium.jpg',
+                                        img3:'./img/85030942387d8c7803922f84c31e82bc42728279.png',
+                                    },
+                                    {
+                                        nickname: 'Gote ',
+                                        img: './img/a9025cd3119df1c847abdc73f45d6ac27ed7a03a.jpg',
+                                        hour: 3,
+                                        value: '6',
+                                        active:false,
+                                        status: '离线',
+                                        img1:'./img/a9025cd3119df1c847abdc73f45d6ac27ed7a03a.jpg',
+                                        img3:'./img/b555843a5aa0a71317992454504253a1a751423e.png',
+                                    },
+                                    {
+                                        nickname: 'Sieg',
+                                        img: './img/a521352ec938d97a89f4b9655f75924d3cea6344.jpg',
+                                        hour: 4,
+                                        value: '666',
+                                        active:false,
+                                        status: '离线',
+                                        img1:'./img/a521352ec938d97a89f4b9655f75924d3cea6344.jpg',
+                                        img3:'./img/b555843a5aa0a71317992454504253a1a751423e.png',
+                                    },
+                                    {
+                                        nickname: 'EndsWithaBullet',
+                                        img: './img/f68742c4645bc204987772256bbf574e1d8d456a.jpg',
+                                        hour: 3,
+                                        value: '牛',
+                                        active:false,
+                                        status: '在线',
+                                        img3:'./img/8999640c5cc2c5532549ea15819370d17ebd9405.png',
+                                        img1:'./img/e3b5b406642fe733a5db331bcfc442ccf54bca21.png',
+                                    },
+                                    {
+                                        nickname: 'Darcy Wang ',
+                                        img: './img/a1d07063db054990cb1f78f0ab84d42e11c4e76b.jpg',
+                                        hour: 5,
+                                        value: '6',
+                                        active:false,
+                                        status: '在线',
+                                        img1:'./img/a1d07063db054990cb1f78f0ab84d42e11c4e76b_medium.jpg',
+                                        img3:'./img/85030942387d8c7803922f84c31e82bc42728279.png',
+                                    },
+                                ]
+                            },
+                        },
+                        {
+                            id: 3,
+                            num: 100,
+                            num1: 14,
+                            num2: 30,
+                            value1: 'Wolf Extraction Quest ',
+                            value2: 'Project Zomboid',
+                            value3: 'Project Zomboid: 创意工坊物品',
+                            img1: './img/game/steamuserimages-a.akamaihd (10).png',
+                            active: false,
+                            user: {
+                                name: '✠ LordHendra ✠',
+                                status: '离线',
+                                img: './img/b2a734431d40a6c110b7c09b1b3b65ad5819c79f_medium.jpg',
+                                img1: './img/capsule_184x69 (1).jpg',
+                                value: 'Region Liberated "John Seed"',
+                                num: 109,
+                                active:false,
+                                img2:'./img/e47273b62284f3ab2e2b9b15c89607c8c1d4dd16.gif',
+                                img3:'./img/85030942387d8c7803922f84c31e82bc42728279.png',
+                                users: [
+                                    {
+                                        nickname: 'Dr.DesperaDoS`* ',
+                                        img: './img/b22533b6718f26deabcb794f4e701da100f332a0.jpg',
+                                        hour: 2,
+                                        value: 'nice!',
+                                        active:false,
+                                        status: '离线',
+                                        img1:'./img/b22533b6718f26deabcb794f4e701da100f332a0_medium.jpg',
+                                        img3:'./img/85030942387d8c7803922f84c31e82bc42728279.png',
+                                    },
+                                    {
+                                        nickname: 'Gote ',
+                                        img: './img/a9025cd3119df1c847abdc73f45d6ac27ed7a03a.jpg',
+                                        hour: 3,
+                                        value: '6',
+                                        active:false,
+                                        status: '离线',
+                                        img1:'./img/a9025cd3119df1c847abdc73f45d6ac27ed7a03a.jpg',
+                                        img3:'./img/b555843a5aa0a71317992454504253a1a751423e.png',
+                                    },
+                                    {
+                                        nickname: 'Sieg',
+                                        img: './img/a521352ec938d97a89f4b9655f75924d3cea6344.jpg',
+                                        hour: 4,
+                                        value: '666',
+                                        active:false,
+                                        status: '离线',
+                                        img1:'./img/a521352ec938d97a89f4b9655f75924d3cea6344.jpg',
+                                        img3:'./img/b555843a5aa0a71317992454504253a1a751423e.png',
+                                    },
+                                    {
+                                        nickname: 'EndsWithaBullet',
+                                        img: './img/f68742c4645bc204987772256bbf574e1d8d456a.jpg',
+                                        hour: 3,
+                                        value: '牛',
+                                        active:false,
+                                        status: '在线',
+                                        img3:'./img/8999640c5cc2c5532549ea15819370d17ebd9405.png',
+                                        img1:'./img/e3b5b406642fe733a5db331bcfc442ccf54bca21.png',
+                                    },
+                                    {
+                                        nickname: 'Darcy Wang ',
+                                        img: './img/a1d07063db054990cb1f78f0ab84d42e11c4e76b.jpg',
+                                        hour: 5,
+                                        value: '6',
+                                        active:false,
+                                        status: '在线',
+                                        img1:'./img/a1d07063db054990cb1f78f0ab84d42e11c4e76b_medium.jpg',
+                                        img3:'./img/85030942387d8c7803922f84c31e82bc42728279.png',
+                                    },
+                                ]
+                            },
+                        },
+                        {
+                            id: 4,
+                            num: 136,
+                            num1: 0,
+                            num2: 91,
+                            value2: '巫师 3：狂猎',
+                            value3: '巫师 3：狂猎: 截图',
+                            img1: './img/game/steamuserimages-a.akamaihd (8).png',
+                            active: false,
+                            user: {
+                                name: '✠ LordHendra ✠',
+                                status: '离线',
+                                img: './img/b2a734431d40a6c110b7c09b1b3b65ad5819c79f_medium.jpg',
+                                img1: './img/capsule_184x69 (1).jpg',
+                                value: 'Region Liberated "John Seed"',
+                                num: 109,
+                                active:false,
+                                img2:'./img/e47273b62284f3ab2e2b9b15c89607c8c1d4dd16.gif',
+                                img3:'./img/85030942387d8c7803922f84c31e82bc42728279.png',
+                                users: [
+                                    {
+                                        nickname: 'Dr.DesperaDoS`* ',
+                                        img: './img/b22533b6718f26deabcb794f4e701da100f332a0.jpg',
+                                        hour: 2,
+                                        value: 'nice!',
+                                        active:false,
+                                        status: '离线',
+                                        img1:'./img/b22533b6718f26deabcb794f4e701da100f332a0_medium.jpg',
+                                        img3:'./img/85030942387d8c7803922f84c31e82bc42728279.png',
+                                    },
+                                    {
+                                        nickname: 'Gote ',
+                                        img: './img/a9025cd3119df1c847abdc73f45d6ac27ed7a03a.jpg',
+                                        hour: 3,
+                                        value: '6',
+                                        active:false,
+                                        status: '离线',
+                                        img1:'./img/a9025cd3119df1c847abdc73f45d6ac27ed7a03a.jpg',
+                                        img3:'./img/b555843a5aa0a71317992454504253a1a751423e.png',
+                                    },
+                                    {
+                                        nickname: 'Sieg',
+                                        img: './img/a521352ec938d97a89f4b9655f75924d3cea6344.jpg',
+                                        hour: 4,
+                                        value: '666',
+                                        active:false,
+                                        status: '离线',
+                                        img1:'./img/a521352ec938d97a89f4b9655f75924d3cea6344.jpg',
+                                        img3:'./img/b555843a5aa0a71317992454504253a1a751423e.png',
+                                    },
+                                    {
+                                        nickname: 'EndsWithaBullet',
+                                        img: './img/f68742c4645bc204987772256bbf574e1d8d456a.jpg',
+                                        hour: 3,
+                                        value: '牛',
+                                        active:false,
+                                        status: '在线',
+                                        img3:'./img/8999640c5cc2c5532549ea15819370d17ebd9405.png',
+                                        img1:'./img/e3b5b406642fe733a5db331bcfc442ccf54bca21.png',
+                                    },
+                                    {
+                                        nickname: 'Darcy Wang ',
+                                        img: './img/a1d07063db054990cb1f78f0ab84d42e11c4e76b.jpg',
+                                        hour: 5,
+                                        value: '6',
+                                        active:false,
+                                        status: '在线',
+                                        img1:'./img/a1d07063db054990cb1f78f0ab84d42e11c4e76b_medium.jpg',
+                                        img3:'./img/85030942387d8c7803922f84c31e82bc42728279.png',
+                                    },
+                                ]
+                            },
+                        },
                     ],
                 ],
                 isShow1: false,
@@ -559,6 +1207,12 @@
 
             },
             methods: {
+                sss(item) {
+                    this.topBarLists.forEach(el => {
+                        el.active = false
+                    });
+                    item.active = true
+                },
                 headerMouseenter(item) {
                     item.active = true;
                     if (item.id === 1) {
