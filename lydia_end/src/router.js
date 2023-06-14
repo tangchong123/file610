@@ -33,5 +33,10 @@ router
 		uploadController.upload.single("file"),
 		uploadController.uploadFile
 	)
+
+router.all('/(.*)', async function (ctx) {
+	ctx.code = 404
+	ctx.errMsg = '访问路径不存在'
+})
 	
 module.exports = router

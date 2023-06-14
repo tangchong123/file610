@@ -6,7 +6,7 @@ const storage = multer.diskStorage({
         cb(null,path.join(__dirname,"../public/upload/"))
     },
     filename: function(req,file,cb) {
-        cb(null,file.fieldname+"-"+Date.now())
+        cb(null,Date.now()+"-"+file.originalname)
     }
 })
 
@@ -15,8 +15,8 @@ const upload = multer({
 })
 
 function uploadFile(ctx) {
-    console.log(ctx.file);
     ctx.msg = "上传成功"
+    ctx.data = `/upload/${ctx.file.filename}`
 }
 
 module.exports = {

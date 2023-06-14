@@ -81,20 +81,3 @@ function uploadFile(data) {
 		data: data,
 	})
 }
-
-function uploadChunk(data, params) {
-	return ajax({
-		method: 'POST',
-		url: '/upload/chunk',
-		data,
-		params,
-	})
-}
-
-function mergeFile(data) {
-	return ajax({
-		method: 'POST',
-		url: '/upload/merge',
-		data: data,
-	})
-}

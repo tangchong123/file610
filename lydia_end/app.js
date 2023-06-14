@@ -9,6 +9,48 @@ const router = require('./src/router')
 
 const app = new Koa();
 
+// 全局响应
+app.use(async (ctx, next) => {
+	await next()
+
+	if (ctx.body) return
+
+	ctx.body = {
+		code: ctx.code || (ctx.errMsg ? 400 : 200),
+		msg: ctx.errMsg || ctx.msg || 'ok',
+		data: ctx.data || null,
+	}
+})
+
+// 错误捕获处理
+app.use(async (ctx, next) => {
+	try {
+		await next()
+	} catch (err) {
+		console.log(err)
+
+		// 数据库验证错误
+		if (err.name == 'ValidationError') {
+			let errs = []
+			for (const errorsKey in err.errors) {
+				// console.log(errorsKey, err.errors[errorsKey].properties.message)
+				errs.push(err.errors[errorsKey].properties.message)
+			}
+
+			return (ctx.errMsg = errs.toString())
+		}
+
+		// token 验证错误
+		if (err.status === 401) {
+			ctx.code = 401
+			ctx.errMsg = 'token 验证失败，请重新登录'
+			return
+		}
+
+		ctx.code = 500
+		ctx.errMsg = '服务端错误'
+	}
+})
 
 // 跨域配置
 app.use(cors())

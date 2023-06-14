@@ -65,6 +65,7 @@ window.onload = function() {
     let avatarSaveBtn = avatarBox.querySelector(".save")
     let uploadBtn = avatarBox.querySelector("#upload")
     let imgCts = avatarBox.querySelectorAll(".imgCt")
+    let avatarList = avatarBox.querySelectorAll(".avatar_list>li>.mask")
     let uploadUrl = null
 
     // 取消按钮
@@ -85,24 +86,31 @@ window.onload = function() {
         imgCts.forEach(img=> {
             img.src=src
         })
-        // 给服务端发送数据
+        // 给服务端发送数据  ?? 我获取不到data
         let data = await uploadFile(formData)
-        console.log(data);
+        uploadUrl = `http://localhost:8080${data}`
+        // console.log(data);
     }
+
+    // 点击您的头像 展示 保存更改为头像
+    avatarList.forEach(item=> {
+        item.onclick = function() {
+            // 展示
+            imgCts.forEach(img=> {
+                img.src=this.previousElementSibling.src
+            })
+            // 更改头像
+            uploadUrl = this.previousElementSibling.src
+        }
+    })
+
     
     // 保存按钮 即 头像上传提交按钮
     avatarSaveBtn.onclick = async function() {
-        
-        uploadUrl = data
-        
-        console.log(data);
-        // let data = await 
-        // let {data} = await updateUsers()
-        // 写到localStorage
-        // user.avatar = data.avatar
-        // localStorage.setItem("user",JSON.stringify(user))
-        
-
+        // 修改当前用户的头像为上传的头像
+        let {data} = await updateAvatar(uploadUrl)
+        user.avatar = data.avatar 
+        localStorage.setItem("user",JSON.stringify(user))
         init()
     }
     
@@ -111,7 +119,7 @@ window.onload = function() {
 
 // *******************************请求接口************************************
     // 更新用户信息接口
-    async function updateUsers(username,nickname,intro,avatar) {
+    async function updateUsers(username,nickname,intro) {
         let {data} = await axios({
             method: "PATCH",
             headers:{
@@ -122,23 +130,24 @@ window.onload = function() {
                 username,
                 nickname,
                 intro,
-                avatar
             }
         })
         return data
     }  
 
-    // 上传头像
-    async function uploadFile(formData) {
-        let data = await axios({
-            method: "POST",
+    // 更新用户头像接口
+    async function updateAvatar(avatar) {
+        let {data} = await axios({
+            method: "PATCH",
             headers:{
                 Authorization: `Bearer ${localStorage.token}`
             },
-            url: `http://localhost:8080/profiles/upload`,
-            data: formData
+            url: `http://localhost:8080/profiles/users/${user.id}`,
+            data: {
+                avatar
+            }
         })
         return data
-    }
+    }  
 
 }
