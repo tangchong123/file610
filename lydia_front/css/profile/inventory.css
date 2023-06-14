@@ -1,0 +1,101 @@
+body {
+  background-color: #162838;
+  color: #969696;
+}
+body .inventory_box {
+  width: 76%;
+  margin: 0 auto;
+  position: relative;
+}
+body .inventory_box .nav {
+  width: 100%;
+  height: 102px;
+  background: rgba(78, 82, 90, 0.4);
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+}
+body .inventory_box .nav .avatar {
+  width: 64px;
+  height: 64px;
+}
+body .inventory_box .nav .avatar .img {
+  width: 64px;
+  height: 64px;
+}
+body .inventory_box .nav .nav_bar {
+  margin-left: 30px;
+}
+body .inventory_box .nav .nav_bar .nickname {
+  color: #ebebeb;
+  font-size: 26px;
+}
+body .inventory_box .nav .nav_bar .nickname:hover {
+  color: #1A9FFF;
+}
+body .inventory_box .nav .nav_bar .edit {
+  color: #ebebeb;
+}
+body .inventory_box .nav .nav_bar .edit:hover {
+  color: #1A9FFF;
+}
+body .inventory_box .btn_box {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+body .inventory_box .btn_box > div {
+  height: 30px;
+  padding: 0 10px;
+  line-height: 30px;
+  text-align: center;
+  margin-left: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px 0 #000;
+}
+body .inventory_box .btn_box > div:hover {
+  color: #fff;
+  cursor: pointer;
+}
+body .inventory_box .btn_box .trade_price {
+  background-color: #00526E;
+}
+body .inventory_box .btn_box .more {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+body .inventory_box .btn_box .more .more_list {
+  display: none;
+  padding-left: 10px;
+  position: absolute;
+  right: 0px;
+  top: 30px;
+  box-shadow: 0 0 10px 0 #000;
+  z-index: 44;
+  background-color: #161A21;
+  border-radius: 4px;
+}
+body .inventory_box .btn_box .more .more_list li {
+  width: 120px;
+  height: 30px;
+  text-align: left;
+  cursor: pointer;
+}
+body .inventory_box .btn_box .more .more_list li a {
+  color: #969696;
+  font-size: 13px;
+}
+body .inventory_box .btn_box .more .more_list li a:hover {
+  color: #fff;
+}
+body .inventory_box .container {
+  width: 96%;
+  margin: 20px auto;
+  min-height: 450px;
+  background-color: #1B1E21;
+  border-radius: 4px;
+  padding: 20px;
+  font-size: 36px;
+}/*# sourceMappingURL=inventory.css.map */
