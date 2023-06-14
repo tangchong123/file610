@@ -73,23 +73,26 @@ window.onload = function() {
     }
 
     // 上传头像
-    uploadBtn.onchange = function() {
-        let file = this.files[0]
-        let src = window.URL.createObjectURL(file)
-        imgCts.forEach(img=> {
-            img.src=src
-        })
-    }
-    
-    // 保存按钮 即 头像上传提交按钮
-    avatarSaveBtn.onclick = async function() {
+    uploadBtn.onchange = async function() {
         let file = uploadBtn.files[0]
         if(!file) {
             return alert("您未选择任何文件！")
         }
         let formData = new FormData()
         formData.append("file",file)
+        // 显示图片
+        let src = window.URL.createObjectURL(file)
+        imgCts.forEach(img=> {
+            img.src=src
+        })
+        // 给服务端发送数据
         let data = await uploadFile(formData)
+        console.log(data);
+    }
+    
+    // 保存按钮 即 头像上传提交按钮
+    avatarSaveBtn.onclick = async function() {
+        
         uploadUrl = data
         
         console.log(data);
@@ -126,13 +129,14 @@ window.onload = function() {
     }  
 
     // 上传头像
-    async function uploadFile() {
+    async function uploadFile(formData) {
         let data = await axios({
             method: "POST",
             headers:{
                 Authorization: `Bearer ${localStorage.token}`
             },
             url: `http://localhost:8080/profiles/upload`,
+            data: formData
         })
         return data
     }
