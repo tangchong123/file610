@@ -1,6 +1,6 @@
 window.onload = function() {
     let user = JSON.parse(localStorage.getItem("user")||"{}")
-    let historyName = JSON.parse(localStorage.getItem("historyName") || `["还没有旧名哦"]`)
+    let historyName = JSON.parse(localStorage.getItem("historyName") || `[""]`)
 
     let editBox = document.querySelector(".edit_box")
     let left = editBox.querySelector(".left")

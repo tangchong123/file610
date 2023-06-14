@@ -4,7 +4,7 @@
     "username": "Marry",
     "nickname": "Marry",
     "password": "123456",
-    "avatar": "../../img/profile/avatar/small.jpg",
+    "avatar": "file:///D:/Lydia/TEAM/file610/lydia_front/img/profile/avatar/1.webp",
     "email": "",
     "intro": "未提供信息"
   },
@@ -20,18 +20,18 @@
   {
     "id": 1686487984342,
     "username": "杨饼干",
-    "nickname": "杨饼干",
+    "nickname": "Cookie",
     "password": "123456",
     "avatar": "file:///D:/Lydia/TEAM/file610/lydia_front/img/profile/avatar/2.webp",
     "email": "",
-    "intro": "我是一只可爱的美短，我每天都要屙粑粑，臭死啦。"
+    "intro": "我是杨饼干"
   },
   {
     "id": 1686487990393,
     "username": "Tom",
     "nickname": "Tom",
     "password": "123456",
-    "avatar": "../../img/profile/avatar/small.jpg",
+    "avatar": "file:///D:/Lydia/TEAM/file610/lydia_front/img/profile/avatar/1.webp",
     "email": "",
     "intro": "未提供信息"
   },
