@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="../../css/header/header.css">
     <link rel="stylesheet" href="../../css/footer/footer.css">
     <link rel="stylesheet" href="../../css/profile/allMessagePage.css">
-    <script src="../../js/profiles/allMessagePage.js"></script>
+    <!-- <script src="../../js/profiles/allMessagePage.js" type="module"></script> -->
     <script src="../../js/axios.min.js"></script>
     <script src="../../js/header/header.js"></script>
+    <script src="../../js/vue.js"></script>
 </head>
 <body>
     <!-- 顶部 -->
@@ -144,24 +145,24 @@
         </div>
     </div>
 
-    <div class="allMessage_box">
+    <div id="allMessage_box">
         <!-- 导航栏 -->
         <div class="nav">
             <a class="avatar" href="main.html">
-                <img src="../../img/profile/avatar/middle.jpg" alt="" style="width: 64px;height: 64px;">
+                <img :src=user.avatar alt="" style="width: 64px;height: 64px;">
             </a>
             <div class="nav_bar">
-                <a class="nickname" href="./main.html">nickname</a>
+                <a class="nickname" href="./main.html">{{user.nickname}}</a>
                 <span>»</span>
                 <a class="edit" href="./allMessagePage.html">个人资料留言</a>
             </div>
         </div>
 
         <!-- 帮助文本格式 弹窗 -->
-        <div class="popup_window_text_format">
+        <div class="popup_window_text_format" v-if="isShowPopup">
             <div class="mask"></div>
             <div class="container">
-                <img class="text_format_no" src="../../img/profile/del.png" alt="">
+                <img class="text_format_no" @click="closePopup" src="../../img/profile/del.png" alt="">
                 <div class="title">文本格式</div>
                 <span>这些标记标签允许您为您的留言及发帖文字添加格式，类似于HTML。</span>
                 <ul>
@@ -208,7 +209,7 @@
                         <a class="r" href="#">网站链接</a>
                     </li>
                 </ul>
-                <button class="text_format_y">确定</button>
+                <button class="text_format_y" @click="closePopup">确定</button>
             </div>
         </div>
 
@@ -229,21 +230,21 @@
                 <!-- 留言输入框 -->
                 <div class="message_ipt">
                     <div class="avatar">
-                        <img src="../../img/profile/avatar/small.jpg" alt="">
+                        <img :src=user.avatar alt="">
                     </div>
-                    <textarea placeholder="添加一条留言" class="addMessageIpt"></textarea>
+                    <textarea placeholder="添加一条留言" class="addMessageIpt" @input="showTools" ref="messageTx"></textarea>
                     <!-- 留言工具 -->
-                    <div class="tools">
-                        <button class="help">格式帮助</button>
+                    <div class="tools" v-if="isShowTools">
+                        <button class="help" @click="showPopup">格式帮助</button>
     
                         <!-- 表情包 -->
-                        <div class="emj">
+                        <div class="emj" @click="showEmjs">
                             
                             <!-- 用js实现图片切换 -->
                             <img src="../../img/profile/emoji2.png" alt="" class="img1">
     
                             <!-- 表情包列表 -->
-                            <ul class="emj_list">
+                            <ul class="emj_list" v-if="isShowEmjs">
                                 <li>
                                     <img src="../../img/profile/e1.png" alt="">
                                     <div class="popup">
@@ -336,7 +337,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <button class="submit">提交留言</button>
+                        <button class="submit" @click="submitMessage">提交留言</button>
                     </div>
                 </div>
             </div>
@@ -344,20 +345,20 @@
             <!-- 留言列表 -->
             <div class="message_list">
                 <!-- 要动态渲染的留言数据 结构模板 -->
-                <div class="message_list_Ct">
-                    <div class="list">
+                <div class="message_list_Ct" v-for="(item,index) in messageList" :key="item.id">
+                    <div class="list" >
                         <div class="message_avatar">
-                            <img src="../../img/profile/avatar/small.jpg" alt="">
+                            <img :src=user.avatar alt="">
                         </div>
                         <div class="content_box">
                             <div class="content_top">
-                                <a href="#" class="message_nickname">nickname</a>
-                                <span class="past_time">1小时以前</span>
+                                <a href="#" class="message_nickname">{{item.nickname}}</a>
+                                <span class="past_time">{{formatTime(item.createTime)}}</span>
                             </div>
-                            <div class="content">留言内容在这儿</div>
+                            <div class="content">{{item.content}}</div>
                         </div>
                         <div class="del">
-                            <img class="delImg" src="../../img/profile/trash.png" alt="">
+                            <img class="delImg" src="../../img/profile/trash.png" @click="delMessage(index)">
                             <div class="del_hint">删除</div>
                         </div>
                     </div>
@@ -385,5 +386,108 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const app = new Vue({
+            el: "#allMessage_box",
+            data: {
+                user: JSON.parse(localStorage.getItem("user")||"{}"),
+                isShowTools: false,
+                isShowPopup: false,
+                isShowEmjs: false,
+                id: null,
+                total: 0,
+                messageList: []
+            },
+            mounted () {
+                 this.renderMessages()
+            },
+            methods: {
+                // 显示工具
+                showTools() {
+                    this.isShowTools=this.$refs.messageTx.value.trim().length
+                },
+                // 显示格式弹窗
+                showPopup() {
+                    this.isShowPopup=true
+                },
+                // 关闭弹窗
+                closePopup() {
+                    this.isShowPopup = false
+                },
+                showEmjs() {
+                    this.isShowEmjs=!this.isShowEmjs
+                },
+                formatTime(pastTime) {
+                    let dt = new Date(pastTime)
+                    let y = dt.getFullYear()
+                    let m = (dt.getMonth()+1+"").padStart(2,0)
+                    let d = (dt.getDate()+"").padStart(2,0)
+                    let hh = (dt.getHours()+"").padStart(2,0)
+                    let mm = (dt.getMinutes()+"").padStart(2,0)
+                    let ss = (dt.getSeconds()+"").padStart(2,0)
+                    return `${y}-${m}-${d} ${hh}:${mm}:${ss}`
+                },
+                async renderMessages() {
+                    let data = await this.getMessages()
+                    this.total = data.data.total
+                    data = await this.getMessages(this.total)
+                    this.messageList = data.data.result
+                },
+                // 提交留言
+                async submitMessage() {
+                    let content = this.$refs.messageTx.value.trim()
+                    await this.addMessage(content)
+                    this.renderMessages()
+                    this.$refs.messageTx.value = ""
+                },
+                // 删除留言
+                async delMessage(index) {
+                    let {data} = await this.getMessages(this.total)
+                    await this.removeMessage(data.result[index].id)
+                    this.renderMessages()
+                },
+                // 获取所有的留言列表请求
+                async getMessages(size=0) {
+                    let {data} = await axios({
+                        method: "GET",
+                        headers:{
+                            Authorization: `Bearer ${localStorage.token}`
+                        },
+                        url: `http://localhost:8080/profiles/message/${this.user.id}?size=${size}`,
+                    })
+                    return data
+                },
+                // 添加留言请求
+                async addMessage(content) {
+                    let {data} = await axios({
+                        method: "POST",
+                        headers:{
+                            Authorization: `Bearer ${localStorage.token}`
+                        },
+                        url: `http://localhost:8080/profiles/message/${this.user.id}`,
+                        data: {
+                            content,
+                            nickname: this.user.nickname
+                        }
+                    })
+                },
+                // 删除留言请求
+                async removeMessage(id) {
+                    await axios({
+                        method: "DELETE",
+                        headers:{
+                            Authorization: `Bearer ${localStorage.token}`
+                        },
+                        url: `http://localhost:8080/profiles/message/${id}`,
+                    })
+                }
+
+            },
+            watch: {
+                
+            }
+        })
+    </script>
 </body>
 </html>

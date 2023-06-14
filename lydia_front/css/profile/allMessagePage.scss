@@ -3,7 +3,7 @@ body {
     color: #969696;
 
     // 所有的留言
-    .allMessage_box {
+    #allMessage_box {
         width: 76%;
         margin: 0 auto;
         position: relative;
@@ -45,7 +45,7 @@ body {
 
         // 文本格式帮助 弹窗
         .popup_window_text_format {
-            display: none;
+            // display: none;
             .mask {
                 position: fixed;
                 inset: 0;
@@ -120,7 +120,9 @@ body {
 
         .all {
             width: 98%;
+            min-height: 500px;
             margin: 0 auto;
+            margin-bottom: 20px;
             color: #969696;
             background-color: rgba(0, 0, 0,.3);
             padding-top: 40px;
@@ -251,7 +253,6 @@ body {
                     }
                     // 留言工具
                     .tools {
-                        visibility: hidden;
                         display: flex;
                         justify-content: flex-end;
                         align-items: center;
@@ -282,7 +283,7 @@ body {
                             }
                             // 表情包列表
                             ul {
-                                visibility: hidden;
+                                // visibility: hidden;
                                 width: 304px;
                                 height: 48px;
                                 background-color: #3B3938;
