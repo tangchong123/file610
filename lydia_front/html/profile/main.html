@@ -7,15 +7,143 @@
     <title>Document</title>
     <link rel="stylesheet" href="../../css/base.css">
     <link rel="stylesheet" href="../../css/profile/main.css">
-    <script src="../../js/request.js"></script>
-    <!-- <script src="../../js/vue.js"></script> -->
+    <link rel="stylesheet" href="../../css/header/header.css">
+    <link rel="stylesheet" href="../../css/footer/footer.css">
+    <!-- <script src="../../js/header/header.js"></script> -->
     <script src="../../js/axios.min.js"></script>
     <script src="../../js/profiles/main.js"></script>
     <script src="../../js/request.js"></script>
 </head>
 <body>
-    <!-- 顶部header -->
-    <iframe class="header" src="../header/header.html" frameborder="0" scrolling="no"></iframe>
+    <!-- 顶部 -->
+    <div class="header_container">
+        <div class="main">
+            <div class="logo">
+                <a href="#">
+                    <img src="../../img/header&footer/logo_steam.svg" alt="">
+                </a>
+            </div>
+            <!-- 中间分类列表 -->
+            <ul class="category">
+                <li>
+                    <a href="#">商店</a>
+                    <ul class="cate_list">
+                        <li>
+                            <a href="#">主页</a>
+                        </li>
+                        <li>
+                            <a href="#">探索队列</a>
+                        </li>
+                        <li>
+                            <a href="#">愿望单</a>
+                        </li>
+                        <li>
+                            <a href="#">点数商店</a>
+                        </li>
+                        <li>
+                            <a href="#">新闻</a>
+                        </li>
+                        <li>
+                            <a href="#">统计数据</a>
+                        </li>
+                        <li>
+                            <a href="#">关于</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">社区</a>
+                    <ul class="cate_list">
+                        <li>
+                            <a href="#">主页</a>
+                        </li>
+                        <li>
+                            <a href="#">讨论</a>
+                        </li>
+                        <li>
+                            <a href="../profile/screenShots.html">创意工坊</a>
+                        </li>
+                        <li>
+                            <a href="#">市场</a>
+                        </li>
+                        <li>
+                            <a href="#">实况直播</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">nickname</a>
+                    <ul class="cate_list">
+                        <li>
+                            <a href="#">动态</a>
+                        </li>
+                        <li>
+                            <a href="../profile/main.html">个人资料</a>
+                        </li>
+                        <li>
+                            <a href="#">好友</a>
+                        </li>
+                        <li>
+                            <a href="../profile/playedGames.html">游戏</a>
+                        </li>
+                        <li>
+                            <a href="#">组</a>
+                        </li>
+                        <li>
+                            <a href="#">内容</a>
+                        </li>
+                        <li>
+                            <a href="../profile/inventory.html">库存</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">聊天</a>
+                </li>
+                <li>
+                    <a href="#">客服</a>
+                </li>
+            </ul>
+            <!-- 右边其他用户信息 -->
+            <div class="right">
+                <!-- 安装Steam -->
+                <div class="install">
+                    <img src="../../img/header&footer/btn_header_installsteam_download.png" alt="">
+                    <span>安装Steam</span>
+                </div>
+                <!-- 消息通知 -->
+                <div class="inform">
+                    <img src="../../img/header&footer/header_menu_notifications.png" alt="">
+                </div>
+                <!-- 用户资料 -->
+                <div class="self_info self">
+                    <span class="self">nickname</span>
+                    <img class="self" src="../../img/profile/arrowDn9x5.gif" alt="">
+                    <ul class="info_list">
+                        <li>
+                            <a href="./main.html">查看个人资料</a>
+                        </li>
+                        <li>
+                            <a href="#">账户明细</a>
+                        </li>
+                        <li>
+                            <a href="#">注销: <i>username</i></a>
+                        </li>
+                        <li>
+                            <a href="#">偏好</a>
+                        </li>
+                        <li>
+                            <a href="#">更改语言</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 头像 -->
+                <a href="./main.html" class="avatar">
+                    <img src="../../img/profile/avatar/small.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
 
     <div id="main_box">
         <!-- 弹窗 -->
@@ -384,6 +512,34 @@
     </div>
 
     <!-- 底部footer -->
-    <iframe class="footer" src="../footer/footer.html" frameborder="0"></iframe>
+    <footer>
+        <div class="footer_box">
+            <div class="logo">
+                <img src="../../img/header&footer/logo_valve_footer.png" alt="">
+            </div>
+            <div class="info">
+                <div class="top">
+                    © Valve Corporation。保留所有权利。所有商标均为其在美国及其它国家/地区的各自持有者所有。本网站上部分地理空间数据由 <a href="http://www.geonames.org/">geonames.org</a> 提供。
+                </div>
+                <ul>
+                    <li><a href="https://store.steampowered.com/privacy_agreement/">隐私政策</a></li>
+                    <li><a href="https://store.steampowered.com/legal/">法律信息</a></li>
+                    <li><a href="https://store.steampowered.com/subscriber_agreement/">Steam订户协议</a></li>
+                    <li><a href="#">Cookie</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let infoList = document.querySelector(".self_info>.info_list")
+        document.onclick = function(e) {
+            if(e.target.matches(".self")) {
+                infoList.style.display = "block"
+            }else {
+                infoList.style.display = "none"
+            }
+        }
+    </script>
 </body>
 </html>

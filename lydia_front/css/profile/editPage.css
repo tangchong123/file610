@@ -2,16 +2,6 @@ body {
   background-color: #1F2326;
   color: #969696;
 }
-body .header {
-  display: block;
-  width: 100%;
-  height: 104px;
-}
-body .footer {
-  display: block;
-  width: 100%;
-  height: 78px;
-}
 body .edit_box {
   width: 76%;
   margin: 0 auto;

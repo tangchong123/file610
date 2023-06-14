@@ -24,29 +24,44 @@
   align-items: center;
   margin-left: 50px;
 }
-.header_container .main .category li {
+.header_container .main .category > li {
   margin-right: 20px;
   position: relative;
 }
-.header_container .main .category li a {
+.header_container .main .category > li .cate_list {
+  display: none;
+  width: 132px;
+  font-size: 14px;
+  padding: 10px 10px;
+  background-color: #161A21;
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  z-index: 555;
+}
+.header_container .main .category > li .cate_list > li {
+  height: 30px;
+}
+.header_container .main .category > li .cate_list > li a {
+  font-size: 14px;
+  color: #b8b6b4;
+  text-transform: uppercase;
+}
+.header_container .main .category > li .cate_list > li a:hover {
+  color: #fff;
+}
+.header_container .main .category > li > a {
   width: 30px;
   height: 24px;
   font-size: 14px;
   color: #b8b6b4;
   text-transform: uppercase;
 }
-.header_container .main .category li a:hover {
+.header_container .main .category > li > a:hover {
   color: #fff;
 }
-.header_container .main .category .cate_list {
-  display: none;
-  width: 132px;
-  height: 210px;
-  font-size: 14px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: 45555;
+.header_container .main .category > li:hover .cate_list {
+  display: block;
 }
 .header_container .main .right {
   position: absolute;
@@ -93,8 +108,32 @@
   margin-top: 2px;
   cursor: pointer;
   margin-right: 15px;
+  position: relative;
 }
 .header_container .main .right .self_info:hover span {
+  color: #fff;
+}
+.header_container .main .right .self_info .info_list {
+  display: none;
+  width: 150px;
+  background-color: #161A21;
+  padding: 20px 10px;
+  position: absolute;
+  top: 25px;
+  right: 0px;
+  z-index: 555;
+}
+.header_container .main .right .self_info .info_list li {
+  height: 30px;
+}
+.header_container .main .right .self_info .info_list li a {
+  font-size: 14px;
+  color: #b8b6b4;
+}
+.header_container .main .right .self_info .info_list li a i {
+  color: #02BFD0;
+}
+.header_container .main .right .self_info .info_list li a:hover {
   color: #fff;
 }
 .header_container .main .right .avatar {

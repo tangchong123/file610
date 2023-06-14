@@ -5,8 +5,385 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/header/header.css">
+    <link rel="stylesheet" href="../../css/footer/footer.css">
+    <link rel="stylesheet" href="../../css/profile/allMessagePage.css">
+    <script src="../../js/profiles/allMessagePage.js"></script>
+    <script src="../../js/axios.min.js"></script>
+    <script src="../../js/header/header.js"></script>
 </head>
 <body>
-    <h1>所有的留言</h1>
+    <!-- 顶部 -->
+    <div class="header_container">
+        <div class="main">
+            <div class="logo">
+                <a href="#">
+                    <img src="../../img/header&footer/logo_steam.svg" alt="">
+                </a>
+            </div>
+            <!-- 中间分类列表 -->
+            <ul class="category">
+                <li>
+                    <a href="#">商店</a>
+                    <ul class="cate_list">
+                        <li>
+                            <a href="#">主页</a>
+                        </li>
+                        <li>
+                            <a href="#">探索队列</a>
+                        </li>
+                        <li>
+                            <a href="#">愿望单</a>
+                        </li>
+                        <li>
+                            <a href="#">点数商店</a>
+                        </li>
+                        <li>
+                            <a href="#">新闻</a>
+                        </li>
+                        <li>
+                            <a href="#">统计数据</a>
+                        </li>
+                        <li>
+                            <a href="#">关于</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">社区</a>
+                    <ul class="cate_list">
+                        <li>
+                            <a href="#">主页</a>
+                        </li>
+                        <li>
+                            <a href="#">讨论</a>
+                        </li>
+                        <li>
+                            <a href="../profile/screenShots.html">创意工坊</a>
+                        </li>
+                        <li>
+                            <a href="#">市场</a>
+                        </li>
+                        <li>
+                            <a href="#">实况直播</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">nickname</a>
+                    <ul class="cate_list">
+                        <li>
+                            <a href="#">动态</a>
+                        </li>
+                        <li>
+                            <a href="../profile/main.html">个人资料</a>
+                        </li>
+                        <li>
+                            <a href="#">好友</a>
+                        </li>
+                        <li>
+                            <a href="../profile/playedGames.html">游戏</a>
+                        </li>
+                        <li>
+                            <a href="#">组</a>
+                        </li>
+                        <li>
+                            <a href="#">内容</a>
+                        </li>
+                        <li>
+                            <a href="../profile/inventory.html">库存</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">聊天</a>
+                </li>
+                <li>
+                    <a href="#">客服</a>
+                </li>
+            </ul>
+            <!-- 右边其他用户信息 -->
+            <div class="right">
+                <!-- 安装Steam -->
+                <div class="install">
+                    <img src="../../img/header&footer/btn_header_installsteam_download.png" alt="">
+                    <span>安装Steam</span>
+                </div>
+                <!-- 消息通知 -->
+                <div class="inform">
+                    <img src="../../img/header&footer/header_menu_notifications.png" alt="">
+                </div>
+                <!-- 用户资料 -->
+                <div class="self_info self">
+                    <span class="self">nickname</span>
+                    <img class="self" src="../../img/profile/arrowDn9x5.gif" alt="">
+                    <ul class="info_list">
+                        <li>
+                            <a href="./main.html">查看个人资料</a>
+                        </li>
+                        <li>
+                            <a href="#">账户明细</a>
+                        </li>
+                        <li>
+                            <a href="#">注销: <i>username</i></a>
+                        </li>
+                        <li>
+                            <a href="#">偏好</a>
+                        </li>
+                        <li>
+                            <a href="#">更改语言</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 头像 -->
+                <a href="./main.html" class="avatar">
+                    <img src="../../img/profile/avatar/small.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="allMessage_box">
+        <!-- 导航栏 -->
+        <div class="nav">
+            <a class="avatar" href="main.html">
+                <img src="../../img/profile/avatar/middle.jpg" alt="" style="width: 64px;height: 64px;">
+            </a>
+            <div class="nav_bar">
+                <a class="nickname" href="./main.html">nickname</a>
+                <span>»</span>
+                <a class="edit" href="./allMessagePage.html">个人资料留言</a>
+            </div>
+        </div>
+
+        <!-- 帮助文本格式 弹窗 -->
+        <div class="popup_window_text_format">
+            <div class="mask"></div>
+            <div class="container">
+                <img class="text_format_no" src="../../img/profile/del.png" alt="">
+                <div class="title">文本格式</div>
+                <span>这些标记标签允许您为您的留言及发帖文字添加格式，类似于HTML。</span>
+                <ul>
+                    <li>
+                        <span class="l">用法</span>
+                        <span class="r">范例</span>
+                    </li>
+                    <li>
+                        <span class="l">[h1]标题文字[/h1]</span>
+                        <h1 class="r">标题文字</h1>
+                    </li>
+                    <li>
+                        <span class="l">[b]粗体文本[/b]</span>
+                        <b class="r">粗体文本</b>
+                    </li>
+                    <li>
+                        <span class="l">[u]下划线文本[/u]</span>
+                        <u class="r">下划线文本</u>
+                    </li>
+                    <li>
+                        <span class="l">[i]斜体文本[/i]</span>
+                        <span class="r">斜体文本</span>
+                    </li>
+                    <li>
+                        <span class="l">[strike]删除文本[/strike]</span>
+                        <del class="r">删除文本</del>
+                    </li>
+                    <li>
+                        <span class="l">[spoiler]隐藏文本[/spoiler]</span>
+                        <span class="r hide">隐藏文本</span>
+                    </li>
+                    <li>
+                        <span class="l">[noparse]不解析[b]标签[/b][/noparse]</span>
+                        <span class="r">不解析[b]标签[/b]</span>
+                    </li>
+                    <!-- // 上面的li在Chrome中渲染不出来？？？why -->
+                    <li>
+                        <span class="l">[hr][/hr]</span>
+                        <span class="r">渲染水平分隔线</span>
+                    </li>
+                    <li>
+                        <span class="l">
+                            [url=store.steampowered.com] 网站链接 [/url] </span>
+                        <a class="r" href="#">网站链接</a>
+                    </li>
+                </ul>
+                <button class="text_format_y">确定</button>
+            </div>
+        </div>
+
+        <div class="all">
+            <div class="message">
+                <!-- 标题 -->
+                <div class="message_title">
+                    <img src="../../img/profile/message.png" alt="">
+                    <span class="t">留言</span>
+                    <input type="checkbox">
+                    <span class="sub">订阅讨论串</span>
+                    <span class="pos">
+                        (<i>?</i>)
+                        <div class="hint">您可以订阅一个讨论串，以便在他人发布新留言时接收留言通知</div>
+                    </span>
+                </div>
+    
+                <!-- 留言输入框 -->
+                <div class="message_ipt">
+                    <div class="avatar">
+                        <img src="../../img/profile/avatar/small.jpg" alt="">
+                    </div>
+                    <textarea placeholder="添加一条留言" class="addMessageIpt"></textarea>
+                    <!-- 留言工具 -->
+                    <div class="tools">
+                        <button class="help">格式帮助</button>
+    
+                        <!-- 表情包 -->
+                        <div class="emj">
+                            
+                            <!-- 用js实现图片切换 -->
+                            <img src="../../img/profile/emoji2.png" alt="" class="img1">
+    
+                            <!-- 表情包列表 -->
+                            <ul class="emj_list">
+                                <li>
+                                    <img src="../../img/profile/e1.png" alt="">
+                                    <div class="popup">
+                                        <img src="../../img/profile/ee1.png" alt="">
+                                        <div class="dis">
+                                            <span>:steambored:</span>
+                                            <span>Steam 表情</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="../../img/profile/e2.png" alt="">
+                                    <div class="popup">
+                                        <img src="../../img/profile/ee2.png" alt="">
+                                        <div class="dis">
+                                            <span>:steamfacepalm:</span>
+                                            <span>Steam 表情</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="../../img/profile/e3.png" alt="">
+                                    <div class="popup">
+                                        <img src="../../img/profile/ee3.png" alt="">
+                                        <div class="dis">
+                                            <span>:steamhappy:</span>
+                                            <span>Steam 表情</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="../../img/profile/e4.png" alt="">
+                                    <div class="popup">
+                                        <img src="../../img/profile/ee4.png" alt="">
+                                        <div class="dis">
+                                            <span>:steammocking:</span>
+                                            <span>Steam 表情</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="../../img/profile/e5.png" alt="">
+                                    <div class="popup">
+                                        <img src="../../img/profile/ee5.png" alt="">
+                                        <div class="dis">
+                                            <span>:steamsad:</span>
+                                            <span>Steam 表情</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="../../img/profile/e6.png" alt="">
+                                    <div class="popup">
+                                        <img src="../../img/profile/ee6.png" alt="">
+                                        <div class="dis">
+                                            <span>:steamsalty:</span>
+                                            <span>Steam 表情</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="../../img/profile/e7.png" alt="">
+                                    <div class="popup">
+                                        <img src="../../img/profile/ee7.png" alt="">
+                                        <div class="dis">
+                                            <span>:steamthis:</span>
+                                            <span>Steam 表情</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="../../img/profile/e8.png" alt="">
+                                    <div class="popup">
+                                        <img src="../../img/profile/ee8.png" alt="">
+                                        <div class="dis">
+                                            <span>:steamthumbsup:</span>
+                                            <span>Steam 表情</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="../../img/profile/e9.png" alt="">
+                                    <div class="popup">
+                                        <img src="../../img/profile/ee9.png" alt="">
+                                        <div class="dis">
+                                            <span>:steamthumbsdown:</span>
+                                            <span>Steam 表情</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="submit">提交留言</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 留言列表 -->
+            <div class="message_list">
+                <!-- 要动态渲染的留言数据 结构模板 -->
+                <div class="message_list_Ct">
+                    <div class="list">
+                        <div class="message_avatar">
+                            <img src="../../img/profile/avatar/small.jpg" alt="">
+                        </div>
+                        <div class="content_box">
+                            <div class="content_top">
+                                <a href="#" class="message_nickname">nickname</a>
+                                <span class="past_time">1小时以前</span>
+                            </div>
+                            <div class="content">留言内容在这儿</div>
+                        </div>
+                        <div class="del">
+                            <img class="delImg" src="../../img/profile/trash.png" alt="">
+                            <div class="del_hint">删除</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部footer -->
+    <footer>
+        <div class="footer_box">
+            <div class="logo">
+                <img src="../../img/header&footer/logo_valve_footer.png" alt="">
+            </div>
+            <div class="info">
+                <div class="top">
+                    © Valve Corporation。保留所有权利。所有商标均为其在美国及其它国家/地区的各自持有者所有。本网站上部分地理空间数据由 <a href="http://www.geonames.org/">geonames.org</a> 提供。
+                </div>
+                <ul>
+                    <li><a href="https://store.steampowered.com/privacy_agreement/">隐私政策</a></li>
+                    <li><a href="https://store.steampowered.com/legal/">法律信息</a></li>
+                    <li><a href="https://store.steampowered.com/subscriber_agreement/">Steam订户协议</a></li>
+                    <li><a href="#">Cookie</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
