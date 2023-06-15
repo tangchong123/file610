@@ -113,6 +113,20 @@ window.onload = function() {
         localStorage.setItem("user",JSON.stringify(user))
         init()
     }
+
+    // 主题选择 页面============================================================
+    let themeBox = right.querySelector(".theme_box")
+    let themeCancelBtn = themeBox.querySelector(".cancel")
+    let themeSaveBtn = themeBox.querySelector(".save")
+    let themeList = themeBox.querySelector(".theme_list")
+    let themeBgShow = themeBox.querySelector(".theme_bg_show")
+
+    // 修改主题
+    themeList.onclick = function(e) {
+        if(e.target.matches(".theme")) {
+            themeBgShow.children[1].classList.add(e.target.classList[1])
+        }
+    }
     
 
 

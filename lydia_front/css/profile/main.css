@@ -141,6 +141,24 @@
   padding: 10px;
   background-color: rgba(116, 74, 116, 0.3);
 }
+#main_box .container .c0 {
+  background-color: rgba(38, 45, 49, 0.3);
+}
+#main_box .container .c1 {
+  background-color: rgba(121, 79, 24, 0.3);
+}
+#main_box .container .c2 {
+  background-color: rgba(2, 3, 9, 0.3);
+}
+#main_box .container .c3 {
+  background-color: rgba(54, 64, 73, 0.3);
+}
+#main_box .container .c4 {
+  background: linear-gradient(to left, rgba(88, 38, 95, 0.3), rgba(106, 31, 97, 0.3));
+}
+#main_box .container .c5 {
+  background-color: rgba(20, 20, 20, 0.3);
+}
 #main_box .container .top {
   width: 100%;
   min-height: 224px;

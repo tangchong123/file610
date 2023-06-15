@@ -149,6 +149,25 @@
         margin: 0 auto;
         padding: 10px;
         background-color: rgba(116, 74, 116,.3);
+        .c0 {
+            background-color: rgba(38, 45, 49,.3);
+        }
+        .c1 {
+            background-color: rgba(121, 79, 24,.3);
+        }
+        .c2{
+            background-color: rgba(2, 3, 9,.3);
+        }
+        .c3 {
+            background-color: rgba(54, 64, 73,.3);
+        }
+        .c4 {
+            // background-color: #5C2461;
+            background: linear-gradient(to left,rgba(88, 38, 95,.3),rgba(106, 31, 97,.3));
+        }
+        .c5 {
+            background-color: rgba(20, 20, 20,.3);
+        }
 
         // 上面
         .top {
