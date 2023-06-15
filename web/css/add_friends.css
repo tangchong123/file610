@@ -1,8 +1,25 @@
 .header {
   width: 100vw;
-  height: 120px;
+  height: 100px;
   background-color: #171a21;
   min-width: 1080px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 120px;
+}
+
+.header > div:nth-of-type(2) {
+  display: flex;
+  width: 28%;
+  min-width: 400px;
+  color: #b8b6b4;
+  justify-content: space-between;
+  margin-left: 30px;
+}
+
+.header > div:nth-of-type(2) > div:hover {
+  color: white;
 }
 
 .main {
@@ -18,8 +35,25 @@
 .main > .main-header {
   width: 100%;
   height: 120px;
-  background-color: skyblue;
   min-width: 800px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.main > .main-header > img {
+  width: 60px;
+  height: 60px;
+  margin-right: 30px;
+}
+
+.main > .main-header > span {
+  padding: 3px;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 2px;
 }
 
 .main > .main-box {
@@ -180,6 +214,53 @@
 
 .main > .main-box > .main-right > .add-friends > .add-menu {
   width: 100%;
+}
+
+.main > .main-box > .main-right > .add-friends > .add-menu > .my-friend-code {
+  width: 100%;
+}
+
+.main > .main-box > .main-right > .add-friends > .add-menu > .my-friend-code > div:nth-of-type(1) {
+  font-weight: 700;
+  font-size: 24px;
+  padding: 12px 20px;
+}
+
+.main > .main-box > .main-right > .add-friends > .add-menu > .my-friend-code > div:nth-of-type(2) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 20px;
+  background-color: rgba(144, 144, 144, 0.1);
+}
+
+.main > .main-box > .main-right > .add-friends > .add-menu > .my-friend-code > div:nth-of-type(2) > span:nth-of-type(1) {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.main > .main-box > .main-right > .add-friends > .add-menu > .my-friend-code > div:nth-of-type(2) > span:nth-of-type(2) {
+  width: 30%;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
+}
+
+.main > .main-box > .main-right > .add-friends > .add-menu > .my-friend-code > div:nth-of-type(3) {
+  padding: 4px 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.main > .main-box > .main-right > .add-friends > .add-menu > .my-friend-code > div:nth-of-type(4) > input {
+  width: 90%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid #000;
+  height: 42px;
+  padding: 0px 20px;
+  color: white;
 }
 
 .footer {

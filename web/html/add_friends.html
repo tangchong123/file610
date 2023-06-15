@@ -13,11 +13,21 @@
 <body>
     <div id="app">
         <div class="header">
-            
+            <div>
+                <img src="https://community.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016" alt="" style="windth:180px;height: 50px;">
+            </div>
+            <div>
+                <div>商店</div>
+                <div>社区</div>
+                <div style="font-weight: 900;font-size: 22px;">{{userInfo.nickName}}</div>
+                <div>聊天</div>
+                <div>客服</div>
+            </div>
         </div>
         <div class="main">
             <div class="main-header">
-                <!-- <div class=""></div> -->
+                <img :src="userInfo.avatar" alt="">
+                <span>{{userInfo.nickName}}</span>
             </div>
             <div class="main-box">
                 <div class="main-left">
@@ -79,7 +89,17 @@
                     <div v-show="controlIndex==1" class="add-friends">
                         <div>添加好友</div>
                         <div class="add-menu">
-                            <div class="my-friend-code"></div>
+                            <div class="my-friend-code">
+                                    <div>您的好友代码</div>
+                                    <div>
+                                        <span>{{myFriendsCode}}</span>
+                                        <span>复制</span>
+                                    </div>
+                                    <div>输入您朋友的好友代码来邀请对方</div>
+                                    <div>
+                                        <input type="text" placeholder="输入好友代码">
+                                    </div>
+                            </div>
                             <div class="fast-invite"></div>
                             <div class="search-friend"></div>
                         </div>
@@ -96,7 +116,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer"></div>
+        <!-- <div class="footer"></div> -->
     </div>
     <script src="../js/vue2.js"></script>
     <script src="../js/add_friends.js"></script>

@@ -2,6 +2,7 @@ let app = new Vue({
     el:"#app",
     data: {
         controlIndex:null,
+        myFriendsCode:"123456789",
         friendsMenu:[
             {
                 "icon":"../imgs/我的.png",
@@ -66,7 +67,14 @@ let app = new Vue({
          friendsList:[],
      },
      created(){
-        this.controlIndex = this.friendsMenu[0].id
+        this.controlIndex = this.friendsMenu[0].id;
+        // 获取用户信息
+        this.userInfo={
+            nickName:"abc",
+            avatar:"https://avatars.akamai.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg",
+            state:0,
+            friendsList:[]
+        }
      },
      methods:{
         changeIndex(i){
