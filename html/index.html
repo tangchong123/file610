@@ -273,12 +273,20 @@
             <li>实验室</li>
           </ul>
           <div class="search">
-            <input type="text" placeholder="搜索">
+            <input type="text" placeholder="搜索" @input="searchInput" v-model.trim="searchKey" @blur="onSearch=false">
+            <div class="searchSuggust" v-show="onSearch">
+              <ul>
+                <li class="noData" v-show="!dataVaild">{{searchList.length!=0?'':'暂无数据'}}</li>
+                <li v-for="game in searchList" :key="game.index">
+                  {{game.name}}
+                </li>
+              </ul>
+            </div>
             <div class="icon">
               <img src="./images/search_icon_btn.png" alt="">
             </div>
           </div>
-          <div class="wishList">
+          <div class="wishList" v-if="isLogin">
             愿望单<span>(10)</span>
           </div>
         </div>
@@ -615,6 +623,7 @@
       </div>
     </footer>
 
+    <!-- 展示更多数据 -->
     <div class="showMoreData">
       <div class="wrapper">
           <div class="moreGame" v-for="data in moreDataList" :key="data.index">
@@ -648,6 +657,7 @@
           </div>
       </div>
     </div>
+
   <script src="./js/jquery-3.0.0.min.js"></script>
   <script src="./js/vue.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

@@ -8,4 +8,6 @@ router
   .get('/getBanner/:limit',indexController.getBanner)
   .get('/getSale',indexController.getSale)
   .get('/getGameList/:limit',indexController.getGameList)
+  .get('/searchGame/:keyword',indexController.searchData)
+
 module.exports = router

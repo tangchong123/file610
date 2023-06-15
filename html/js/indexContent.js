@@ -4,7 +4,11 @@ const app = new Vue({
     isLogin:true,
     canGetData:false,
     moreDataList:[],
-    url:[]
+    url:[],
+    onSearch:false,
+    searchKey:'',
+    searchList:[],
+    dataVaild:false
   },
   watch:{
     canGetData(val){
@@ -50,8 +54,45 @@ const app = new Vue({
         }
       }
     },
+    searchInput(){
+      this.onSearch = true
+      if(this.searchKey){
+        antiShake(this.getSearch(this.searchKey),2000)
+      }
+    },
+    getSearch(keyword){
+      if(keyword.trim()===''){
+        this.searchList = []
+      }
+      axios({
+        method:'GET',
+        url:`http://localhost:4400/api/searchGame/${keyword}`
+      }).then(res=>{
+          this.searchList = res.data.data
+          if(this.searchList.length!=0){
+            this.dataVaild = true
+          }else{
+            this.dataVaild = false
+          }
+      })
+    }
   },
 })
+
+// 防抖函数
+function antiShake(fn,delay){
+  let timer = null
+  return function(){
+    // 无论时间到没到都会清除定时器
+    clearTimeout(timer)
+    // 清除上一次 设置下一次
+    // 设置定时器 延迟delay秒执行 将timer设为null
+    timer = setTimeout(()=>{
+      fn()
+    },delay)
+    // 执行传入的函数
+  }
+}
 
  // 获取列表
 let navList = document.querySelectorAll('.showGameList .navTab ul li')

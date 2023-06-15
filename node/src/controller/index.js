@@ -47,5 +47,25 @@ module.exports = {
       msg:'获取成功',
       data:res
     }
+  },
+  async searchData(ctx){
+    let {keyword} = ctx.request.params
+    let file = JSON.parse(fs.readFileSync(path.join(__dirname,'../../data/gameList.json')))
+    file = file.filter(item=>{
+      return item.name.toLowerCase().includes(keyword.toLowerCase())
+    })
+    console.log(file);
+    if(file.length!=0){
+      return ctx.body = {
+        code:200,
+        msg:'搜索成功',
+        data:file
+      }
+    }
+    return ctx.body = {
+      code:400,
+      msg:'暂无商品',
+      data:[]
+    }
   }
 }
