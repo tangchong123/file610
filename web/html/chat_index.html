@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../css/chat-index.css">
     <link rel="stylesheet" href="../css/chat.css">
 </head>
-
 <body>
     <div id="app">
         <!-- <div class="cover"></div> -->
@@ -24,7 +23,7 @@
                 </div>
                 <div class="create-group-four">
                     <span>邀请至群组好友</span>
-                    <input type="text" placeholder="请输入好友名字" v-model = "inviteFriend">
+                    <input type="text" placeholder="请输入好友名字" v-model = "groupName">
                 </div>
                 <div class="create-group-five">
                     <div v-if=" groupName == '' " style="color: #969696;background-color: rgba(35, 37, 43, 1);">
@@ -279,7 +278,8 @@
             <!-- 头部栏 -->
             <div class="header">
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALIAAAAfCAYAAABDCJdYAAAACXBIWXMAAAsTAAALEwEAmpwYAAAF0WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDE4LTExLTE2VDE0OjI1OjU0LTA4OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE4LTExLTE2VDE0OjI1OjU0LTA4OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOC0xMS0xNlQxNDoyNTo1NC0wODowMCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo4ZTgyYTY5ZS03MmVmLTM4NDgtODI0Zi1hNmQzMTY4Mzg4NWIiIHhtcE1NOkRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDphMmVjMDY3Mi1kNDRjLTE2NGYtYTNl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"
-                    alt="">
+                    alt="" >
+                <!-- <input type="file"> -->
                 <div>
                     <span>商店</span>
                     <span>社区</span>
@@ -291,6 +291,7 @@
                 <div class="user-info-box">
                     <div>
                         <img v-bind:src="userInfo.avatar" alt="" @click="changeAvatar">
+                        <input type="file" style="display: none;" class="avatarInput" v-on:change="uploadImg">
                         <div class="userNickname">
                             <div class="userNickname-box">
                                 <div>{{userInfo.nickName}}</div>
@@ -329,7 +330,15 @@
                     <img src="../imgs/addfriend.png" alt="" @click="toAddFriend">
                 </div>
                 <div class="friend-state-box">
-
+                    <div>
+                        <div>好友列表</div>
+                        <div>{{onlineFriend}} / {{countFriends}}</div>
+                    </div>
+                    <div v-for ="(item,index) of inviteFriend" class="friends-list" @click.self = "showChatBox(index)">
+                        <img :src="item.avatar" alt="">
+                        <span :class = "{'is-online':item.state === 0}">{{item.nickName}}</span>
+                        <span :class = "{'is-online':item.state === 0}">{{states[item.state]}}</span>
+                    </div>
                 </div>
                 <div class="group-commit">
                     <div class="group-commit-header">
@@ -353,16 +362,39 @@
                 </div>
             </div>
             <div class="right-box">
-                <div v-if="!isOnclick" class="no-friend-chat">
+                <div v-if="!isShowChatBox" class="no-friend-chat">
                     点击一个好友或群组,开始聊天吧!
                 </div>
-                <div v-else>
-                    已选择好友
-                    {{msg}}
+                <div v-else class="friend-chat">
+                    <div class="chat-box-header">
+                        <img :src="chattingFriend.avatar" alt="">
+                        <span> {{chattingFriend.nickName}}</span>
+                        <span>{{states[chattingFriend.state]}}</span>
+                    </div>
+                    <div class="chat-box-body">
+                        <div class="chat-info-box">
+                            <div v-for="(item,index) of messageList">
+                                <div v-if="item.nickName == chattingFriend.nickName">
+                                    <div>{{item.data}}</div>
+                                    <div class="chat-content">
+                                        {{item.content}}
+                                    </div>
+                                </div>
+                                <div class="chat-avatar-box"  v-if="item.nickName == chattingFriend.nickName">
+                                    <img :src="item.avatar" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-input-box">
+                            <input type="text" class="message-value">
+                            <span @click = "sendInfo">发送</span>
+                        </div>
+                    </div>  
                 </div>
             </div>
         </div>
     </div>
+    <script src="../js/utils/date.js"></script>
     <script src="../js/vue2.js" ></script>
     <script src="../js/chat-index.js"></script>
     <script>

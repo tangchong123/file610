@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .img{
+        width: 100px;
+        height: 100px;
+      }
+      img{
+        width: 200%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="file" name="" id="" accept="image/*" />
+    <div class="img"><img src="" alt=""></div>
+    <script>
+      document.querySelector('input').onchange = function () {
+        let file = document.querySelector('input').files[0]
+        if (!file) alert('请选择文件')
+        // 获取图片地址
+        let src = window.URL.createObjectURL(file)
+        // 设置图片
+        document.querySelector('.img img').src = src
+        // 指定以FormData的格式传输数据
+        // 指定为为二进制类型，比如图片、mp3、文件
+        let formData = new FormData()
+        formData.append('file', file)
+        fetch('http://localhost:4500/api/upload', {
+          method:'POST',
+          body: formData,
+        }).then(res=>res.json())
+        .then(res=>{
+          console.log(res);
+        })
+      }
+    </script>
+  </body>
+</html>

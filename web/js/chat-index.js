@@ -3,50 +3,109 @@ let app = new Vue({
     data: {
         msg: "index页面msg",
         isLoading: true,
-        userInfo:{
-            nickName:"abc",
-            avatar:"https://avatars.akamai.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg",
-            state:0,
-            friendsList:[]
+        userInfo: {
+            nickName: "abc",
+            avatar: "https://avatars.akamai.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg",
+            state: 0,
+            friendsList: []
         },
         //控制显示隐藏内容
-        isOnclick:false,
-        isShowGroup:true,
+        isOnclick: false,
+        isShowGroup: true,
         isShowStates: false,
-        isShowCreateGroup:false,
-        states:["在线","离开","隐身","请勿打扰"],
-        groupName:"",
-        inviteFriend:[],
-        isShowSetting:false,
-        friendsSetting:[
-            "好友列表","聊天","大小与缩放","通知","语音"
+        isShowCreateGroup: false,
+        isShowChatBox:false,
+        states: ["在线", "离开", "隐身", "请勿打扰"],
+        groupName: "",
+        inviteFriend: [
+            {
+                nickName: "abc",
+                avatar: "https://avatars.akamai.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg",
+                state: 1,
+                friendsList: []
+            },
+            {
+                nickName: "a",
+                avatar: "https://avatars.akamai.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg",
+                state: 0,
+                friendsList: []
+            },
+            {
+                nickName: "b",
+                avatar: "https://avatars.akamai.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg",
+                state: 1,
+                friendsList: []
+            },
+            {
+                nickName: "c",
+                avatar: "https://avatars.akamai.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg",
+                state: 0,
+                friendsList: []
+            },
+            {
+                nickName: "abcaa",
+                avatar: "https://avatars.akamai.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg",
+                state: 1,
+                friendsList: []
+            },
+            {
+                nickName: "aa",
+                avatar: "https://avatars.akamai.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg",
+                state: 0,
+                friendsList: []
+            },
+            {
+                nickName: "bb",
+                avatar: "https://avatars.akamai.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg",
+                state: 1,
+                friendsList: []
+            },
+            {
+                nickName: "cc",
+                avatar: "https://avatars.akamai.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg",
+                state: 0,
+                friendsList: []
+            }
         ],
-        settingActivateIndex:3,
+        onlineFriend:0,
+        isShowSetting: false,
+        friendsSetting: [
+            "好友列表", "聊天", "大小与缩放", "通知", "语音"
+        ],
+        chattingFriend:null,
+        settingActivateIndex: 3,
         notifyList: [
-            "好友加入游戏时","好友上线时","收到直接聊天信息时","收到聊天室通知时","组活动与公告"
+            "好友加入游戏时", "好友上线时", "收到直接聊天信息时", "收到聊天室通知时", "组活动与公告"
         ],
         voiceInputDevice: [
             "default"
         ],
-        voiceInputDeviceIndex:0,
-        voiceOutDevice:[
+        voiceInputDeviceIndex: 0,
+        voiceOutDevice: [
             "default"
         ],
-        voiceOutDeviceIndex:0,
-        activateMicrophone:1
+        voiceOutDeviceIndex: 0,
+        activateMicrophone: 1,
+        messageList:[
+            {
+                avatar:"",
+                content:"",
+                time:""
+            }
+        ]
 
     },
     methods: {
-        showGroup(){
+        showGroup() {
             this.isShowGroup = !this.isShowGroup;
         },
-        showStates(){
+        showStates() {
             this.isShowStates = !this.isShowStates
             let statesEl = document.querySelector(".states-box")
             statesEl.children[this.userInfo.state].style.color = "#6dcff6"
         },
         changeStates(event) {
-            if(!event.target.getAttribute("i")){
+            if (!event.target.getAttribute("i")) {
                 return
             }
             let statesEl = document.querySelector(".states-box")
@@ -55,39 +114,92 @@ let app = new Vue({
 
             this.userInfo.state = event.target.getAttribute("i")
             event.target.style.color = "#6dcff6"
-         },
-        createGroup(){
+        },
+        createGroup() {
             this.isShowCreateGroup = !this.isShowCreateGroup
         },
-        cancelCreateGroup(){
+        cancelCreateGroup() {
             this.isShowCreateGroup = false
         },
         //换头像
-        changeAvatar(){},
-        toAddFriend(){
+        changeAvatar() {
+            document.querySelector(".avatarInput").click()
+
+        },
+        uploadImg() {
+            let files = document.querySelector(".avatarInput");
+            //获取第一个文件内容
+            let imgFile = files.files[0]
+            // console.dir(imgFile.name)
+            if (!/\.(jpg|png)$/.test(imgFile.name)) {
+                alert("文件类型不正确")
+                // this.uploadImg()
+                return
+            }
+            let reader = new FileReader()
+            reader.onload = function (event) {
+                console.log(event.target.result)
+            }
+            let a = reader.readAsDataURL(imgFile)
+            // console.log(a)
+            // console.log(file.files)
+        },
+        toAddFriend() {
             window.location.href = "../html/add_friends.html"
         },
-        ShowSetting(){
+        ShowSetting() {
             this.isShowSetting = !this.isShowSetting
         },
-        changeNotify(i){
+        changeNotify(i) {
             this.settingActivateIndex = i
         },
-        changeVoiceInputDevice(i){
-            this.voiceInputDeviceIndex  = i
+        changeVoiceInputDevice(i) {
+            this.voiceInputDeviceIndex = i
         },
-        changeVoiceOutDevice(i){
-            this.voiceOutDeviceIndex  = i
+        changeVoiceOutDevice(i) {
+            this.voiceOutDeviceIndex = i
         },
-        changeMicrophone(i){
+        changeMicrophone(i) {
             this.activateMicrophone = i
         },
-        cancelSetting(){
+        cancelSetting() {
             this.isShowSetting = false
             console.log("aaa")
-        }
+        },
+        showChatBox(i){
+            this.isShowChatBox = true
+            if(this.chattingFriend != this.inviteFriend[i]){
+                this.chattingFriend = this.inviteFriend[i]
+            }
+            // console.log(i)
+        },
+        sendInfo(){
+            let messageEl = document.querySelector(".message-value")
+            if(messageEl.value === ""){
+                messageEl.placeholder = "信息不能为空"
+                return
+            }
+            this.messageList.push({
+                nickName:this.chattingFriend.nickName,
+                avatar:this.userInfo.avatar,
+                content: messageEl.value,
+                data: new Date().format('yyyy-MM-dd hh:mm:ss')
+            })
+            messageEl.value = ""
 
-     },
+        },
+
+
+    },
+    created(){
+        this.inviteFriend.sort((a,b) => a.state - b.state)
+        this.inviteFriend.forEach((item,index)=>{
+            if(item.state === 0){
+                this.onlineFriend +=1
+            }
+        })
+        this.countFriends = this.inviteFriend.length
+    },
     watch: {
 
     },
