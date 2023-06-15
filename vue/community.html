@@ -101,212 +101,144 @@
                 <p>最新</p>
             </div>
         </div>
-        <div class="commentBar">
-            <div v-for="item in commentLists" :key="item.id" @click="item.active = true">
-                <p>{{item.value1}}</p>
-                <p>
-                    {{item.value2}}
-                    <img src="./img/award_icon_blue.svg" alt="">
-                    <span>{{item.num}}</span>
-                </p>
-                <div>
-                    <div>
-                        <img src="./img/icon_rate.png" alt="">
-                    </div>
-                    <div>
-                        <p>推荐</p>
-                        <p>总时数 {{item.hours}} 小时</p>
-                    </div>
-                </div>
-                <p>发布于：{{item.publish}}</p>
-                <p>{{item.comment}}</p>
-                <div>
-                    <span>{{item.value3}}</span>
-                    <div>
-                        <img src="./img/comment_quoteicon.png" alt="">
-                        {{item.comments}}
-                    </div>
-                </div>
-                <div class="popUp" :class="{doActive:item.active}" @click.stop="item.active=false">
-                    <div @click.stop="">
-                        <p>https://steamcommunity.com/profiles/76561199417197377/recommended/2290180/
-                            <span @click.stop="item.active=false">X
-                            </span>
-                        </p>
-                        <div>
-                            <div>
-                                <div>
-                                    <img :src="item.img1" alt="">
-                                    <div><img :src="item.img2" alt=""></div>
-                                </div>
-                                <span>{{item.name}}</span>»
-                                <span>评测</span>»
-                                <span>{{item.game}}</span>
-                            </div>
-                            <div>
-                                <div>
-                                    <div>
-                                        <p>
-                                            <span>{{item.value1}}</span>
-                                            <span>{{item.value2}}</span>
-                                        </p>
-                                        <div v-for="item1 in item.giftLists" @mouseenter="item1.active = true"
-                                            @mouseleave="item1.active = false">
-                                            <img :src="item1.gift" alt="">
-                                            <span>{{item1.num}}</span>
-                                            <div :class="{Active1:item1.active}">
-                                                <div>
-                                                    <img :src="item1.gifts" alt="">
-                                                </div>
-                                                <div>
-                                                    <p>{{item1.value1}}</p>
-                                                    <p>{{item1.value2}}</p>
-                                                    <p>奖励会给予创建者{{item1.num1}} Steam 点数。由{{item1.num ? item1.num : 1}}人送出
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <img src="./img/award_icon_blue.svg" alt="">
-                                            <span>1</span>
-                                            <p>查看另外1个社区大奖</p>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <img src="./img/icon_thumbsUp.png" alt="">
-                                        <div>
-                                            <p>推荐</p>
-                                            <p>过去2周 {{item.hours}} 小时/总时数 {{item.hours1}} 小时 （评测时
-                                                {{item.hours2}} 小时）</p>
-                                        </div>
-                                        <div>
-                                            <img src="./img/icon_review_steam.png" alt="">
-                                            <p>产品是从Steam上直接购买的</p>
-                                        </div>
-                                    </div>
-                                    <p>发布于：{{item.publish}} 上午 {{item.date}}</p>
-                                    <p>{{item.comment}}</p>
-                                </div>
-                            </div>
-                            <div>
-                                <span>这篇评测是否有价值？</span>
-                                <div>
-                                    <div><img src="./img/icons_16.png" alt=""></div>
-                                    是
-                                </div>
-                                <div>
-                                    <div><img src="./img/icons_16.png" alt=""></div>
-                                    否
-                                </div>
-                                <div>
-                                    <div><img src="./img/icons_16.png" alt=""></div>
-                                    欢乐
-                                </div>
-                                <div>
-                                    <div><img src="./img/award_icon (1).svg" alt=""></div>
-                                    奖励
-                                </div>
-                                <div>
-                                    <div><img src="./img/icons_16.png" alt=""></div>
-                                    <p>举报该评测违反《Steam 服务协议条款》或《在线行为准则》。</p>
-                                </div>
-                            </div>
-                            <div>
-                                <img :src="item.img3" alt="">
-                                <div>
-                                    <div><img src="./img/icon_store.png" alt=""><span>访问商店页面</span></div>
-                                    <div><img src="./img/icon_community.png" alt=""><span>浏览社区中心</span></div>
-                                    <div><img src="./img/icon_search.png" alt=""><span>寻找更多类似产品</span></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div>
-                                    <div><img src="./img/icons_16.png" alt=""></div>
-                                    <span>4 条留言</span>
-                                    <span>订阅讨论串</span>
-                                </div>
-                                <div v-for="item2 in item.userLists">
-                                    <img :src="item2.img" alt="" @mouseenter="item2.active = true"
-                                        @mouseleave="item2.active= false">
-                                    <div>
-                                        <p>
-                                            <span>{{item2.nickname}}</span>
-                                            <span>{{item2.hour}} 小时以前</span>
-                                        </p>
-                                        <p>{{item2.value}}</p>
-                                    </div>
-                                    <div><img src="./img/icons_16.png" alt=""></div>
-                                    <div :class="{cardActive:item2.active}">
-                                        <div></div>
-                                        <div>
-                                            <div>2</div>
-                                            <span>Steam 等级</span>
-                                        </div>
-                                        <div>
-                                            <div>
-                                                <img :src="item2.img3" alt="">
-                                                <img :src="item2.img1" alt="">
-                                            </div>
-                                            <div>
-                                                <p>{{item2.nickname}}</p>
-                                                <p>{{item2.status}}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="gameBar">
-            <div v-for="item in gameRecommendedLists">
-                <div @click="item[0].active=true">
-                    <span>
-                        <img :src="item[0].img1" alt="">
-                    </span>
+        <div v-show="topBarLists[0].active">
+            <div class="commentBar">
+                <div v-for="item in commentLists" :key="item.id" @click="item.active = true">
+                    <p>{{item.value1}}</p>
+                    <p>
+                        {{item.value2}}
+                        <img src="./img/award_icon_blue.svg" alt="">
+                        <span>{{item.num}}</span>
+                    </p>
                     <div>
                         <div>
-                            <p>
-                                <img src="./img/5-star.png" alt="">
-                                {{item[0].num}} 个评价
-                            </p>
-                            <p>{{item[0].value1}}</p>
+                            <img src="./img/icon_rate.png" alt="">
                         </div>
                         <div>
-                            <img src="./img/award_icon_blue.svg" alt="">
-                            <span>{{item[0].num1}}</span>
+                            <p>推荐</p>
+                            <p>总时数 {{item.hours}} 小时</p>
+                        </div>
+                    </div>
+                    <p>发布于：{{item.publish}}</p>
+                    <p>{{item.comment}}</p>
+                    <div>
+                        <span>{{item.value3}}</span>
+                        <div>
                             <img src="./img/comment_quoteicon.png" alt="">
-                            {{item[0].num2}}
+                            {{item.comments}}
                         </div>
                     </div>
-                    <div>{{item[0].value2}}</div>
-                    <div>{{item[0].value3}}</div>
-                    <div :class="{Active1:item[0].active}" @click.stop="item[0].active=false">
+                    <div class="popUp" :class="{doActive:item.active}" @click.stop="item.active=false">
                         <div @click.stop="">
-                            <p>https://steamcommunity.com/sharedfiles/filedetails/?id=2988708577
-                                <span @click.stop="item[0].active=false">X
+                            <p>https://steamcommunity.com/profiles/76561199417197377/recommended/2290180/
+                                <span @click.stop="item.active=false">X
                                 </span>
                             </p>
-
                             <div>
                                 <div>
-                                    <img :src="item[0].img1" alt="">
+                                    <div>
+                                        <img :src="item.img1" alt="">
+                                        <div><img :src="item.img2" alt=""></div>
+                                    </div>
+                                    <span>{{item.name}}</span>»
+                                    <span>评测</span>»
+                                    <span>{{item.game}}</span>
                                 </div>
                                 <div>
                                     <div>
                                         <div>
-                                            <div><img :src="item[0].user.img" alt=""  @mouseenter="item[0].user.active = true"
-                                                @mouseleave="item[0].user.active= false"></div>
+                                            <p>
+                                                <span>{{item.value1}}</span>
+                                                <span>{{item.value2}}</span>
+                                            </p>
+                                            <div v-for="item1 in item.giftLists" @mouseenter="item1.active = true"
+                                                @mouseleave="item1.active = false">
+                                                <img :src="item1.gift" alt="">
+                                                <span>{{item1.num}}</span>
+                                                <div :class="{Active1:item1.active}">
+                                                    <div>
+                                                        <img :src="item1.gifts" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <p>{{item1.value1}}</p>
+                                                        <p>{{item1.value2}}</p>
+                                                        <p>奖励会给予创建者{{item1.num1}} Steam 点数。由{{item1.num ? item1.num :
+                                                            1}}人送出
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div>
-                                                <p>{{item[0].user.name}}</p>
-                                                <p>{{item[0].user.status}}</p>
+                                                <img src="./img/award_icon_blue.svg" alt="">
+                                                <span>1</span>
+                                                <p>查看另外1个社区大奖</p>
                                             </div>
                                         </div>
-                                        <img :src="item[0].user.img1" alt="">
-                                        <div :class="{Active1:item[0].user.active}">
+                                        <div>
+                                            <img src="./img/icon_thumbsUp.png" alt="">
+                                            <div>
+                                                <p>推荐</p>
+                                                <p>过去2周 {{item.hours}} 小时/总时数 {{item.hours1}} 小时 （评测时
+                                                    {{item.hours2}} 小时）</p>
+                                            </div>
+                                            <div>
+                                                <img src="./img/icon_review_steam.png" alt="">
+                                                <p>产品是从Steam上直接购买的</p>
+                                            </div>
+                                        </div>
+                                        <p>发布于：{{item.publish}} 上午 {{item.date}}</p>
+                                        <p>{{item.comment}}</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span>这篇评测是否有价值？</span>
+                                    <div>
+                                        <div><img src="./img/icons_16.png" alt=""></div>
+                                        是
+                                    </div>
+                                    <div>
+                                        <div><img src="./img/icons_16.png" alt=""></div>
+                                        否
+                                    </div>
+                                    <div>
+                                        <div><img src="./img/icons_16.png" alt=""></div>
+                                        欢乐
+                                    </div>
+                                    <div>
+                                        <div><img src="./img/award_icon (1).svg" alt=""></div>
+                                        奖励
+                                    </div>
+                                    <div>
+                                        <div><img src="./img/icons_16.png" alt=""></div>
+                                        <p>举报该评测违反《Steam 服务协议条款》或《在线行为准则》。</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img :src="item.img3" alt="">
+                                    <div>
+                                        <div><img src="./img/icon_store.png" alt=""><span>访问商店页面</span></div>
+                                        <div><img src="./img/icon_community.png" alt=""><span>浏览社区中心</span></div>
+                                        <div><img src="./img/icon_search.png" alt=""><span>寻找更多类似产品</span></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <div><img src="./img/icons_16.png" alt=""></div>
+                                        <span>4 条留言</span>
+                                        <span>订阅讨论串</span>
+                                    </div>
+                                    <div v-for="item2 in item.userLists">
+                                        <img :src="item2.img" alt="" @mouseenter="item2.active = true"
+                                            @mouseleave="item2.active= false">
+                                        <div>
+                                            <p>
+                                                <span>{{item2.nickname}}</span>
+                                                <span>{{item2.hour}} 小时以前</span>
+                                            </p>
+                                            <p>{{item2.value}}</p>
+                                        </div>
+                                        <div><img src="./img/icons_16.png" alt=""></div>
+                                        <div :class="{cardActive:item2.active}">
                                             <div></div>
                                             <div>
                                                 <div>2</div>
@@ -314,54 +246,126 @@
                                             </div>
                                             <div>
                                                 <div>
-                                                    <img :src="item[0].user.img3" alt="">
-                                                    <img :src="item[0].user.img2" alt="">
+                                                    <img :src="item2.img3" alt="">
+                                                    <img :src="item2.img1" alt="">
                                                 </div>
+                                                <div>
+                                                    <p>{{item2.nickname}}</p>
+                                                    <p>{{item2.status}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gameBar">
+                <div v-for="item in gameRecommendedLists">
+                    <div @click="item[0].active=true">
+                        <span>
+                            <img :src="item[0].img1" alt="">
+                        </span>
+                        <div>
+                            <div>
+                                <p>
+                                    <img src="./img/5-star.png" alt="">
+                                    {{item[0].num}} 个评价
+                                </p>
+                                <p>{{item[0].value1}}</p>
+                            </div>
+                            <div>
+                                <img src="./img/award_icon_blue.svg" alt="">
+                                <span>{{item[0].num1}}</span>
+                                <img src="./img/comment_quoteicon.png" alt="">
+                                {{item[0].num2}}
+                            </div>
+                        </div>
+                        <div>{{item[0].value2}}</div>
+                        <div>{{item[0].value3}}</div>
+                        <div :class="{Active1:item[0].active}" @click.stop="item[0].active=false">
+                            <div @click.stop="">
+                                <p>https://steamcommunity.com/sharedfiles/filedetails/?id=2988708577
+                                    <span @click.stop="item[0].active=false">X
+                                    </span>
+                                </p>
+
+                                <div>
+                                    <div>
+                                        <img :src="item[0].img1" alt="">
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <div><img :src="item[0].user.img" alt=""
+                                                        @mouseenter="item[0].user.active = true"
+                                                        @mouseleave="item[0].user.active= false"></div>
                                                 <div>
                                                     <p>{{item[0].user.name}}</p>
                                                     <p>{{item[0].user.status}}</p>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <p>{{item[0].user.value}}</p>
-                                        <div><img src="./img/icon_rate.png" alt="">{{item[0].user.num}}</div>
-                                        <div>
-                                            <div>
-                                                <div><img src="./img/icons_16.png" alt=""></div>
-                                            </div>
-                                            <div>
-                                                <div><img src="./img/icons_16.png" alt=""></div>
-                                            </div>
-                                            <div><img src="./img/award_icon (1).svg" alt="">奖励</div>
-                                        </div>
-                                        <div>
-                                            <div v-for="item2 in item[0].user.users">
-                                                <img :src="item2.img" alt="" @mouseenter="item2.active = true"
-                                                    @mouseleave="item2.active= false">
+                                            <img :src="item[0].user.img1" alt="">
+                                            <div :class="{Active1:item[0].user.active}">
+                                                <div></div>
                                                 <div>
-                                                    <p>
-                                                        <span>{{item2.nickname}}</span>
-                                                        <span>{{item2.hour}} 小时以前</span>
-                                                    </p>
-                                                    <p>{{item2.value}}</p>
+                                                    <div>2</div>
+                                                    <span>Steam 等级</span>
                                                 </div>
-                                                <div><img src="./img/icons_16.png" alt=""></div>
-                                                <div :class="{cardActive:item2.active}">
-                                                    <div></div>
+                                                <div>
                                                     <div>
-                                                        <div>2</div>
-                                                        <span>Steam 等级</span>
+                                                        <img :src="item[0].user.img3" alt="">
+                                                        <img :src="item[0].user.img2" alt="">
                                                     </div>
                                                     <div>
+                                                        <p>{{item[0].user.name}}</p>
+                                                        <p>{{item[0].user.status}}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p>{{item[0].user.value}}</p>
+                                            <div><img src="./img/icon_rate.png" alt="">{{item[0].user.num}}</div>
+                                            <div>
+                                                <div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                </div>
+                                                <div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                </div>
+                                                <div><img src="./img/award_icon (1).svg" alt="">奖励</div>
+                                            </div>
+                                            <div>
+                                                <div v-for="item2 in item[0].user.users">
+                                                    <img :src="item2.img" alt="" @mouseenter="item2.active = true"
+                                                        @mouseleave="item2.active= false">
+                                                    <div>
+                                                        <p>
+                                                            <span>{{item2.nickname}}</span>
+                                                            <span>{{item2.hour}} 小时以前</span>
+                                                        </p>
+                                                        <p>{{item2.value}}</p>
+                                                    </div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                    <div :class="{cardActive:item2.active}">
+                                                        <div></div>
                                                         <div>
-                                                            <img :src="item2.img3" alt="">
-                                                            <img :src="item2.img1" alt="">
+                                                            <div>2</div>
+                                                            <span>Steam 等级</span>
                                                         </div>
                                                         <div>
-                                                            <p>{{item2.nickname}}</p>
-                                                            <p>{{item2.status}}</p>
+                                                            <div>
+                                                                <img :src="item2.img3" alt="">
+                                                                <img :src="item2.img1" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <p>{{item2.nickname}}</p>
+                                                                <p>{{item2.status}}</p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -372,100 +376,101 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div @click="item[1].active=true">
-                    <span>
-                        <img :src="item[1].img1" alt="">
-                    </span>
-                    <p>
-                        <img src="./img/icon_rate.png" alt="">
-                        <span>{{item[1].num}}</span>
-                        <img src="./img/award_icon_blue.svg" alt="">
-                        <span>{{item[1].num1}}</span>
-                        <img src="./img/comment_quoteicon.png" alt="">
-                        {{item[1].num2}}
-                    </p>
-                    <p>{{item[1].value1}}</p>
-                    <div>{{item[1].value2}}</div>
-                    <div>{{item[1].value3}}</div>
-                    <div :class="{Active1:item[1].active}" @click.stop="item[1].active=false">
-                        <div @click.stop="">
-                            <p>https://steamcommunity.com/sharedfiles/filedetails/?id=2988708577
-                                <span @click.stop="item[1].active=false">X
-                                </span>
-                            </p>
+                    <div @click="item[1].active=true">
+                        <span>
+                            <img :src="item[1].img1" alt="">
+                        </span>
+                        <p>
+                            <img src="./img/icon_rate.png" alt="">
+                            <span>{{item[1].num}}</span>
+                            <img src="./img/award_icon_blue.svg" alt="">
+                            <span>{{item[1].num1}}</span>
+                            <img src="./img/comment_quoteicon.png" alt="">
+                            {{item[1].num2}}
+                        </p>
+                        <p>{{item[1].value1}}</p>
+                        <div>{{item[1].value2}}</div>
+                        <div>{{item[1].value3}}</div>
+                        <div :class="{Active1:item[1].active}" @click.stop="item[1].active=false">
+                            <div @click.stop="">
+                                <p>https://steamcommunity.com/sharedfiles/filedetails/?id=2988708577
+                                    <span @click.stop="item[1].active=false">X
+                                    </span>
+                                </p>
 
-                            <div>
-                                <div>
-                                    <img :src="item[1].img1" alt="">
-                                </div>
                                 <div>
                                     <div>
+                                        <img :src="item[1].img1" alt="">
+                                    </div>
+                                    <div>
                                         <div>
-                                            <div><img :src="item[1].user.img" alt=""  @mouseenter="item[1].user.active = true"
-                                                @mouseleave="item[1].user.active= false"></div>
                                             <div>
-                                                <p>{{item[1].user.name}}</p>
-                                                <p>{{item[1].user.status}}</p>
-                                            </div>
-                                        </div>
-                                        <img :src="item[1].user.img1" alt="">
-                                        <div :class="{Active1:item[1].user.active}">
-                                            <div></div>
-                                            <div>
-                                                <div>2</div>
-                                                <span>Steam 等级</span>
-                                            </div>
-                                            <div>
-                                                <div>
-                                                    <img :src="item[1].user.img3" alt="">
-                                                    <img :src="item[1].user.img2" alt="">
-                                                </div>
+                                                <div><img :src="item[1].user.img" alt=""
+                                                        @mouseenter="item[1].user.active = true"
+                                                        @mouseleave="item[1].user.active= false"></div>
                                                 <div>
                                                     <p>{{item[1].user.name}}</p>
                                                     <p>{{item[1].user.status}}</p>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <p>{{item[1].user.value}}</p>
-                                        <div><img src="./img/icon_rate.png" alt="">{{item[1].user.num}}</div>
-                                        <div>
-                                            <div>
-                                                <div><img src="./img/icons_16.png" alt=""></div>
-                                            </div>
-                                            <div>
-                                                <div><img src="./img/icons_16.png" alt=""></div>
-                                            </div>
-                                            <div><img src="./img/award_icon (1).svg" alt="">奖励</div>
-                                        </div>
-                                        <div>
-                                            <div v-for="item2 in item[1].user.users">
-                                                <img :src="item2.img" alt="" @mouseenter="item2.active = true"
-                                                    @mouseleave="item2.active= false">
+                                            <img :src="item[1].user.img1" alt="">
+                                            <div :class="{Active1:item[1].user.active}">
+                                                <div></div>
                                                 <div>
-                                                    <p>
-                                                        <span>{{item2.nickname}}</span>
-                                                        <span>{{item2.hour}} 小时以前</span>
-                                                    </p>
-                                                    <p>{{item2.value}}</p>
+                                                    <div>2</div>
+                                                    <span>Steam 等级</span>
                                                 </div>
-                                                <div><img src="./img/icons_16.png" alt=""></div>
-                                                <div :class="{cardActive:item2.active}">
-                                                    <div></div>
+                                                <div>
                                                     <div>
-                                                        <div>2</div>
-                                                        <span>Steam 等级</span>
+                                                        <img :src="item[1].user.img3" alt="">
+                                                        <img :src="item[1].user.img2" alt="">
                                                     </div>
                                                     <div>
+                                                        <p>{{item[1].user.name}}</p>
+                                                        <p>{{item[1].user.status}}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p>{{item[1].user.value}}</p>
+                                            <div><img src="./img/icon_rate.png" alt="">{{item[1].user.num}}</div>
+                                            <div>
+                                                <div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                </div>
+                                                <div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                </div>
+                                                <div><img src="./img/award_icon (1).svg" alt="">奖励</div>
+                                            </div>
+                                            <div>
+                                                <div v-for="item2 in item[1].user.users">
+                                                    <img :src="item2.img" alt="" @mouseenter="item2.active = true"
+                                                        @mouseleave="item2.active= false">
+                                                    <div>
+                                                        <p>
+                                                            <span>{{item2.nickname}}</span>
+                                                            <span>{{item2.hour}} 小时以前</span>
+                                                        </p>
+                                                        <p>{{item2.value}}</p>
+                                                    </div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                    <div :class="{cardActive:item2.active}">
+                                                        <div></div>
                                                         <div>
-                                                            <img :src="item2.img3" alt="">
-                                                            <img :src="item2.img1" alt="">
+                                                            <div>2</div>
+                                                            <span>Steam 等级</span>
                                                         </div>
                                                         <div>
-                                                            <p>{{item2.nickname}}</p>
-                                                            <p>{{item2.status}}</p>
+                                                            <div>
+                                                                <img :src="item2.img3" alt="">
+                                                                <img :src="item2.img1" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <p>{{item2.nickname}}</p>
+                                                                <p>{{item2.status}}</p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -476,106 +481,107 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div @click="item[2].active=true">
-                    <span>
-                        <img :src="item[2].img1" alt="">
-                    </span>
-                    <div>
+                    <div @click="item[2].active=true">
+                        <span>
+                            <img :src="item[2].img1" alt="">
+                        </span>
                         <div>
-                            <p>
-                                <img src="./img/4-star.png" alt="">
-                                {{item[2].num}} 个评价
-                            </p>
-                            <p>{{item[2].value1}}</p>
-                        </div>
-                        <div>
-                            <img src="./img/award_icon_blue.svg" alt="">
-                            <span>{{item[2].num1}}</span>
-                            <img src="./img/comment_quoteicon.png" alt="">
-                            {{item[2].num2}}
-                        </div>
-                    </div>
-                    <div>{{item[2].value2}}</div>
-                    <div>{{item[2].value3}}</div>
-                    <div :class="{Active1:item[2].active}" @click.stop="item[2].active=false">
-                        <div @click.stop="">
-                            <p>https://steamcommunity.com/sharedfiles/filedetails/?id=2988708577
-                                <span @click.stop="item[2].active=false">X
-                                </span>
-                            </p>
-
                             <div>
-                                <div>
-                                    <img :src="item[2].img1" alt="">
-                                </div>
+                                <p>
+                                    <img src="./img/4-star.png" alt="">
+                                    {{item[2].num}} 个评价
+                                </p>
+                                <p>{{item[2].value1}}</p>
+                            </div>
+                            <div>
+                                <img src="./img/award_icon_blue.svg" alt="">
+                                <span>{{item[2].num1}}</span>
+                                <img src="./img/comment_quoteicon.png" alt="">
+                                {{item[2].num2}}
+                            </div>
+                        </div>
+                        <div>{{item[2].value2}}</div>
+                        <div>{{item[2].value3}}</div>
+                        <div :class="{Active1:item[2].active}" @click.stop="item[2].active=false">
+                            <div @click.stop="">
+                                <p>https://steamcommunity.com/sharedfiles/filedetails/?id=2988708577
+                                    <span @click.stop="item[2].active=false">X
+                                    </span>
+                                </p>
+
                                 <div>
                                     <div>
+                                        <img :src="item[2].img1" alt="">
+                                    </div>
+                                    <div>
                                         <div>
-                                            <div><img :src="item[2].user.img" alt=""  @mouseenter="item[2].user.active = true"
-                                                @mouseleave="item[2].user.active= false"></div>
                                             <div>
-                                                <p>{{item[2].user.name}}</p>
-                                                <p>{{item[2].user.status}}</p>
-                                            </div>
-                                        </div>
-                                        <img :src="item[2].user.img1" alt="">
-                                        <div :class="{Active1:item[2].user.active}">
-                                            <div></div>
-                                            <div>
-                                                <div>2</div>
-                                                <span>Steam 等级</span>
-                                            </div>
-                                            <div>
-                                                <div>
-                                                    <img :src="item[2].user.img3" alt="">
-                                                    <img :src="item[2].user.img2" alt="">
-                                                </div>
+                                                <div><img :src="item[2].user.img" alt=""
+                                                        @mouseenter="item[2].user.active = true"
+                                                        @mouseleave="item[2].user.active= false"></div>
                                                 <div>
                                                     <p>{{item[2].user.name}}</p>
                                                     <p>{{item[2].user.status}}</p>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <p>{{item[2].user.value}}</p>
-                                        <div><img src="./img/icon_rate.png" alt="">{{item[2].user.num}}</div>
-                                        <div>
-                                            <div>
-                                                <div><img src="./img/icons_16.png" alt=""></div>
-                                            </div>
-                                            <div>
-                                                <div><img src="./img/icons_16.png" alt=""></div>
-                                            </div>
-                                            <div><img src="./img/award_icon (1).svg" alt="">奖励</div>
-                                        </div>
-                                        <div>
-                                            <div v-for="item2 in item[2].user.users">
-                                                <img :src="item2.img" alt="" @mouseenter="item2.active = true"
-                                                    @mouseleave="item2.active= false">
+                                            <img :src="item[2].user.img1" alt="">
+                                            <div :class="{Active1:item[2].user.active}">
+                                                <div></div>
                                                 <div>
-                                                    <p>
-                                                        <span>{{item2.nickname}}</span>
-                                                        <span>{{item2.hour}} 小时以前</span>
-                                                    </p>
-                                                    <p>{{item2.value}}</p>
+                                                    <div>2</div>
+                                                    <span>Steam 等级</span>
                                                 </div>
-                                                <div><img src="./img/icons_16.png" alt=""></div>
-                                                <div :class="{cardActive:item2.active}">
-                                                    <div></div>
+                                                <div>
                                                     <div>
-                                                        <div>2</div>
-                                                        <span>Steam 等级</span>
+                                                        <img :src="item[2].user.img3" alt="">
+                                                        <img :src="item[2].user.img2" alt="">
                                                     </div>
                                                     <div>
+                                                        <p>{{item[2].user.name}}</p>
+                                                        <p>{{item[2].user.status}}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p>{{item[2].user.value}}</p>
+                                            <div><img src="./img/icon_rate.png" alt="">{{item[2].user.num}}</div>
+                                            <div>
+                                                <div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                </div>
+                                                <div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                </div>
+                                                <div><img src="./img/award_icon (1).svg" alt="">奖励</div>
+                                            </div>
+                                            <div>
+                                                <div v-for="item2 in item[2].user.users">
+                                                    <img :src="item2.img" alt="" @mouseenter="item2.active = true"
+                                                        @mouseleave="item2.active= false">
+                                                    <div>
+                                                        <p>
+                                                            <span>{{item2.nickname}}</span>
+                                                            <span>{{item2.hour}} 小时以前</span>
+                                                        </p>
+                                                        <p>{{item2.value}}</p>
+                                                    </div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                    <div :class="{cardActive:item2.active}">
+                                                        <div></div>
                                                         <div>
-                                                            <img :src="item2.img3" alt="">
-                                                            <img :src="item2.img1" alt="">
+                                                            <div>2</div>
+                                                            <span>Steam 等级</span>
                                                         </div>
                                                         <div>
-                                                            <p>{{item2.nickname}}</p>
-                                                            <p>{{item2.status}}</p>
+                                                            <div>
+                                                                <img :src="item2.img3" alt="">
+                                                                <img :src="item2.img1" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <p>{{item2.nickname}}</p>
+                                                                <p>{{item2.status}}</p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -586,115 +592,116 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div @click="item[3].active=true">
-                    <span>
-                        <img :src="item[3].img1" alt="">
-                    </span>
-                    <div>
+                    <div @click="item[3].active=true">
+                        <span>
+                            <img :src="item[3].img1" alt="">
+                        </span>
                         <div>
+                            <div>
+                                <p>
+                                    <span>
+                                        <img src="./img/icons_16.png" alt="">
+                                    </span>
+                                    <span>
+                                        <img src="./img/icons_16.png" alt="">
+                                    </span>
+                                    <span>
+                                        <img src="./img/award_icon (1).svg" alt="">
+                                        奖励
+                                    </span>
+                                </p>
+                            </div>
                             <p>
-                                <span>
-                                    <img src="./img/icons_16.png" alt="">
-                                </span>
-                                <span>
-                                    <img src="./img/icons_16.png" alt="">
-                                </span>
-                                <span>
-                                    <img src="./img/award_icon (1).svg" alt="">
-                                    奖励
-                                </span>
+                                <img src="./img/icon_rate.png" alt="">
+                                <span>{{item[3].num}}</span>
+                                <img src="./img/award_icon_blue.svg" alt="">
+                                <span>{{item[3].num1}}</span>
+                                <img src="./img/comment_quoteicon.png" alt="">
+                                {{item[3].num2}}
                             </p>
                         </div>
-                        <p>
-                            <img src="./img/icon_rate.png" alt="">
-                            <span>{{item[3].num}}</span>
-                            <img src="./img/award_icon_blue.svg" alt="">
-                            <span>{{item[3].num1}}</span>
-                            <img src="./img/comment_quoteicon.png" alt="">
-                            {{item[3].num2}}
-                        </p>
-                    </div>
-                    <div>{{item[3].value2}}</div>
-                    <div>{{item[3].value3}}</div>
-                    <div :class="{Active1:item[3].active}" @click.stop="item[3].active=false">
-                        <div @click.stop="">
-                            <p>https://steamcommunity.com/sharedfiles/filedetails/?id=2988708577
-                                <span @click.stop="item[3].active=false">X
-                                </span>
-                            </p>
+                        <div>{{item[3].value2}}</div>
+                        <div>{{item[3].value3}}</div>
+                        <div :class="{Active1:item[3].active}" @click.stop="item[3].active=false">
+                            <div @click.stop="">
+                                <p>https://steamcommunity.com/sharedfiles/filedetails/?id=2988708577
+                                    <span @click.stop="item[3].active=false">X
+                                    </span>
+                                </p>
 
-                            <div>
-                                <div>
-                                    <img :src="item[3].img1" alt="">
-                                </div>
                                 <div>
                                     <div>
+                                        <img :src="item[3].img1" alt="">
+                                    </div>
+                                    <div>
                                         <div>
-                                            <div><img :src="item[3].user.img" alt=""  @mouseenter="item[3].user.active = true"
-                                                @mouseleave="item[3].user.active= false"></div>
                                             <div>
-                                                <p>{{item[3].user.name}}</p>
-                                                <p>{{item[3].user.status}}</p>
-                                            </div>
-                                        </div>
-                                        <img :src="item[3].user.img1" alt="">
-                                        <div :class="{Active1:item[3].user.active}">
-                                            <div></div>
-                                            <div>
-                                                <div>2</div>
-                                                <span>Steam 等级</span>
-                                            </div>
-                                            <div>
-                                                <div>
-                                                    <img :src="item[3].user.img3" alt="">
-                                                    <img :src="item[3].user.img2" alt="">
-                                                </div>
+                                                <div><img :src="item[3].user.img" alt=""
+                                                        @mouseenter="item[3].user.active = true"
+                                                        @mouseleave="item[3].user.active= false"></div>
                                                 <div>
                                                     <p>{{item[3].user.name}}</p>
                                                     <p>{{item[3].user.status}}</p>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <p>{{item[3].user.value}}</p>
-                                        <div><img src="./img/icon_rate.png" alt="">{{item[3].user.num}}</div>
-                                        <div>
-                                            <div>
-                                                <div><img src="./img/icons_16.png" alt=""></div>
-                                            </div>
-                                            <div>
-                                                <div><img src="./img/icons_16.png" alt=""></div>
-                                            </div>
-                                            <div><img src="./img/award_icon (1).svg" alt="">奖励</div>
-                                        </div>
-                                        <div>
-                                            <div v-for="item2 in item[3].user.users">
-                                                <img :src="item2.img" alt="" @mouseenter="item2.active = true"
-                                                    @mouseleave="item2.active= false">
+                                            <img :src="item[3].user.img1" alt="">
+                                            <div :class="{Active1:item[3].user.active}">
+                                                <div></div>
                                                 <div>
-                                                    <p>
-                                                        <span>{{item2.nickname}}</span>
-                                                        <span>{{item2.hour}} 小时以前</span>
-                                                    </p>
-                                                    <p>{{item2.value}}</p>
+                                                    <div>2</div>
+                                                    <span>Steam 等级</span>
                                                 </div>
-                                                <div><img src="./img/icons_16.png" alt=""></div>
-                                                <div :class="{cardActive:item2.active}">
-                                                    <div></div>
+                                                <div>
                                                     <div>
-                                                        <div>2</div>
-                                                        <span>Steam 等级</span>
+                                                        <img :src="item[3].user.img3" alt="">
+                                                        <img :src="item[3].user.img2" alt="">
                                                     </div>
                                                     <div>
+                                                        <p>{{item[3].user.name}}</p>
+                                                        <p>{{item[3].user.status}}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p>{{item[3].user.value}}</p>
+                                            <div><img src="./img/icon_rate.png" alt="">{{item[3].user.num}}</div>
+                                            <div>
+                                                <div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                </div>
+                                                <div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                </div>
+                                                <div><img src="./img/award_icon (1).svg" alt="">奖励</div>
+                                            </div>
+                                            <div>
+                                                <div v-for="item2 in item[3].user.users">
+                                                    <img :src="item2.img" alt="" @mouseenter="item2.active = true"
+                                                        @mouseleave="item2.active= false">
+                                                    <div>
+                                                        <p>
+                                                            <span>{{item2.nickname}}</span>
+                                                            <span>{{item2.hour}} 小时以前</span>
+                                                        </p>
+                                                        <p>{{item2.value}}</p>
+                                                    </div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                    <div :class="{cardActive:item2.active}">
+                                                        <div></div>
                                                         <div>
-                                                            <img :src="item2.img3" alt="">
-                                                            <img :src="item2.img1" alt="">
+                                                            <div>2</div>
+                                                            <span>Steam 等级</span>
                                                         </div>
                                                         <div>
-                                                            <p>{{item2.nickname}}</p>
-                                                            <p>{{item2.status}}</p>
+                                                            <div>
+                                                                <img :src="item2.img3" alt="">
+                                                                <img :src="item2.img1" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <p>{{item2.nickname}}</p>
+                                                                <p>{{item2.status}}</p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -707,7 +714,914 @@
                     </div>
                 </div>
             </div>
-            <img src="" alt="">
+        </div>
+        <div v-show="topBarLists[1].active">
+            <div class="gameBar1">
+                <div v-for="item in gameRecommendedLists">
+                    <div @click="item[0].active=true">
+                        <span>
+                            <img :src="item[0].img1" alt="">
+                        </span>
+                        <div>
+                            <div>
+                                <p>
+                                    <img src="./img/5-star.png" alt="">
+                                    {{item[0].num}} 个评价
+                                </p>
+                                <p>{{item[0].value1}}</p>
+                            </div>
+                            <div>
+                                <img src="./img/award_icon_blue.svg" alt="">
+                                <span>{{item[0].num1}}</span>
+                                <img src="./img/comment_quoteicon.png" alt="">
+                                {{item[0].num2}}
+                            </div>
+                        </div>
+                        <div>{{item[0].value2}}</div>
+                        <div>{{item[0].value3}}</div>
+                        <div :class="{Active1:item[0].active}" @click.stop="item[0].active=false">
+                            <div @click.stop="">
+                                <p>https://steamcommunity.com/sharedfiles/filedetails/?id=2988708577
+                                    <span @click.stop="item[0].active=false">X
+                                    </span>
+                                </p>
+
+                                <div>
+                                    <div>
+                                        <img :src="item[0].img1" alt="">
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <div><img :src="item[0].user.img" alt=""
+                                                        @mouseenter="item[0].user.active = true"
+                                                        @mouseleave="item[0].user.active= false"></div>
+                                                <div>
+                                                    <p>{{item[0].user.name}}</p>
+                                                    <p>{{item[0].user.status}}</p>
+                                                </div>
+                                            </div>
+                                            <img :src="item[0].user.img1" alt="">
+                                            <div :class="{Active1:item[0].user.active}">
+                                                <div></div>
+                                                <div>
+                                                    <div>2</div>
+                                                    <span>Steam 等级</span>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <img :src="item[0].user.img3" alt="">
+                                                        <img :src="item[0].user.img2" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <p>{{item[0].user.name}}</p>
+                                                        <p>{{item[0].user.status}}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p>{{item[0].user.value}}</p>
+                                            <div><img src="./img/icon_rate.png" alt="">{{item[0].user.num}}</div>
+                                            <div>
+                                                <div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                </div>
+                                                <div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                </div>
+                                                <div><img src="./img/award_icon (1).svg" alt="">奖励</div>
+                                            </div>
+                                            <div>
+                                                <div v-for="item2 in item[0].user.users">
+                                                    <img :src="item2.img" alt="" @mouseenter="item2.active = true"
+                                                        @mouseleave="item2.active= false">
+                                                    <div>
+                                                        <p>
+                                                            <span>{{item2.nickname}}</span>
+                                                            <span>{{item2.hour}} 小时以前</span>
+                                                        </p>
+                                                        <p>{{item2.value}}</p>
+                                                    </div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                    <div :class="{cardActive:item2.active}">
+                                                        <div></div>
+                                                        <div>
+                                                            <div>2</div>
+                                                            <span>Steam 等级</span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <img :src="item2.img3" alt="">
+                                                                <img :src="item2.img1" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <p>{{item2.nickname}}</p>
+                                                                <p>{{item2.status}}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div @click="item[1].active=true">
+                        <span>
+                            <img :src="item[1].img1" alt="">
+                        </span>
+                        <p>
+                            <img src="./img/icon_rate.png" alt="">
+                            <span>{{item[1].num}}</span>
+                            <img src="./img/award_icon_blue.svg" alt="">
+                            <span>{{item[1].num1}}</span>
+                            <img src="./img/comment_quoteicon.png" alt="">
+                            {{item[1].num2}}
+                        </p>
+                        <p>{{item[1].value1}}</p>
+                        <div>{{item[1].value2}}</div>
+                        <div>{{item[1].value3}}</div>
+                        <div :class="{Active1:item[1].active}" @click.stop="item[1].active=false">
+                            <div @click.stop="">
+                                <p>https://steamcommunity.com/sharedfiles/filedetails/?id=2988708577
+                                    <span @click.stop="item[1].active=false">X
+                                    </span>
+                                </p>
+
+                                <div>
+                                    <div>
+                                        <img :src="item[1].img1" alt="">
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <div><img :src="item[1].user.img" alt=""
+                                                        @mouseenter="item[1].user.active = true"
+                                                        @mouseleave="item[1].user.active= false"></div>
+                                                <div>
+                                                    <p>{{item[1].user.name}}</p>
+                                                    <p>{{item[1].user.status}}</p>
+                                                </div>
+                                            </div>
+                                            <img :src="item[1].user.img1" alt="">
+                                            <div :class="{Active1:item[1].user.active}">
+                                                <div></div>
+                                                <div>
+                                                    <div>2</div>
+                                                    <span>Steam 等级</span>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <img :src="item[1].user.img3" alt="">
+                                                        <img :src="item[1].user.img2" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <p>{{item[1].user.name}}</p>
+                                                        <p>{{item[1].user.status}}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p>{{item[1].user.value}}</p>
+                                            <div><img src="./img/icon_rate.png" alt="">{{item[1].user.num}}</div>
+                                            <div>
+                                                <div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                </div>
+                                                <div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                </div>
+                                                <div><img src="./img/award_icon (1).svg" alt="">奖励</div>
+                                            </div>
+                                            <div>
+                                                <div v-for="item2 in item[1].user.users">
+                                                    <img :src="item2.img" alt="" @mouseenter="item2.active = true"
+                                                        @mouseleave="item2.active= false">
+                                                    <div>
+                                                        <p>
+                                                            <span>{{item2.nickname}}</span>
+                                                            <span>{{item2.hour}} 小时以前</span>
+                                                        </p>
+                                                        <p>{{item2.value}}</p>
+                                                    </div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                    <div :class="{cardActive:item2.active}">
+                                                        <div></div>
+                                                        <div>
+                                                            <div>2</div>
+                                                            <span>Steam 等级</span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <img :src="item2.img3" alt="">
+                                                                <img :src="item2.img1" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <p>{{item2.nickname}}</p>
+                                                                <p>{{item2.status}}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div @click="item[2].active=true">
+                        <span>
+                            <img :src="item[2].img1" alt="">
+                        </span>
+                        <div>
+                            <div>
+                                <p>
+                                    <img src="./img/4-star.png" alt="">
+                                    {{item[2].num}} 个评价
+                                </p>
+                                <p>{{item[2].value1}}</p>
+                            </div>
+                            <div>
+                                <img src="./img/award_icon_blue.svg" alt="">
+                                <span>{{item[2].num1}}</span>
+                                <img src="./img/comment_quoteicon.png" alt="">
+                                {{item[2].num2}}
+                            </div>
+                        </div>
+                        <div>{{item[2].value2}}</div>
+                        <div>{{item[2].value3}}</div>
+                        <div :class="{Active1:item[2].active}" @click.stop="item[2].active=false">
+                            <div @click.stop="">
+                                <p>https://steamcommunity.com/sharedfiles/filedetails/?id=2988708577
+                                    <span @click.stop="item[2].active=false">X
+                                    </span>
+                                </p>
+
+                                <div>
+                                    <div>
+                                        <img :src="item[2].img1" alt="">
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <div><img :src="item[2].user.img" alt=""
+                                                        @mouseenter="item[2].user.active = true"
+                                                        @mouseleave="item[2].user.active= false"></div>
+                                                <div>
+                                                    <p>{{item[2].user.name}}</p>
+                                                    <p>{{item[2].user.status}}</p>
+                                                </div>
+                                            </div>
+                                            <img :src="item[2].user.img1" alt="">
+                                            <div :class="{Active1:item[2].user.active}">
+                                                <div></div>
+                                                <div>
+                                                    <div>2</div>
+                                                    <span>Steam 等级</span>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <img :src="item[2].user.img3" alt="">
+                                                        <img :src="item[2].user.img2" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <p>{{item[2].user.name}}</p>
+                                                        <p>{{item[2].user.status}}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p>{{item[2].user.value}}</p>
+                                            <div><img src="./img/icon_rate.png" alt="">{{item[2].user.num}}</div>
+                                            <div>
+                                                <div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                </div>
+                                                <div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                </div>
+                                                <div><img src="./img/award_icon (1).svg" alt="">奖励</div>
+                                            </div>
+                                            <div>
+                                                <div v-for="item2 in item[2].user.users">
+                                                    <img :src="item2.img" alt="" @mouseenter="item2.active = true"
+                                                        @mouseleave="item2.active= false">
+                                                    <div>
+                                                        <p>
+                                                            <span>{{item2.nickname}}</span>
+                                                            <span>{{item2.hour}} 小时以前</span>
+                                                        </p>
+                                                        <p>{{item2.value}}</p>
+                                                    </div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                    <div :class="{cardActive:item2.active}">
+                                                        <div></div>
+                                                        <div>
+                                                            <div>2</div>
+                                                            <span>Steam 等级</span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <img :src="item2.img3" alt="">
+                                                                <img :src="item2.img1" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <p>{{item2.nickname}}</p>
+                                                                <p>{{item2.status}}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div @click="item[3].active=true">
+                        <span>
+                            <img :src="item[3].img1" alt="">
+                        </span>
+                        <div>
+                            <div>
+                                <p>
+                                    <span>
+                                        <img src="./img/icons_16.png" alt="">
+                                    </span>
+                                    <span>
+                                        <img src="./img/icons_16.png" alt="">
+                                    </span>
+                                    <span>
+                                        <img src="./img/award_icon (1).svg" alt="">
+                                        奖励
+                                    </span>
+                                </p>
+                            </div>
+                            <p>
+                                <img src="./img/icon_rate.png" alt="">
+                                <span>{{item[3].num}}</span>
+                                <img src="./img/award_icon_blue.svg" alt="">
+                                <span>{{item[3].num1}}</span>
+                                <img src="./img/comment_quoteicon.png" alt="">
+                                {{item[3].num2}}
+                            </p>
+                        </div>
+                        <div>{{item[3].value2}}</div>
+                        <div>{{item[3].value3}}</div>
+                        <div :class="{Active1:item[3].active}" @click.stop="item[3].active=false">
+                            <div @click.stop="">
+                                <p>https://steamcommunity.com/sharedfiles/filedetails/?id=2988708577
+                                    <span @click.stop="item[3].active=false">X
+                                    </span>
+                                </p>
+
+                                <div>
+                                    <div>
+                                        <img :src="item[3].img1" alt="">
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <div><img :src="item[3].user.img" alt=""
+                                                        @mouseenter="item[3].user.active = true"
+                                                        @mouseleave="item[3].user.active= false"></div>
+                                                <div>
+                                                    <p>{{item[3].user.name}}</p>
+                                                    <p>{{item[3].user.status}}</p>
+                                                </div>
+                                            </div>
+                                            <img :src="item[3].user.img1" alt="">
+                                            <div :class="{Active1:item[3].user.active}">
+                                                <div></div>
+                                                <div>
+                                                    <div>2</div>
+                                                    <span>Steam 等级</span>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <img :src="item[3].user.img3" alt="">
+                                                        <img :src="item[3].user.img2" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <p>{{item[3].user.name}}</p>
+                                                        <p>{{item[3].user.status}}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p>{{item[3].user.value}}</p>
+                                            <div><img src="./img/icon_rate.png" alt="">{{item[3].user.num}}</div>
+                                            <div>
+                                                <div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                </div>
+                                                <div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                </div>
+                                                <div><img src="./img/award_icon (1).svg" alt="">奖励</div>
+                                            </div>
+                                            <div>
+                                                <div v-for="item2 in item[3].user.users">
+                                                    <img :src="item2.img" alt="" @mouseenter="item2.active = true"
+                                                        @mouseleave="item2.active= false">
+                                                    <div>
+                                                        <p>
+                                                            <span>{{item2.nickname}}</span>
+                                                            <span>{{item2.hour}} 小时以前</span>
+                                                        </p>
+                                                        <p>{{item2.value}}</p>
+                                                    </div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                    <div :class="{cardActive:item2.active}">
+                                                        <div></div>
+                                                        <div>
+                                                            <div>2</div>
+                                                            <span>Steam 等级</span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <img :src="item2.img3" alt="">
+                                                                <img :src="item2.img1" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <p>{{item2.nickname}}</p>
+                                                                <p>{{item2.status}}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div v-show="topBarLists[2].active">
+            <div class="gameBar2">
+                <div v-for="item in gameRecommendedLists">
+                    <div @click="item[0].active=true">
+                        <span>
+                            <img :src="item[0].img1" alt="">
+                        </span>
+                        <div>
+                            <div>
+                                <p>
+                                    <img src="./img/5-star.png" alt="">
+                                    {{item[0].num}} 个评价
+                                </p>
+                                <p>{{item[0].value1}}</p>
+                            </div>
+                            <div>
+                                <img src="./img/award_icon_blue.svg" alt="">
+                                <span>{{item[0].num1}}</span>
+                                <img src="./img/comment_quoteicon.png" alt="">
+                                {{item[0].num2}}
+                            </div>
+                        </div>
+                        <div>{{item[0].value2}}</div>
+                        <div>{{item[0].value3}}</div>
+                        <div :class="{Active1:item[0].active}" @click.stop="item[0].active=false">
+                            <div @click.stop="">
+                                <p>https://steamcommunity.com/sharedfiles/filedetails/?id=2988708577
+                                    <span @click.stop="item[0].active=false">X
+                                    </span>
+                                </p>
+
+                                <div>
+                                    <div>
+                                        <img :src="item[0].img1" alt="">
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <div><img :src="item[0].user.img" alt=""
+                                                        @mouseenter="item[0].user.active = true"
+                                                        @mouseleave="item[0].user.active= false"></div>
+                                                <div>
+                                                    <p>{{item[0].user.name}}</p>
+                                                    <p>{{item[0].user.status}}</p>
+                                                </div>
+                                            </div>
+                                            <img :src="item[0].user.img1" alt="">
+                                            <div :class="{Active1:item[0].user.active}">
+                                                <div></div>
+                                                <div>
+                                                    <div>2</div>
+                                                    <span>Steam 等级</span>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <img :src="item[0].user.img3" alt="">
+                                                        <img :src="item[0].user.img2" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <p>{{item[0].user.name}}</p>
+                                                        <p>{{item[0].user.status}}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p>{{item[0].user.value}}</p>
+                                            <div><img src="./img/icon_rate.png" alt="">{{item[0].user.num}}</div>
+                                            <div>
+                                                <div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                </div>
+                                                <div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                </div>
+                                                <div><img src="./img/award_icon (1).svg" alt="">奖励</div>
+                                            </div>
+                                            <div>
+                                                <div v-for="item2 in item[0].user.users">
+                                                    <img :src="item2.img" alt="" @mouseenter="item2.active = true"
+                                                        @mouseleave="item2.active= false">
+                                                    <div>
+                                                        <p>
+                                                            <span>{{item2.nickname}}</span>
+                                                            <span>{{item2.hour}} 小时以前</span>
+                                                        </p>
+                                                        <p>{{item2.value}}</p>
+                                                    </div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                    <div :class="{cardActive:item2.active}">
+                                                        <div></div>
+                                                        <div>
+                                                            <div>2</div>
+                                                            <span>Steam 等级</span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <img :src="item2.img3" alt="">
+                                                                <img :src="item2.img1" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <p>{{item2.nickname}}</p>
+                                                                <p>{{item2.status}}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   <div>
+                    <div @click="item[1].active=true">
+                        <span>
+                            <img :src="item[1].img1" alt="">
+                        </span>
+                        <p>
+                            <img src="./img/icon_rate.png" alt="">
+                            <span>{{item[1].num}}</span>
+                            <img src="./img/award_icon_blue.svg" alt="">
+                            <span>{{item[1].num1}}</span>
+                            <img src="./img/comment_quoteicon.png" alt="">
+                            {{item[1].num2}}
+                        </p>
+                        <p>{{item[1].value1}}</p>
+                        <div>{{item[1].value2}}</div>
+                        <div>{{item[1].value3}}</div>
+                        <div :class="{Active1:item[1].active}" @click.stop="item[1].active=false">
+                            <div @click.stop="">
+                                <p>https://steamcommunity.com/sharedfiles/filedetails/?id=2988708577
+                                    <span @click.stop="item[1].active=false">X
+                                    </span>
+                                </p>
+
+                                <div>
+                                    <div>
+                                        <img :src="item[1].img1" alt="">
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <div><img :src="item[1].user.img" alt=""
+                                                        @mouseenter="item[1].user.active = true"
+                                                        @mouseleave="item[1].user.active= false"></div>
+                                                <div>
+                                                    <p>{{item[1].user.name}}</p>
+                                                    <p>{{item[1].user.status}}</p>
+                                                </div>
+                                            </div>
+                                            <img :src="item[1].user.img1" alt="">
+                                            <div :class="{Active1:item[1].user.active}">
+                                                <div></div>
+                                                <div>
+                                                    <div>2</div>
+                                                    <span>Steam 等级</span>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <img :src="item[1].user.img3" alt="">
+                                                        <img :src="item[1].user.img2" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <p>{{item[1].user.name}}</p>
+                                                        <p>{{item[1].user.status}}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p>{{item[1].user.value}}</p>
+                                            <div><img src="./img/icon_rate.png" alt="">{{item[1].user.num}}</div>
+                                            <div>
+                                                <div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                </div>
+                                                <div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                </div>
+                                                <div><img src="./img/award_icon (1).svg" alt="">奖励</div>
+                                            </div>
+                                            <div>
+                                                <div v-for="item2 in item[1].user.users">
+                                                    <img :src="item2.img" alt="" @mouseenter="item2.active = true"
+                                                        @mouseleave="item2.active= false">
+                                                    <div>
+                                                        <p>
+                                                            <span>{{item2.nickname}}</span>
+                                                            <span>{{item2.hour}} 小时以前</span>
+                                                        </p>
+                                                        <p>{{item2.value}}</p>
+                                                    </div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                    <div :class="{cardActive:item2.active}">
+                                                        <div></div>
+                                                        <div>
+                                                            <div>2</div>
+                                                            <span>Steam 等级</span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <img :src="item2.img3" alt="">
+                                                                <img :src="item2.img1" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <p>{{item2.nickname}}</p>
+                                                                <p>{{item2.status}}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div @click="item[2].active=true">
+                        <span>
+                            <img :src="item[2].img1" alt="">
+                        </span>
+                        <div>
+                            <div>
+                                <p>
+                                    <img src="./img/4-star.png" alt="">
+                                    {{item[2].num}} 个评价
+                                </p>
+                                <p>{{item[2].value1}}</p>
+                            </div>
+                            <div>
+                                <img src="./img/award_icon_blue.svg" alt="">
+                                <span>{{item[2].num1}}</span>
+                                <img src="./img/comment_quoteicon.png" alt="">
+                                {{item[2].num2}}
+                            </div>
+                        </div>
+                        <div>{{item[2].value2}}</div>
+                        <div>{{item[2].value3}}</div>
+                        <div :class="{Active1:item[2].active}" @click.stop="item[2].active=false">
+                            <div @click.stop="">
+                                <p>https://steamcommunity.com/sharedfiles/filedetails/?id=2988708577
+                                    <span @click.stop="item[2].active=false">X
+                                    </span>
+                                </p>
+
+                                <div>
+                                    <div>
+                                        <img :src="item[2].img1" alt="">
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <div><img :src="item[2].user.img" alt=""
+                                                        @mouseenter="item[2].user.active = true"
+                                                        @mouseleave="item[2].user.active= false"></div>
+                                                <div>
+                                                    <p>{{item[2].user.name}}</p>
+                                                    <p>{{item[2].user.status}}</p>
+                                                </div>
+                                            </div>
+                                            <img :src="item[2].user.img1" alt="">
+                                            <div :class="{Active1:item[2].user.active}">
+                                                <div></div>
+                                                <div>
+                                                    <div>2</div>
+                                                    <span>Steam 等级</span>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <img :src="item[2].user.img3" alt="">
+                                                        <img :src="item[2].user.img2" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <p>{{item[2].user.name}}</p>
+                                                        <p>{{item[2].user.status}}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p>{{item[2].user.value}}</p>
+                                            <div><img src="./img/icon_rate.png" alt="">{{item[2].user.num}}</div>
+                                            <div>
+                                                <div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                </div>
+                                                <div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                </div>
+                                                <div><img src="./img/award_icon (1).svg" alt="">奖励</div>
+                                            </div>
+                                            <div>
+                                                <div v-for="item2 in item[2].user.users">
+                                                    <img :src="item2.img" alt="" @mouseenter="item2.active = true"
+                                                        @mouseleave="item2.active= false">
+                                                    <div>
+                                                        <p>
+                                                            <span>{{item2.nickname}}</span>
+                                                            <span>{{item2.hour}} 小时以前</span>
+                                                        </p>
+                                                        <p>{{item2.value}}</p>
+                                                    </div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                    <div :class="{cardActive:item2.active}">
+                                                        <div></div>
+                                                        <div>
+                                                            <div>2</div>
+                                                            <span>Steam 等级</span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <img :src="item2.img3" alt="">
+                                                                <img :src="item2.img1" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <p>{{item2.nickname}}</p>
+                                                                <p>{{item2.status}}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   </div>
+                    <div @click="item[3].active=true">
+                        <span>
+                            <img :src="item[3].img1" alt="">
+                        </span>
+                        <div>
+                            <div>
+                                <p>
+                                    <span>
+                                        <img src="./img/icons_16.png" alt="">
+                                    </span>
+                                    <span>
+                                        <img src="./img/icons_16.png" alt="">
+                                    </span>
+                                    <span>
+                                        <img src="./img/award_icon (1).svg" alt="">
+                                        奖励
+                                    </span>
+                                </p>
+                            </div>
+                            <p>
+                                <img src="./img/icon_rate.png" alt="">
+                                <span>{{item[3].num}}</span>
+                                <img src="./img/award_icon_blue.svg" alt="">
+                                <span>{{item[3].num1}}</span>
+                                <img src="./img/comment_quoteicon.png" alt="">
+                                {{item[3].num2}}
+                            </p>
+                        </div>
+                        <div>{{item[3].value2}}</div>
+                        <div>{{item[3].value3}}</div>
+                        <div :class="{Active1:item[3].active}" @click.stop="item[3].active=false">
+                            <div @click.stop="">
+                                <p>https://steamcommunity.com/sharedfiles/filedetails/?id=2988708577
+                                    <span @click.stop="item[3].active=false">X
+                                    </span>
+                                </p>
+
+                                <div>
+                                    <div>
+                                        <img :src="item[3].img1" alt="">
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <div><img :src="item[3].user.img" alt=""
+                                                        @mouseenter="item[3].user.active = true"
+                                                        @mouseleave="item[3].user.active= false"></div>
+                                                <div>
+                                                    <p>{{item[3].user.name}}</p>
+                                                    <p>{{item[3].user.status}}</p>
+                                                </div>
+                                            </div>
+                                            <img :src="item[3].user.img1" alt="">
+                                            <div :class="{Active1:item[3].user.active}">
+                                                <div></div>
+                                                <div>
+                                                    <div>2</div>
+                                                    <span>Steam 等级</span>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <img :src="item[3].user.img3" alt="">
+                                                        <img :src="item[3].user.img2" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <p>{{item[3].user.name}}</p>
+                                                        <p>{{item[3].user.status}}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p>{{item[3].user.value}}</p>
+                                            <div><img src="./img/icon_rate.png" alt="">{{item[3].user.num}}</div>
+                                            <div>
+                                                <div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                </div>
+                                                <div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                </div>
+                                                <div><img src="./img/award_icon (1).svg" alt="">奖励</div>
+                                            </div>
+                                            <div>
+                                                <div v-for="item2 in item[3].user.users">
+                                                    <img :src="item2.img" alt="" @mouseenter="item2.active = true"
+                                                        @mouseleave="item2.active= false">
+                                                    <div>
+                                                        <p>
+                                                            <span>{{item2.nickname}}</span>
+                                                            <span>{{item2.hour}} 小时以前</span>
+                                                        </p>
+                                                        <p>{{item2.value}}</p>
+                                                    </div>
+                                                    <div><img src="./img/icons_16.png" alt=""></div>
+                                                    <div :class="{cardActive:item2.active}">
+                                                        <div></div>
+                                                        <div>
+                                                            <div>2</div>
+                                                            <span>Steam 等级</span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <img :src="item2.img3" alt="">
+                                                                <img :src="item2.img1" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <p>{{item2.nickname}}</p>
+                                                                <p>{{item2.status}}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -920,59 +1834,59 @@
                                 img1: './img/capsule_184x69 (1).jpg',
                                 value: 'Region Liberated "John Seed"',
                                 num: 109,
-                                active:false,
-                                img2:'./img/e47273b62284f3ab2e2b9b15c89607c8c1d4dd16.gif',
-                                img3:'./img/85030942387d8c7803922f84c31e82bc42728279.png',
+                                active: false,
+                                img2: './img/e47273b62284f3ab2e2b9b15c89607c8c1d4dd16.gif',
+                                img3: './img/85030942387d8c7803922f84c31e82bc42728279.png',
                                 users: [
                                     {
                                         nickname: 'Dr.DesperaDoS`* ',
                                         img: './img/b22533b6718f26deabcb794f4e701da100f332a0.jpg',
                                         hour: 2,
                                         value: 'nice!',
-                                        active:false,
+                                        active: false,
                                         status: '离线',
-                                        img1:'./img/b22533b6718f26deabcb794f4e701da100f332a0_medium.jpg',
-                                        img3:'./img/85030942387d8c7803922f84c31e82bc42728279.png',
+                                        img1: './img/b22533b6718f26deabcb794f4e701da100f332a0_medium.jpg',
+                                        img3: './img/85030942387d8c7803922f84c31e82bc42728279.png',
                                     },
                                     {
                                         nickname: 'Gote ',
                                         img: './img/a9025cd3119df1c847abdc73f45d6ac27ed7a03a.jpg',
                                         hour: 3,
                                         value: '6',
-                                        active:false,
+                                        active: false,
                                         status: '离线',
-                                        img1:'./img/a9025cd3119df1c847abdc73f45d6ac27ed7a03a.jpg',
-                                        img3:'./img/b555843a5aa0a71317992454504253a1a751423e.png',
+                                        img1: './img/a9025cd3119df1c847abdc73f45d6ac27ed7a03a.jpg',
+                                        img3: './img/b555843a5aa0a71317992454504253a1a751423e.png',
                                     },
                                     {
                                         nickname: 'Sieg',
                                         img: './img/a521352ec938d97a89f4b9655f75924d3cea6344.jpg',
                                         hour: 4,
                                         value: '666',
-                                        active:false,
+                                        active: false,
                                         status: '离线',
-                                        img1:'./img/a521352ec938d97a89f4b9655f75924d3cea6344.jpg',
-                                        img3:'./img/b555843a5aa0a71317992454504253a1a751423e.png',
+                                        img1: './img/a521352ec938d97a89f4b9655f75924d3cea6344.jpg',
+                                        img3: './img/b555843a5aa0a71317992454504253a1a751423e.png',
                                     },
                                     {
                                         nickname: 'EndsWithaBullet',
                                         img: './img/f68742c4645bc204987772256bbf574e1d8d456a.jpg',
                                         hour: 3,
                                         value: '牛',
-                                        active:false,
+                                        active: false,
                                         status: '在线',
-                                        img3:'./img/8999640c5cc2c5532549ea15819370d17ebd9405.png',
-                                        img1:'./img/e3b5b406642fe733a5db331bcfc442ccf54bca21.png',
+                                        img3: './img/8999640c5cc2c5532549ea15819370d17ebd9405.png',
+                                        img1: './img/e3b5b406642fe733a5db331bcfc442ccf54bca21.png',
                                     },
                                     {
                                         nickname: 'Darcy Wang ',
                                         img: './img/a1d07063db054990cb1f78f0ab84d42e11c4e76b.jpg',
                                         hour: 5,
                                         value: '6',
-                                        active:false,
+                                        active: false,
                                         status: '在线',
-                                        img1:'./img/a1d07063db054990cb1f78f0ab84d42e11c4e76b_medium.jpg',
-                                        img3:'./img/85030942387d8c7803922f84c31e82bc42728279.png',
+                                        img1: './img/a1d07063db054990cb1f78f0ab84d42e11c4e76b_medium.jpg',
+                                        img3: './img/85030942387d8c7803922f84c31e82bc42728279.png',
                                     },
                                 ]
                             },
@@ -994,59 +1908,59 @@
                                 img1: './img/capsule_184x69.jpg',
                                 value: 'Region Liberated "John Seed"',
                                 num: 109,
-                                active:false,
-                                img2:'./img/480806c2db44534d53340b03237110575ab4b1ea_medium.jpg',
-                                img3:'./img/ff0e949ff66f2208a005ed51244ad145f0b68904.png',
+                                active: false,
+                                img2: './img/480806c2db44534d53340b03237110575ab4b1ea_medium.jpg',
+                                img3: './img/ff0e949ff66f2208a005ed51244ad145f0b68904.png',
                                 users: [
                                     {
                                         nickname: 'Dr.DesperaDoS`* ',
                                         img: './img/b22533b6718f26deabcb794f4e701da100f332a0.jpg',
                                         hour: 2,
                                         value: 'nice!',
-                                        active:false,
+                                        active: false,
                                         status: '离线',
-                                        img1:'./img/b22533b6718f26deabcb794f4e701da100f332a0_medium.jpg',
-                                        img3:'./img/85030942387d8c7803922f84c31e82bc42728279.png',
+                                        img1: './img/b22533b6718f26deabcb794f4e701da100f332a0_medium.jpg',
+                                        img3: './img/85030942387d8c7803922f84c31e82bc42728279.png',
                                     },
                                     {
                                         nickname: 'Gote ',
                                         img: './img/a9025cd3119df1c847abdc73f45d6ac27ed7a03a.jpg',
                                         hour: 3,
                                         value: '6',
-                                        active:false,
+                                        active: false,
                                         status: '离线',
-                                        img1:'./img/a9025cd3119df1c847abdc73f45d6ac27ed7a03a.jpg',
-                                        img3:'./img/b555843a5aa0a71317992454504253a1a751423e.png',
+                                        img1: './img/a9025cd3119df1c847abdc73f45d6ac27ed7a03a.jpg',
+                                        img3: './img/b555843a5aa0a71317992454504253a1a751423e.png',
                                     },
                                     {
                                         nickname: 'Sieg',
                                         img: './img/a521352ec938d97a89f4b9655f75924d3cea6344.jpg',
                                         hour: 4,
                                         value: '666',
-                                        active:false,
+                                        active: false,
                                         status: '离线',
-                                        img1:'./img/a521352ec938d97a89f4b9655f75924d3cea6344.jpg',
-                                        img3:'./img/b555843a5aa0a71317992454504253a1a751423e.png',
+                                        img1: './img/a521352ec938d97a89f4b9655f75924d3cea6344.jpg',
+                                        img3: './img/b555843a5aa0a71317992454504253a1a751423e.png',
                                     },
                                     {
                                         nickname: 'EndsWithaBullet',
                                         img: './img/f68742c4645bc204987772256bbf574e1d8d456a.jpg',
                                         hour: 3,
                                         value: '牛',
-                                        active:false,
+                                        active: false,
                                         status: '在线',
-                                        img3:'./img/8999640c5cc2c5532549ea15819370d17ebd9405.png',
-                                        img1:'./img/e3b5b406642fe733a5db331bcfc442ccf54bca21.png',
+                                        img3: './img/8999640c5cc2c5532549ea15819370d17ebd9405.png',
+                                        img1: './img/e3b5b406642fe733a5db331bcfc442ccf54bca21.png',
                                     },
                                     {
                                         nickname: 'Darcy Wang ',
                                         img: './img/a1d07063db054990cb1f78f0ab84d42e11c4e76b.jpg',
                                         hour: 5,
                                         value: '6',
-                                        active:false,
+                                        active: false,
                                         status: '在线',
-                                        img1:'./img/a1d07063db054990cb1f78f0ab84d42e11c4e76b_medium.jpg',
-                                        img3:'./img/85030942387d8c7803922f84c31e82bc42728279.png',
+                                        img1: './img/a1d07063db054990cb1f78f0ab84d42e11c4e76b_medium.jpg',
+                                        img3: './img/85030942387d8c7803922f84c31e82bc42728279.png',
                                     },
                                 ]
                             },
@@ -1068,59 +1982,59 @@
                                 img1: './img/capsule_184x69 (1).jpg',
                                 value: 'Region Liberated "John Seed"',
                                 num: 109,
-                                active:false,
-                                img2:'./img/e47273b62284f3ab2e2b9b15c89607c8c1d4dd16.gif',
-                                img3:'./img/85030942387d8c7803922f84c31e82bc42728279.png',
+                                active: false,
+                                img2: './img/e47273b62284f3ab2e2b9b15c89607c8c1d4dd16.gif',
+                                img3: './img/85030942387d8c7803922f84c31e82bc42728279.png',
                                 users: [
                                     {
                                         nickname: 'Dr.DesperaDoS`* ',
                                         img: './img/b22533b6718f26deabcb794f4e701da100f332a0.jpg',
                                         hour: 2,
                                         value: 'nice!',
-                                        active:false,
+                                        active: false,
                                         status: '离线',
-                                        img1:'./img/b22533b6718f26deabcb794f4e701da100f332a0_medium.jpg',
-                                        img3:'./img/85030942387d8c7803922f84c31e82bc42728279.png',
+                                        img1: './img/b22533b6718f26deabcb794f4e701da100f332a0_medium.jpg',
+                                        img3: './img/85030942387d8c7803922f84c31e82bc42728279.png',
                                     },
                                     {
                                         nickname: 'Gote ',
                                         img: './img/a9025cd3119df1c847abdc73f45d6ac27ed7a03a.jpg',
                                         hour: 3,
                                         value: '6',
-                                        active:false,
+                                        active: false,
                                         status: '离线',
-                                        img1:'./img/a9025cd3119df1c847abdc73f45d6ac27ed7a03a.jpg',
-                                        img3:'./img/b555843a5aa0a71317992454504253a1a751423e.png',
+                                        img1: './img/a9025cd3119df1c847abdc73f45d6ac27ed7a03a.jpg',
+                                        img3: './img/b555843a5aa0a71317992454504253a1a751423e.png',
                                     },
                                     {
                                         nickname: 'Sieg',
                                         img: './img/a521352ec938d97a89f4b9655f75924d3cea6344.jpg',
                                         hour: 4,
                                         value: '666',
-                                        active:false,
+                                        active: false,
                                         status: '离线',
-                                        img1:'./img/a521352ec938d97a89f4b9655f75924d3cea6344.jpg',
-                                        img3:'./img/b555843a5aa0a71317992454504253a1a751423e.png',
+                                        img1: './img/a521352ec938d97a89f4b9655f75924d3cea6344.jpg',
+                                        img3: './img/b555843a5aa0a71317992454504253a1a751423e.png',
                                     },
                                     {
                                         nickname: 'EndsWithaBullet',
                                         img: './img/f68742c4645bc204987772256bbf574e1d8d456a.jpg',
                                         hour: 3,
                                         value: '牛',
-                                        active:false,
+                                        active: false,
                                         status: '在线',
-                                        img3:'./img/8999640c5cc2c5532549ea15819370d17ebd9405.png',
-                                        img1:'./img/e3b5b406642fe733a5db331bcfc442ccf54bca21.png',
+                                        img3: './img/8999640c5cc2c5532549ea15819370d17ebd9405.png',
+                                        img1: './img/e3b5b406642fe733a5db331bcfc442ccf54bca21.png',
                                     },
                                     {
                                         nickname: 'Darcy Wang ',
                                         img: './img/a1d07063db054990cb1f78f0ab84d42e11c4e76b.jpg',
                                         hour: 5,
                                         value: '6',
-                                        active:false,
+                                        active: false,
                                         status: '在线',
-                                        img1:'./img/a1d07063db054990cb1f78f0ab84d42e11c4e76b_medium.jpg',
-                                        img3:'./img/85030942387d8c7803922f84c31e82bc42728279.png',
+                                        img1: './img/a1d07063db054990cb1f78f0ab84d42e11c4e76b_medium.jpg',
+                                        img3: './img/85030942387d8c7803922f84c31e82bc42728279.png',
                                     },
                                 ]
                             },
@@ -1141,59 +2055,59 @@
                                 img1: './img/capsule_184x69 (1).jpg',
                                 value: 'Region Liberated "John Seed"',
                                 num: 109,
-                                active:false,
-                                img2:'./img/e47273b62284f3ab2e2b9b15c89607c8c1d4dd16.gif',
-                                img3:'./img/85030942387d8c7803922f84c31e82bc42728279.png',
+                                active: false,
+                                img2: './img/e47273b62284f3ab2e2b9b15c89607c8c1d4dd16.gif',
+                                img3: './img/85030942387d8c7803922f84c31e82bc42728279.png',
                                 users: [
                                     {
                                         nickname: 'Dr.DesperaDoS`* ',
                                         img: './img/b22533b6718f26deabcb794f4e701da100f332a0.jpg',
                                         hour: 2,
                                         value: 'nice!',
-                                        active:false,
+                                        active: false,
                                         status: '离线',
-                                        img1:'./img/b22533b6718f26deabcb794f4e701da100f332a0_medium.jpg',
-                                        img3:'./img/85030942387d8c7803922f84c31e82bc42728279.png',
+                                        img1: './img/b22533b6718f26deabcb794f4e701da100f332a0_medium.jpg',
+                                        img3: './img/85030942387d8c7803922f84c31e82bc42728279.png',
                                     },
                                     {
                                         nickname: 'Gote ',
                                         img: './img/a9025cd3119df1c847abdc73f45d6ac27ed7a03a.jpg',
                                         hour: 3,
                                         value: '6',
-                                        active:false,
+                                        active: false,
                                         status: '离线',
-                                        img1:'./img/a9025cd3119df1c847abdc73f45d6ac27ed7a03a.jpg',
-                                        img3:'./img/b555843a5aa0a71317992454504253a1a751423e.png',
+                                        img1: './img/a9025cd3119df1c847abdc73f45d6ac27ed7a03a.jpg',
+                                        img3: './img/b555843a5aa0a71317992454504253a1a751423e.png',
                                     },
                                     {
                                         nickname: 'Sieg',
                                         img: './img/a521352ec938d97a89f4b9655f75924d3cea6344.jpg',
                                         hour: 4,
                                         value: '666',
-                                        active:false,
+                                        active: false,
                                         status: '离线',
-                                        img1:'./img/a521352ec938d97a89f4b9655f75924d3cea6344.jpg',
-                                        img3:'./img/b555843a5aa0a71317992454504253a1a751423e.png',
+                                        img1: './img/a521352ec938d97a89f4b9655f75924d3cea6344.jpg',
+                                        img3: './img/b555843a5aa0a71317992454504253a1a751423e.png',
                                     },
                                     {
                                         nickname: 'EndsWithaBullet',
                                         img: './img/f68742c4645bc204987772256bbf574e1d8d456a.jpg',
                                         hour: 3,
                                         value: '牛',
-                                        active:false,
+                                        active: false,
                                         status: '在线',
-                                        img3:'./img/8999640c5cc2c5532549ea15819370d17ebd9405.png',
-                                        img1:'./img/e3b5b406642fe733a5db331bcfc442ccf54bca21.png',
+                                        img3: './img/8999640c5cc2c5532549ea15819370d17ebd9405.png',
+                                        img1: './img/e3b5b406642fe733a5db331bcfc442ccf54bca21.png',
                                     },
                                     {
                                         nickname: 'Darcy Wang ',
                                         img: './img/a1d07063db054990cb1f78f0ab84d42e11c4e76b.jpg',
                                         hour: 5,
                                         value: '6',
-                                        active:false,
+                                        active: false,
                                         status: '在线',
-                                        img1:'./img/a1d07063db054990cb1f78f0ab84d42e11c4e76b_medium.jpg',
-                                        img3:'./img/85030942387d8c7803922f84c31e82bc42728279.png',
+                                        img1: './img/a1d07063db054990cb1f78f0ab84d42e11c4e76b_medium.jpg',
+                                        img3: './img/85030942387d8c7803922f84c31e82bc42728279.png',
                                     },
                                 ]
                             },
@@ -1208,7 +2122,7 @@
             },
             methods: {
                 sss(item) {
-                    this.topBarLists.forEach(el => {
+                    this.topBarLists.forEach((el) => {
                         el.active = false
                     });
                     item.active = true

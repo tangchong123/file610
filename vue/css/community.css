@@ -2803,4 +2803,3625 @@ body .gameBar > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:
 body .gameBar > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div .cardActive {
   transform: scale(1) !important;
   opacity: 1 !important;
+}
+body .gameBar1 {
+  width: 64%;
+  margin: 60px auto;
+}
+body .gameBar1 > div {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+body .gameBar1 > div > div:nth-of-type(1) {
+  width: 100%;
+  padding: 5px;
+  background: #0d131b;
+  color: #636363;
+  font-size: 12px;
+  position: relative;
+}
+body .gameBar1 > div > div:nth-of-type(1):hover {
+  border: 1px solid #2f89bc;
+}
+body .gameBar1 > div > div:nth-of-type(1):hover > div:nth-of-type(2) {
+  background: #212f43;
+}
+body .gameBar1 > div > div:nth-of-type(1):hover > div:nth-of-type(3) {
+  display: block;
+}
+body .gameBar1 > div > div:nth-of-type(1) > span:nth-of-type(1) {
+  width: 100%;
+}
+body .gameBar1 > div > div:nth-of-type(1) > span:nth-of-type(1) > img {
+  width: 100%;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(1) {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 40px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) {
+  display: flex;
+  height: inherit;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) > img {
+  margin-right: 3px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) {
+  padding: 5px 0;
+  height: inherit;
+  display: flex;
+  align-items: start;
+  font-size: 14px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > span {
+  color: #66c0f4;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > img:nth-of-type(1) {
+  width: 10px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > img {
+  margin: 0 5px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(2) {
+  position: absolute;
+  padding: 0 5px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  border-top: 1px solid #272f38;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(3) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 10px);
+  margin: 5px;
+  height: 50px;
+  background: rgba(54, 70, 87, 0.8);
+  color: white;
+  font-size: 16px;
+  line-height: 50px;
+  padding: 0 10px;
+  display: none;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(9, 15, 20, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s linear;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div {
+  width: 95%;
+  height: 600px;
+  border: 2px solid #304a66;
+  display: flex;
+  flex-direction: column;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > p {
+  width: inherit;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  padding: 0 7px;
+  position: absolute;
+  background: #304a66;
+  color: #ebebeb;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > p > span {
+  float: right;
+  margin-right: 20px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > p > span:hover {
+  cursor: pointer;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div {
+  width: 100%;
+  height: 570px;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(1) {
+  width: 66.5%;
+  height: 100%;
+  overflow: hidden;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(1) > img {
+  height: 100%;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) {
+  width: 33.2%;
+  height: 100%;
+  background: #1f2126;
+  padding: 3px;
+  overflow: auto;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) {
+  background: #2a3543;
+  padding: 5px;
+  flex: 1;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) {
+  width: 36px;
+  height: 36px;
+  border: 2px solid #5e5e5e;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > img {
+  width: 32px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) {
+  margin-left: 10px;
+  color: #898989;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > img {
+  height: 100%;
+  margin: 0 2px 0 4px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) {
+  width: 320px;
+  height: 160px;
+  position: absolute;
+  left: 40px;
+  top: 0px;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s linear;
+  z-index: 100;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) {
+  width: 100%;
+  height: 90px;
+  background: rgba(58, 63, 70, 0.9);
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) {
+  width: 100%;
+  height: 70px;
+  background: rgba(40, 40, 47, 0.9);
+  display: flex;
+  align-items: center;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #9b9b9b;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 40px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > span {
+  font-size: 14px;
+  margin-left: 20px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 10;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > p {
+  margin-left: 20px;
+  color: #57cbde;
+  font-size: 18px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > p:nth-of-type(2) {
+  font-size: 14px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > img {
+  width: 80px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > img:nth-of-type(2) {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: -1;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) {
+  width: 100%;
+  padding: 5px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > p:nth-of-type(1) {
+  font-size: 17px;
+  color: #70c5fb;
+  padding: 10px 0px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+  color: #70c5fb;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > img {
+  width: 15px;
+  margin-right: 3px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  border-bottom: 1px solid #354357;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) img {
+  margin-left: -80px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1):hover {
+  background: #3c6179;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1):hover img {
+  margin-left: -144px;
+  margin-top: -20px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) img {
+  margin-left: -32px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2):hover {
+  background: #3c6179;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2):hover img {
+  margin-left: -80px;
+  margin-top: -20px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > img {
+  width: 12px;
+  margin-right: 3px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3):hover {
+  background: #3c6179;
+  color: white;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div {
+  padding: 13px 8px;
+  height: 20px;
+  background: #131417;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #939393;
+  transform: scale(1.1);
+  margin-right: 15px;
+  border-radius: 5px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div > div {
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) {
+  width: 100%;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div {
+  width: 90%;
+  margin: 20px 0;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: white;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div:hover > div:nth-of-type(2) {
+  opacity: 1;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) {
+  flex: 1;
+  margin-left: 20px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(1) {
+  font-size: 15px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(1):hover {
+  color: #66c0f4;
+  text-decoration: underline;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(2) {
+  font-size: 12px;
+  color: #56707f;
+  margin-left: 5px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(2) {
+  font-size: 13px;
+  color: #acb2b8;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(2) {
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  opacity: 0;
+  margin-right: 20px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(2) > img {
+  margin-left: -128px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) {
+  width: 320px;
+  height: 160px;
+  position: absolute;
+  left: 40px;
+  top: 0px;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s linear;
+  z-index: 100;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(1) {
+  width: 100%;
+  height: 90px;
+  background: rgba(58, 63, 70, 0.9);
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(2) {
+  width: 100%;
+  height: 70px;
+  background: rgba(40, 40, 47, 0.9);
+  display: flex;
+  align-items: center;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(2) > div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #9b9b9b;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 40px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(2) > span {
+  font-size: 14px;
+  margin-left: 20px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 10;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2) > p {
+  margin-left: 20px;
+  color: #57cbde;
+  font-size: 18px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2) > p:nth-of-type(2) {
+  font-size: 14px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(1) {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(1) > img {
+  width: 80px;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(1) > img:nth-of-type(2) {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: -1;
+}
+body .gameBar1 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div .cardActive {
+  transform: scale(1) !important;
+  opacity: 1 !important;
+}
+body .gameBar1 > div > div:nth-of-type(2) {
+  padding: 5px;
+  width: 32.5%;
+  display: flex;
+  flex-direction: column;
+  background: #0d131b;
+  color: #636363;
+  font-size: 10px;
+  position: relative;
+}
+body .gameBar1 > div > div:nth-of-type(2):hover {
+  border: 1px solid #2f89bc;
+}
+body .gameBar1 > div > div:nth-of-type(2):hover > div:nth-of-type(1) {
+  background: #212f43;
+}
+body .gameBar1 > div > div:nth-of-type(2):hover > div:nth-of-type(2) {
+  display: block;
+}
+body .gameBar1 > div > div:nth-of-type(2) > span:nth-of-type(1) {
+  width: 100%;
+  height: 355px;
+  overflow: hidden;
+}
+body .gameBar1 > div > div:nth-of-type(2) > span:nth-of-type(1) > img {
+  width: 100%;
+  margin-top: -60px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > p {
+  width: 100%;
+  height: 25px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 25px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > p:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-size: 14px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > p:nth-of-type(1) > span {
+  color: #66c0f4;
+}
+body .gameBar1 > div > div:nth-of-type(2) > p:nth-of-type(1) > img {
+  margin: 0 5px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > p:nth-of-type(1) > img:nth-of-type(2) {
+  width: 10px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(1) {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  border-top: 1px solid #272f38;
+  padding: 0 5px;
+  line-height: 40px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 10px);
+  margin: 5px;
+  height: 50px;
+  background: rgba(54, 70, 87, 0.8);
+  color: white;
+  font-size: 16px;
+  line-height: 50px;
+  padding: 0 10px;
+  display: none;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(9, 15, 20, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s linear;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div {
+  width: 50%;
+  height: 670px;
+  border: 2px solid #304a66;
+  display: flex;
+  flex-direction: column;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > p {
+  width: inherit;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  padding: 0 7px;
+  position: absolute;
+  background: #304a66;
+  color: #ebebeb;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > p > span {
+  float: right;
+  margin-right: 20px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > p > span:hover {
+  cursor: pointer;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div {
+  width: 100%;
+  height: 640px;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(1) {
+  width: 66.5%;
+  height: 100%;
+  overflow: hidden;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(1) > img {
+  height: 100%;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) {
+  width: 70%;
+  height: 100%;
+  background: #1f2126;
+  padding: 3px;
+  overflow: auto;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) {
+  background: #2a3543;
+  padding: 5px;
+  flex: 1;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) {
+  width: 36px;
+  height: 36px;
+  border: 2px solid #5e5e5e;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > img {
+  width: 32px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) {
+  margin-left: 10px;
+  color: #898989;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > img {
+  height: 100%;
+  margin: 0 2px 0 4px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) {
+  width: 320px;
+  height: 160px;
+  position: absolute;
+  left: 40px;
+  top: 0px;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s linear;
+  z-index: 100;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) {
+  width: 100%;
+  height: 90px;
+  background: rgba(58, 63, 70, 0.9);
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) {
+  width: 100%;
+  height: 70px;
+  background: rgba(40, 40, 47, 0.9);
+  display: flex;
+  align-items: center;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #9b9b9b;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 40px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > span {
+  font-size: 14px;
+  margin-left: 20px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 10;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > p {
+  margin-left: 20px;
+  color: #57cbde;
+  font-size: 18px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > p:nth-of-type(2) {
+  font-size: 14px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > img {
+  width: 80px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > img:nth-of-type(2) {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: -1;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) {
+  width: 100%;
+  padding: 5px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > p:nth-of-type(1) {
+  font-size: 17px;
+  color: #70c5fb;
+  padding: 10px 0px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+  color: #70c5fb;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > img {
+  width: 15px;
+  margin-right: 3px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  border-bottom: 1px solid #354357;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) img {
+  margin-left: -80px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1):hover {
+  background: #3c6179;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1):hover img {
+  margin-left: -144px;
+  margin-top: -20px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) img {
+  margin-left: -32px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2):hover {
+  background: #3c6179;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2):hover img {
+  margin-left: -80px;
+  margin-top: -20px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > img {
+  width: 12px;
+  margin-right: 3px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3):hover {
+  background: #3c6179;
+  color: white;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div {
+  padding: 13px 8px;
+  height: 20px;
+  background: #131417;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #939393;
+  transform: scale(1.1);
+  margin-right: 15px;
+  border-radius: 5px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div > div {
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) {
+  width: 100%;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div {
+  width: 90%;
+  margin: 20px 0;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: white;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div:hover > div:nth-of-type(2) {
+  opacity: 1;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) {
+  flex: 1;
+  margin-left: 20px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(1) {
+  font-size: 15px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(1):hover {
+  color: #66c0f4;
+  text-decoration: underline;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(2) {
+  font-size: 12px;
+  color: #56707f;
+  margin-left: 5px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(2) {
+  font-size: 13px;
+  color: #acb2b8;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(2) {
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  opacity: 0;
+  margin-right: 20px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(2) > img {
+  margin-left: -128px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) {
+  width: 320px;
+  height: 160px;
+  position: absolute;
+  left: 40px;
+  top: 0px;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s linear;
+  z-index: 100;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(1) {
+  width: 100%;
+  height: 90px;
+  background: rgba(58, 63, 70, 0.9);
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(2) {
+  width: 100%;
+  height: 70px;
+  background: rgba(40, 40, 47, 0.9);
+  display: flex;
+  align-items: center;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(2) > div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #9b9b9b;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 40px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(2) > span {
+  font-size: 14px;
+  margin-left: 20px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 10;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2) > p {
+  margin-left: 20px;
+  color: #57cbde;
+  font-size: 18px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2) > p:nth-of-type(2) {
+  font-size: 14px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(1) {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(1) > img {
+  width: 80px;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(1) > img:nth-of-type(2) {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: -1;
+}
+body .gameBar1 > div > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div .cardActive {
+  transform: scale(1) !important;
+  opacity: 1 !important;
+}
+body .gameBar1 > div > div:nth-of-type(3) {
+  margin-top: 10px;
+  width: 65%;
+  padding: 5px;
+  background: #0d131b;
+  color: #636363;
+  font-size: 12px;
+  position: relative;
+}
+body .gameBar1 > div > div:nth-of-type(3):hover {
+  border: 1px solid #2f89bc;
+}
+body .gameBar1 > div > div:nth-of-type(3):hover > div:nth-of-type(2) {
+  background: #212f43;
+}
+body .gameBar1 > div > div:nth-of-type(3):hover > div:nth-of-type(3) {
+  display: block;
+}
+body .gameBar1 > div > div:nth-of-type(3) > span:nth-of-type(1) {
+  width: 100%;
+}
+body .gameBar1 > div > div:nth-of-type(3) > span:nth-of-type(1) > img {
+  width: 100%;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(1) {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 40px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) {
+  display: flex;
+  height: inherit;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) > img {
+  margin-right: 3px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(2) {
+  padding: 5px 0;
+  height: inherit;
+  display: flex;
+  align-items: start;
+  font-size: 14px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(2) > span {
+  color: #66c0f4;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(2) > img:nth-of-type(1) {
+  width: 10px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(2) > img {
+  margin: 0 5px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(2) {
+  position: absolute;
+  padding: 0 5px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  border-top: 1px solid #272f38;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(3) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 10px);
+  margin: 5px;
+  height: 50px;
+  background: rgba(54, 70, 87, 0.8);
+  color: white;
+  font-size: 16px;
+  line-height: 50px;
+  padding: 0 10px;
+  display: none;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(9, 15, 20, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s linear;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div {
+  width: 95%;
+  height: 600px;
+  border: 2px solid #304a66;
+  display: flex;
+  flex-direction: column;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > p {
+  width: inherit;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  padding: 0 7px;
+  position: absolute;
+  background: #304a66;
+  color: #ebebeb;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > p > span {
+  float: right;
+  margin-right: 20px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > p > span:hover {
+  cursor: pointer;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div {
+  width: 100%;
+  height: 570px;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(1) {
+  width: 66.5%;
+  height: 100%;
+  overflow: hidden;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(1) > img {
+  height: 100%;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) {
+  width: 33.2%;
+  height: 100%;
+  background: #1f2126;
+  padding: 3px;
+  overflow: auto;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) {
+  background: #2a3543;
+  padding: 5px;
+  flex: 1;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) {
+  width: 36px;
+  height: 36px;
+  border: 2px solid #5e5e5e;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > img {
+  width: 32px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) {
+  margin-left: 10px;
+  color: #898989;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > img {
+  height: 100%;
+  margin: 0 2px 0 4px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) {
+  width: 320px;
+  height: 160px;
+  position: absolute;
+  left: 40px;
+  top: 0px;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s linear;
+  z-index: 100;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) {
+  width: 100%;
+  height: 90px;
+  background: rgba(58, 63, 70, 0.9);
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) {
+  width: 100%;
+  height: 70px;
+  background: rgba(40, 40, 47, 0.9);
+  display: flex;
+  align-items: center;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #9b9b9b;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 40px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > span {
+  font-size: 14px;
+  margin-left: 20px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 10;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > p {
+  margin-left: 20px;
+  color: #57cbde;
+  font-size: 18px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > p:nth-of-type(2) {
+  font-size: 14px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > img {
+  width: 80px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > img:nth-of-type(2) {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: -1;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) {
+  width: 100%;
+  padding: 5px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > p:nth-of-type(1) {
+  font-size: 17px;
+  color: #70c5fb;
+  padding: 10px 0px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+  color: #70c5fb;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > img {
+  width: 15px;
+  margin-right: 3px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  border-bottom: 1px solid #354357;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) img {
+  margin-left: -80px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1):hover {
+  background: #3c6179;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1):hover img {
+  margin-left: -144px;
+  margin-top: -20px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) img {
+  margin-left: -32px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2):hover {
+  background: #3c6179;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2):hover img {
+  margin-left: -80px;
+  margin-top: -20px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > img {
+  width: 12px;
+  margin-right: 3px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3):hover {
+  background: #3c6179;
+  color: white;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div {
+  padding: 13px 8px;
+  height: 20px;
+  background: #131417;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #939393;
+  transform: scale(1.1);
+  margin-right: 15px;
+  border-radius: 5px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div > div {
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) {
+  width: 100%;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div {
+  width: 90%;
+  margin: 20px 0;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: white;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div:hover > div:nth-of-type(2) {
+  opacity: 1;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) {
+  flex: 1;
+  margin-left: 20px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(1) {
+  font-size: 15px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(1):hover {
+  color: #66c0f4;
+  text-decoration: underline;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(2) {
+  font-size: 12px;
+  color: #56707f;
+  margin-left: 5px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(2) {
+  font-size: 13px;
+  color: #acb2b8;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(2) {
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  opacity: 0;
+  margin-right: 20px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(2) > img {
+  margin-left: -128px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) {
+  width: 320px;
+  height: 160px;
+  position: absolute;
+  left: 40px;
+  top: 0px;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s linear;
+  z-index: 100;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(1) {
+  width: 100%;
+  height: 90px;
+  background: rgba(58, 63, 70, 0.9);
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(2) {
+  width: 100%;
+  height: 70px;
+  background: rgba(40, 40, 47, 0.9);
+  display: flex;
+  align-items: center;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(2) > div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #9b9b9b;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 40px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(2) > span {
+  font-size: 14px;
+  margin-left: 20px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 10;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2) > p {
+  margin-left: 20px;
+  color: #57cbde;
+  font-size: 18px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2) > p:nth-of-type(2) {
+  font-size: 14px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(1) {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(1) > img {
+  width: 80px;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(1) > img:nth-of-type(2) {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: -1;
+}
+body .gameBar1 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div .cardActive {
+  transform: scale(1) !important;
+  opacity: 1 !important;
+}
+body .gameBar1 > div > div:nth-of-type(4) {
+  margin-top: 10px;
+  width: 100%;
+  padding: 5px;
+  background: #0d131b;
+  color: #636363;
+  font-size: 12px;
+  position: relative;
+}
+body .gameBar1 > div > div:nth-of-type(4):hover {
+  border: 1px solid #2f89bc;
+}
+body .gameBar1 > div > div:nth-of-type(4):hover > div:nth-of-type(2) {
+  background: #212f43;
+}
+body .gameBar1 > div > div:nth-of-type(4):hover > div:nth-of-type(3) {
+  display: block;
+}
+body .gameBar1 > div > div:nth-of-type(4) > span:nth-of-type(1) {
+  width: 100%;
+}
+body .gameBar1 > div > div:nth-of-type(4) > span:nth-of-type(1) > img {
+  width: 100%;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(1) {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 40px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(1) {
+  display: flex;
+  height: inherit;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) > span {
+  width: 16px;
+  height: 16px;
+  background: #080b10;
+  overflow: hidden;
+  margin: 0 5px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(1) > img {
+  margin-left: -80px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(2) > img {
+  margin-left: -32px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(3) {
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 30px;
+  color: #ffc83d;
+  font-size: 12px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(3) > img {
+  width: 13px;
+  margin-right: 5px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) > img {
+  margin-right: 3px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(1) > p:nth-of-type(1) {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-size: 14px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(1) > p:nth-of-type(1) > span {
+  color: #66c0f4;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(1) > p:nth-of-type(1) > img {
+  margin: 0 5px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(1) > p:nth-of-type(1) > img:nth-of-type(2) {
+  width: 10px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(2) {
+  position: absolute;
+  padding: 0 5px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  border-top: 1px solid #272f38;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(3) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 10px);
+  margin: 5px;
+  height: 50px;
+  background: rgba(54, 70, 87, 0.8);
+  color: white;
+  font-size: 16px;
+  line-height: 50px;
+  padding: 0 10px;
+  display: none;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(9, 15, 20, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s linear;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div {
+  width: 95%;
+  height: 600px;
+  border: 2px solid #304a66;
+  display: flex;
+  flex-direction: column;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > p {
+  width: inherit;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  padding: 0 7px;
+  position: absolute;
+  background: #304a66;
+  color: #ebebeb;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > p > span {
+  float: right;
+  margin-right: 20px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > p > span:hover {
+  cursor: pointer;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div {
+  width: 100%;
+  height: 570px;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(1) {
+  width: 66.5%;
+  height: 100%;
+  overflow: hidden;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(1) > img {
+  height: 100%;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) {
+  width: 33.2%;
+  height: 100%;
+  background: #1f2126;
+  padding: 3px;
+  overflow: auto;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) {
+  background: #2a3543;
+  padding: 5px;
+  flex: 1;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) {
+  width: 36px;
+  height: 36px;
+  border: 2px solid #5e5e5e;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > img {
+  width: 32px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) {
+  margin-left: 10px;
+  color: #898989;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > img {
+  height: 100%;
+  margin: 0 2px 0 4px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) {
+  width: 320px;
+  height: 160px;
+  position: absolute;
+  left: 40px;
+  top: 0px;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s linear;
+  z-index: 100;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) {
+  width: 100%;
+  height: 90px;
+  background: rgba(58, 63, 70, 0.9);
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) {
+  width: 100%;
+  height: 70px;
+  background: rgba(40, 40, 47, 0.9);
+  display: flex;
+  align-items: center;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #9b9b9b;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 40px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > span {
+  font-size: 14px;
+  margin-left: 20px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 10;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > p {
+  margin-left: 20px;
+  color: #57cbde;
+  font-size: 18px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > p:nth-of-type(2) {
+  font-size: 14px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > img {
+  width: 80px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > img:nth-of-type(2) {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: -1;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) {
+  width: 100%;
+  padding: 5px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > p:nth-of-type(1) {
+  font-size: 17px;
+  color: #70c5fb;
+  padding: 10px 0px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+  color: #70c5fb;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > img {
+  width: 15px;
+  margin-right: 3px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  border-bottom: 1px solid #354357;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) img {
+  margin-left: -80px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1):hover {
+  background: #3c6179;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1):hover img {
+  margin-left: -144px;
+  margin-top: -20px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) img {
+  margin-left: -32px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2):hover {
+  background: #3c6179;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2):hover img {
+  margin-left: -80px;
+  margin-top: -20px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > img {
+  width: 12px;
+  margin-right: 3px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3):hover {
+  background: #3c6179;
+  color: white;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div {
+  padding: 13px 8px;
+  height: 20px;
+  background: #131417;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #939393;
+  transform: scale(1.1);
+  margin-right: 15px;
+  border-radius: 5px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div > div {
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) {
+  width: 100%;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div {
+  width: 90%;
+  margin: 20px 0;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: white;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div:hover > div:nth-of-type(2) {
+  opacity: 1;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) {
+  flex: 1;
+  margin-left: 20px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(1) {
+  font-size: 15px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(1):hover {
+  color: #66c0f4;
+  text-decoration: underline;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(2) {
+  font-size: 12px;
+  color: #56707f;
+  margin-left: 5px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(2) {
+  font-size: 13px;
+  color: #acb2b8;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(2) {
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  opacity: 0;
+  margin-right: 20px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(2) > img {
+  margin-left: -128px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) {
+  width: 320px;
+  height: 160px;
+  position: absolute;
+  left: 40px;
+  top: 0px;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s linear;
+  z-index: 100;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(1) {
+  width: 100%;
+  height: 90px;
+  background: rgba(58, 63, 70, 0.9);
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(2) {
+  width: 100%;
+  height: 70px;
+  background: rgba(40, 40, 47, 0.9);
+  display: flex;
+  align-items: center;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(2) > div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #9b9b9b;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 40px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(2) > span {
+  font-size: 14px;
+  margin-left: 20px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 10;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2) > p {
+  margin-left: 20px;
+  color: #57cbde;
+  font-size: 18px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2) > p:nth-of-type(2) {
+  font-size: 14px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(1) {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(1) > img {
+  width: 80px;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(1) > img:nth-of-type(2) {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: -1;
+}
+body .gameBar1 > div > div:nth-of-type(4) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div .cardActive {
+  transform: scale(1) !important;
+  opacity: 1 !important;
+}
+body .gameBar2 {
+  width: 64%;
+  margin: 60px auto;
+}
+body .gameBar2 > div {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+body .gameBar2 > div > div:nth-of-type(1) {
+  width: 63%;
+  height: 715px;
+  padding: 5px;
+  background: #0d131b;
+  color: #636363;
+  overflow: hidden;
+  font-size: 12px;
+  position: relative;
+}
+body .gameBar2 > div > div:nth-of-type(1):hover {
+  border: 1px solid #2f89bc;
+}
+body .gameBar2 > div > div:nth-of-type(1):hover > div:nth-of-type(2) {
+  background: #212f43;
+}
+body .gameBar2 > div > div:nth-of-type(1):hover > div:nth-of-type(3) {
+  display: block;
+}
+body .gameBar2 > div > div:nth-of-type(1) > span:nth-of-type(1) {
+  width: 100%;
+}
+body .gameBar2 > div > div:nth-of-type(1) > span:nth-of-type(1) > img {
+  height: 635px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(1) {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 40px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) {
+  display: flex;
+  height: inherit;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) > img {
+  margin-right: 3px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) {
+  padding: 5px 0;
+  height: inherit;
+  display: flex;
+  align-items: start;
+  font-size: 14px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > span {
+  color: #66c0f4;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > img:nth-of-type(1) {
+  width: 10px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > img {
+  margin: 0 5px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(2) {
+  position: absolute;
+  padding: 0 5px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  border-top: 1px solid #272f38;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(3) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 10px);
+  margin: 5px;
+  height: 50px;
+  background: rgba(54, 70, 87, 0.8);
+  color: white;
+  font-size: 16px;
+  line-height: 50px;
+  padding: 0 10px;
+  display: none;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(9, 15, 20, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s linear;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div {
+  width: 95%;
+  height: 600px;
+  border: 2px solid #304a66;
+  display: flex;
+  flex-direction: column;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > p {
+  width: inherit;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  padding: 0 7px;
+  position: absolute;
+  background: #304a66;
+  color: #ebebeb;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > p > span {
+  float: right;
+  margin-right: 20px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > p > span:hover {
+  cursor: pointer;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div {
+  width: 100%;
+  height: 570px;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(1) {
+  width: 66.5%;
+  height: 100%;
+  overflow: hidden;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(1) > img {
+  height: 100%;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) {
+  width: 33.2%;
+  height: 100%;
+  background: #1f2126;
+  padding: 3px;
+  overflow: auto;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) {
+  background: #2a3543;
+  padding: 5px;
+  flex: 1;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) {
+  width: 36px;
+  height: 36px;
+  border: 2px solid #5e5e5e;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > img {
+  width: 32px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) {
+  margin-left: 10px;
+  color: #898989;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > img {
+  height: 100%;
+  margin: 0 2px 0 4px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) {
+  width: 320px;
+  height: 160px;
+  position: absolute;
+  left: 40px;
+  top: 0px;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s linear;
+  z-index: 100;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) {
+  width: 100%;
+  height: 90px;
+  background: rgba(58, 63, 70, 0.9);
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) {
+  width: 100%;
+  height: 70px;
+  background: rgba(40, 40, 47, 0.9);
+  display: flex;
+  align-items: center;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #9b9b9b;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 40px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > span {
+  font-size: 14px;
+  margin-left: 20px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 10;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > p {
+  margin-left: 20px;
+  color: #57cbde;
+  font-size: 18px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > p:nth-of-type(2) {
+  font-size: 14px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > img {
+  width: 80px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > img:nth-of-type(2) {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: -1;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) {
+  width: 100%;
+  padding: 5px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > p:nth-of-type(1) {
+  font-size: 17px;
+  color: #70c5fb;
+  padding: 10px 0px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+  color: #70c5fb;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > img {
+  width: 15px;
+  margin-right: 3px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  border-bottom: 1px solid #354357;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) img {
+  margin-left: -80px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1):hover {
+  background: #3c6179;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1):hover img {
+  margin-left: -144px;
+  margin-top: -20px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) img {
+  margin-left: -32px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2):hover {
+  background: #3c6179;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2):hover img {
+  margin-left: -80px;
+  margin-top: -20px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > img {
+  width: 12px;
+  margin-right: 3px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3):hover {
+  background: #3c6179;
+  color: white;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div {
+  padding: 13px 8px;
+  height: 20px;
+  background: #131417;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #939393;
+  transform: scale(1.1);
+  margin-right: 15px;
+  border-radius: 5px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div > div {
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) {
+  width: 100%;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div {
+  width: 90%;
+  margin: 20px 0;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: white;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div:hover > div:nth-of-type(2) {
+  opacity: 1;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) {
+  flex: 1;
+  margin-left: 20px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(1) {
+  font-size: 15px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(1):hover {
+  color: #66c0f4;
+  text-decoration: underline;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(2) {
+  font-size: 12px;
+  color: #56707f;
+  margin-left: 5px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(2) {
+  font-size: 13px;
+  color: #acb2b8;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(2) {
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  opacity: 0;
+  margin-right: 20px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(2) > img {
+  margin-left: -128px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) {
+  width: 320px;
+  height: 160px;
+  position: absolute;
+  left: 40px;
+  top: 0px;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s linear;
+  z-index: 100;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(1) {
+  width: 100%;
+  height: 90px;
+  background: rgba(58, 63, 70, 0.9);
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(2) {
+  width: 100%;
+  height: 70px;
+  background: rgba(40, 40, 47, 0.9);
+  display: flex;
+  align-items: center;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(2) > div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #9b9b9b;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 40px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(2) > span {
+  font-size: 14px;
+  margin-left: 20px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 10;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2) > p {
+  margin-left: 20px;
+  color: #57cbde;
+  font-size: 18px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2) > p:nth-of-type(2) {
+  font-size: 14px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(1) {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(1) > img {
+  width: 80px;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(1) > img:nth-of-type(2) {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: -1;
+}
+body .gameBar2 > div > div:nth-of-type(1) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div .cardActive {
+  transform: scale(1) !important;
+  opacity: 1 !important;
+}
+body .gameBar2 > div > div:nth-of-type(2) {
+  width: 35.5%;
+  display: flex;
+  flex-direction: column;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) {
+  padding: 5px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #0d131b;
+  color: #636363;
+  font-size: 10px;
+  position: relative;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1):hover {
+  border: 1px solid #2f89bc;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1):hover > div:nth-of-type(1) {
+  background: #212f43;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1):hover > div:nth-of-type(2) {
+  display: block;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > span:nth-of-type(1) {
+  width: 100%;
+  height: 355px;
+  overflow: hidden;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > span:nth-of-type(1) > img {
+  width: 100%;
+  margin-top: -60px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > p {
+  width: 100%;
+  height: 25px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 25px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-size: 14px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(1) > span {
+  color: #66c0f4;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(1) > img {
+  margin: 0 5px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(1) > img:nth-of-type(2) {
+  width: 10px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  border-top: 1px solid #272f38;
+  padding: 0 5px;
+  line-height: 40px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 10px);
+  margin: 5px;
+  height: 50px;
+  background: rgba(54, 70, 87, 0.8);
+  color: white;
+  font-size: 16px;
+  line-height: 50px;
+  padding: 0 10px;
+  display: none;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(9, 15, 20, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s linear;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div {
+  width: 50%;
+  height: 670px;
+  border: 2px solid #304a66;
+  display: flex;
+  flex-direction: column;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > p {
+  width: inherit;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  padding: 0 7px;
+  position: absolute;
+  background: #304a66;
+  color: #ebebeb;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > p > span {
+  float: right;
+  margin-right: 20px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > p > span:hover {
+  cursor: pointer;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div {
+  width: 100%;
+  height: 640px;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(1) {
+  width: 66.5%;
+  height: 100%;
+  overflow: hidden;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(1) > img {
+  height: 100%;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) {
+  width: 70%;
+  height: 100%;
+  background: #1f2126;
+  padding: 3px;
+  overflow: auto;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) {
+  background: #2a3543;
+  padding: 5px;
+  flex: 1;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) {
+  width: 36px;
+  height: 36px;
+  border: 2px solid #5e5e5e;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > img {
+  width: 32px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) {
+  margin-left: 10px;
+  color: #898989;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > img {
+  height: 100%;
+  margin: 0 2px 0 4px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) {
+  width: 320px;
+  height: 160px;
+  position: absolute;
+  left: 40px;
+  top: 0px;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s linear;
+  z-index: 100;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) {
+  width: 100%;
+  height: 90px;
+  background: rgba(58, 63, 70, 0.9);
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) {
+  width: 100%;
+  height: 70px;
+  background: rgba(40, 40, 47, 0.9);
+  display: flex;
+  align-items: center;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #9b9b9b;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 40px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > span {
+  font-size: 14px;
+  margin-left: 20px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 10;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > p {
+  margin-left: 20px;
+  color: #57cbde;
+  font-size: 18px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > p:nth-of-type(2) {
+  font-size: 14px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > img {
+  width: 80px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > img:nth-of-type(2) {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: -1;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) {
+  width: 100%;
+  padding: 5px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > p:nth-of-type(1) {
+  font-size: 17px;
+  color: #70c5fb;
+  padding: 10px 0px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+  color: #70c5fb;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > img {
+  width: 15px;
+  margin-right: 3px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  border-bottom: 1px solid #354357;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) img {
+  margin-left: -80px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1):hover {
+  background: #3c6179;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1):hover img {
+  margin-left: -144px;
+  margin-top: -20px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) img {
+  margin-left: -32px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2):hover {
+  background: #3c6179;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2):hover img {
+  margin-left: -80px;
+  margin-top: -20px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > img {
+  width: 12px;
+  margin-right: 3px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3):hover {
+  background: #3c6179;
+  color: white;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div {
+  padding: 13px 8px;
+  height: 20px;
+  background: #131417;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #939393;
+  transform: scale(1.1);
+  margin-right: 15px;
+  border-radius: 5px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div > div {
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) {
+  width: 100%;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div {
+  width: 90%;
+  margin: 20px 0;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: white;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div:hover > div:nth-of-type(2) {
+  opacity: 1;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) {
+  flex: 1;
+  margin-left: 20px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(1) {
+  font-size: 15px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(1):hover {
+  color: #66c0f4;
+  text-decoration: underline;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(2) {
+  font-size: 12px;
+  color: #56707f;
+  margin-left: 5px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(2) {
+  font-size: 13px;
+  color: #acb2b8;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(2) {
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  opacity: 0;
+  margin-right: 20px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(2) > img {
+  margin-left: -128px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) {
+  width: 320px;
+  height: 160px;
+  position: absolute;
+  left: 40px;
+  top: 0px;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s linear;
+  z-index: 100;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(1) {
+  width: 100%;
+  height: 90px;
+  background: rgba(58, 63, 70, 0.9);
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(2) {
+  width: 100%;
+  height: 70px;
+  background: rgba(40, 40, 47, 0.9);
+  display: flex;
+  align-items: center;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(2) > div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #9b9b9b;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 40px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(2) > span {
+  font-size: 14px;
+  margin-left: 20px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 10;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2) > p {
+  margin-left: 20px;
+  color: #57cbde;
+  font-size: 18px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2) > p:nth-of-type(2) {
+  font-size: 14px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(1) {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(1) > img {
+  width: 80px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(1) > img:nth-of-type(2) {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: -1;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div .cardActive {
+  transform: scale(1) !important;
+  opacity: 1 !important;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) {
+  margin-top: 10px;
+  width: 100%;
+  padding: 5px;
+  background: #0d131b;
+  color: #636363;
+  font-size: 12px;
+  position: relative;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2):hover {
+  border: 1px solid #2f89bc;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2):hover > div:nth-of-type(2) {
+  background: #212f43;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2):hover > div:nth-of-type(3) {
+  display: block;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > span:nth-of-type(1) {
+  width: 100%;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > span:nth-of-type(1) > img {
+  width: 100%;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 40px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) {
+  display: flex;
+  height: inherit;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) > img {
+  margin-right: 3px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) {
+  padding: 5px 0;
+  height: inherit;
+  display: flex;
+  align-items: start;
+  font-size: 14px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > span {
+  color: #66c0f4;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > img:nth-of-type(1) {
+  width: 10px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > img {
+  margin: 0 5px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) {
+  position: absolute;
+  padding: 0 5px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  border-top: 1px solid #272f38;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 10px);
+  margin: 5px;
+  height: 50px;
+  background: rgba(54, 70, 87, 0.8);
+  color: white;
+  font-size: 16px;
+  line-height: 50px;
+  padding: 0 10px;
+  display: none;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(9, 15, 20, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s linear;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div {
+  width: 95%;
+  height: 600px;
+  border: 2px solid #304a66;
+  display: flex;
+  flex-direction: column;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > p {
+  width: inherit;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  padding: 0 7px;
+  position: absolute;
+  background: #304a66;
+  color: #ebebeb;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > p > span {
+  float: right;
+  margin-right: 20px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > p > span:hover {
+  cursor: pointer;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div {
+  width: 100%;
+  height: 570px;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(1) {
+  width: 66.5%;
+  height: 100%;
+  overflow: hidden;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(1) > img {
+  height: 100%;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) {
+  width: 33.2%;
+  height: 100%;
+  background: #1f2126;
+  padding: 3px;
+  overflow: auto;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) {
+  background: #2a3543;
+  padding: 5px;
+  flex: 1;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) {
+  width: 36px;
+  height: 36px;
+  border: 2px solid #5e5e5e;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > img {
+  width: 32px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) {
+  margin-left: 10px;
+  color: #898989;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > img {
+  height: 100%;
+  margin: 0 2px 0 4px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) {
+  width: 320px;
+  height: 160px;
+  position: absolute;
+  left: 40px;
+  top: 0px;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s linear;
+  z-index: 100;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) {
+  width: 100%;
+  height: 90px;
+  background: rgba(58, 63, 70, 0.9);
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) {
+  width: 100%;
+  height: 70px;
+  background: rgba(40, 40, 47, 0.9);
+  display: flex;
+  align-items: center;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #9b9b9b;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 40px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > span {
+  font-size: 14px;
+  margin-left: 20px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 10;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > p {
+  margin-left: 20px;
+  color: #57cbde;
+  font-size: 18px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > p:nth-of-type(2) {
+  font-size: 14px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > img {
+  width: 80px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > img:nth-of-type(2) {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: -1;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) {
+  width: 100%;
+  padding: 5px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > p:nth-of-type(1) {
+  font-size: 17px;
+  color: #70c5fb;
+  padding: 10px 0px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+  color: #70c5fb;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > img {
+  width: 15px;
+  margin-right: 3px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  border-bottom: 1px solid #354357;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) img {
+  margin-left: -80px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1):hover {
+  background: #3c6179;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1):hover img {
+  margin-left: -144px;
+  margin-top: -20px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) img {
+  margin-left: -32px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2):hover {
+  background: #3c6179;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2):hover img {
+  margin-left: -80px;
+  margin-top: -20px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > img {
+  width: 12px;
+  margin-right: 3px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3):hover {
+  background: #3c6179;
+  color: white;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div {
+  padding: 13px 8px;
+  height: 20px;
+  background: #131417;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #939393;
+  transform: scale(1.1);
+  margin-right: 15px;
+  border-radius: 5px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div > div {
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) {
+  width: 100%;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div {
+  width: 90%;
+  margin: 20px 0;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: white;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div:hover > div:nth-of-type(2) {
+  opacity: 1;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) {
+  flex: 1;
+  margin-left: 20px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(1) {
+  font-size: 15px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(1):hover {
+  color: #66c0f4;
+  text-decoration: underline;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(2) {
+  font-size: 12px;
+  color: #56707f;
+  margin-left: 5px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(2) {
+  font-size: 13px;
+  color: #acb2b8;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(2) {
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  opacity: 0;
+  margin-right: 20px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(2) > img {
+  margin-left: -128px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) {
+  width: 320px;
+  height: 160px;
+  position: absolute;
+  left: 40px;
+  top: 0px;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s linear;
+  z-index: 100;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(1) {
+  width: 100%;
+  height: 90px;
+  background: rgba(58, 63, 70, 0.9);
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(2) {
+  width: 100%;
+  height: 70px;
+  background: rgba(40, 40, 47, 0.9);
+  display: flex;
+  align-items: center;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(2) > div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #9b9b9b;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 40px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(2) > span {
+  font-size: 14px;
+  margin-left: 20px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 10;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2) > p {
+  margin-left: 20px;
+  color: #57cbde;
+  font-size: 18px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2) > p:nth-of-type(2) {
+  font-size: 14px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(1) {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(1) > img {
+  width: 80px;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(1) > img:nth-of-type(2) {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: -1;
+}
+body .gameBar2 > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div .cardActive {
+  transform: scale(1) !important;
+  opacity: 1 !important;
+}
+body .gameBar2 > div > div:nth-of-type(3) {
+  margin-top: 10px;
+  width: 100%;
+  padding: 5px;
+  background: #0d131b;
+  color: #636363;
+  font-size: 12px;
+  position: relative;
+}
+body .gameBar2 > div > div:nth-of-type(3):hover {
+  border: 1px solid #2f89bc;
+}
+body .gameBar2 > div > div:nth-of-type(3):hover > div:nth-of-type(2) {
+  background: #212f43;
+}
+body .gameBar2 > div > div:nth-of-type(3):hover > div:nth-of-type(3) {
+  display: block;
+}
+body .gameBar2 > div > div:nth-of-type(3) > span:nth-of-type(1) {
+  width: 100%;
+}
+body .gameBar2 > div > div:nth-of-type(3) > span:nth-of-type(1) > img {
+  width: 100%;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(1) {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 40px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) {
+  display: flex;
+  height: inherit;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) > span {
+  width: 16px;
+  height: 16px;
+  background: #080b10;
+  overflow: hidden;
+  margin: 0 5px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(1) > img {
+  margin-left: -80px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(2) > img {
+  margin-left: -32px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(3) {
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 30px;
+  color: #ffc83d;
+  font-size: 12px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(3) > img {
+  width: 13px;
+  margin-right: 5px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) > img {
+  margin-right: 3px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(1) > p:nth-of-type(1) {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-size: 14px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(1) > p:nth-of-type(1) > span {
+  color: #66c0f4;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(1) > p:nth-of-type(1) > img {
+  margin: 0 5px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(1) > p:nth-of-type(1) > img:nth-of-type(2) {
+  width: 10px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(2) {
+  position: absolute;
+  padding: 0 5px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  border-top: 1px solid #272f38;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(3) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 10px);
+  margin: 5px;
+  height: 50px;
+  background: rgba(54, 70, 87, 0.8);
+  color: white;
+  font-size: 16px;
+  line-height: 50px;
+  padding: 0 10px;
+  display: none;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(9, 15, 20, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s linear;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div {
+  width: 95%;
+  height: 600px;
+  border: 2px solid #304a66;
+  display: flex;
+  flex-direction: column;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > p {
+  width: inherit;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  padding: 0 7px;
+  position: absolute;
+  background: #304a66;
+  color: #ebebeb;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > p > span {
+  float: right;
+  margin-right: 20px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > p > span:hover {
+  cursor: pointer;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div {
+  width: 100%;
+  height: 570px;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(1) {
+  width: 66.5%;
+  height: 100%;
+  overflow: hidden;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(1) > img {
+  height: 100%;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) {
+  width: 33.2%;
+  height: 100%;
+  background: #1f2126;
+  padding: 3px;
+  overflow: auto;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) {
+  background: #2a3543;
+  padding: 5px;
+  flex: 1;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) {
+  width: 36px;
+  height: 36px;
+  border: 2px solid #5e5e5e;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > img {
+  width: 32px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) {
+  margin-left: 10px;
+  color: #898989;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > img {
+  height: 100%;
+  margin: 0 2px 0 4px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) {
+  width: 320px;
+  height: 160px;
+  position: absolute;
+  left: 40px;
+  top: 0px;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s linear;
+  z-index: 100;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) {
+  width: 100%;
+  height: 90px;
+  background: rgba(58, 63, 70, 0.9);
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) {
+  width: 100%;
+  height: 70px;
+  background: rgba(40, 40, 47, 0.9);
+  display: flex;
+  align-items: center;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #9b9b9b;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 40px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > span {
+  font-size: 14px;
+  margin-left: 20px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 10;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > p {
+  margin-left: 20px;
+  color: #57cbde;
+  font-size: 18px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > p:nth-of-type(2) {
+  font-size: 14px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > img {
+  width: 80px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > img:nth-of-type(2) {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: -1;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) {
+  width: 100%;
+  padding: 5px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > p:nth-of-type(1) {
+  font-size: 17px;
+  color: #70c5fb;
+  padding: 10px 0px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+  color: #70c5fb;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > img {
+  width: 15px;
+  margin-right: 3px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  border-bottom: 1px solid #354357;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) img {
+  margin-left: -80px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1):hover {
+  background: #3c6179;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1):hover img {
+  margin-left: -144px;
+  margin-top: -20px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) img {
+  margin-left: -32px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2):hover {
+  background: #3c6179;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2):hover img {
+  margin-left: -80px;
+  margin-top: -20px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > img {
+  width: 12px;
+  margin-right: 3px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3):hover {
+  background: #3c6179;
+  color: white;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div {
+  padding: 13px 8px;
+  height: 20px;
+  background: #131417;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #939393;
+  transform: scale(1.1);
+  margin-right: 15px;
+  border-radius: 5px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div > div {
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) {
+  width: 100%;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div {
+  width: 90%;
+  margin: 20px 0;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: white;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div:hover > div:nth-of-type(2) {
+  opacity: 1;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) {
+  flex: 1;
+  margin-left: 20px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(1) {
+  font-size: 15px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(1):hover {
+  color: #66c0f4;
+  text-decoration: underline;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(2) {
+  font-size: 12px;
+  color: #56707f;
+  margin-left: 5px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(2) {
+  font-size: 13px;
+  color: #acb2b8;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(2) {
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  opacity: 0;
+  margin-right: 20px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(2) > img {
+  margin-left: -128px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) {
+  width: 320px;
+  height: 160px;
+  position: absolute;
+  left: 40px;
+  top: 0px;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s linear;
+  z-index: 100;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(1) {
+  width: 100%;
+  height: 90px;
+  background: rgba(58, 63, 70, 0.9);
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(2) {
+  width: 100%;
+  height: 70px;
+  background: rgba(40, 40, 47, 0.9);
+  display: flex;
+  align-items: center;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(2) > div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #9b9b9b;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 40px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(2) > span {
+  font-size: 14px;
+  margin-left: 20px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 10;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2) > p {
+  margin-left: 20px;
+  color: #57cbde;
+  font-size: 18px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2) > p:nth-of-type(2) {
+  font-size: 14px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(1) {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(1) > img {
+  width: 80px;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(1) > img:nth-of-type(2) {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: -1;
+}
+body .gameBar2 > div > div:nth-of-type(3) > div:nth-of-type(4) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div .cardActive {
+  transform: scale(1) !important;
+  opacity: 1 !important;
 }/*# sourceMappingURL=community.css.map */
