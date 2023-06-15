@@ -13,6 +13,44 @@ window.onload = function(){
     let tools = mainBox.querySelector(".tools")
     let helpBtn = tools.querySelector(".help")
     let emjBtn = tools.querySelector(".emj")
+    let emjArr = [  // 表情包数组
+        {
+            name: "steambored",
+            src: "../../img/profile/e1.png"
+        },
+        {
+            name: "steamfacepalm",
+            src: "../../img/profile/e2.png"
+        },
+        {
+            name: "steamhappy",
+            src: "../../img/profile/e3.png"
+        },
+        {
+            name: "steammocking",
+            src: "../../img/profile/e4.png"
+        },
+        {
+            name: "steamsad",
+            src: "../../img/profile/e5.png"
+        },
+        {
+            name: "steamsalty",
+            src: "../../img/profile/e6.png"
+        },
+        {
+            name: "steamthis",
+            src: "../../img/profile/e7.png"
+        },
+        {
+            name: "steamthumbsup",
+            src: "../../img/profile/e8.png"
+        },
+        {
+            name: "steamthumbsdown",
+            src: "../../img/profile/e9.png"
+        }
+    ]
     let page = 1
 
     // 格式化时间 
@@ -64,6 +102,18 @@ window.onload = function(){
         // 先清除留言列表
         message_listCt.innerHTML = ""
         data.result.forEach((message,index)=> {
+
+            // 转换表情包
+            let content = message.content
+            let contentArr = content.split(":")
+            let ename = contentArr[1]
+            for(let i=0;i<emjArr.length;i++) {
+                if(ename==emjArr[i].name) {
+                    let img = `<img src=${emjArr[i].src}>`
+                    content = contentArr[0]+img+contentArr[2]
+                }
+            }
+
             let str = `
             <div class="list">
                 <div class="message_avatar">
@@ -74,7 +124,7 @@ window.onload = function(){
                         <a href="#" class="message_nickname">${message.nickname}</a>
                         <span class="past_time">${formatTime(message.createTime)}</span>
                     </div>
-                    <div class="content">${message.content}</div>
+                    <div class="content">${content}</div>
                 </div>
                 <div class="del">
                     <img class="delImg" data-index=${index} src="../../img/profile/trash.png" alt="">
@@ -235,6 +285,7 @@ window.onload = function(){
         }
     }
     // 添加留言
+    
     addMessageBtn.onclick = async function() {
         let content = addMessageIpt.value
         await addMessage(content,user.nickname)
@@ -264,6 +315,14 @@ window.onload = function(){
         }
         text_format_y.onclick = function() {
             text_format_popup_window.style.display = "none"
+        }
+    }
+
+    // 发送表情包
+    let emjList = emjBtn.querySelector(".emj_list")
+    emjList.onclick = function(e) {
+        if(e.target.matches(".emj_img")) {
+            addMessageIpt.value += e.target.nextElementSibling.children[1].children[0].innerHTML
         }
     }
 

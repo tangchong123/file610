@@ -28,12 +28,12 @@
   },
   {
     "id": 1686487990393,
-    "username": "Tom",
-    "nickname": "Tom",
+    "username": "杨冰淇淋",
+    "nickname": "杨冰淇淋",
     "password": "123456",
-    "avatar": "file:///D:/Lydia/TEAM/file610/lydia_front/img/profile/avatar/1.webp",
+    "avatar": "http://localhost:8080/upload/1686792615277-3.webp",
     "email": "",
-    "intro": "未提供信息"
+    "intro": "冰淇淋是夏日佳品"
   },
   {
     "id": 1686488009205,

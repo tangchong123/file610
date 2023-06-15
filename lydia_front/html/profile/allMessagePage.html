@@ -246,7 +246,7 @@
                             <!-- 表情包列表 -->
                             <ul class="emj_list" v-if="isShowEmjs">
                                 <li>
-                                    <img src="../../img/profile/e1.png" alt="">
+                                    <img src="../../img/profile/e1.png" @click="sendEmj('steambored')">
                                     <div class="popup">
                                         <img src="../../img/profile/ee1.png" alt="">
                                         <div class="dis">
@@ -256,7 +256,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <img src="../../img/profile/e2.png" alt="">
+                                    <img src="../../img/profile/e2.png" @click="sendEmj('steamfacepalm')">
                                     <div class="popup">
                                         <img src="../../img/profile/ee2.png" alt="">
                                         <div class="dis">
@@ -266,7 +266,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <img src="../../img/profile/e3.png" alt="">
+                                    <img src="../../img/profile/e3.png" @click="sendEmj('steamhappy')">
                                     <div class="popup">
                                         <img src="../../img/profile/ee3.png" alt="">
                                         <div class="dis">
@@ -276,7 +276,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <img src="../../img/profile/e4.png" alt="">
+                                    <img src="../../img/profile/e4.png" @click="sendEmj('steammocking')">
                                     <div class="popup">
                                         <img src="../../img/profile/ee4.png" alt="">
                                         <div class="dis">
@@ -286,7 +286,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <img src="../../img/profile/e5.png" alt="">
+                                    <img src="../../img/profile/e5.png" @click="sendEmj('steamsad')">
                                     <div class="popup">
                                         <img src="../../img/profile/ee5.png" alt="">
                                         <div class="dis">
@@ -296,7 +296,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <img src="../../img/profile/e6.png" alt="">
+                                    <img src="../../img/profile/e6.png" @click="sendEmj('steamsalty')">
                                     <div class="popup">
                                         <img src="../../img/profile/ee6.png" alt="">
                                         <div class="dis">
@@ -306,7 +306,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <img src="../../img/profile/e7.png" alt="">
+                                    <img src="../../img/profile/e7.png" @click="sendEmj('steamthis')">
                                     <div class="popup">
                                         <img src="../../img/profile/ee7.png" alt="">
                                         <div class="dis">
@@ -316,7 +316,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <img src="../../img/profile/e8.png" alt="">
+                                    <img src="../../img/profile/e8.png" @click="sendEmj('steamthumbsup')">
                                     <div class="popup">
                                         <img src="../../img/profile/ee8.png" alt="">
                                         <div class="dis">
@@ -326,7 +326,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <img src="../../img/profile/e9.png" alt="">
+                                    <img src="../../img/profile/e9.png" @click="sendEmj('steamthumbsdown')">
                                     <div class="popup">
                                         <img src="../../img/profile/ee9.png" alt="">
                                         <div class="dis">
@@ -355,7 +355,7 @@
                                 <a href="#" class="message_nickname">{{item.nickname}}</a>
                                 <span class="past_time">{{formatTime(item.createTime)}}</span>
                             </div>
-                            <div class="content">{{item.content}}</div>
+                            <div class="content" v-html="item.content"></div>
                         </div>
                         <div class="del">
                             <img class="delImg" src="../../img/profile/trash.png" @click="delMessage(index)">
@@ -397,7 +397,45 @@
                 isShowEmjs: false,
                 id: null,
                 total: 0,
-                messageList: []
+                messageList: [],
+                emjArr: [  // 表情包数组
+                    {
+                        name: "steambored",
+                        src: "../../img/profile/e1.png"
+                    },
+                    {
+                        name: "steamfacepalm",
+                        src: "../../img/profile/e2.png"
+                    },
+                    {
+                        name: "steamhappy",
+                        src: "../../img/profile/e3.png"
+                    },
+                    {
+                        name: "steammocking",
+                        src: "../../img/profile/e4.png"
+                    },
+                    {
+                        name: "steamsad",
+                        src: "../../img/profile/e5.png"
+                    },
+                    {
+                        name: "steamsalty",
+                        src: "../../img/profile/e6.png"
+                    },
+                    {
+                        name: "steamthis",
+                        src: "../../img/profile/e7.png"
+                    },
+                    {
+                        name: "steamthumbsup",
+                        src: "../../img/profile/e8.png"
+                    },
+                    {
+                        name: "steamthumbsdown",
+                        src: "../../img/profile/e9.png"
+                    }
+                ]
             },
             mounted () {
                  this.renderMessages()
@@ -418,6 +456,10 @@
                 showEmjs() {
                     this.isShowEmjs=!this.isShowEmjs
                 },
+                // 点击表情包 获取emj_name
+                sendEmj(emjName) {
+                    this.$refs.messageTx.value+=":"+emjName+":"
+                },
                 formatTime(pastTime) {
                     let dt = new Date(pastTime)
                     let y = dt.getFullYear()
@@ -437,6 +479,14 @@
                 // 提交留言
                 async submitMessage() {
                     let content = this.$refs.messageTx.value.trim()
+                    let contentArr = content.split(":")
+                    let ename = contentArr[1]
+                    for (const emj of this.emjArr) {
+                        if(ename==emj.name) {
+                            let img = `<img src=${emj.src}>`
+                            content = contentArr[0]+img+contentArr[2]
+                        }
+                    }
                     await this.addMessage(content)
                     this.renderMessages()
                     this.$refs.messageTx.value = ""
