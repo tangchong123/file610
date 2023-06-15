@@ -17,6 +17,7 @@ let app = new Vue({
         isShowChatBox:false,
         states: ["在线", "离开", "隐身", "请勿打扰"],
         groupName: "",
+        newGroupName:"",
         inviteFriend: [
             {
                 nickName: "abc",
@@ -73,7 +74,7 @@ let app = new Vue({
             "好友列表", "聊天", "大小与缩放", "通知", "语音"
         ],
         chattingFriend:null,
-        settingActivateIndex: 3,
+        settingActivateIndex: 0,
         notifyList: [
             "好友加入游戏时", "好友上线时", "收到直接聊天信息时", "收到聊天室通知时", "组活动与公告"
         ],
@@ -92,10 +93,40 @@ let app = new Vue({
                 content:"",
                 time:""
             }
-        ]
+        ],
+        //弹出框控制按钮样式
+        changeNickName:false,
+        groupFriend: true,
+        hiddenFriend:false,
+        hiddenKindFriend:true,
+        ignoreState:true,
+        noSrcImg:false,
+        rememberMessage:true,
+        showHours:true,
+        noAnimation:true,
+        simpleList: true,
+        simpleLike:true,
+
+        //拖拽接受event
+        dragged :null
 
     },
     methods: {
+        dragCommitStart(e,i){
+            // console.log(e.target)
+            this.dragged = e.target
+        },
+        // dragCommitEnd(e,i){
+        //     console.log(e.target)
+        // },
+        targetDragOver(e){
+            e.preventDefault();
+        },
+        targetDrag(e){
+            e.preventDefault();
+            e.target.appendChild(this.dragged);
+            // console.log(this.dragged)
+        },
         showGroup() {
             this.isShowGroup = !this.isShowGroup;
         },

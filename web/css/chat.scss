@@ -1,3 +1,40 @@
+.left-box{
+    > .drag-box{
+        width: 100%;
+        // background-color: red;
+        // > div {
+        //     display: flex;
+        //     justify-content: space-between;
+        //     align-items: center;
+        //     > img {
+        //         width: 30px;
+        //         height: 30px;
+        //     }
+        // }
+        >.friends-list {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0px;
+            border-bottom: 1px solid white;
+    
+            >img {
+                width: 32px;
+                height: 33px;
+            }
+    
+            >.is-online {
+                color: darkturquoise;
+            }
+        }
+        > .friends-box-null{
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
 .friends-box {
     width: 100%;
 
@@ -16,7 +53,7 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, .7);
+    background: rgba(0, 0, 0, 1);
     z-index: 3;
 }
 
@@ -274,9 +311,9 @@
     >.showTips {
         transition: all .3 linear;
         padding: 0px 20px;
-        color: rgba(197, 214, 212, .35);
+        color: rgba(197, 214, 212, 1);
         font-size: 14px;
-        z-index: 2;
+        z-index: 10;
         >div {
             width: 100%;
             margin: 20px 0;
@@ -484,6 +521,12 @@
                             text-align: center;
                             line-height: 40px;
                             font-size: 16px;
+                        }
+                        > .setting-open{
+                            background-color: #2d73ff;
+                        }
+                        > .setting-close{
+                            background-color: #5f6875;
                         }
                     }
 

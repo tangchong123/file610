@@ -23,7 +23,7 @@
                 </div>
                 <div class="create-group-four">
                     <span>邀请至群组好友</span>
-                    <input type="text" placeholder="请输入好友名字" v-model = "groupName">
+                    <input type="text" placeholder="请输入好友名字" v-model = "newGroupName">
                 </div>
                 <div class="create-group-five">
                     <div v-if=" groupName == '' " style="color: #969696;background-color: rgba(35, 37, 43, 1);">
@@ -67,39 +67,39 @@
                                 </div>
                             </div>
                             <div>
-                                <div>关</div>
-                                <div>开</div>
+                                <div :class="{'setting-close':changeNickName == false}" @click = "changeNickName = false">关</div>
+                                <div :class="{'setting-open':changeNickName == true}" @click = "changeNickName = true">开</div>
                             </div>
                         </div>
                         <div class="setting-body">
                             <div>按游戏将好友分组</div>
                             <div>
-                                <div>关</div>
-                                <div>开</div>
+                                <div :class="{'setting-close':groupFriend == false}" @click = "groupFriend = false">关</div>
+                                <div :class="{'setting-open':groupFriend == true}" @click = "groupFriend = true">开</div>
                             </div>
 
                         </div>
                         <div class="setting-body">
                             <div>在自定义类别中隐藏离线好友</div>
                             <div>
-                                <div>关</div>
-                                <div>开</div>
+                                <div :class="{'setting-close':hiddenFriend == false}" @click = "hiddenFriend = false">关</div>
+                                <div :class="{'setting-open':hiddenFriend == true}" @click = "hiddenFriend = true">开</div>
                             </div>
 
                         </div>
                         <div class="setting-body">
                             <div>在线/离线好友列表中隐藏已分类好友</div>
                             <div>
-                                <div>关</div>
-                                <div>开</div>
+                                <div :class="{'setting-close':hiddenKindFriend == false}" @click = "hiddenKindFriend = false">关</div>
+                                <div :class="{'setting-open':hiddenKindFriend == true}" @click = "hiddenKindFriend = true">开</div>
                             </div>
 
                         </div>
                         <div class="setting-body">
                             <div>将好友排序时忽略“离开:状态</div>
                             <div>
-                                <div>关</div>
-                                <div>开</div>
+                                <div :class="{'setting-close':ignoreState == false}" @click = "ignoreState = false">关</div>
+                                <div :class="{'setting-open':ignoreState == true}" @click = "ignoreState = true">开</div>
                             </div>
 
                         </div>
@@ -111,36 +111,36 @@
                         <div class="setting-body">
                             <div>不嵌入图片及其他内联媒体</div>
                             <div>
-                                <div>关</div>
-                                <div>开</div>
+                                <div :class="{'setting-close':noSrcImg == false}" @click = "noSrcImg = false">关</div>
+                                <div :class="{'setting-open':noSrcImg == true}" @click = "noSrcImg = true">开</div>
                             </div>
                         </div>
                         <div class="setting-body">
                             <div>记住我打开的聊天</div>
                             <div>
-                                <div>关</div>
-                                <div>开</div>
+                                <div :class="{'setting-close':rememberMessage == false}" @click = "rememberMessage = false">关</div>
+                                <div :class="{'setting-open':rememberMessage == true}" @click = "rememberMessage = true">开</div>
                             </div>
                         </div>
                         <div class="setting-body">
                             <div>时间戳始终以 24 小时制显示</div>
                             <div>
-                                <div>关</div>
-                                <div>开</div>
+                                <div :class="{'setting-close':showHours == false}" @click = "showHours = false">关</div>
+                                <div :class="{'setting-open':showHours == true}" @click = "showHours = true">开</div>
                             </div>
                         </div>
                         <div class="setting-body">
                             <div>在聊天消息输入中禁用拼写检查</div>
                             <div>
-                                <div>关</div>
-                                <div>开</div>
+                                <div :class="{'setting-close':changeNickName == false}" @click = "changeNickName = false">关</div>
+                                <div :class="{'setting-open':changeNickName == true}" @click = "changeNickName = true">开</div>
                             </div>
                         </div>
                         <div class="setting-body">
                             <div>禁用房间动画效果</div>
                             <div>
-                                <div>关</div>
-                                <div>开</div>
+                                <div :class="{'setting-close':noAnimation == false}" @click = "noAnimation = false">关</div>
+                                <div :class="{'setting-open':noAnimation == true}" @click = "noAnimation = true">开</div>
                             </div>
                         </div>
                     </div>
@@ -151,15 +151,15 @@
                         <div class="setting-body">
                             <div>精简好友名单与聊天视图</div>
                             <div>
-                                <div>关</div>
-                                <div>开</div>
+                                <div :class="{'setting-close':simpleList == false}" @click = "simpleList = false">关</div>
+                                <div :class="{'setting-open':simpleList == true}" @click = "simpleList = true">开</div>
                             </div>
                         </div>
                         <div class="setting-body">
                             <div>精简收藏区</div>
                             <div>
-                                <div>关</div>
-                                <div>开</div>
+                                <div :class="{'setting-close':simpleLike == false}" @click = "simpleLike = false">关</div>
+                                <div :class="{'setting-open':simpleLike == true}" @click = "simpleLike = true">开</div>
                             </div>
                         </div>
                     </div>
@@ -311,13 +311,13 @@
                         ♲
                     </span>
                 </div>
-                <div class="drag-box ">
+                <div class="drag-box "  v-on:dragover.self = "targetDragOver($event)" v-on:drop.self = "targetDrag($event)">
                     <div v-if="userInfo.friendsList.length === 0 " class="friends-box-null">
                         将好友与聊天拖至此处以方便访问
                     </div>
                     <div v-else class="friends-box">
                         <div v-for="friend in userInfo.friendsList">
-                            {{friend}}
+                            {{friend.nickName}}
                         </div>
                     </div>
                 </div>
@@ -334,7 +334,7 @@
                         <div>好友列表</div>
                         <div>{{onlineFriend}} / {{countFriends}}</div>
                     </div>
-                    <div v-for ="(item,index) of inviteFriend" class="friends-list" @click.self = "showChatBox(index)">
+                    <div v-for ="(item,index) of inviteFriend" class="friends-list" @click.self = "showChatBox(index)" draggable = "true" v-on:dragstart = "dragCommitStart($event,index)" v-on:dragend = "dragCommitEnd($event,index)">
                         <img :src="item.avatar" alt="">
                         <span :class = "{'is-online':item.state === 0}">{{item.nickName}}</span>
                         <span :class = "{'is-online':item.state === 0}">{{states[item.state]}}</span>
