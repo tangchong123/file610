@@ -72,7 +72,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">nickname</a>
+                    <a href="#" class="nicknameCt">nickname</a>
                     <ul class="cate_list">
                         <li>
                             <a href="#">动态</a>
@@ -117,7 +117,7 @@
                 </div>
                 <!-- 用户资料 -->
                 <div class="self_info self">
-                    <span class="self">nickname</span>
+                    <span class="self nn">nickname</span>
                     <img class="self" src="../../img/profile/arrowDn9x5.gif" alt="">
                     <ul class="info_list">
                         <li>
@@ -537,6 +537,10 @@
         let headerCt = document.querySelector(".header_container")
         let avatarCt = headerCt.querySelector(".avatar>img")
         let infoList = document.querySelector(".self_info>.info_list")
+        let nicknameCt = document.querySelector(".nicknameCt")
+        let nicknameCt2 = document.querySelector(".self_info>.nn")
+        nicknameCt.innerHTML = user.nickname
+        nicknameCt2.innerHTML = user.nickname
         document.onclick = function(e) {
             if(e.target.matches(".self")) {
                 infoList.style.display = "block"
